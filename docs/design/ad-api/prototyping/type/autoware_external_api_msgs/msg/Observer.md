@@ -6,5 +6,6 @@ uint8 LOCAL=2
 uint8 REMOTE=3
 
 # fields
+
 uint8 mode
 </code></pre></div>

@@ -7,5 +7,6 @@ uint8 RIGHT = 2
 uint8 HAZARD = 3
 
 # fields
+
 uint8 data
 </code></pre></div>

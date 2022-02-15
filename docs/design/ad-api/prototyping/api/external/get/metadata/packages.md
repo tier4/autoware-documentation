@@ -2,9 +2,8 @@
 
 ## Classification
 
-- Category: Mandatory
 - Behavior: Service
-- DataType: autoware_external_api_msgs/srv/GetMetadataPackages
+- DataType: tier4_external_api_msgs/srv/GetMetadataPackages
 
 ## Description
 

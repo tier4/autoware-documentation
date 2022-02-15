@@ -1,6 +1,7 @@
 # SetService
 
-<div class="highlight"><pre><code><a href="../../../tier4_external_api_msgs/msg/Service">tier4_external_api_msgs/Service</a> mode
+```txt
+tier4_external_api_msgs/Service mode
 ---
-<a href="../../../tier4_external_api_msgs/msg/ResponseStatus">tier4_external_api_msgs/ResponseStatus</a> status
-</code></pre></div>
+tier4_external_api_msgs/ResponseStatus status
+```

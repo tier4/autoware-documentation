@@ -1,6 +1,9 @@
 external/get/version:
   behavior: service
   type: autoware_external_api_msgs/srv/GetVersion
+external/get/metadata/packages:
+  behavior: service
+  type: tier4_external_api_msgs/srv/GetMetadataPackages
 external/set/service:
   behavior: service
   type: tier4_external_api_msgs/srv/SetService
@@ -19,6 +22,9 @@ external/get/engage:
 external/set/emergency:
   behavior: service
   type: tier4_external_api_msgs/srv/SetEmergency
+external/get/emergency:
+  behavior: topic
+  type: tier4_external_api_msgs/msg/Emergency
 external/set/door:
   behavior: service
   type: tier4_external_api_msgs/srv/SetDoor
@@ -55,6 +61,9 @@ external/get/observer:
 external/get/map/info/hash:
   behavior: topic
   type: tier4_external_api_msgs/msg/MapHash
+external/get/map/lanelet/xml:
+  behavior: service
+  type: tier4_external_api_msgs/srv/GetTextFile
 external/set/pause_driving:
   behavior: service
   type: tier4_external_api_msgs/srv/PauseDriving
@@ -64,7 +73,7 @@ external/set/velocity_limit:
 external/set/command/local/control:
   behavior: topic
   type: tier4_external_api_msgs/msg/ControlCommandStamped
-external/set/command/local/gear_shift:
+external/set/command/local/shift:
   behavior: topic
   type: tier4_external_api_msgs/msg/GearShiftStamped
 external/set/command/local/turn_signal:
@@ -76,7 +85,7 @@ external/set/command/local/heartbeat:
 external/set/command/remote/control:
   behavior: topic
   type: tier4_external_api_msgs/msg/ControlCommandStamped
-external/set/command/remote/gear_shift:
+external/set/command/remote/shift:
   behavior: topic
   type: tier4_external_api_msgs/msg/GearShiftStamped
 external/set/command/remote/turn_signal:

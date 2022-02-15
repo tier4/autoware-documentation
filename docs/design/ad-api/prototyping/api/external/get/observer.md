@@ -2,9 +2,8 @@
 
 ## Classification
 
-- Category: Mandatory
 - Behavior: Topic
-- DataType: autoware_external_api_msgs/msg/Observer
+- DataType: tier4_external_api_msgs/msg/Observer
 
 ## Description
 

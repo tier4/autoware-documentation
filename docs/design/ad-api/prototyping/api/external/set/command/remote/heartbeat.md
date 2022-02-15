@@ -2,9 +2,8 @@
 
 ## Classification
 
-- Category: Optional
 - Behavior: Topic
-- DataType: autoware_external_api_msgs/msg/Heartbeat
+- DataType: tier4_external_api_msgs/msg/Heartbeat
 
 ## Description
 

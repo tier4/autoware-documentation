@@ -2,9 +2,8 @@
 
 ## Classification
 
-- Category: Mandatory
 - Behavior: Service
-- DataType: autoware_external_api_msgs/srv/InitializePoseAuto
+- DataType: tier4_external_api_msgs/srv/InitializePoseAuto
 
 ## Description
 

@@ -2,9 +2,8 @@
 
 ## Classification
 
-- Category: Mandatory
 - Behavior: Service
-- DataType: autoware_external_api_msgs/srv/SetVelocityLimit
+- DataType: tier4_external_api_msgs/srv/SetVelocityLimit
 
 ## Description
 

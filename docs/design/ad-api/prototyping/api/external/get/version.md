@@ -2,7 +2,6 @@
 
 ## Classification
 
-- Category: Mandatory
 - Behavior: Service
 - DataType: autoware_external_api_msgs/srv/GetVersion
 

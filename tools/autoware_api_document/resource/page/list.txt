@@ -1,9 +1,0 @@
-# List of Autoware API
-
-## External API
-
-{external}
-
-## Internal API
-
-{internal}

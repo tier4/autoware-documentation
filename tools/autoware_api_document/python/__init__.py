@@ -59,7 +59,7 @@ def generate_list(target, groups):
                 type_name = make_type_link(spec)
                 table.line(spec.behavior, spec_name, type_name)
             fp.write('## {} API\n\n'.format(group.capitalize()))
-            fp.write(table.text() + '\n\n')
+            fp.write(table.text() + '\n')
 
 
 def make_page_link(spec : AutowareAPI):
@@ -94,12 +94,12 @@ def generate_page(target, spec):
 
 def generate_type(target, definition):
     # use html tag to enable hyperlink in code block
-    prefix = '<div class="highlight"><pre><code>'
-    suffix = '</code></pre></div>'
     lines = [
         '# ' + definition.name,
         '',
-        prefix + definition.page + suffix,
+        '```txt',
+        definition.page,
+        '```',
     ]
     path = target.joinpath('type', definition.path).with_suffix('.md')
     path.parent.mkdir(parents=True, exist_ok=True)

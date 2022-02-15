@@ -32,6 +32,13 @@ class TypeDefinition(object):
 
     def __load_page(self, name):
         name = name.split('/')
+        path = pathlib.Path(get_package_share_directory(name[0]))
+        path = path.joinpath(*name[1:]).with_suffix('.' + name[1])
+        return path.read_text().strip() if path.exists() else None
+
+    """
+    def __load_page(self, name):
+        name = name.split('/')
         if name[0] not in self.my_packages:
             return None
         path = pathlib.Path(get_package_share_directory(name[0]))
@@ -51,6 +58,7 @@ class TypeDefinition(object):
                 line = '<a href="../../../{}">{}</a>{}'.format(data.path, '/'.join(names), other)
             code += line + '\n'
         return code
+    """
 
     @property
     def name(self):

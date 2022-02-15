@@ -28,6 +28,9 @@ external/get/emergency:
 external/set/door:
   behavior: service
   type: tier4_external_api_msgs/srv/SetDoor
+external/get/door:
+  behavior: topic
+  type: tier4_external_api_msgs/msg/DoorStatus
 external/get/vehicle/status:
   behavior: topic
   type: tier4_external_api_msgs/msg/VehicleStatusStamped

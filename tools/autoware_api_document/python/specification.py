@@ -91,7 +91,7 @@ class AutowareAPI(object):
     def __load_page(self, name):
         name = name.split('/')
         path = pathlib.Path(get_package_share_directory('autoware_api_document'))
-        path = path.joinpath('resource/page', name[0], '-'.join(name[1:])).with_suffix('.md')
+        path = path.joinpath('resource/page', name[0], '-'.join(name[1:])).with_suffix('.txt')
         return path.read_text().strip() if path.exists() else None
 
     def __load_type(self, name):

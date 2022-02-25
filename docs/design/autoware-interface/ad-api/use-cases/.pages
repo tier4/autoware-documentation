@@ -1,1 +1,3 @@
-hide: true
+collapse: true
+nav:
+  - Use Cases: index.md

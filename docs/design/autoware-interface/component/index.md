@@ -1,4 +1,4 @@
-# AD API
+# Component interface
 
 !!! warning
 

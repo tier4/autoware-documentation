@@ -25,6 +25,20 @@
 | Ready     | 発車条件を満たしており、ユーザーからの承認操作を待っている状態。             |
 | Driving   | 目的地に向かって走行している状態。                                           |
 
+## Fail Safe State
+
+車両の異常に関わる状態を管理する。
+
+![fail-safe-state](./fail-safe.drawio.svg)
+
+| State            | Description                              |
+| ---------------- | ---------------------------------------- |
+| Normal           | 正常状態                                 |
+| Takeover Request | 正常だが異常の可能性が高くなっている状態 |
+| MRM Operating    | 異常があり MRM を動作させている状態      |
+| MRM Succeeded    | 異常があり MRM が成功した状態            |
+| MRM Failed       | 異常があり MRM が失敗した状態            |
+
 ## Operation Mode
 
 車両の制御モード。
@@ -38,6 +52,19 @@
 | Autonomous | 自律制御    |
 | Local      | 近接操作    |
 | Remote     | 遠隔操作    |
+
+## Moving State
+
+車両の速度に関する状態遷移。
+
+![moving-state](./moving.drawio.svg)
+
+| State        | Description |
+| ------------ | ----------- |
+| Stopped      | 停止中      |
+| Starting     | 発車確認中  |
+| Moving       | 移動中      |
+| Decelerating | 減速中      |
 
 ## Route State
 

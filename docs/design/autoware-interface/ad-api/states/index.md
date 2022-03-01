@@ -59,12 +59,12 @@
 
 ![moving-state](./moving.drawio.svg)
 
-| State        | Description |
-| ------------ | ----------- |
-| Stopped      | 停止中      |
-| Starting     | 発車確認中  |
-| Moving       | 移動中      |
-| Decelerating | 減速中      |
+| State        | Description        |
+| ------------ | ------------------ |
+| Stopped      | 停止中             |
+| Starting     | 発車確認中         |
+| Moving       | 移動中             |
+| Decelerating | 停止に向けて減速中 |
 
 ## Route State
 
@@ -76,8 +76,20 @@
 | -------- | -------------------------------------------------- |
 | Unset    | ルートが設定されていない状態。                     |
 | Set      | ルートを設定されている状態。                       |
-| Arrived  | ルートの終点まで到着した状態。                     |
 | Changing | ルートを走りながら別のルートを切り替えている状態。 |
+
+## Goal State
+
+目的地に関する状態遷移。ルートが設定されている場合に有効になる。<br>
+※Route State (Set, Changing) のサブ状態にすることも検討する。
+
+![route-goal-state](./route-goal.drawio.svg)
+
+| State        | Description                    |
+| ------------ | ------------------------------ |
+| On The Way   | ルートを走行している状態。     |
+| Arrive Soon  | ルートの終点に近づいた状態。   |
+| Arrived Goal | ルートの終点まで到着した状態。 |
 
 ## Localization State
 
@@ -87,6 +99,19 @@
 
 | State        | Description                                                        |
 | ------------ | ------------------------------------------------------------------ |
-|              | 自己位置が未推定、もしくは、何らかの原因で信頼できなくなった状態。 |
+| Uncertain    | 自己位置が未推定、もしくは、何らかの原因で信頼できなくなった状態。 |
 | Initializing | 自己位置を推定している状態。                                       |
-|              | 自己位置が推定できている状態。                                     |
+| Estimated    | 自己位置が推定できている状態。                                     |
+
+## Vehicle Info
+
+| Name          | Type  | Description      |
+| ------------- | ----- | ---------------- |
+| position      | Twist | 位置、角度       |
+| velocity      | Twist | 速度、角速度     |
+| acceleration  | Twist | 加速度、角加速度 |
+| blinker       | Enum  | ウィンカー       |
+| hazard        | Enum  | ハザード         |
+| gear          | Enum  | ギア             |
+| fuel.value    | float | 燃料（残量）     |
+| fuel.capacity | float | 燃料（最大）     |

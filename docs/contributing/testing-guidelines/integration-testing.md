@@ -2,30 +2,17 @@
 
 ## Introduction
 
-This article motivates developers to adopt integration testing by explaining how to write, run,
-and evaluate the results of integration tests.
-
-## Quick reference
-
-1. [colcon](https://github.com/ros2/ros2/wiki/Colcon-Tutorial) is used to build and run test.
-2. [launch testing](https://github.com/ros2/launch/tree/master/launch_testing) launches nodes and runs tests.
-3. [Testing in general](testing-in-general.md) describes the big picture of testing.
+This article motivates developers to adopt integration testing by explaining how to write, run, and evaluate the results of integration tests.
 
 ## Integration testing
 
-An integration test is defined as the phase in software testing where individual software
-modules are combined and tested as a group. Integration tests occur after unit tests, and before
-validation tests.
+An integration test is defined as the phase in software testing where individual software modules are combined and tested as a group. Integration tests occur after unit tests, and before validation tests.
 
-The input to an integration test is a set of independent modules that have been unit tested. The set
-of modules are tested against the defined integration test plan, and the output is a set of
-properly integrated software modules that are ready for system testing.
+The input to an integration test is a set of independent modules that have been unit tested. The set of modules are tested against the defined integration test plan, and the output is a set of properly integrated software modules that are ready for system testing.
 
 ## Value of integration testing
 
-Integration tests determine if independently developed software modules work correctly
-when the modules are connected to each other. In ROS 2, the software modules are called
-nodes. As a special case, testing a single node can be referred to as component testing.
+Integration tests determine if independently developed software modules work correctly when the modules are connected to each other. In ROS 2, the software modules are called nodes. As a special case, testing a single node can be referred to as component testing.
 
 Integration tests help to find the following types of errors:
 
@@ -33,9 +20,7 @@ Integration tests help to find the following types of errors:
 - Reveal edge cases that were not touched with unit tests, such as a critical timing issue, network communication delay, disk I/O failure, and many other problems that can occur in production environments
 - Using tools like `stress` and `udpreplay`, performance of nodes is tested with real data or while the system is under high CPU/memory load, where situations such as `malloc` failures can be detected
 
-With ROS 2, it is possible to program complex autonomous-driving applications with a large number
-of nodes. Therefore, a lot of effort has been made to provide an integration-test framework that
-helps developers test the interaction of ROS2 nodes.
+With ROS 2, it is possible to program complex autonomous-driving applications with a large number of nodes. Therefore, a lot of effort has been made to provide an integration-test framework that helps developers test the interaction of ROS2 nodes.
 
 ## Integration-test framework
 
@@ -53,17 +38,14 @@ Autoware has dedicated API for smoke testing
 
 To use this framework, in `package.xml` add:
 
-```{xml}
+```xml
 <test_depend>autoware_testing</test_depend>
 ```
 
 and in `CMakeLists.txt` add:
 
-```{cmake}
+```cmake
 if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
-
   find_package(autoware_testing REQUIRED)
   add_smoke_test(${PROJECT_NAME} ${NODE_NAME})
 endif()
@@ -74,10 +56,48 @@ which adds smoke test that ensures that node can be:
 1. launched with default parameter file,
 2. terminated with a standard `SIGTERM` signal,
 
-For full API documentation see [package design page](autoware-testing-package-design.md).
+For full API documentation see [package design page](https://github.com/autowarefoundation/autoware.universe/blob/main/common/autoware_testing/design/autoware_testing-design.md).
 
-This API is not suitable for all smoke test cases. For example, it can not be used when some specific file location,
-like map, is required to be passed to the node or some preparation need to be conducted before node launch. In such cases use manual solution from [section below](#integration-test-with-a-single-node-component-test).
+This API is not suitable for all smoke test cases. For example, it can not be used when some specific file location, like map, is required to be passed to the node or some preparation need to be conducted before node launch. In such cases use manual solution from [section below](#integration-test-with-a-single-node-component-test).
+
+### Interface tests
+
+Autoware has dedicated API for interface testing
+
+To use this framework, create interface definition file:
+
+```yaml
+input_topics:
+  - name: ~/input/lateral/control_cmd
+    type: autoware_auto_control_msgs/msg/AckermannLateralCommand
+  - name: ~/input/longitudinal/control_cmd
+    type: autoware_auto_control_msgs/msg/LongitudinalCommand
+output_topics:
+  - name: ~/output/control_cmd
+    type: autoware_auto_control_msgs/msg/AckermannControlCommand
+```
+
+in `package.xml`, add:
+
+```xml
+<test_depend>autoware_testing</test_depend>
+```
+
+and in `CMakeLists.txt` add:
+
+```cmake
+if(BUILD_TESTING)
+  find_package(autoware_testing REQUIRED)
+  add_interface_test(${PROJECT_NAME} ${NODE_NAME} ${TOPIC_FILENAME})
+endif()
+```
+
+which adds interface test that ensures that node can be:
+
+1. node consumes/produces the desired output in line with the high-level documentation of its design document.
+2. helps to keep the docs up to date and to prevent users from having to dig through the source code to find the topic names/types.
+
+For full API documentation see [package design page](https://github.com/autowarefoundation/autoware.universe/blob/main/common/autoware_testing/design/autoware_testing-design.md).
 
 ### Integration test with a single node: component test
 
@@ -87,17 +107,14 @@ To add a component test to an existing node, follow the example of the `lanelet2
 
 In `package.xml`, add
 
-```{xml}
+```xml
 <test_depend>ros_testing</test_depend>
 ```
 
 In `CMakeLists.txt`, add or modify the `BUILD_TESTING` section:
 
-```{cmake}
+```cmake
 if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
-
   add_ros_test(
     test/lanelet2_map_provider_launch.test.py
     TIMEOUT "30"
@@ -113,7 +130,7 @@ Let's look at `test/lanelet2_map_provider_launch.test.py` as an example.
 
 The essential content is to first import dependencies:
 
-```{python}
+```python
 from ament_index_python import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
@@ -126,7 +143,7 @@ import unittest
 
 Then a launch description was created to launch the node under test. Note that `test_map.osm` file path is found and passed to the node. This is one of limitation of [smoke test](#integration-testing-smoke-test):
 
-```{python}
+```python
 @pytest.mark.launch_test
 def generate_test_description():
 
@@ -165,42 +182,41 @@ and finally the test condition. As before, it is just a smoke test ensures the n
 
 so the test code is executed after the node executable has been shut down (`post_shutdown_test`):
 
-```{python}
+```python
 @launch_testing.post_shutdown_test()
 class TestProcessOutput(unittest.TestCase):
 
     def test_exit_code(self, proc_output, proc_info, ndt_mapper):
-        # Check that process exits with code -15 code: termination request, sent to the program
-        launch_testing.asserts.assertExitCodes(proc_info, [-15], process=ndt_mapper)
+        # Check that process exits with code 0
+        launch_testing.asserts.assertExitCodes(proc_info, process=ndt_mapper)
 ```
 
 ## Running the test
 
 Continuing the example from above, first build
 
-```{bash}
-$ ade enter
-ade$ cd AutowareCore
-ade$ colcon build --packages-up-to lanelet2_map_provider
-ade$ source install/setup.bash
+```bash
+cd AutowareCore
+colcon build --packages-up-to lanelet2_map_provider
+source install/setup.bash
 ```
 
 then either execute the component test manually
 
-```{bash}
-ade$ ros2 test src/mapping/had_map/lanelet2_map_provider/test/lanelet2_map_provider_launch.test.py
+```bash
+ros2 test src/mapping/had_map/lanelet2_map_provider/test/lanelet2_map_provider_launch.test.py
 ```
 
 or as part of testing the entire package:
 
-```{bash}
-ade$ colcon test --packages-select lanelet2_map_provider
+```bash
+colcon test --packages-select lanelet2_map_provider
 ```
 
 Verify that the test is executed; e.g.
 
-```{bash}
-ade$ colcon test-result --all --verbose
+```bash
+colcon test-result --all --verbose
 ...
 build/lanelet2_map_provider/test_results/lanelet2_map_provider/test_lanelet2_map_provider_launch.test.py.xunit.xml: 1 test, 0 errors, 0 failures, 0 skipped
 ```
@@ -213,7 +229,7 @@ The simple test described in [Integration test with a single node: component tes
 
 To test while the node is running, create an [_active test_](https://github.com/ros2/launch/tree/foxy/launch_testing#active-tests) by adding a subclass of Python's `unittest.TestCase` to `*launch.test.py`. Some boilerplate code is required to access output by creating a node and a subscription to a particular topic; e.g.
 
-```{python}
+```python
 import unittest
 
 class TestRunningDataPublisher(unittest.TestCase):
@@ -269,3 +285,9 @@ class TestRunningDataPublisher(unittest.TestCase):
 
 To run multiple nodes together, simply add more nodes to the launch description in `*launch.test.py`.
 The lidar stack has more elaborate examples on how to feed input and to test more than just the exit status of nodes; see [point_cloud_filter_transform_tf_publisher.test.py](https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto/-/blob/master/src/perception/filters/point_cloud_filter_transform_nodes/test/point_cloud_filter_transform_tf_publisher.test.py) for details.
+
+## References
+
+1. [colcon](https://github.com/ros2/ros2/wiki/Colcon-Tutorial) is used to build and run test.
+2. [launch testing](https://github.com/ros2/launch/tree/master/launch_testing) launches nodes and runs tests.
+3. [Testing in general](testing-in-general.md) describes the big picture of testing.

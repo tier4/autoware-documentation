@@ -141,11 +141,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-10/design/node-diagram/</loc>
-         <lastmod>2022-03-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-10/design/autoware-interface/prototyping/api/list/</loc>
          <lastmod>2022-03-08</lastmod>
          <changefreq>daily</changefreq>
@@ -517,6 +512,11 @@
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-10/design/configuration-management/repository-structure/</loc>
+         <lastmod>2022-03-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-10/design/node-diagram/</loc>
          <lastmod>2022-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>

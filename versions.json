@@ -5,5 +5,10 @@
     "aliases": [
       "latest"
     ]
+  },
+  {
+    "version": "pr-7",
+    "title": "pr-7",
+    "aliases": []
   }
 ]

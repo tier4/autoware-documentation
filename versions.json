@@ -2,14 +2,14 @@
   {
     "version": "tier4-main",
     "title": "tier4-main",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "pr-10",
     "title": "pr-10",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "pr-7",

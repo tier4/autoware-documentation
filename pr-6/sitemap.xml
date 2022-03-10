@@ -2,617 +2,617 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/cmake/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/cpp/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/docker/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/github-actions/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/markdown/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/package-xml/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/python/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/ros2-interfaces/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/languages/shell-scripts/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/class-design/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/console-logging/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/coordinate-system/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/directory-structure/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/launch-files/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/naming/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/parameters/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/task-scheduling/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/coding-guidelines/ros-nodes/topic-namespaces/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/discussion-guidelines/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/documentation-guidelines/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/pull-request-guidelines/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/testing-guidelines/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/contributing/testing-guidelines/integration-testing/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/list/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/diagnostics/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/door/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/emergency/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/engage/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/observer/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/operator/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/rosbag_logging_mode/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/route/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/service/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/version/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/command/selected/control/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/command/selected/vehicle/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/map/info/hash/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/map/lanelet/xml/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/metadata/packages/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/get/vehicle/status/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/clear_route/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/door/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/emergency/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/engage/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/initialize_pose/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/initialize_pose_auto/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/observer/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/operator/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/pause_driving/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/rosbag_logging_mode/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/route/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/service/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/velocity_limit/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/local/control/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/local/gear_shift/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/local/heartbeat/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/local/shift/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/local/turn_signal/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/remote/control/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/remote/gear_shift/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/remote/heartbeat/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/remote/shift/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/api/external/set/command/remote/turn_signal/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/autoware_external_api_msgs/srv/GetVersion/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/ClassifiedDiagnostics/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/ControlCommandStamped/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/DoorStatus/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/Emergency/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/EngageStatus/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/GearShiftStamped/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/Heartbeat/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/MapHash/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/Observer/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/Operator/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/RosbagLoggingMode/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/Route/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/Service/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/TurnSignalStamped/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/msg/VehicleStatusStamped/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/ClearRoute/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/Engage/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/GetMetadataPackages/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/GetTextFile/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/InitializePose/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/InitializePoseAuto/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/PauseDriving/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/SetDoor/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/SetEmergency/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/SetObserver/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/SetOperator/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/SetRosbagLoggingMode/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/SetRoute/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/SetService/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/autoware-interface/prototyping/type/tier4_external_api_msgs/srv/SetVelocityLimit/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/configuration-management/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/configuration-management/development-process/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/configuration-management/release-process/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/design/configuration-management/repository-structure/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/help/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/help/docs-guide/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/help/support-guidelines/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/how-to-guides/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/installation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/installation/autoware/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/installation/autoware/docker-installation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/installation/autoware/local-installation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/installation/tools-for-developers/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/installation/tools-for-users/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/tutorials/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/tutorials/ad-hoc-simulation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/tutorials/ad-hoc-simulation/digital-twin-simulation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/tutorials/ad-hoc-simulation/planning-simulation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/tutorials/ad-hoc-simulation/rosbag-replay-simulation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/tutorials/scenario-simulation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/tutorials/scenario-simulation/digital-twin-simulation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/tutorials/scenario-simulation/planning-simulation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-6/tutorials/scenario-simulation/rosbag-replay-simulation/</loc>
-         <lastmod>2022-03-09</lastmod>
+         <lastmod>2022-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

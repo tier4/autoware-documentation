@@ -37,7 +37,7 @@ The following are examples of incorrect interface names for AD API and Component
 - /autoware/state
 - /api/engage/autoware
 - /planning/route/api
-- /vehicle/adapi/status
+- /vehicle/my_api/status
 
 ## Logging
 

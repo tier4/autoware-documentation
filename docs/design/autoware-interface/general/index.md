@@ -66,6 +66,9 @@ This section describes the features common to all interfaces in Autoware. See th
 ### Communication Method
 
 As shown in the table below, interfaces are classified into four communication methods to define their behavior.
+Function Call is a request-response communication and is used for processing that requires immediate results. The others are publish-subscribe communication.
+Notification is used to process data that changes with some event, typically a callback. Streams handle continuously changing data.
+Reliable Stream expects all data to arrive without loss, Realtime Stream expects the latest data to arrive with low delay.
 
 | Communication Method | ROS 2 Interface                   | Optional Interface   |
 | -------------------- | --------------------------------- | -------------------- |
@@ -73,10 +76,6 @@ As shown in the table below, interfaces are classified into four communication m
 | Notification         | Topic (reliable, transient_local) | MQTT (QoS=2, retain) |
 | Reliable Stream      | Topic (reliable, volatile)        | MQTT (QoS=2)         |
 | Realtime Stream      | Topic (best_effort, volatile)     | MQTT (QoS=0)         |
-
-Function Call is a request-response communication and is used for processing that requires immediate results. The others are publish-subscribe communication.
-Notification is used to process data that changes with some event, typically a callback. Streams handle continuously changing data.
-Reliable Stream expects all data to arrive without loss, Realtime Stream expects the latest data to arrive with low delay.
 
 These methods are provided as services or topics of ROS 2 since Autoware is developed using ROS 2 and mainly communicates with its packages.
 On the other hand, FMS and HMI are often implemented as web services, Autoware is also expected to communicate with applications that do not use ROS 2.

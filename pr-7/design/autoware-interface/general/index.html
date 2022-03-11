@@ -2161,7 +2161,10 @@ It is desirable to propose them for standardization if they are sufficiently eva
 <li>Features of Component Interface</li>
 </ul>
 <h3 id="communication-method">Communication Method<a class="headerlink" href="#communication-method" title="Permanent link">#</a></h3>
-<p>As shown in the table below, interfaces are classified into four communication methods to define their behavior.</p>
+<p>As shown in the table below, interfaces are classified into four communication methods to define their behavior.
+Function Call is a request-response communication and is used for processing that requires immediate results. The others are publish-subscribe communication.
+Notification is used to process data that changes with some event, typically a callback. Streams handle continuously changing data.
+Reliable Stream expects all data to arrive without loss, Realtime Stream expects the latest data to arrive with low delay.</p>
 <table>
 <thead>
 <tr>
@@ -2193,9 +2196,6 @@ It is desirable to propose them for standardization if they are sufficiently eva
 </tr>
 </tbody>
 </table>
-<p>Function Call is a request-response communication and is used for processing that requires immediate results. The others are publish-subscribe communication.
-Notification is used to process data that changes with some event, typically a callback. Streams handle continuously changing data.
-Reliable Stream expects all data to arrive without loss, Realtime Stream expects the latest data to arrive with low delay.</p>
 <p>These methods are provided as services or topics of ROS 2 since Autoware is developed using ROS 2 and mainly communicates with its packages.
 On the other hand, FMS and HMI are often implemented as web services, Autoware is also expected to communicate with applications that do not use ROS 2.
 It is wasteful for each of these applications to have an adapter for Autoware, and a more suitable means of communication is required.

@@ -331,11 +331,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/prototyping/api/external/set/command/local/gear_shift/</loc>
-         <lastmod>2022-03-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/prototyping/api/external/set/command/local/heartbeat/</loc>
          <lastmod>2022-03-11</lastmod>
          <changefreq>daily</changefreq>
@@ -352,11 +347,6 @@
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/prototyping/api/external/set/command/remote/control/</loc>
-         <lastmod>2022-03-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/prototyping/api/external/set/command/remote/gear_shift/</loc>
          <lastmod>2022-03-11</lastmod>
          <changefreq>daily</changefreq>
     </url>

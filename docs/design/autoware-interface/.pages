@@ -1,5 +1,6 @@
+collapse_single_pages: true
 nav:
-  - General: general
+  - general
+  - prototyping
   - AD API: ad-api
   - Component: component
-  - Prototyping: prototyping

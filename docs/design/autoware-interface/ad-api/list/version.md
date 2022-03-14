@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the API version.
+Get the API version. The version numbers follow SemVer.
 
 ## Request
 

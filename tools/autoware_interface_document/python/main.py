@@ -19,6 +19,8 @@ from collections import OrderedDict
 from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
 from .type import InterfaceName
+from .type import InterfaceType
+
 
 def generate():
     parser = argparse.ArgumentParser()
@@ -27,11 +29,21 @@ def generate():
 
     base_path = Path(args.path)
     list_path = Path(get_package_share_directory("autoware_interface_document")) / "resource" / "adapi.yaml"
+    api_path = base_path / "list"
+    msg_path = base_path / "type"
 
-    api = list_apis(base_path, list_path)
-    for api in api.values():
+    msgs = list_msgs()
+    for msg in msgs.values():
+        print(msg.name)
+        msg.write(msg_path)
+    InterfaceType.WriteIndex(msg_path, msgs.values())
+
+
+    apis = list_apis(base_path, list_path)
+    for api in apis.values():
         print(api.name)
         api.rewrite()
+    InterfaceName.WriteIndex(api_path, apis.values())
 
 
 def list_apis(base_path: Path, list_path: Path):
@@ -53,4 +65,18 @@ def list_apis(base_path: Path, list_path: Path):
 
 
 def list_msgs():
-    pass
+    packages = ["autoware_ad_api_msgs"]
+    msgs = {}
+    for package in packages:
+        path = Path(get_package_share_directory(package))
+        for file in (path / "msg").iterdir():
+            if file.suffix == ".msg":
+                msg = InterfaceType(file)
+                msgs[msg.name] = msg
+        for file in (path / "srv").iterdir():
+            if file.suffix == ".srv":
+                msg = InterfaceType(file)
+                msgs[msg.name] = msg
+    for msg in msgs.values():
+        msg.refer(msgs)
+    return msgs

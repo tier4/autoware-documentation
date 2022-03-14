@@ -1,0 +1,4 @@
+bool update
+---
+autoware_ad_api_msgs/ResponseStatus status
+string[] versions

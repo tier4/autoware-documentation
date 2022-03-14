@@ -23,6 +23,7 @@ for byte in (8, 16, 32, 64):
     builtins.add(F"int{byte}")
     builtins.add(F"uint{byte}")
 
+
 class InterfaceType:
 
     def __init__(self, path: Path):
@@ -148,6 +149,7 @@ class MarkdownHeader:
                 self._method = line.split(":")[1].strip()
             if line.startswith("- Type:"):
                 self._type = line.split(":")[1].strip()
+                self._type = MarkdownLink.LoadType(self._type)
         return lines
 
 
@@ -166,4 +168,28 @@ class MarkdownOthers:
 
 class MarkdownLink:
 
-    pass
+    def __init__(self, text, link):
+        self.text = text
+        self.link = link
+
+    def __str__(self):
+        if self.link is None:  # TODO: remove
+            return self.text
+        return F"[{self.text}]({self.link})"
+
+    @staticmethod
+    def Load(text):
+        match = re.match(R"\[(.+)\]\((.+)\)", text)
+        link = None
+        if match:
+            text = match.group(1)
+            link = match.group(2)
+        return MarkdownLink(text, link)
+
+    # TODO: remove
+    @staticmethod
+    def LoadType(text):
+        link = MarkdownLink.Load(text)
+        part = link.text.split("/")
+        link.link = "../type/" + "/".join([*part[:-1], camel_to_snake(part[-1])]) + ".md"
+        return link

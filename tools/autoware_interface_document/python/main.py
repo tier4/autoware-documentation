@@ -38,7 +38,6 @@ def generate():
         msg.write(msg_path)
     InterfaceType.WriteIndex(msg_path, msgs.values())
 
-
     apis = list_apis(base_path, list_path)
     for api in apis.values():
         print(api.name)
@@ -51,7 +50,7 @@ def list_apis(base_path: Path, list_path: Path):
     for name in yaml.safe_load(list_path.read_text()):
         apis[name] = None
     for file in (base_path / "list").iterdir():
-        if file.name in {".pages", "index.md"}:
+        if file.is_dir() or file.name in {".pages", "index.md"}:
             continue
         api = InterfaceName(file)
         if api.name not in apis:

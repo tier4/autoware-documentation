@@ -15,10 +15,16 @@ find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
+  msg/AutowareLauncherState.msg
   msg/ResponseStatus.msg
   msg/ResponseStatusCode.msg
   msg/ResponseStatusDetail.msg
+  srv/AutowareLauncherCommand.srv
+  srv/FetchAutowareVersion.srv
   srv/GetInterfaceVersion.srv
+  srv/GetAutowareVersion.srv
+  srv/RouteClear.srv
+  srv/SetAutowareVersion.srv
   DEPENDENCIES
     builtin_interfaces
 )

@@ -1,6 +1,7 @@
 # Type
 
 - [autoware_ad_api_msgs/msg/ResponseStatusCode](autoware_ad_api_msgs/msg/response_status_code.md)
+- [autoware_ad_api_msgs/msg/OperationMode](autoware_ad_api_msgs/msg/operation_mode.md)
 - [autoware_ad_api_msgs/msg/ResponseStatus](autoware_ad_api_msgs/msg/response_status.md)
 - [autoware_ad_api_msgs/msg/LaneletSegment](autoware_ad_api_msgs/msg/lanelet_segment.md)
 - [autoware_ad_api_msgs/msg/LaneletRouteData](autoware_ad_api_msgs/msg/lanelet_route_data.md)
@@ -14,6 +15,7 @@
 - [autoware_ad_api_msgs/srv/SetAutowareVersion](autoware_ad_api_msgs/srv/set_autoware_version.md)
 - [autoware_ad_api_msgs/srv/AutowareLauncherCommand](autoware_ad_api_msgs/srv/autoware_launcher_command.md)
 - [autoware_ad_api_msgs/srv/RouteClear](autoware_ad_api_msgs/srv/route_clear.md)
+- [autoware_ad_api_msgs/srv/OperationModeChange](autoware_ad_api_msgs/srv/operation_mode_change.md)
 - [autoware_ad_api_msgs/srv/FetchAutowareVersion](autoware_ad_api_msgs/srv/fetch_autoware_version.md)
 - [autoware_ad_api_msgs/srv/LaneletRouteSet](autoware_ad_api_msgs/srv/lanelet_route_set.md)
 - [autoware_ad_api_msgs/srv/RouteSet](autoware_ad_api_msgs/srv/route_set.md)

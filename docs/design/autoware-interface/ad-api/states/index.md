@@ -39,20 +39,6 @@
 | MRM Succeeded    | 異常があり MRM が成功した状態            |
 | MRM Failed       | 異常があり MRM が失敗した状態            |
 
-## Operation Mode
-
-車両の制御モード。
-
-![operation-mode](./operation-mode.drawio.svg)
-
-| State      | Description |
-| ---------- | ----------- |
-| Direct     | 直接操作    |
-| Stop       | 停止保持    |
-| Autonomous | 自律制御    |
-| Local      | 近接操作    |
-| Remote     | 遠隔操作    |
-
 ## Moving State
 
 車両の速度に関する状態遷移。

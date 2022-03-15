@@ -6,6 +6,8 @@
 - [/api/autoware/version/change](autoware-version-change.md)
 - [/api/autoware/launcher/state](autoware-launcher-state.md)
 - [/api/autoware/launcher/command](autoware-launcher-command.md)
+- [/api/operation/mode/data](operation-mode-data.md)
+- [/api/operation/mode/change](operation-mode-change.md)
 - [/api/route/state](route-state.md)
 - [/api/route/clear](route-clear.md)
 - [/api/route/set](route-set.md)

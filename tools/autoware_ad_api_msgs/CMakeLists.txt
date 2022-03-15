@@ -19,11 +19,14 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/ResponseStatus.msg
   msg/ResponseStatusCode.msg
   msg/ResponseStatusDetail.msg
+  msg/Route.msg
+  msg/RouteData.msg
   srv/AutowareLauncherCommand.srv
   srv/FetchAutowareVersion.srv
   srv/GetInterfaceVersion.srv
   srv/GetAutowareVersion.srv
   srv/RouteClear.srv
+  srv/RouteSet.srv
   srv/SetAutowareVersion.srv
   DEPENDENCIES
     builtin_interfaces

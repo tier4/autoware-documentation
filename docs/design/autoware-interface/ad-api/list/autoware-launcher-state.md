@@ -1,7 +1,7 @@
 # /api/autoware/launcher/state
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/srv/AutowareLauncherState](../type/autoware_ad_api_msgs/srv/autoware_launcher_state.md)
+- Type: [autoware_ad_api_msgs/msg/AutowareLauncherState](../type/autoware_ad_api_msgs/msg/autoware_launcher_state.md)
 
 ## Description
 

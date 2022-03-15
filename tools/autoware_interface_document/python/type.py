@@ -51,9 +51,10 @@ class InterfaceType:
 
     def refer(self, types):
         for name in self.__uses(self._text):
-            type = types[name]
-            self._uses.add(type)
-            type._used.add(self)
+            if name in types:
+                type = types[name]
+                self._uses.add(type)
+                type._used.add(self)
 
     def write(self, path):
         path = path / self.link

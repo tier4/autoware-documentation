@@ -1,4 +1,4 @@
-# Autoware Launcher State
+# Launcher State
 
 ![launcher-state](./launcher-state.drawio.svg)
 

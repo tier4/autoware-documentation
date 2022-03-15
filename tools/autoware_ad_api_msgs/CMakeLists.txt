@@ -36,6 +36,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   route/msg/LaneletPrimitive.msg
   others/msg/OperationMode.msg
   others/srv/OperationModeChange.srv
+  others/msg/DrivingState.msg
+  others/srv/DrivingEngage.srv
   DEPENDENCIES
     builtin_interfaces
     std_msgs

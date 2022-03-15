@@ -4,9 +4,9 @@
 - /api/autoware/version/change
 - /api/autoware/launcher/state
 - /api/autoware/launcher/command
-# - /api/driving/state
-# - /api/driving/engage
-- /api/operation/mode/data
+- /api/driving/state
+- /api/driving/engage
+- /api/operation/mode/notice
 - /api/operation/mode/change
 - /api/route/state
 - /api/route/clear

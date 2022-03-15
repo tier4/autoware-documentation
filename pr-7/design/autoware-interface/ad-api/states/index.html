@@ -1132,13 +1132,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#driving-state" class="md-nav__link">
-    Driving State
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#fail-safe-state" class="md-nav__link">
     Fail Safe State
   </a>
@@ -1146,29 +1139,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#operation-mode" class="md-nav__link">
-    Operation Mode
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#moving-state" class="md-nav__link">
     Moving State
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#route-state" class="md-nav__link">
-    Route State
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#goal-state" class="md-nav__link">
-    Goal State
   </a>
   
 </li>
@@ -1201,10 +1173,95 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_5_2_3_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3_5">
+          Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/driving-state/" class="md-nav__link">
+        Driving State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../data/launcher-state/" class="md-nav__link">
-        Autoware Launcher State
+        Launcher State
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/operation-mode/" class="md-nav__link">
+        Operation Mode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/route-state/" class="md-nav__link">
+        Route State
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2128,13 +2185,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#driving-state" class="md-nav__link">
-    Driving State
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#fail-safe-state" class="md-nav__link">
     Fail Safe State
   </a>
@@ -2142,29 +2192,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#operation-mode" class="md-nav__link">
-    Operation Mode
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#moving-state" class="md-nav__link">
     Moving State
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#route-state" class="md-nav__link">
-    Route State
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#goal-state" class="md-nav__link">
-    Goal State
   </a>
   
 </li>
@@ -2231,31 +2260,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="driving-state">Driving State<a class="headerlink" href="#driving-state" title="Permanent link">#</a></h2>
-<p>車両の走行に関わる状態を管理する。他の状態遷移を参照している。</p>
-<p><img alt="driving-state" src="driving.drawio.svg" /></p>
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Preparing</td>
-<td>ルートの待ち、ドアの開閉中、自己位置初期化中などの発車条件を満たさない状態。</td>
-</tr>
-<tr>
-<td>Ready</td>
-<td>発車条件を満たしており、ユーザーからの承認操作を待っている状態。</td>
-</tr>
-<tr>
-<td>Driving</td>
-<td>目的地に向かって走行している状態。</td>
-</tr>
-</tbody>
-</table>
 <h2 id="fail-safe-state">Fail Safe State<a class="headerlink" href="#fail-safe-state" title="Permanent link">#</a></h2>
 <p>車両の異常に関わる状態を管理する。</p>
 <p><img alt="fail-safe-state" src="fail-safe.drawio.svg" /></p>
@@ -2289,39 +2293,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="operation-mode">Operation Mode<a class="headerlink" href="#operation-mode" title="Permanent link">#</a></h2>
-<p>車両の制御モード。</p>
-<p><img alt="operation-mode" src="operation-mode.drawio.svg" /></p>
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Direct</td>
-<td>直接操作</td>
-</tr>
-<tr>
-<td>Stop</td>
-<td>停止保持</td>
-</tr>
-<tr>
-<td>Autonomous</td>
-<td>自律制御</td>
-</tr>
-<tr>
-<td>Local</td>
-<td>近接操作</td>
-</tr>
-<tr>
-<td>Remote</td>
-<td>遠隔操作</td>
-</tr>
-</tbody>
-</table>
 <h2 id="moving-state">Moving State<a class="headerlink" href="#moving-state" title="Permanent link">#</a></h2>
 <p>車両の速度に関する状態遷移。</p>
 <p><img alt="moving-state" src="moving.drawio.svg" /></p>
@@ -2348,57 +2319,6 @@
 <tr>
 <td>Decelerating</td>
 <td>停止に向けて減速中</td>
-</tr>
-</tbody>
-</table>
-<h2 id="route-state">Route State<a class="headerlink" href="#route-state" title="Permanent link">#</a></h2>
-<p>ルートに関する状態遷移。目的地へのルートが設定されているかを管理する。</p>
-<p><img alt="route-state" src="route.drawio.svg" /></p>
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Unset</td>
-<td>ルートが設定されていない状態。</td>
-</tr>
-<tr>
-<td>Set</td>
-<td>ルートを設定されている状態。</td>
-</tr>
-<tr>
-<td>Changing</td>
-<td>ルートを走りながら別のルートを切り替えている状態。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="goal-state">Goal State<a class="headerlink" href="#goal-state" title="Permanent link">#</a></h2>
-<p>目的地に関する状態遷移。ルートが設定されている場合に有効になる。<br>
-※Route State (Set, Changing) のサブ状態にすることも検討する。</p>
-<p><img alt="route-goal-state" src="route-goal.drawio.svg" /></p>
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>On The Way</td>
-<td>ルートを走行している状態。</td>
-</tr>
-<tr>
-<td>Arrive Soon</td>
-<td>ルートの終点に近づいた状態。</td>
-</tr>
-<tr>
-<td>Arrived Goal</td>
-<td>ルートの終点まで到着した状態。</td>
 </tr>
 </tbody>
 </table>
@@ -2513,13 +2433,13 @@
       
       
         
-        <a href="../data/launcher-state/" class="md-footer__link md-footer__link--next" aria-label="Next: Autoware Launcher State" rel="next">
+        <a href="../data/driving-state/" class="md-footer__link md-footer__link--next" aria-label="Next: Driving State" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Autoware Launcher State
+              Driving State
             </div>
           </div>
           <div class="md-footer__button md-icon">

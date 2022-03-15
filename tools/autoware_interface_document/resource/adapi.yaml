@@ -6,8 +6,8 @@
 - /api/autoware/launcher/command
 # - /api/driving/state
 # - /api/driving/engage
-# - /api/operator/mode
-# - /api/operator/change
+- /api/operation/mode/data
+- /api/operation/mode/change
 - /api/route/state
 - /api/route/clear
 - /api/route/set

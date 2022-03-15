@@ -68,14 +68,12 @@ def list_msgs():
     msgs = {}
     for package in packages:
         path = Path(get_package_share_directory(package))
-        for file in (path / "msg").iterdir():
-            if file.suffix == ".msg":
-                msg = InterfaceType(file)
-                msgs[msg.name] = msg
-        for file in (path / "srv").iterdir():
-            if file.suffix == ".srv":
-                msg = InterfaceType(file)
-                msgs[msg.name] = msg
+        for file in path.glob("msg/**/*.msg"):
+            msg = InterfaceType(file)
+            msgs[msg.name] = msg
+        for file in path.glob("srv/**/*.srv"):
+            msg = InterfaceType(file)
+            msgs[msg.name] = msg
     for msg in msgs.values():
         msg.refer(msgs)
     return msgs

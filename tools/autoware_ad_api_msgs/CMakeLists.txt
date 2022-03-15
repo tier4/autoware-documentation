@@ -15,26 +15,31 @@ find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  msg/AutowareLauncherState.msg
-  msg/ResponseStatus.msg
-  msg/ResponseStatusCode.msg
-  msg/ResponseStatusDetail.msg
-  msg/Route.msg
-  msg/RouteData.msg
-  msg/LaneletRoute.msg
-  msg/LaneletRouteData.msg
-  msg/LaneletSegment.msg
-  msg/LaneletPrimitive.msg
-  srv/AutowareLauncherCommand.srv
-  srv/FetchAutowareVersion.srv
-  srv/GetInterfaceVersion.srv
-  srv/GetAutowareVersion.srv
-  srv/RouteClear.srv
-  srv/RouteSet.srv
-  srv/LaneletRouteSet.srv
-  srv/SetAutowareVersion.srv
+  common/srv/GetInterfaceVersion.srv
+  common/msg/ResponseStatus.msg
+  common/msg/ResponseStatusCode.msg
+  common/msg/ResponseStatusDetail.msg
+  launcher/msg/AutowareLauncherState.msg
+  launcher/srv/AutowareLauncherCommand.srv
+  launcher/srv/GetAutowareVersion.srv
+  launcher/srv/SetAutowareVersion.srv
+  launcher/srv/FetchAutowareVersion.srv
+  # route/msg/RouteState.msg
+  route/srv/RouteClear.srv
+  route/srv/RouteSet.srv
+  route/msg/Route.msg
+  route/msg/RouteData.msg
+  route/srv/LaneletRouteSet.srv
+  route/msg/LaneletRoute.msg
+  route/msg/LaneletRouteData.msg
+  route/msg/LaneletSegment.msg
+  route/msg/LaneletPrimitive.msg
+  others/msg/OperationMode.msg
+  others/srv/OperationModeChange.srv
   DEPENDENCIES
     builtin_interfaces
+    std_msgs
+    geometry_msgs
 )
 
 if(BUILD_TESTING)

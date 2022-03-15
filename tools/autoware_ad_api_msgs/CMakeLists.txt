@@ -21,12 +21,17 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/ResponseStatusDetail.msg
   msg/Route.msg
   msg/RouteData.msg
+  msg/LaneletRoute.msg
+  msg/LaneletRouteData.msg
+  msg/LaneletSegment.msg
+  msg/LaneletPrimitive.msg
   srv/AutowareLauncherCommand.srv
   srv/FetchAutowareVersion.srv
   srv/GetInterfaceVersion.srv
   srv/GetAutowareVersion.srv
   srv/RouteClear.srv
   srv/RouteSet.srv
+  srv/LaneletRouteSet.srv
   srv/SetAutowareVersion.srv
   DEPENDENCIES
     builtin_interfaces

@@ -12,7 +12,7 @@
 - /api/route/clear
 - /api/route/set
 - /api/route/data
-# - /api/route/lanelet/set
-# - /api/route/lanelet/data
+- /api/route/lanelet/set
+- /api/route/lanelet/data
 # - /api/door/status
 # - /api/door/operate

@@ -10,3 +10,5 @@
 - [/api/route/clear](route-clear.md)
 - [/api/route/set](route-set.md)
 - [/api/route/data](route-data.md)
+- [/api/route/lanelet/set](route-lanelet-set.md)
+- [/api/route/lanelet/data](route-lanelet-data.md)

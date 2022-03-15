@@ -16,5 +16,5 @@ autoware_ad_api_msgs/LaneletSegment[] segments
 
 ## The types that use this
 
-- [autoware_ad_api_msgs/srv/LaneletRouteSet](../../autoware_ad_api_msgs/srv/lanelet_route_set.md)
 - [autoware_ad_api_msgs/msg/LaneletRouteData](../../autoware_ad_api_msgs/msg/lanelet_route_data.md)
+- [autoware_ad_api_msgs/srv/LaneletRouteSet](../../autoware_ad_api_msgs/srv/lanelet_route_set.md)

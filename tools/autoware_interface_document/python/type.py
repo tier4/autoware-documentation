@@ -49,12 +49,16 @@ class InterfaceType:
         parts = self.name.split("/")
         return "/".join([*parts[:-1], camel_to_snake(parts[-1])]) + ".md"
 
-    def refer(self, types):
+    def link_relations(self, types):
         for name in self.__uses(self._text):
             if name in types:
                 type = types[name]
                 self._uses.add(type)
                 type._used.add(self)
+
+    def sort_relations(self):
+        self._uses = list(sorted(self._uses, key=lambda t: t.name))
+        self._used = list(sorted(self._used, key=lambda t: t.name))
 
     def write(self, path):
         path = path / self.link

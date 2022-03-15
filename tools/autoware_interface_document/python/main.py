@@ -15,7 +15,6 @@
 import argparse
 import yaml
 import logging
-from collections import OrderedDict
 from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
 from .type import InterfaceName
@@ -46,7 +45,7 @@ def generate():
 
 
 def list_apis(base_path: Path, list_path: Path):
-    apis = OrderedDict()
+    apis = {}
     for name in yaml.safe_load(list_path.read_text()):
         apis[name] = None
     for file in (base_path / "list").iterdir():
@@ -60,7 +59,7 @@ def list_apis(base_path: Path, list_path: Path):
     for name in apis:
         if apis[name] is None:
             logging.warning(F"API name is not found in file: {name}")
-    return OrderedDict(item for item in apis.items() if item[1])
+    return dict(item for item in apis.items() if item[1])
 
 
 def list_msgs():
@@ -74,6 +73,6 @@ def list_msgs():
         for file in path.glob("srv/**/*.srv"):
             msg = InterfaceType(file)
             msgs[msg.name] = msg
-    for msg in msgs.values():
-        msg.refer(msgs)
-    return msgs
+    for msg in msgs.values(): msg.link_relations(msgs)
+    for msg in msgs.values(): msg.sort_relations()
+    return dict(sorted(msgs.items()))

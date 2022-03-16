@@ -38,6 +38,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   others/srv/OperationModeChange.srv
   others/msg/DrivingState.msg
   others/srv/DrivingEngage.srv
+  others/msg/DoorStatusArray.msg
+  others/msg/DoorStatus.msg
+  others/msg/DoorCommand.msg
+  others/srv/DoorOperate.srv
   DEPENDENCIES
     builtin_interfaces
     std_msgs

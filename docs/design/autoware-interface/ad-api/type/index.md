@@ -1,6 +1,9 @@
 # Type
 
 - [autoware_ad_api_msgs/msg/AutowareLauncherState](autoware_ad_api_msgs/msg/autoware_launcher_state.md)
+- [autoware_ad_api_msgs/msg/DoorCommand](autoware_ad_api_msgs/msg/door_command.md)
+- [autoware_ad_api_msgs/msg/DoorStatus](autoware_ad_api_msgs/msg/door_status.md)
+- [autoware_ad_api_msgs/msg/DoorStatusArray](autoware_ad_api_msgs/msg/door_status_array.md)
 - [autoware_ad_api_msgs/msg/DrivingState](autoware_ad_api_msgs/msg/driving_state.md)
 - [autoware_ad_api_msgs/msg/LaneletPrimitive](autoware_ad_api_msgs/msg/lanelet_primitive.md)
 - [autoware_ad_api_msgs/msg/LaneletRoute](autoware_ad_api_msgs/msg/lanelet_route.md)
@@ -13,6 +16,7 @@
 - [autoware_ad_api_msgs/msg/Route](autoware_ad_api_msgs/msg/route.md)
 - [autoware_ad_api_msgs/msg/RouteData](autoware_ad_api_msgs/msg/route_data.md)
 - [autoware_ad_api_msgs/srv/AutowareLauncherCommand](autoware_ad_api_msgs/srv/autoware_launcher_command.md)
+- [autoware_ad_api_msgs/srv/DoorOperate](autoware_ad_api_msgs/srv/door_operate.md)
 - [autoware_ad_api_msgs/srv/DrivingEngage](autoware_ad_api_msgs/srv/driving_engage.md)
 - [autoware_ad_api_msgs/srv/FetchAutowareVersion](autoware_ad_api_msgs/srv/fetch_autoware_version.md)
 - [autoware_ad_api_msgs/srv/GetAutowareVersion](autoware_ad_api_msgs/srv/get_autoware_version.md)

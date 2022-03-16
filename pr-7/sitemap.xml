@@ -151,12 +151,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/data/fail-safe-state/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/data/launcher-state/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/data/localization/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/data/moving-state/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/data/operation-mode/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/data/power-state/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -256,12 +276,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/list/version/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/list/vehicle-status/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/states/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/list/version/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -342,6 +362,11 @@
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/type/autoware_ad_api_msgs/msg/route_data/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interface/ad-api/type/autoware_ad_api_msgs/msg/route_state/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>

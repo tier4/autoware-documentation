@@ -27,7 +27,7 @@ def generate():
     args = parser.parse_args()
 
     base_path = Path(args.path)
-    list_path = Path(get_package_share_directory("autoware_interface_document")) / "resource" / "adapi.yaml"
+    list_path = Path(get_package_share_directory("autoware_interface_document")) / "resource" / "order.yaml"
     api_path = base_path / "list"
     msg_path = base_path / "type"
 

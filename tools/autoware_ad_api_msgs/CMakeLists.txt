@@ -24,7 +24,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   launcher/srv/GetAutowareVersion.srv
   launcher/srv/SetAutowareVersion.srv
   launcher/srv/FetchAutowareVersion.srv
-  # route/msg/RouteState.msg
+  route/msg/RouteState.msg
   route/srv/RouteClear.srv
   route/srv/RouteSet.srv
   route/msg/Route.msg

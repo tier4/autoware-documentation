@@ -23,7 +23,7 @@ from .type import InterfaceType
 
 def generate():
     parser = argparse.ArgumentParser()
-    parser.add_argument("path", default="docs/design/autoware-interface/ad-api", nargs="?")
+    parser.add_argument("path", default="docs/design/autoware-interfaces/ad-api", nargs="?")
     args = parser.parse_args()
 
     base_path = Path(args.path)

@@ -1,6 +1,0 @@
-collapse_single_pages: true
-nav:
-  - general
-  - prototyping
-  - AD API: ad-api
-  - Component: component

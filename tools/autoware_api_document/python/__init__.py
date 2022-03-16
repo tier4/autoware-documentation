@@ -22,7 +22,7 @@ from .markdown import MarkdownTable
 
 def generate():
     parser = argparse.ArgumentParser()
-    parser.add_argument('path', default='docs/design/autoware-interface/prototyping', nargs='?')
+    parser.add_argument('path', default='docs/design/autoware-interfaces/prototyping', nargs='?')
     args = parser.parse_args()
 
     target = pathlib.Path(args.path)

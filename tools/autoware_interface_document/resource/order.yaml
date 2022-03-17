@@ -14,5 +14,6 @@
 - /api/route/data
 - /api/route/lanelet/set
 - /api/route/lanelet/data
+- /api/vehicle/status
 - /api/door/status
 - /api/door/operate

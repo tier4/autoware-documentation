@@ -16,5 +16,6 @@
 - [/api/route/data](route-data.md)
 - [/api/route/lanelet/set](route-lanelet-set.md)
 - [/api/route/lanelet/data](route-lanelet-data.md)
+- [/api/vehicle/status](vehicle-status.md)
 - [/api/door/status](door-status.md)
 - [/api/door/operate](door-operate.md)

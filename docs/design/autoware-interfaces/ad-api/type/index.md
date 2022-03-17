@@ -16,6 +16,7 @@
 - [autoware_ad_api_msgs/msg/Route](autoware_ad_api_msgs/msg/route.md)
 - [autoware_ad_api_msgs/msg/RouteData](autoware_ad_api_msgs/msg/route_data.md)
 - [autoware_ad_api_msgs/msg/RouteState](autoware_ad_api_msgs/msg/route_state.md)
+- [autoware_ad_api_msgs/msg/VehicleStatus](autoware_ad_api_msgs/msg/vehicle_status.md)
 - [autoware_ad_api_msgs/srv/AutowareLauncherCommand](autoware_ad_api_msgs/srv/autoware_launcher_command.md)
 - [autoware_ad_api_msgs/srv/DoorOperate](autoware_ad_api_msgs/srv/door_operate.md)
 - [autoware_ad_api_msgs/srv/DrivingEngage](autoware_ad_api_msgs/srv/driving_engage.md)

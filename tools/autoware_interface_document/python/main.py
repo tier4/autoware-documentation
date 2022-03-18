@@ -33,13 +33,11 @@ def generate():
 
     msgs = list_msgs()
     for msg in msgs.values():
-        print(msg.name)
         msg.write(msg_path)
     InterfaceType.WriteIndex(msg_path, msgs.values())
 
     apis = list_apis(base_path, list_path)
     for api in apis.values():
-        print(api.name)
         api.rewrite()
     InterfaceName.WriteIndex(api_path, apis.values())
 

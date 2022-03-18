@@ -70,12 +70,12 @@ Function Call is a request-response communication and is used for processing tha
 Notification is used to process data that changes with some event, typically a callback. Streams handle continuously changing data.
 Reliable Stream expects all data to arrive without loss, Realtime Stream expects the latest data to arrive with low delay.
 
-| Communication Method | ROS 2 Interface                   | Optional Interface   |
-| -------------------- | --------------------------------- | -------------------- |
-| Function Call        | Service                           | HTTP                 |
-| Notification         | Topic (reliable, transient_local) | MQTT (QoS=2, retain) |
-| Reliable Stream      | Topic (reliable, volatile)        | MQTT (QoS=2)         |
-| Realtime Stream      | Topic (best_effort, volatile)     | MQTT (QoS=0)         |
+| Communication Method | ROS 2 Implementation              | Optional Implementation |
+| -------------------- | --------------------------------- | ----------------------- |
+| Function Call        | Service                           | HTTP                    |
+| Notification         | Topic (reliable, transient_local) | MQTT (QoS=2, retain)    |
+| Reliable Stream      | Topic (reliable, volatile)        | MQTT (QoS=2)            |
+| Realtime Stream      | Topic (best_effort, volatile)     | MQTT (QoS=0)            |
 
 These methods are provided as services or topics of ROS 2 since Autoware is developed using ROS 2 and mainly communicates with its packages.
 On the other hand, FMS and HMI are often implemented as web services, Autoware is also expected to communicate with applications that do not use ROS 2.
@@ -84,29 +84,39 @@ HTTP and MQTT are suggested as additional options for applications that do not u
 
 ### Naming Convention
 
-The name of the interface must be `/<component name>/api/<interface name>`,
+The name of the interface must be `/<component name>/api/<version>/<interface name>`,
 where `<component name>` is the name of the component. For an AD API component, omit this part and start with `/api`.
+The `<version>` is a major version with `v` such as `v1`.
 The `<interface name>` is an arbitrary string separated by slashes, and all parts except the last must be nouns.
 Note that this rule causes a restriction that the namespace `api` must not be used as a name other than AD API and Component Interface.
 
 The following are examples of correct interface names for AD API and Component Interface:
 
-- /api/autoware/state
-- /api/autoware/engage
-- /planning/api/route/change
-- /vehicle/api/status
+- /api/v1/autoware/state
+- /api/v1/autoware/engage
+- /planning/api/v1/route/change
+- /vehicle/api/v1/status
 
 The following are examples of incorrect interface names for AD API and Component Interface:
 
+- /api/autoware/state
 - /autoware/state
-- /api/engage/autoware
-- /planning/route/api
-- /vehicle/my_api/status
+- /api/v1/engage/autoware
+- /planning/route/api/v1
+- /vehicle/my_api/v1/status
 
 ### Logging
 
 If logging is needed, rosbag is available for topics, and use logger in rclcpp or rclpy for services.
 It is recommended to have wrappers for the service and client that logs when the method is called.
+
+### Enumeration
+
+列挙型で使用する定数には、ゼロやから文字列など型のデフォルト値を使用しないでください。
+これは値を設定を忘れた場合に意図しない動作を防ぎます。必要ならばデフォルト値として UNKNOWN を定義してください。
+
+列挙型の値を直接使用しないでください。数値の割り当てはバージョンの更新時に変更される可能性があります。
+数値の変更は定数変更は後方互換性が維持されるものとして扱われるため、minor バージョンの変更に留まります。
 
 ### Stream Frequency
 
@@ -122,6 +132,8 @@ Consider the following restrictions and describe if necessary:
 - execution order
 - concurrent execution
 - etc.
+
+## Interface and Data Structure
 
 ### Response Status
 
@@ -140,18 +152,6 @@ Function Call uses the following response code to handle the return value in gen
 | T.B.D. | T.B.D. | Forbidden    |
 | T.B.D. | T.B.D. | NotSupported |
 | T.B.D. | T.B.D. | Timeout      |
-
-## Interface and Data Structure
-
-See the following for AD API:
-
-- List
-- Type
-
-See the following for Component Interface:
-
-- List
-- Type
 
 ## Concern, Assumption, and Limitation
 

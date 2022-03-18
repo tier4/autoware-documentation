@@ -5,6 +5,7 @@
 - [autoware_ad_api_msgs/msg/DoorStatus](autoware_ad_api_msgs/msg/door_status.md)
 - [autoware_ad_api_msgs/msg/DoorStatusArray](autoware_ad_api_msgs/msg/door_status_array.md)
 - [autoware_ad_api_msgs/msg/DrivingState](autoware_ad_api_msgs/msg/driving_state.md)
+- [autoware_ad_api_msgs/msg/FailSafeState](autoware_ad_api_msgs/msg/fail_safe_state.md)
 - [autoware_ad_api_msgs/msg/LaneletPrimitive](autoware_ad_api_msgs/msg/lanelet_primitive.md)
 - [autoware_ad_api_msgs/msg/LaneletRoute](autoware_ad_api_msgs/msg/lanelet_route.md)
 - [autoware_ad_api_msgs/msg/LaneletRouteData](autoware_ad_api_msgs/msg/lanelet_route_data.md)

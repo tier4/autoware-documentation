@@ -1,9 +1,10 @@
 - /api/version
+- /api/autoware/launcher/state
+- /api/autoware/launcher/command
 - /api/autoware/version/current
 - /api/autoware/version/fetch
 - /api/autoware/version/change
-- /api/autoware/launcher/state
-- /api/autoware/launcher/command
+- /api/fail_safe/state
 - /api/driving/state
 - /api/driving/engage
 - /api/operation/mode/notice

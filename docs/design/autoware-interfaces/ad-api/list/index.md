@@ -1,11 +1,12 @@
 # List
 
 - [/api/version](version.md)
+- [/api/autoware/launcher/state](autoware-launcher-state.md)
+- [/api/autoware/launcher/command](autoware-launcher-command.md)
 - [/api/autoware/version/current](autoware-version-current.md)
 - [/api/autoware/version/fetch](autoware-version-fetch.md)
 - [/api/autoware/version/change](autoware-version-change.md)
-- [/api/autoware/launcher/state](autoware-launcher-state.md)
-- [/api/autoware/launcher/command](autoware-launcher-command.md)
+- [/api/fail_safe/state](fail_safe-state.md)
 - [/api/driving/state](driving-state.md)
 - [/api/driving/engage](driving-engage.md)
 - [/api/operation/mode/notice](operation-mode-notice.md)

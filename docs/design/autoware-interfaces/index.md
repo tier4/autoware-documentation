@@ -8,15 +8,15 @@ Autoware defines two categories of interfaces. The first one is Autoware AD API 
 
 - Applications can operate multiple and various vehicles in a common way.
 
-  ![unified-access](./images/unified-access.drawio.svg)
+  ![unified-access](./general/unified-access.drawio.svg)
 
 - Applications are not affected by version updates and implementation changes.
 
-  ![absorb-changes](./images/absorb-changes.drawio.svg)
+  ![absorb-changes](./general/absorb-changes.drawio.svg)
 
 - Developers only need to know the interface to add new features and hardware.
 
-  ![new-feature](./images/new-feature.drawio.svg)
+  ![new-feature](./general/new-feature.drawio.svg)
 
 ## Requirements
 
@@ -43,7 +43,7 @@ AD API implementation is also a component.
 Since the functional elements required for AD API are defined as Component Interface, other components do not need to consider AD API directly.
 Tools for evaluation and debugging, such as simulators, access both AD API and Component Interface.
 
-![architecture](./images/architecture.drawio.svg)
+![architecture](./general/architecture.drawio.svg)
 
 Component Interface has a hierarchical specification.
 The top-level architecture consists of some components. Each component has some options of the next-level architecture.
@@ -54,7 +54,7 @@ A sub-component can be combined with others that adopt the same architecture.
 Third parties can define and publish their own architecture and interface for open source development.
 It is desirable to propose them for standardization if they are sufficiently evaluated.
 
-![component](./images/hierarchy.drawio.svg)
+![component](./general/hierarchy.drawio.svg)
 
 ## Features
 

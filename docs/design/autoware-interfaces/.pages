@@ -1,6 +1,6 @@
 collapse_single_pages: true
 nav:
-  - General: general
+  - index.md
   - Prototyping: prototyping
   - AD API: ad-api
   - Component: component

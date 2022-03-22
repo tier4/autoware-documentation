@@ -14,8 +14,8 @@ Get the vehicle status.
 | pose            | Pose  | 位置、角度 (RPY の方が良いかも) |
 | velocity        | Twist | 速度、角速度                    |
 | acceleration    | Twist | 加速度、角加速度                |
+| gear            | Enum  | ギア                            |
 | turn_indicators | Enum  | ウィンカー                      |
 | hazard_lights   | Enum  | ハザード                        |
-| gear            | Enum  | ギア                            |
 | fuel_remaining  | float | 燃料（残量）                    |
 | fuel_capacity   | float | 燃料（最大）                    |

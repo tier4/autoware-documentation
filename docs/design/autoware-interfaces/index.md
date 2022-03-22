@@ -58,7 +58,7 @@ It is desirable to propose them for standardization if they are sufficiently eva
 
 ## Features
 
-This section describes the features common to all interfaces in Autoware. See the following for each interface.
+This section describes common features for all interfaces in Autoware. See the following for each interface.
 
 - Features of AD API
 - Features of Component Interface
@@ -70,24 +70,25 @@ Function Call is a request-response communication and is used for processing tha
 Notification is used to process data that changes with some event, typically a callback. Streams handle continuously changing data.
 Reliable Stream expects all data to arrive without loss, Realtime Stream expects the latest data to arrive with low delay.
 
-| Communication Method | ROS 2 Implementation              | Optional Implementation |
+| Communication Method | ROS Implementation                | Optional Implementation |
 | -------------------- | --------------------------------- | ----------------------- |
 | Function Call        | Service                           | HTTP                    |
 | Notification         | Topic (reliable, transient_local) | MQTT (QoS=2, retain)    |
 | Reliable Stream      | Topic (reliable, volatile)        | MQTT (QoS=2)            |
 | Realtime Stream      | Topic (best_effort, volatile)     | MQTT (QoS=0)            |
 
-These methods are provided as services or topics of ROS 2 since Autoware is developed using ROS 2 and mainly communicates with its packages.
-On the other hand, FMS and HMI are often implemented as web services, Autoware is also expected to communicate with applications that do not use ROS 2.
+These methods are provided as services or topics of ROS since Autoware is developed using ROS and mainly communicates with its packages.
+On the other hand, FMS and HMI are often implemented without ROS, Autoware is also expected to communicate with applications that do not use ROS.
 It is wasteful for each of these applications to have an adapter for Autoware, and a more suitable means of communication is required.
-HTTP and MQTT are suggested as additional options for applications that do not use ROS 2 because these protocols are widely used and can substitute the behavior of services and topics. In that case, text formats such as JSON, where field names are repeated in an array of objects, are inefficient and it is necessary to consider the serialization method.
+HTTP and MQTT are suggested as additional options because these protocols are widely used and can substitute the behavior of services and topics.
+In that case, text formats such as JSON, where field names are repeated in an array of objects, are inefficient and it is necessary to consider the serialization.
 
 ### Naming Convention
 
 The name of the interface must be `/<component name>/api/<version>/<interface name>`,
 where `<component name>` is the name of the component. For an AD API component, omit this part and start with `/api`.
-The `<version>` is a major version with `v` such as `v1`.
-The `<interface name>` is an arbitrary string separated by slashes, and all parts except the last must be nouns.
+The `<version>` is a major version with `v` such as `v1`. This can provide older interfaces for backward compatibility.
+The `<interface name>` is an arbitrary string separated by slashes.
 Note that this rule causes a restriction that the namespace `api` must not be used as a name other than AD API and Component Interface.
 
 The following are examples of correct interface names for AD API and Component Interface:
@@ -107,51 +108,66 @@ The following are examples of incorrect interface names for AD API and Component
 
 ### Logging
 
+It is recommended to log the interface for analysis of vehicle behavior.
 If logging is needed, rosbag is available for topics, and use logger in rclcpp or rclpy for services.
-It is recommended to have wrappers for the service and client that logs when the method is called.
+Typically, create a wrapper for services and clients that logs when a method is called.
 
-### Enumeration
+### Constants and Enumeration
 
 列挙型で使用する定数には、ゼロやから文字列など型のデフォルト値を使用しないでください。
 これは値を設定を忘れた場合に意図しない動作を防ぎます。必要ならばデフォルト値として UNKNOWN を定義してください。
 
 列挙型の値を直接使用しないでください。数値の割り当てはバージョンの更新時に変更される可能性があります。
-数値の変更は定数変更は後方互換性が維持されるものとして扱われるため、minor バージョンの変更に留まります。
-
-### Stream Frequency
-
-Set the recommended and minimum frequency for Stream. The minimum frequency is used for diagnostics.
+数値の変更は後方互換性が維持されるものとして扱います。つまり、minor バージョンの変更に留まります。
 
 ### Restrictions
 
-Consider the following restrictions and describe if necessary:
+For each API, consider the restrictions such as following and describe them if necessary.
+
+Services:
 
 - response time
 - pre-condition
 - post-condition
 - execution order
 - concurrent execution
-- etc.
 
-## Interface and Data Structure
+Topics:
+
+- recommended delay range
+- maximum delay
+- recommended frequency range
+- minimum frequency
+- default frequency
+
+## Data Structure
+
+This section describes common data structure for all interfaces in Autoware. See the following for each interface.
+
+- Data Structure of AD API
+- Data Structure of Component Interface
+
+### Request Header
+
+T.B.D. (現段階では必須のデータなし)
 
 ### Response Status
 
 Function Call uses the following response code to handle the return value in general.
 
-| Group  | Code   | Description  |
-| ------ | ------ | ------------ |
-| 0x0000 | 0x0000 | Unknown      |
-| 0x1000 | -      | OK           |
-| 0x1000 | 0x1001 | Success      |
-| 0x1000 | 0x1002 | Accepted     |
-| 0x1000 | 0x1003 | NoEffect     |
-| T.B.D. | T.B.D. | Unavailable  |
-| T.B.D. | T.B.D. | Warning      |
-| T.B.D. | T.B.D. | Error        |
-| T.B.D. | T.B.D. | Forbidden    |
-| T.B.D. | T.B.D. | NotSupported |
-| T.B.D. | T.B.D. | Timeout      |
+| Group  | Code   | Description   |
+| ------ | ------ | ------------- |
+| 0x0000 | 0x0000 | UNKNOWN       |
+| 0x1000 | -      | OK            |
+| 0x1000 | 0x1001 | SUCCESS       |
+| 0x1000 | 0x1002 | ACCEPTED      |
+| 0x1000 | 0x1003 | NO_EFFECT     |
+| T.B.D. | T.B.D. | UNAVAILABLE   |
+| T.B.D. | T.B.D. | WARNING       |
+| T.B.D. | T.B.D. | ERROR         |
+| T.B.D. | T.B.D. | FORBIDDEN     |
+| T.B.D. | T.B.D. | NOT_SUPPORTED |
+| T.B.D. | T.B.D. | TIMEOUT       |
 
 ## Concern, Assumption, and Limitation
 

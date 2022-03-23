@@ -39,6 +39,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   others/msg/FailSafeState.msg
   others/msg/DrivingState.msg
   others/srv/DrivingEngage.srv
+  others/srv/DrivingPause.srv
   others/msg/VehicleStatus.msg
   others/msg/DoorStatusArray.msg
   others/msg/DoorStatus.msg

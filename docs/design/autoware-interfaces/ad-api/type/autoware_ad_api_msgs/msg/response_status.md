@@ -16,6 +16,7 @@ autoware_ad_api_msgs/ResponseStatusDetail[] details
 - [autoware_ad_api_msgs/srv/AutowareLauncherCommand](../../autoware_ad_api_msgs/srv/autoware_launcher_command.md)
 - [autoware_ad_api_msgs/srv/DoorOperate](../../autoware_ad_api_msgs/srv/door_operate.md)
 - [autoware_ad_api_msgs/srv/DrivingEngage](../../autoware_ad_api_msgs/srv/driving_engage.md)
+- [autoware_ad_api_msgs/srv/DrivingPause](../../autoware_ad_api_msgs/srv/driving_pause.md)
 - [autoware_ad_api_msgs/srv/FetchAutowareVersion](../../autoware_ad_api_msgs/srv/fetch_autoware_version.md)
 - [autoware_ad_api_msgs/srv/GetAutowareVersion](../../autoware_ad_api_msgs/srv/get_autoware_version.md)
 - [autoware_ad_api_msgs/srv/GetInterfaceVersion](../../autoware_ad_api_msgs/srv/get_interface_version.md)

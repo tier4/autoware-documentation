@@ -1,4 +1,4 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="441px" height="121px" viewBox="-0.5 -0.5 441 121" content="&lt;mxfile&gt;&lt;diagram id=&quot;tcMfOnotJW8KoQyYVokG&quot; name=&quot;Page-1&quot;&gt;zZbbjtowEIafhvucloZLFgJdqa0QSK16aSUmcdfJRI45pE9fm4wTh+xu2QNiQQL79/gwvz/HGfmz/LgUpMy+Q0L5yHOS48ifjzwvvHPUrxbqRvDHk0ZIBUsaye2EDftLUcR+6Y4ltOoFSgAuWdkXYygKGsueRoSAQz9sC7w/a0lSOhA2MeFD9RdLZIaqa9LQDV8pSzOcOvS+NA05McGYSZWRBA6W5EcjfyYAZFPKjzPKtXfGl6bf4pnWdmGCFvKSDgGuuJK1SY4mKlesFlCov/tM5lzVXFUcToBzVrATsfFnjJtCREpNGM6kh7c64rKWFHIqRa0CBOVEsn3faoI7lrZxXVKqgHk9YwquZk/4DkcdJK32odRF1VNBdJbzlnE+Aw7iFOs7p4/WoZAIpxti3Yrbnj5Kr6SAR2q1LBz9fcnNPRWSHl/0CVsDJKnuVw8dl0bKLCKN9h5fn7DRZgeEzCCFgvCoU+8F7IqE6hF0/l3MN4AS7f5DpazRV7KT0N+MSkElp/oQKyHmpKpYbOQF46/jdDLk1MTdgNPJgNPVOlpN1w8/lgOnOx91toeMSbopySmxg3rmXnhoL8fM9f7LWRvy0aAF4zeAZqXfZ+4iMtprxSIjuPtoMk5dFcuktgJKYIWsrJFXWrAO/NlOuIFzZmYzYmdtu7TLjrVho8NwHU3nv2+OoD++IYLhu591r71EDW7XvUTfhKAbXhdBk7qF4Hz98PMzPAfP79uWuCtQqKrdm2BjY/c67Uf/AA==&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="441px" height="201px" viewBox="-0.5 -0.5 441 201" content="&lt;mxfile&gt;&lt;diagram id=&quot;tcMfOnotJW8KoQyYVokG&quot; name=&quot;Page-1&quot;&gt;xVfbspowFP0aZ9qXDhex+niOt56ZtuPoTHvOYwpR0kbChCDSr28COxAEFce24oPJysplr6xswsCd7o9LjuLwCwswHThWcBy4s4Hj2JY3kn8KyUvEHU1KYMdJAKQa2JDfWPcENCUBThpEwRgVJG6CPosi7IsGhjhnWZO2ZbQ5a4x2uAVsfETb6HcSiBBQW4ehGj5hsgth6rHzsWzYI02GSJIQBSwzIHc+cKecMVGW9scppko8rUvZb3GmtVoYx5Ho02EIK05EroPDgYwVqhGL5N9zKPZU1mxZbE8AcyYs5b7WB/ZXIL7DmgYzqeGNjrCsJWZ7LHguCRxTJMihKTWCHdtVvDooWYC4zogCqzkgmsKoraDlPsSqKHtKE53EvCWUThllvOC6VvEonEUCzGmPoW7wtsUj8URw9gsbLQtL/S6pecBc4ONFnaB1CE7Km9Ws9qWGQsORGrtH1w4ZTe8wLkK2YxGi8xp95iyNAqxGUPHXnM+MxSD3TyxEDrqiVLDmZiTSVOJJHWIJ+BQlCfE1vCD0Np9O2j7VvAf4dNLy6Wo9Xz2tX74uW0rXOqpos5AIvIlREVgmk27PQ9vfZrZz1WcV5W8bzbucpLqNZoTf9Fzn9l61SvWeMaziWd2S9XZG0VV6GeUGIWYkEokx8koBxoE/2QnbPknxt/FloVxBvRVVKP3SgPZSbdv1/Gn29nDLuqPHWVZPfUduNMSQGvD8VeEfPF19M9tmR+hU1vK7rO5Z597e/9vq9vg2q1/h3211rYxh9dn65VtXfk4ysqeouD0VryZ4nw2rewNQ9Yinru7Ypd65uaobTq8Og+n0iniX1Z2WKDFKE+ljx3r3Q17L39+XCU5uX1tP/dq3rfLpum2Niqc6DlekPpfUz2g9+ndJRVbrD4HSrfXnlDv/Aw==&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
         <path d="M 40 20 L 73.63 20" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
@@ -24,8 +24,8 @@
                 </text>
             </switch>
         </g>
-        <path d="M 380 40 L 380 100 L 326.37 100" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 321.12 100 L 328.12 96.5 L 326.37 100 L 328.12 103.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 380 40 L 380 70 L 380 73.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 380 78.88 L 376.5 71.88 L 380 73.63 L 383.5 71.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
         <rect x="320" y="0" width="120" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
@@ -43,22 +43,30 @@
                 </text>
             </switch>
         </g>
-        <path d="M 200 100 L 140 100 L 140 46.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 140 80 L 140 70 L 140 46.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
         <path d="M 140 41.12 L 143.5 48.12 L 140 46.37 L 136.5 48.12 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="200" y="80" width="120" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 80 120 L 80 80 L 440 80 L 440 120" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 80 120 L 80 200 L 440 200 L 440 120" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 80 120 L 440 120" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="259.5" y="104.5">
+                DRIVING
+            </text>
+        </g>
+        <rect x="200" y="140" width="120" height="40" rx="6" ry="6" fill="#f5f5f5" stroke="#666666" pointer-events="none"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 100px; margin-left: 201px;">
-                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                DRIVING
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 160px; margin-left: 201px;">
+                        <div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                paused (bool)
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="260" y="104" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    DRIVING
+                <text x="260" y="164" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    paused (bool)
                 </text>
             </switch>
         </g>

@@ -1,4 +1,7 @@
 nav:
   - index.md
+  - autoware-concepts
   - autoware-interfaces
+  - autoware-interface
   - configuration-management
+  - node-diagram

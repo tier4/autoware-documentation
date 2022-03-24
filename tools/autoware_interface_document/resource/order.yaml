@@ -5,6 +5,7 @@
 - /api/autoware/version/fetch
 - /api/autoware/version/change
 - /api/fail_safe/state
+- /api/fail_safe/external/stop
 - /api/driving/state
 - /api/driving/engage
 - /api/driving/pause

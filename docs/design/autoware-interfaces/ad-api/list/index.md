@@ -7,6 +7,7 @@
 - [/api/autoware/version/fetch](autoware-version-fetch.md)
 - [/api/autoware/version/change](autoware-version-change.md)
 - [/api/fail_safe/state](fail_safe-state.md)
+- [/api/fail_safe/external/stop](fail_safe-external-stop.md)
 - [/api/driving/state](driving-state.md)
 - [/api/driving/engage](driving-engage.md)
 - [/api/driving/pause](driving-pause.md)

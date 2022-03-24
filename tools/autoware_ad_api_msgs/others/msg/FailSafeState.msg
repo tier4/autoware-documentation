@@ -6,4 +6,5 @@ uint32 MRM_SUCCEEDED = 4
 uint32 MRM_FAILED = 5
 
 uint32 state
-bool recoverable
+bool auto_recovery
+bool external_stop

@@ -58,11 +58,6 @@ It is desirable to propose them for standardization if they are sufficiently eva
 
 ## Features
 
-This section describes common features for all interfaces in Autoware. See the following for each interface.
-
-- Features of AD API
-- Features of Component Interface
-
 ### Communication Method
 
 As shown in the table below, interfaces are classified into four communication methods to define their behavior.
@@ -81,7 +76,7 @@ These methods are provided as services or topics of ROS since Autoware is develo
 On the other hand, FMS and HMI are often implemented without ROS, Autoware is also expected to communicate with applications that do not use ROS.
 It is wasteful for each of these applications to have an adapter for Autoware, and a more suitable means of communication is required.
 HTTP and MQTT are suggested as additional options because these protocols are widely used and can substitute the behavior of services and topics.
-In that case, text formats such as JSON, where field names are repeated in an array of objects, are inefficient and it is necessary to consider the serialization.
+In that case, text formats such as JSON where field names are repeated in an array of objects, are inefficient and it is necessary to consider the serialization.
 
 ### Naming Convention
 
@@ -113,11 +108,14 @@ Typically, create a wrapper for services and clients that logs when a method is 
 
 ### Constants and Enumeration
 
-列挙型で使用する定数には、ゼロやから文字列など型のデフォルト値を使用しないでください。
-これは値を設定を忘れた場合に意図しない動作を防ぎます。必要ならばデフォルト値として UNKNOWN を定義してください。
+定数を定義する場合、用途を明らかにするために対象となる変数と用途をコメントで明記してください。
+また、現状 ROS にはデータ型として列挙型を表現する方法が無いため、列挙型も同様にコメントを記載します。
+同一のデータ型内に複数の列挙型が含まれる場合、混同を判別出来るよう、被らない数値を選択してください。
 
-列挙型の値を直接使用しないでください。数値の割り当てはバージョンの更新時に変更される可能性があります。
-数値の変更は後方互換性が維持されるものとして扱います。つまり、minor バージョンの変更に留まります。
+列挙型で使用する定数には、ゼロや空文字列など型のデフォルト値を使用しないでください。
+変数を設定し忘れた場合に定義外の値として異常を検出し、意図しない動作を防ぎます。
+未受信状態の判定などデフォルトとの比較が必要になる場合は UNKNOWN として定義してください。
+また、列挙型の値を直接使用しないでください。数値の割り当てはバージョンの更新時に変更される可能性があります。
 
 ### Restrictions
 
@@ -141,10 +139,11 @@ Topics:
 
 ## Data Structure
 
-This section describes common data structure for all interfaces in Autoware. See the following for each interface.
+### Data Type Definition
 
-- Data Structure of AD API
-- Data Structure of Component Interface
+AD API では、必然的に同じ型になる場合を除き、型を共有しないでください。片方の API で型の変更が必要になった時に、別の API に影響するのを防ぎます。
+また Component Interface の型を AD API に流用することも避けてください。内部の実装が変わった時に AD API の型も変更されてしまうためです。
+この場合、AD API の型を Component Interface で使用するか、全く同じ型を作成し、内容をコピーする変換を入れることで対応します。
 
 ### Request Header
 
@@ -152,21 +151,47 @@ T.B.D. (現段階では必須のデータなし)
 
 ### Response Status
 
-Function Call uses the following response code to handle the return value in general.
+通信方式として Function Call を使用するインターフェースについて、エラーフォーマットを統一するために共通の response status を使用します。
+各インターフェースは以下に示す ResponseStatus 型のデータを status という名称でレスポンスに含めてください。
+フィールド `status.summary.code` がインターフェースの実行結果で、呼び出し元はこの値に従って処理を分岐させなければなりません。
+逆に、それ以外のデータは人間のユーザーに向けたものであり、プログラムが直接利用するべきではありません。
+これらのデータは主に、前提となる条件を人間のユーザーに向けて案内したり、開発者にエラーの原因を問い合わせるための情報として利用されます。
 
-| Group  | Code   | Description   |
-| ------ | ------ | ------------- |
-| 0x0000 | 0x0000 | UNKNOWN       |
-| 0x1000 | -      | OK            |
-| 0x1000 | 0x1001 | SUCCESS       |
-| 0x1000 | 0x1002 | ACCEPTED      |
-| 0x1000 | 0x1003 | NO_EFFECT     |
-| T.B.D. | T.B.D. | UNAVAILABLE   |
-| T.B.D. | T.B.D. | WARNING       |
-| T.B.D. | T.B.D. | ERROR         |
-| T.B.D. | T.B.D. | FORBIDDEN     |
-| T.B.D. | T.B.D. | NOT_SUPPORTED |
-| T.B.D. | T.B.D. | TIMEOUT       |
+フィールド `details` の典型期な使用方法は、インターフェースが内部で別のインターフェースを呼び出しているケースです。
+例えば内部で２つのインターフェースを利用していた場合、それぞれの response status を `details` に格納し、
+それらのマージ結果を`summary` に設定することでユーザーはどのコンポーネントでエラーが発生していたかを知ることができます。
+
+- ResponseStatus
+
+  | Name    | Type                       | Description                      |
+  | ------- | -------------------------- | -------------------------------- |
+  | summary | ResponseStatusDetail       | 最終的なステータス               |
+  | details | ResponseStatusDetail Array | 部分的なステータスについての詳細 |
+
+- ResponseStatusDetail
+
+  | Name        | Type   | Description                                  |
+  | ----------- | ------ | -------------------------------------------- |
+  | code        | uint32 | ステータスコード                             |
+  | component   | string | エラーを出したコンポーネント                 |
+  | message     | string | エラーメッセージ                             |
+  | description | string | エラーに関する詳細な情報、または情報への参照 |
+
+- ResponseStatusCode
+
+  | Group  | Code   | Description   |
+  | ------ | ------ | ------------- |
+  | 0x0000 | 0x0000 | UNKNOWN       |
+  | 0x1000 | 0x1000 | OK            |
+  | 0x1000 | 0x1001 | SUCCESS       |
+  | 0x1000 | 0x1002 | ACCEPTED      |
+  | 0x1000 | 0x1003 | NO_EFFECT     |
+  | T.B.D. | T.B.D. | UNAVAILABLE   |
+  | T.B.D. | T.B.D. | WARNING       |
+  | T.B.D. | T.B.D. | ERROR         |
+  | T.B.D. | T.B.D. | FORBIDDEN     |
+  | T.B.D. | T.B.D. | NOT_SUPPORTED |
+  | T.B.D. | T.B.D. | TIMEOUT       |
 
 ## Concern, Assumption, and Limitation
 

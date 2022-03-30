@@ -1,4 +1,4 @@
-# Component interface
+# Component interfaces
 
 !!! warning
 

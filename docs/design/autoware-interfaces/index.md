@@ -22,6 +22,12 @@ Autoware defines two categories of interfaces. The first one is Autoware AD API 
 
 Goals:
 
+- AD API provides functionality to create the following applications:
+  - 車両に指定の経路を周回させる、または、要求に応じて車両を走行させる。
+  - 発車や停止など車両の挙動に対する操作を行う。
+  - 車両の走行に関する情報を乗客や乗員、周囲に通知する。
+  - 車両に搭載されているドアなどのデバイスを操作する。
+  - 車両の監視、もしくは手動での操作を行う。
 - AD API provides stable and long-term specifications. This enables unified access to all vehicles.
 - AD API hides differences in version and implementation and absorbs the impact of changes.
 - AD API has a default implementation and can be applied to some simple ODDs with options.

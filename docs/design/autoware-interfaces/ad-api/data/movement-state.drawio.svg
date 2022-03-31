@@ -1,4 +1,4 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="441px" height="121px" viewBox="-0.5 -0.5 441 121" content="&lt;mxfile&gt;&lt;diagram id=&quot;tcMfOnotJW8KoQyYVokG&quot; name=&quot;Page-1&quot;&gt;zVfBlpowFP0a9yLi6LLj6HTRWbnoOgeekDbwOCGo9OubwAsE0Rltp1g8R5KbF5J3733hMPHX6elVsjx5wwjEZDaNThP/ZTKbLYOp/jdA1QD+YtUAseRRA3kdsOO/gECaF5c8gqIXqBCF4nkfDDHLIFQ9jEmJx37YHkV/1ZzFMAB2IRND9DuPVEKoZ9MwA1+BxwktvZw9NQMps8GUSZGwCI8O5G8m/loiqqaVntYgDHeWl2be9spouzEJmbplwpx2XKjKJgeRzpW6GWb69pyoVOiep5vDBWjNAksZWn4WJAqTMdgwWsk83plI23oFTEHJSgdIEEzxQ59qRorFbVyXlG5QXldIod0cmCjpqYOktQ65aeqZ2kRnOe+5EGsUKOtYf1pfBsdMkTm9JfWduH19abxQEn+CM7Kdmt97bB5AKji9yxONzslJVb977HxpocRxpMX+htcLNLreQakSjDFjYtOhzxLLLALzBJN/F/MNMSe6f4BSFfHKSoV9MQptKvXFFLEGQsGKgocW3nJxn09XQ5/auAf4dDXw6U5hnmu2znnuWDS5HhOuYJezOq2jPnFvLNnbTebNPnRZG/LZNguCPzqizvT70Avti8TxQjAfSfpWEVd6bWiexQ/X3l88UPunUbSfB9feVyNobxd3tH+BEARI9l/of177bX8UAyzuNMBdr4d7fdKcB32fNPKN4JNgOUotXMpxtFqwizu18IaHT6qCgeUvcHHzKfgvq0B3uy+Aesz5jPI3vwE=&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="441px" height="121px" viewBox="-0.5 -0.5 441 121" content="&lt;mxfile&gt;&lt;diagram id=&quot;tcMfOnotJW8KoQyYVokG&quot; name=&quot;Page-1&quot;&gt;zVddc6IwFP01vguI1Uer6O5Mu+3Uzu5zBiJkN3KZEET3128CNxCkH3a2VuGB5OSG5J5zbhgG3ny7XwmSJfcQUT5wh9F+4C0GrusM/bF6aORQI954WgOxYBEGtcCa/aVmJqIFi2jeCZQAXLKsC4aQpjSUHYwIAWU3bAO8u2pGYtoD1iHhffQXi2SCqGPS0APfKIsTXHri3tQDW2KCMZM8IRGUFuQFA28uAGTd2u7nlGvyDC/1vOUro83GBE3lKRNGuONcHkxyNFK5YjeFVD1uE7nlqueoZn8BXDOHQoSGH9RXEhFTE4Yr6ddbE3FbKwpbKsVBBQjKiWS7LtUEFYubuDYp1cC8XiEFd7MjvMC39pJWOmS6qWYqEx3lvGGcz4GDqGK9YXVpHFKJ5nQm2LfiNtWl8FwK+EOtkeVQ32+xuaNC0v2bPOHoCJ106HbL1pcGSixHGux/eH2BRts7IGQCMaSEBy16K6BII6rfoPNvY+4AMqT7N5XygLySQkJXjFyZSs50ESsg5CTPWWjgJeMf8+m071MTdwGfTns+XT8/PD4Gix7PLYs61zJhkq4zUqVVqiP3xJI93WSO+67LmpDPtpnvn+OIar4blvT+6FLSN4rY0s+enr//WF1ce298Qe1vzqH9yL+mz5PZjaX9IpgHd8HT7Cr0P679pv8lBhh/0ACf+Xkw54HtE6PW1/vEn5yjFl7K8XK1YHZj1cL9w89rqILjU/CcVaC67R9ANWb9R3nBPw==&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
         <path d="M 40 20 L 73.63 20" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
@@ -14,13 +14,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 20px; margin-left: 81px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Stopped
+                                STOPPED
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="140" y="24" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Stopped
+                    STOPPED
                 </text>
             </switch>
         </g>
@@ -33,13 +33,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 20px; margin-left: 321px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Starting
+                                STARTING
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="380" y="24" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Starting
+                    STARTING
                 </text>
             </switch>
         </g>
@@ -52,13 +52,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 100px; margin-left: 81px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Decelerating
+                                DECELERATING
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="140" y="104" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Decelerating
+                    DECELERATING
                 </text>
             </switch>
         </g>
@@ -74,13 +74,13 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 100px; margin-left: 321px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Moving
+                                MOVING
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="380" y="104" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Moving
+                    MOVING
                 </text>
             </switch>
         </g>

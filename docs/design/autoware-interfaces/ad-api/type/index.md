@@ -10,6 +10,7 @@
 - [autoware_ad_api_msgs/msg/LaneletRoute](autoware_ad_api_msgs/msg/lanelet_route.md)
 - [autoware_ad_api_msgs/msg/LaneletRouteData](autoware_ad_api_msgs/msg/lanelet_route_data.md)
 - [autoware_ad_api_msgs/msg/LaneletSegment](autoware_ad_api_msgs/msg/lanelet_segment.md)
+- [autoware_ad_api_msgs/msg/MovementState](autoware_ad_api_msgs/msg/movement_state.md)
 - [autoware_ad_api_msgs/msg/OperationMode](autoware_ad_api_msgs/msg/operation_mode.md)
 - [autoware_ad_api_msgs/msg/ResponseStatus](autoware_ad_api_msgs/msg/response_status.md)
 - [autoware_ad_api_msgs/msg/ResponseStatusCode](autoware_ad_api_msgs/msg/response_status_code.md)

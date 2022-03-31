@@ -11,6 +11,7 @@
 - [/api/driving/state](driving-state.md)
 - [/api/driving/engage](driving-engage.md)
 - [/api/driving/pause](driving-pause.md)
+- [/api/movement/state](movement-state.md)
 - [/api/operation/mode/notice](operation-mode-notice.md)
 - [/api/operation/mode/change](operation-mode-change.md)
 - [/api/route/state](route-state.md)

@@ -23,11 +23,11 @@ Autoware defines two categories of interfaces. The first one is Autoware AD API 
 Goals:
 
 - AD API provides functionality to create the following applications:
-  - 車両に指定の経路を周回させる、または、要求に応じて車両を走行させる。
-  - 発車や停止など車両の挙動に対する操作を行う。
-  - 車両の走行に関する情報を乗客や乗員、周囲に通知する。
-  - 車両に搭載されているドアなどのデバイスを操作する。
-  - 車両の監視、もしくは手動での操作を行う。
+  - Drive the vehicle on the route or drive to the requested positions in order.
+  - Operate vehicle behavior such as starting and stopping.
+  - Display or announce the vehicle status to operators, passengers, and people around.
+  - Control vehicle devices such as doors.
+  - Monitor the vehicle or drive it manually.
 - AD API provides stable and long-term specifications. This enables unified access to all vehicles.
 - AD API hides differences in version and implementation and absorbs the impact of changes.
 - AD API has a default implementation and can be applied to some simple ODDs with options.
@@ -112,17 +112,6 @@ It is recommended to log the interface for analysis of vehicle behavior.
 If logging is needed, rosbag is available for topics, and use logger in rclcpp or rclpy for services.
 Typically, create a wrapper for services and clients that logs when a method is called.
 
-### Constants and Enumeration
-
-定数を定義する場合、用途を明らかにするために対象となる変数と用途をコメントで明記してください。
-また、現状 ROS にはデータ型として列挙型を表現する方法が無いため、列挙型も同様にコメントを記載します。
-同一のデータ型内に複数の列挙型が含まれる場合、混同を判別出来るよう、被らない数値を選択してください。
-
-列挙型で使用する定数には、ゼロや空文字列など型のデフォルト値を使用しないでください。
-変数を設定し忘れた場合に定義外の値として異常を検出し、意図しない動作を防ぎます。
-未受信状態の判定などデフォルトとの比較が必要になる場合は UNKNOWN として定義してください。
-また、列挙型の値を直接使用しないでください。数値の割り当てはバージョンの更新時に変更される可能性があります。
-
 ### Restrictions
 
 For each API, consider the restrictions such as following and describe them if necessary.
@@ -147,48 +136,56 @@ Topics:
 
 ### Data Type Definition
 
-AD API では、必然的に同じ型になる場合を除き、型を共有しないでください。片方の API で型の変更が必要になった時に、別の API に影響するのを防ぎます。
-また Component Interface の型を AD API に流用することも避けてください。内部の実装が変わった時に AD API の型も変更されてしまうためです。
-この場合、AD API の型を Component Interface で使用するか、全く同じ型を作成し、内容をコピーする変換を入れることで対応します。
+Do not share the types in AD API unless they are obviously the same to avoid changes in one API affecting another.
+Also, implementation-dependent types, including Component Interface, should not be used in AD API for the same reason.
+Use the type in AD API in implementation, or create the same type and copy the data to convert the type.
+
+### Constants and Enumeration
+
+Since ROS don't support enumeration, use constants instead.
+The default value of type such as zero and empty string should not be used to detect that a variable is unassigned.
+Alternatively, assign it a dedicated name to indicate that it is undefined.
+If one type has multiple enumerations, comment on the correspondence between constants and variables.
+Assign unique values to all constants so that it can be distinguished from other enumerations.
+Do not use enumeration values directly, as assignments are subject to change when the version is updated.
 
 ### Time Stamp
 
-データにタイムスタンプを含める場合、その時刻が何を示しているのかを明確にしてください。
-特にデータを順に処理する場合には、元になったデータの時刻と更新時刻とを混同する可能性があり、場合によっては複数のタイムスタンプを持つ必要があります。
-また、ROS では時刻は transform にも使用されます。この場合はタイムスタンプの代わりに std_msgs/msg/Header を使用してください。
-ヘッダーについても対象について十分に検討し、特に transform の対象となるデータが複数ある場合は共通のヘッダーで問題ないか、また、別途時刻が必要ないかを確認してください。
+Clarify what the timestamp indicates. for example, send time, measurement time, update time, etc. Consider having multiple timestamps if necessary.
+Use `std_msgs/msg/Header` when using ROS transform.
+Also consider whether the header is common to all data, independent for each data, or additional timestamp is required.
 
 ### Request Header
 
-現状では必須のデータはありません。今後に必要が出てきた場合に記載します。
+Currently, there is no required header.
 
 ### Response Status
 
-通信方式として Function Call を使用するインターフェースについて、エラーフォーマットを統一するために共通の response status を使用します。
-各インターフェースは以下に示す ResponseStatus 型のデータを status という名称でレスポンスに含めてください。
-フィールド `status.summary.code` がインターフェースの実行結果で、呼び出し元はこの値に従って処理を分岐させなければなりません。
-逆に、それ以外のデータは人間のユーザーに向けたものであり、プログラムが直接利用するべきではありません。
-これらのデータは主に、前提となる条件を人間のユーザーに向けて案内したり、開発者にエラーの原因を問い合わせるための情報として利用されます。
+The interfaces whose communication method is Function Call use a common response status to unify the error format.
+For those interfaces, include the ResponseStatus shown below in the response with the name status.
+The data `status.summary.code` is the execution result of the interface, and the caller branches the process according to this value.
+Others are for the users and should not be used directly by the program.
+These data are primarily used to provide users with solution tips and to ask the developer for the cause of the error.
 
-フィールド `details` の典型期な使用方法は、インターフェースが内部で別のインターフェースを呼び出しているケースです。
-例えば内部で２つのインターフェースを利用していた場合、それぞれの response status を `details` に格納し、
-それらのマージ結果を`summary` に設定することでユーザーはどのコンポーネントでエラーが発生していたかを知ることができます。
+The typical use of the field `details` is when an interface calls other interfaces.
+That interface stores response statuses in `details`, then merges them and sets the result to `summary`.
+This allows the user to know which component was causing the error by checking `details`.
 
 - ResponseStatus
 
-  | Name    | Type                       | Description                      |
-  | ------- | -------------------------- | -------------------------------- |
-  | summary | ResponseStatusDetail       | 最終的なステータス               |
-  | details | ResponseStatusDetail Array | 部分的なステータスについての詳細 |
+  | Name    | Type                       | Description    |
+  | ------- | -------------------------- | -------------- |
+  | summary | ResponseStatusDetail       | status summary |
+  | details | ResponseStatusDetail Array | status details |
 
 - ResponseStatusDetail
 
-  | Name        | Type   | Description                                  |
-  | ----------- | ------ | -------------------------------------------- |
-  | code        | uint32 | ステータスコード                             |
-  | component   | string | エラーを出したコンポーネント                 |
-  | message     | string | エラーメッセージ                             |
-  | description | string | エラーに関する詳細な情報、または情報への参照 |
+  | Name        | Type   | Description                                                 |
+  | ----------- | ------ | ----------------------------------------------------------- |
+  | code        | uint32 | response status code                                        |
+  | component   | string | the component that caused the error                         |
+  | message     | string | error message                                               |
+  | description | string | error information such as detailed message and document URL |
 
 - ResponseStatusCode
 
@@ -203,13 +200,15 @@ AD API では、必然的に同じ型になる場合を除き、型を共有し�
   | T.B.D. | T.B.D. | WARNING       |
   | T.B.D. | T.B.D. | ERROR         |
   | T.B.D. | T.B.D. | FORBIDDEN     |
+  | T.B.D. | T.B.D. | BAD_REQUEST   |
   | T.B.D. | T.B.D. | NOT_SUPPORTED |
   | T.B.D. | T.B.D. | TIMEOUT       |
 
 ## Concern, Assumption, and Limitation
 
-- アプリケーションと AD API との互換性については、AD API が提供するバージョン情報を用いて判断します。
-  未知のバージョンであってもメジャーバージョン(1 以降)が一致している限りは利用可能として扱います。
-  また、各 Component Interface と AD API の互換性についてはバージョン管理システムを利用して維持されることを前提とします。
-- ROS のサービスはクライアント側でタイムアウトの設定が可能だが、サーバー側では処理が継続する可能性があります。
-  この場合、クライアントからタイムアウト後にサービスを再実行しても処理できないため、サーバー側でもタイムアウトに関する何らかの枠組みが必要になります。
+- The applications use the version information provided by AD API to check compatibility.
+  Unknown versions are also treated as available as long as the major versions match when it is 1 or later.
+  Compatibility between AD API and Component Interface is assumed to be maintained by the version management system.
+- If an unintended behavior of AD API is detected, the application should take appropriate action.
+  Autoware tries to keep working as long as possible, but it is not guaranteed to be safe.
+  Safety should be considered for the entire system, including the applications.

@@ -23,6 +23,8 @@ autoware_ad_api_msgs/ResponseStatusDetail[] details
 - [autoware_ad_api_msgs/srv/GetInterfaceVersion](../../autoware_ad_api_msgs/srv/get_interface_version.md)
 - [autoware_ad_api_msgs/srv/LaneletRouteSet](../../autoware_ad_api_msgs/srv/lanelet_route_set.md)
 - [autoware_ad_api_msgs/srv/OperationModeChange](../../autoware_ad_api_msgs/srv/operation_mode_change.md)
+- [autoware_ad_api_msgs/srv/PoseInitializationRequest](../../autoware_ad_api_msgs/srv/pose_initialization_request.md)
+- [autoware_ad_api_msgs/srv/PoseInitializationReset](../../autoware_ad_api_msgs/srv/pose_initialization_reset.md)
 - [autoware_ad_api_msgs/srv/RouteClear](../../autoware_ad_api_msgs/srv/route_clear.md)
 - [autoware_ad_api_msgs/srv/RouteSet](../../autoware_ad_api_msgs/srv/route_set.md)
 - [autoware_ad_api_msgs/srv/SetAutowareVersion](../../autoware_ad_api_msgs/srv/set_autoware_version.md)

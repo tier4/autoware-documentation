@@ -12,6 +12,9 @@
 - /api/movement/state
 - /api/operation/mode/notice
 - /api/operation/mode/change
+- /api/pose_initialization/state
+- /api/pose_initialization/reset
+- /api/pose_initialization/request
 - /api/route/state
 - /api/route/clear
 - /api/route/set

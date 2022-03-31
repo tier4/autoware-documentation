@@ -36,6 +36,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   route/msg/LaneletPrimitive.msg
   others/msg/OperationMode.msg
   others/srv/OperationModeChange.srv
+  others/msg/PoseInitializationState.msg
+  others/srv/PoseInitializationReset.srv
+  others/srv/PoseInitializationRequest.srv
   others/msg/FailSafeState.msg
   others/srv/FailSafeExternalStop.srv
   others/msg/DrivingState.msg

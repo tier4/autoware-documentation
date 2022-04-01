@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the recognition areas.
+Get the recognition objects.
 
 ## Message
 

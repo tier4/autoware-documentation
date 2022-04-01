@@ -10,6 +10,9 @@
 - /api/driving/engage
 - /api/driving/pause
 - /api/movement/state
+- /api/movement/factors
+- /api/recognition/areas
+- /api/recognition/objects
 - /api/operation/mode/notice
 - /api/operation/mode/change
 - /api/pose_initialization/state

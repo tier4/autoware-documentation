@@ -50,6 +50,13 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   others/msg/DoorCommand.msg
   others/srv/DoorOperate.srv
   others/msg/MovementState.msg
+  others/msg/MovementFactorArray.msg
+  others/msg/MovementFactor.msg
+  others/msg/RecognitionReference.msg
+  others/msg/RecognitionObjectArray.msg
+  others/msg/RecognitionAreaArray.msg
+  others/msg/RecognitionArea.msg
+  others/msg/RecognitionVector.msg
   DEPENDENCIES
     builtin_interfaces
     std_msgs

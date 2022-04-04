@@ -13,5 +13,10 @@
     "version": "pr-6",
     "title": "pr-6",
     "aliases": []
+  },
+  {
+    "version": "latest",
+    "title": "latest",
+    "aliases": []
   }
 ]

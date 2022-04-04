@@ -1202,6 +1202,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_3_3_5">
@@ -1346,6 +1348,20 @@
     <li class="md-nav__item">
       <a href="../power-state/" class="md-nav__link">
         Power State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        Requirements for Components
       </a>
     </li>
   
@@ -2488,7 +2504,10 @@
 
 
 <h1 id="pose-initialization-state">Pose Initialization State<a class="headerlink" href="#pose-initialization-state" title="Permanent link">#</a></h1>
-<p>自己位置の初期化に関する状態遷移。</p>
+<p>これは Autoware が自己位置の初期化や再初期化を受け付けているかを示す状態遷移で、自己位置推定機能の起動が完了すると使用可能になります。
+初期位置を受け付けている場合、初期化用のサービスの呼び出すか、GNSS などから初期位置が入力されると自己位置の初期化を開始します。
+初期化に成功したら以降は初期化の要求を受け付けなくなり、初期化に失敗した場合は初期位置の受け付け状態に戻ってやり直します。
+初期化が完了した後、再度初期化を行いたい場合はリセットを行い、初期位置の受け付け状態に戻してください。</p>
 <p><img alt="pose-initialization-state" src="../pose-initialization-state.drawio.svg" /></p>
 <table>
 <thead>
@@ -2500,15 +2519,15 @@
 <tbody>
 <tr>
 <td>WAITING</td>
-<td>自己位置の初期化が可能な状態。</td>
+<td>自己位置の初期化のために初期位置を受け付けている状態。</td>
 </tr>
 <tr>
 <td>INITIALIZING</td>
-<td>自己位置を初期化している状態。</td>
+<td>自己位置を初期化している途中で、初期位置を受け付けていない状態。</td>
 </tr>
 <tr>
 <td>REJECTING</td>
-<td>自己位置が初期化ができない状態。</td>
+<td>自己位置の初期化が完了しており、初期位置を受け付けていない状態。</td>
 </tr>
 </tbody>
 </table>

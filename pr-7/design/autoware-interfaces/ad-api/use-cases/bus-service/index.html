@@ -1200,8 +1200,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_5_3_3_5">
@@ -1336,20 +1334,6 @@
     <li class="md-nav__item">
       <a href="../../data/power-state/" class="md-nav__link">
         Power State
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/requirements/" class="md-nav__link">
-        Requirements for Components
       </a>
     </li>
   
@@ -2489,13 +2473,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#diagram" class="md-nav__link">
-    Diagram
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#scenario" class="md-nav__link">
     Scenario
   </a>
@@ -2530,23 +2507,37 @@
 <h1 id="use-case-of-bus-service">Use Case of Bus Service<a class="headerlink" href="#use-case-of-bus-service" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
 <p>This use case is a bus operation service that goes around the designated stops.</p>
-<h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">#</a></h2>
-<p><img alt="bus-service-remote-operation" src="../bus-service-remote.drawio.svg" /></p>
 <h2 id="scenario">Scenario<a class="headerlink" href="#scenario" title="Permanent link">#</a></h2>
 <ol>
-<li><a href="launch-autoware">Launch Autoware</a></li>
-<li>The maintenance staff sets the schedule for the application.</li>
-<li>The application sets the route to the first bus stop. (<a href="../../list/route-set/">/api/route/set</a>)</li>
-<li>The operator changes the operation mode to manual. (<a href="../list/operator-change">/api/operator/change</a>)</li>
-<li>The operator drives the vehicle to the entry position.</li>
-<li>The operator changes the operation mode to autonomous. (<a href="../list/operator-change">/api/operator/change</a>)</li>
-<li>The operator waits for the vehicle to be ready. (<a href="../list/driving-state">/api/driving/state</a>)</li>
-<li>The operator starts the vehicle. (<a href="../list/driving-engage">/api/driving/engage</a>)</li>
-<li>The application waits for the vehicle to arrive at bus stop. (<a href="../list/route-state">/api/route/state</a>)</li>
-<li>The application sets the route to the next bus stop. (<a href="../list/route-set">/api/route/set</a>)</li>
-<li>The operator controls the doors. (<a href="../list/door-operate">/api/door/operate</a>)</li>
-<li>The operator waits for the vehicle to be ready. (<a href="../list/driving-state">/api/driving/state</a>)</li>
-<li>The operator starts the vehicle. (<a href="../list/driving-engage">/api/driving/engage</a>)</li>
+<li>Startup the autonomous driving system.<ul>
+<li>Launch Autoware.</li>
+</ul>
+</li>
+<li>Drive the vehicle from the garage to the waiting position.<ul>
+<li>Drive the vehicle manually.</li>
+</ul>
+</li>
+<li>Drive the vehicle to the next bus stop.<ul>
+<li>Drive to the designated position.</li>
+</ul>
+</li>
+<li>Get on and off the vehicle.<ul>
+<li>Door operation.</li>
+</ul>
+</li>
+<li>Return to step 4 unless it's the last bus stop.</li>
+<li>Drive the vehicle to the waiting position.<ul>
+<li>Drive to the designated position.</li>
+</ul>
+</li>
+<li>Drive the vehicle from the waiting position to the garage.<ul>
+<li>Drive the vehicle manually.</li>
+</ul>
+</li>
+<li>Shutdown the autonomous driving system.<ul>
+<li>Launch Autoware.</li>
+</ul>
+</li>
 </ol>
 <h2 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">#</a></h2>
 <p>Currently, Autoware can only handle the route to next bus stop. This is suitable for on-demand driving where next bus stop changes dynamically, but it is inefficient on routes that do not change. Therefore, consider multiple routes. Also, consider how to specify the stop by name instead of pose.</p>
@@ -2584,13 +2575,13 @@
       
       
         
-        <a href="../launch-autoware/" class="md-footer__link md-footer__link--next" aria-label="Next: Use Case of Launch Autoware" rel="next">
+        <a href="../on-demand-service/" class="md-footer__link md-footer__link--next" aria-label="Next: Use Case of Bus Service" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Use Case of Launch Autoware
+              Use Case of Bus Service
             </div>
           </div>
           <div class="md-footer__button md-icon">

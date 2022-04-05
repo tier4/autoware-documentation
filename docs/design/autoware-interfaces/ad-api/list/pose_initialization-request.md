@@ -9,9 +9,9 @@ Request the pose initialization based on the specified pose. This API changes th
 
 ## Request
 
-| Name  | Type                                        | Description  |
-| ----- | ------------------------------------------- | ------------ |
-| state | geometry_msgs/msg/PoseWithCovarianceStamped | initial pose |
+| Name | Type                                        | Description  |
+| ---- | ------------------------------------------- | ------------ |
+| pose | geometry_msgs/msg/PoseWithCovarianceStamped | initial pose |
 
 ## Response
 

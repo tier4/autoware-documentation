@@ -1,26 +1,23 @@
-# Route State
+# Route
 
-## Route Main State
+## Related API
+
+- [/api/v1/route/state](../list/route-state.md)
+- [/api/v1/route/clear](../list/route-clear.md)
+- [/api/v1/route/set](../list/route-set.md)
+- [/api/v1/route/data](../list/route-data.md)
+- [/api/v1/route/lanelet/set](../list/route-lanelet-set.md)
+- [/api/v1/route/lanelet/data](../list/route-lanelet-data.md)
+
+## Route State
 
 ルートに関する状態遷移。目的地へのルートが設定されているかを管理する。
 
-![route-main-state](./route-main-state.drawio.svg)
+![route-state](./route-state.drawio.svg)
 
 | State    | Description                                        |
 | -------- | -------------------------------------------------- |
 | UNSET    | ルートが設定されていない状態。                     |
 | SET      | ルートを設定されている状態。                       |
 | CHANGING | ルートを走りながら別のルートを切り替えている状態。 |
-
-## Route Goal State
-
-目的地に関する状態遷移。ルートが設定されている場合に有効になる。<br>
-※Route State (Set, Changing) のサブ状態にすることも検討する。
-
-![route-goal-state](./route-goal-state.drawio.svg)
-
-| State        | Description                    |
-| ------------ | ------------------------------ |
-| ON_THE_WAY   | ルートを走行している状態。     |
-| ARRIVE_SOON  | ルートの終点に近づいた状態。   |
-| ARRIVED_GOAL | ルートの終点まで到着した状態。 |
+| ARRIVE   | ルートの終点まで到着した状態。                     |

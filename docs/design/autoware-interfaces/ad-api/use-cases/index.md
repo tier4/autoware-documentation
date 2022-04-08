@@ -1,18 +1,13 @@
 # Use Cases of Autoware AD API
 
-## Use Cases
+## User Stories
 
 - [Bus Service](bus-service.md)
 - [On Demand Service](on-demand-service.md)
 
-## Features
-
-### System setup and shutdown
+## Use Cases
 
 - Launch Autoware
-- Drive the vehicle manually.
-
-### Autonomous Driving
-
-- Door operation.
-- Drive the vehicle to the designated position.
+- Drive manually.
+- Get on and off.
+- [Drive to the designated position](drive-designated-position.md)

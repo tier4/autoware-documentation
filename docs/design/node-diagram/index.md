@@ -10,4 +10,4 @@ TBD.
 
 ![Node diagram](overall-node-diagram-autoware-universe.drawio.svg)
 
-[Open in draw.io for fullscreen]({{ "latest/design/node-diagram/overall-node-diagram-autoware-universe.drawio.svg" | drawio }})
+[Open in draw.io for fullscreen]({{ "/design/node-diagram/overall-node-diagram-autoware-universe.drawio.svg" | drawio }})

@@ -2,12 +2,12 @@
 
 ## Related API
 
-- [/api/v1/route/state](../list/route-state.md)
-- [/api/v1/route/clear](../list/route-clear.md)
-- [/api/v1/route/set](../list/route-set.md)
-- [/api/v1/route/data](../list/route-data.md)
-- [/api/v1/route/lanelet/set](../list/route-lanelet-set.md)
-- [/api/v1/route/lanelet/data](../list/route-lanelet-data.md)
+- {{ adapi("/api/v1/route/state") }}
+- {{ adapi("/api/v1/route/clear") }}
+- {{ adapi("/api/v1/route/set") }}
+- {{ adapi("/api/v1/route/data") }}
+- {{ adapi("/api/v1/route/lanelet/set") }}
+- {{ adapi("/api/v1/route/lanelet/data") }}
 
 ## Route State
 

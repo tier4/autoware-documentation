@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the door status. For details, see the [door operation](../data/door-operation.md).
+Get the door status. For details, see the [door operation](../features/door-operation.md).
 
 ## Message
 

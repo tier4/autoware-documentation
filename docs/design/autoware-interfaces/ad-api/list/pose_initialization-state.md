@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the pose initialization state. For details, see the [pose initialization state](../data/pose-initialization-state.md).
+Get the pose initialization state. For details, see the [pose initialization state](../features/pose-initialization-state.md).
 
 ## Message
 

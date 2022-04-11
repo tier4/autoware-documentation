@@ -5,7 +5,7 @@
 
 ## Description
 
-Operate the door. For details, see the [door operation](../data/door-operation.md).
+Operate the door. For details, see the [door operation](../features/door-operation.md).
 
 ## Request
 

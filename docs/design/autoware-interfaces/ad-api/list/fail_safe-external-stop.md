@@ -5,7 +5,7 @@
 
 ## Description
 
-Set or clear the external emergency stop. This API changes the [fail safe state](../data/fail-safe-state.md).
+Set or clear the external emergency stop. This API changes the [fail safe state](../features/fail-safe-state.md).
 
 ## Request
 

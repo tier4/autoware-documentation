@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the launcher state. For details, see the [launcher state](../data/launcher-state.md).
+Get the launcher state. For details, see the [launcher state](../features/launcher-state.md).
 
 ## Message
 

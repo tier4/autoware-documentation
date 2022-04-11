@@ -5,7 +5,7 @@
 
 ## Description
 
-Launch or terminate Autoware. This API changes the [launcher state](../data/launcher-state.md).
+Launch or terminate Autoware. This API changes the [launcher state](../features/launcher-state.md).
 
 ## Request
 

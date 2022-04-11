@@ -5,7 +5,7 @@
 
 ## Description
 
-Request the pose initialization based on the specified pose. This API changes the [pose initialization state](../data/pose-initialization-state.md).
+Request the pose initialization based on the specified pose. This API changes the [pose initialization state](../features/pose-initialization-state.md).
 
 ## Request
 

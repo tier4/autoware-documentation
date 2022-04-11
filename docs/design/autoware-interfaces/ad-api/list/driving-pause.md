@@ -5,7 +5,7 @@
 
 ## Description
 
-Pause or unpause the vehicle. This API changes the [driving state](../data/driving-state.md).
+Pause or unpause the vehicle. This API changes the [driving state](../features/driving-state.md).
 
 ## Request
 

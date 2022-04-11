@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the driving state. For details, see the [driving state](../data/driving-state.md).
+Get the driving state. For details, see the [driving state](../features/driving-state.md).
 
 ## Message
 

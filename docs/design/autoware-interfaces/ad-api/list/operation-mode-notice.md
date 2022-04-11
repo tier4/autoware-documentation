@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the operation mode. For details, see the [operation mode](../data/operation-mode.md).
+Get the operation mode. For details, see the [operation mode](../features/operation-mode.md).
 
 ## Message
 

@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the route state. For details, see the [route state](../data/route-state.md).
+Get the route state. For details, see the [route state](../features/route-state.md).
 
 ## Message
 

@@ -5,7 +5,7 @@
 
 ## Description
 
-Reset the pose initialization state. This API changes the [pose initialization state](../data/pose-initialization-state.md).
+Reset the pose initialization state. This API changes the [pose initialization state](../features/pose-initialization-state.md).
 
 ## Request
 

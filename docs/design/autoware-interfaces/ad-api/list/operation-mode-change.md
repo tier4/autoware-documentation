@@ -5,7 +5,7 @@
 
 ## Description
 
-Set the operation mode. For details, see the [operation mode](../data/operation-mode.md).
+Set the operation mode. For details, see the [operation mode](../features/operation-mode.md).
 This API always fail if the vehicle does not support mode change by software.
 
 ## Request

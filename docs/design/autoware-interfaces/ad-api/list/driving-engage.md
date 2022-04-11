@@ -5,7 +5,7 @@
 
 ## Description
 
-Engage or disengage the vehicle. This API changes the [driving state](../data/driving-state.md).
+Engage or disengage the vehicle. This API changes the [driving state](../features/driving-state.md).
 
 ## Request
 

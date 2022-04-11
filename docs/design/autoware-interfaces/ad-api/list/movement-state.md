@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the movement state. For details, see the [movement state](../data/movement-state.md).
+Get the movement state. For details, see the [movement state](../features/movement-state.md).
 
 ## Message
 

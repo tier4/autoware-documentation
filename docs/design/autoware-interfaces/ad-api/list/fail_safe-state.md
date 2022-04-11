@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the fail safe state. For details, see the [fail safe state](../data/fail-safe-state.md).
+Get the fail safe state. For details, see the [fail safe state](../features/fail-safe-state.md).
 
 ## Message
 

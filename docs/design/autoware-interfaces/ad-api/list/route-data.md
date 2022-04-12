@@ -1,7 +1,7 @@
 # /api/route/data
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/msg/RouteData](../type/autoware_ad_api_msgs/msg/route_data.md)
+- Type: [autoware_ad_api_msgs/msg/RouteData](../types/autoware_ad_api_msgs/msg/route_data.md)
 
 ## Description
 

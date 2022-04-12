@@ -1,7 +1,7 @@
 # /api/operation/mode/change
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/OperationModeChange](../type/autoware_ad_api_msgs/srv/operation_mode_change.md)
+- Type: [autoware_ad_api_msgs/srv/OperationModeChange](../types/autoware_ad_api_msgs/srv/operation_mode_change.md)
 
 ## Description
 

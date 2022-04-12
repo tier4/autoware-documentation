@@ -1,7 +1,7 @@
 # /api/door/operate
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/DoorOperate](../type/autoware_ad_api_msgs/srv/door_operate.md)
+- Type: [autoware_ad_api_msgs/srv/DoorOperate](../types/autoware_ad_api_msgs/srv/door_operate.md)
 
 ## Description
 

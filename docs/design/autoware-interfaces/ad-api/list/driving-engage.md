@@ -1,7 +1,7 @@
 # /api/driving/engage
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/DrivingEngage](../type/autoware_ad_api_msgs/srv/driving_engage.md)
+- Type: [autoware_ad_api_msgs/srv/DrivingEngage](../types/autoware_ad_api_msgs/srv/driving_engage.md)
 
 ## Description
 

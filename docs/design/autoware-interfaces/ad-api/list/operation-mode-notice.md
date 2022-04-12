@@ -1,7 +1,7 @@
 # /api/operation/mode/notice
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/msg/OperationMode](../type/autoware_ad_api_msgs/msg/operation_mode.md)
+- Type: [autoware_ad_api_msgs/msg/OperationMode](../types/autoware_ad_api_msgs/msg/operation_mode.md)
 
 ## Description
 

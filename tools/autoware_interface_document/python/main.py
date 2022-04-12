@@ -29,7 +29,7 @@ def generate():
     base_path = Path(args.path)
     list_path = Path(get_package_share_directory("autoware_interface_document")) / "resource" / "order.yaml"
     api_path = base_path / "list"
-    msg_path = base_path / "type"
+    msg_path = base_path / "types"
 
     msgs = list_msgs()
     for msg in msgs.values():

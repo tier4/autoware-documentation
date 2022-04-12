@@ -1,7 +1,7 @@
 # /api/movement/state
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/msg/MovementState](../type/autoware_ad_api_msgs/msg/movement_state.md)
+- Type: [autoware_ad_api_msgs/msg/MovementState](../types/autoware_ad_api_msgs/msg/movement_state.md)
 
 ## Description
 

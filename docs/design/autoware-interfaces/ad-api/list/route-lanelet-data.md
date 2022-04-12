@@ -1,7 +1,7 @@
 # /api/route/lanelet/data
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/msg/LaneletRouteData](../type/autoware_ad_api_msgs/msg/lanelet_route_data.md)
+- Type: [autoware_ad_api_msgs/msg/LaneletRouteData](../types/autoware_ad_api_msgs/msg/lanelet_route_data.md)
 
 ## Description
 

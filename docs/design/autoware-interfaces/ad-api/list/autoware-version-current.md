@@ -1,7 +1,7 @@
 # /api/autoware/version/current
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/GetAutowareVersion](../type/autoware_ad_api_msgs/srv/get_autoware_version.md)
+- Type: [autoware_ad_api_msgs/srv/GetAutowareVersion](../types/autoware_ad_api_msgs/srv/get_autoware_version.md)
 
 ## Description
 

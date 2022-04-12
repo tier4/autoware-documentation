@@ -1,7 +1,7 @@
 # /api/pose_initialization/state
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/msg/PoseInitializationState](../type/autoware_ad_api_msgs/msg/pose_initialization_state.md)
+- Type: [autoware_ad_api_msgs/msg/PoseInitializationState](../types/autoware_ad_api_msgs/msg/pose_initialization_state.md)
 
 ## Description
 

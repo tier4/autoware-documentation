@@ -1,4 +1,4 @@
-# List
+# List of Autoware AD API
 
 - [/api/version](version.md)
 - [/api/autoware/launcher/state](autoware-launcher-state.md)

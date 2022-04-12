@@ -1,7 +1,7 @@
 # /api/driving/state
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/msg/DrivingState](../type/autoware_ad_api_msgs/msg/driving_state.md)
+- Type: [autoware_ad_api_msgs/msg/DrivingState](../types/autoware_ad_api_msgs/msg/driving_state.md)
 
 ## Description
 

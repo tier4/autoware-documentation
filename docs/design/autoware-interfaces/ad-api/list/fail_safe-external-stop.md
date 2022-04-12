@@ -1,7 +1,7 @@
 # /api/fail_safe/external/stop
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/FailSafeExternalStop](../type/autoware_ad_api_msgs/srv/fail_safe_external_stop.md)
+- Type: [autoware_ad_api_msgs/srv/FailSafeExternalStop](../types/autoware_ad_api_msgs/srv/fail_safe_external_stop.md)
 
 ## Description
 

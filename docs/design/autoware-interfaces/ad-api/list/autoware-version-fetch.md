@@ -1,7 +1,7 @@
 # /api/autoware/version/fetch
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/FetchAutowareVersion](../type/autoware_ad_api_msgs/srv/fetch_autoware_version.md)
+- Type: [autoware_ad_api_msgs/srv/FetchAutowareVersion](../types/autoware_ad_api_msgs/srv/fetch_autoware_version.md)
 
 ## Description
 

@@ -1,7 +1,7 @@
 # /api/driving/pause
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/DrivingPause](../type/autoware_ad_api_msgs/srv/driving_pause.md)
+- Type: [autoware_ad_api_msgs/srv/DrivingPause](../types/autoware_ad_api_msgs/srv/driving_pause.md)
 
 ## Description
 

@@ -1,7 +1,7 @@
 # /api/autoware/launcher/command
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/AutowareLauncherCommand](../type/autoware_ad_api_msgs/srv/autoware_launcher_command.md)
+- Type: [autoware_ad_api_msgs/srv/AutowareLauncherCommand](../types/autoware_ad_api_msgs/srv/autoware_launcher_command.md)
 
 ## Description
 

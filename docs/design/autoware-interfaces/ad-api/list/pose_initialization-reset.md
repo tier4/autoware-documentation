@@ -1,7 +1,7 @@
 # /api/pose_initialization/reset
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/PoseInitializationReset](../type/autoware_ad_api_msgs/srv/pose_initialization_reset.md)
+- Type: [autoware_ad_api_msgs/srv/PoseInitializationReset](../types/autoware_ad_api_msgs/srv/pose_initialization_reset.md)
 
 ## Description
 

@@ -1,7 +1,7 @@
 # /api/autoware/version/change
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/SetAutowareVersion](../type/autoware_ad_api_msgs/srv/set_autoware_version.md)
+- Type: [autoware_ad_api_msgs/srv/SetAutowareVersion](../types/autoware_ad_api_msgs/srv/set_autoware_version.md)
 
 ## Description
 

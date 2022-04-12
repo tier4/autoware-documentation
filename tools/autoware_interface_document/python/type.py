@@ -78,7 +78,7 @@ class InterfaceType:
     def WriteIndex(path, types):
         path = path / "index.md"
         with path.open("w") as fp:
-            fp.write("# Type\n\n")
+            fp.write("# Types of Autoware AD API\n\n")
             for type in types:
                 fp.write(F"- [{type.name}]({type.link})\n")
 
@@ -109,7 +109,7 @@ class InterfaceName:
     def WriteIndex(path, apis):
         path = path / "index.md"
         with path.open("w") as fp:
-            fp.write("# List\n\n")
+            fp.write("# List of Autoware AD API\n\n")
             for api in apis:
                 fp.write(F"- [{api.name}]({api.link})\n")
 
@@ -196,5 +196,5 @@ class MarkdownLink:
     def LoadType(text):
         link = MarkdownLink.Load(text)
         part = link.text.split("/")
-        link.link = "../type/" + "/".join([*part[:-1], camel_to_snake(part[-1])]) + ".md"
+        link.link = "../types/" + "/".join([*part[:-1], camel_to_snake(part[-1])]) + ".md"
         return link

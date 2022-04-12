@@ -1,7 +1,7 @@
 # /api/door/status
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/msg/DoorStatusArray](../type/autoware_ad_api_msgs/msg/door_status_array.md)
+- Type: [autoware_ad_api_msgs/msg/DoorStatusArray](../types/autoware_ad_api_msgs/msg/door_status_array.md)
 
 ## Description
 

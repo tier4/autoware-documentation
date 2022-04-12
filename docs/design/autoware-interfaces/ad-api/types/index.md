@@ -1,4 +1,4 @@
-# Type
+# Types of Autoware AD API
 
 - [autoware_ad_api_msgs/msg/AutowareLauncherState](autoware_ad_api_msgs/msg/autoware_launcher_state.md)
 - [autoware_ad_api_msgs/msg/DoorCommand](autoware_ad_api_msgs/msg/door_command.md)

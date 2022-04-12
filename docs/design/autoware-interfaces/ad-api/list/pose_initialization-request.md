@@ -1,7 +1,7 @@
 # /api/pose_initialization/request
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/PoseInitializationRequest](../type/autoware_ad_api_msgs/srv/pose_initialization_request.md)
+- Type: [autoware_ad_api_msgs/srv/PoseInitializationRequest](../types/autoware_ad_api_msgs/srv/pose_initialization_request.md)
 
 ## Description
 

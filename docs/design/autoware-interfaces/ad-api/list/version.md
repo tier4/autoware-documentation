@@ -1,7 +1,7 @@
 # /api/version
 
 - Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/GetInterfaceVersion](../type/autoware_ad_api_msgs/srv/get_interface_version.md)
+- Type: [autoware_ad_api_msgs/srv/GetInterfaceVersion](../types/autoware_ad_api_msgs/srv/get_interface_version.md)
 
 ## Description
 

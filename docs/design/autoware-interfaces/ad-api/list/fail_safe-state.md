@@ -1,7 +1,7 @@
 # /api/fail_safe/state
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/msg/FailSafeState](../type/autoware_ad_api_msgs/msg/fail_safe_state.md)
+- Type: [autoware_ad_api_msgs/msg/FailSafeState](../types/autoware_ad_api_msgs/msg/fail_safe_state.md)
 
 ## Description
 

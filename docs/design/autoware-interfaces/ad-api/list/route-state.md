@@ -1,7 +1,7 @@
 # /api/route/state
 
 - Method: Notification
-- Type: [autoware_ad_api_msgs/msg/RouteState](../type/autoware_ad_api_msgs/msg/route_state.md)
+- Type: [autoware_ad_api_msgs/msg/RouteState](../types/autoware_ad_api_msgs/msg/route_state.md)
 
 ## Description
 

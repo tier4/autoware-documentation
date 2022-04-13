@@ -85,8 +85,9 @@ class InterfaceType:
 
 class InterfaceName:
 
-    def __init__(self, path):
-        self._path: Path = path
+    def __init__(self, path, name):
+        self._path = path
+        self._name = name
         self._page = None
 
     def init(self):
@@ -95,12 +96,12 @@ class InterfaceName:
 
     @property
     def name(self):
-        return "/api/" + self._path.stem.replace("-", "/")
+        return "/" + str(self._name)
 
     # TODO: MarkdownLink
     @property
     def link(self):
-        return self._path.stem + ".md"
+        return self._name.with_suffix(".md")
 
     def rewrite(self):
         self._path.write_text(self._page.markdown())

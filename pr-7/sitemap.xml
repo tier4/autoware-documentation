@@ -236,147 +236,152 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/autoware-launcher-command/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/version/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/autoware-launcher-state/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/route/clear/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/autoware-version-change/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/route/data/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/autoware-version-current/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/route/set/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/autoware-version-fetch/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/route/state/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/door-operate/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/route/lanelet/data/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/door-status/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/route/lanelet/set/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/driving-engage/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/driving-pause/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/autoware-launcher-command/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/driving-state/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/autoware-launcher-state/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/fail_safe-external-stop/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/autoware-version-change/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/fail_safe-state/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/autoware-version-current/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/movement-factors/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/autoware-version-fetch/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/movement-state/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/door-operate/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/operation-mode-change/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/door-status/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/operation-mode-notice/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/driving-engage/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/pose_initialization-request/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/driving-pause/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/pose_initialization-reset/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/driving-state/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/pose_initialization-state/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/fail_safe-external-stop/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/recognition-areas/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/fail_safe-state/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/recognition-objects/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/movement-factors/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/route-clear/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/movement-state/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/route-data/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/operation-mode-change/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/route-lanelet-data/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/operation-mode-notice/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/route-lanelet-set/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/pose_initialization-request/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/route-set/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/pose_initialization-reset/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/route-state/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/pose_initialization-state/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/vehicle-status/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/recognition-areas/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/version/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/recognition-objects/</loc>
+         <lastmod>2022-04-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/old/vehicle-status/</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>

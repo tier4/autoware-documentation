@@ -1,4 +1,4 @@
-- /api/version
+- /api/interface/version
 - /api/autoware/launcher/state
 - /api/autoware/launcher/command
 - /api/autoware/version/current

@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import re
+import yaml
 from pathlib import Path
 
 from .util import camel_to_snake
@@ -118,84 +119,30 @@ class InterfaceName:
 class MarkdownPage:
 
     def __init__(self, path, name):
-        self._header = MarkdownHeader(name)
-        self._others = MarkdownOthers()
         lines = path.read_text().split("\n")
-        lines = self._header.parse(lines)
-        lines = self._others.parse(lines)
-
-    @property
-    def _contents(self):
-        yield self._header
-        yield self._others
-
-    def markdown(self):
-        return "\n".join(content.markdown() for content in self._contents)
-
-
-class MarkdownHeader:
-
-    def __init__(self, name):
-        self._name = name
-        self._method = None
-        self._type = None
-
-    def markdown(self):
-        return "\n".join([
-            F"# {self._name}\n",
-            F"- Method: {self._method}",
-            F"- Type: {self._type}\n",
-        ])
-
-    def parse(self, lines):
         for index, line in enumerate(lines):
-            if line.startswith("##"):
-                return lines[index:]
-            if line.startswith("- Method:"):
-                self._method = line.split(":")[1].strip()
-            if line.startswith("- Type:"):
-                self._type = line.split(":")[1].strip()
-                self._type = MarkdownLink.LoadType(self._type)
-        return lines
+            if line.startswith("# "):
+                break
+        self._name = name
+        self._meta = MarkdownMeta(lines[:index])
+        self._body = MarkdownBody(lines[index:])
+
+    def markdown(self):
+        return self._meta.markdown() + self._body.markdown()
 
 
-class MarkdownOthers:
+class MarkdownMeta:
 
-    def __init__(self):
-        self._lines = None
+    def __init__(self, lines):
+        self._data = yaml.safe_load("\n".join(line for line in lines if line != "---"))
+
+    def markdown(self):
+        return f"---\n{yaml.safe_dump(self._data)}---\n\n" if self._data else ""
+
+class MarkdownBody:
+
+    def __init__(self, lines):
+        self._lines = lines
 
     def markdown(self):
         return "\n".join(self._lines)
-
-    def parse(self, lines):
-        self._lines = lines
-        return []
-
-
-class MarkdownLink:
-
-    def __init__(self, text, link):
-        self.text = text
-        self.link = link
-
-    def __str__(self):
-        if self.link is None:  # TODO: remove
-            return self.text
-        return F"[{self.text}]({self.link})"
-
-    @staticmethod
-    def Load(text):
-        match = re.match(R"\[(.+)\]\((.+)\)", text)
-        link = None
-        if match:
-            text = match.group(1)
-            link = match.group(2)
-        return MarkdownLink(text, link)
-
-    # TODO: remove
-    @staticmethod
-    def LoadType(text):
-        link = MarkdownLink.Load(text)
-        part = link.text.split("/")
-        link.link = "../types/" + "/".join([*part[:-1], camel_to_snake(part[-1])]) + ".md"
-        return link

@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: notification
+  type: autoware_ad_api_msgs/msg/OperationMode
+---
+
 # /api/operation/mode/notice
 
-- Method: Notification
-- Type: [autoware_ad_api_msgs/msg/OperationMode](../types/autoware_ad_api_msgs/msg/operation_mode.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Get the operation mode. For details, see the [operation mode](../features/operation-mode.md).
+Get the operation mode. For details, see the [operation mode](../../../../features/operation-mode.md).
 
 ## Message
 

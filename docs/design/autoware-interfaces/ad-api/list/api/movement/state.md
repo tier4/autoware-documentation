@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: notification
+  type: autoware_ad_api_msgs/msg/MovementState
+---
+
 # /api/movement/state
 
-- Method: Notification
-- Type: [autoware_ad_api_msgs/msg/MovementState](../types/autoware_ad_api_msgs/msg/movement_state.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Get the movement state. For details, see the [movement state](../features/movement-state.md).
+Get the movement state. For details, see the [movement state](../../../features/movement-state.md).
 
 ## Message
 

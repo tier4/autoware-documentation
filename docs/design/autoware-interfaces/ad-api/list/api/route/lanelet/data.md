@@ -1,7 +1,13 @@
+---
+autoware_interface:
+  method: notification
+  type: autoware_ad_api_msgs/msg/LaneletRouteData
+---
+
 # /api/route/lanelet/data
 
-- Method: Notification
-- Type: [autoware_ad_api_msgs/msg/LaneletRouteData](../types/autoware_ad_api_msgs/msg/lanelet_route_data.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 

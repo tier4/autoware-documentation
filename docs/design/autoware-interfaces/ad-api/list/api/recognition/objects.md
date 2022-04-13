@@ -1,7 +1,13 @@
+---
+autoware_interface:
+  method: notification
+  type: autoware_ad_api_msgs/msg/RecognitionObjectArray
+---
+
 # /api/recognition/objects
 
-- Method: Notification
-- Type: [autoware_ad_api_msgs/msg/RecognitionObjectArray](../types/autoware_ad_api_msgs/msg/recognition_object_array.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 

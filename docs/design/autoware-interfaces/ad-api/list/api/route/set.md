@@ -1,7 +1,13 @@
+---
+autoware_interface:
+  method: function call
+  type: autoware_ad_api_msgs/srv/RouteSet
+---
+
 # /api/route/set
 
-- Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/RouteSet](../types/autoware_ad_api_msgs/srv/route_set.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 

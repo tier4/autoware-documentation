@@ -1,7 +1,13 @@
+---
+autoware_interface:
+  method: function call
+  type: autoware_ad_api_msgs/srv/LaneletRouteSet
+---
+
 # /api/route/lanelet/set
 
-- Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/LaneletRouteSet](../types/autoware_ad_api_msgs/srv/lanelet_route_set.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 

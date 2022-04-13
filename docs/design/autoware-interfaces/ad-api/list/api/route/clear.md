@@ -1,7 +1,13 @@
+---
+autoware_interface:
+  method: function call
+  type: autoware_ad_api_msgs/srv/RouteClear
+---
+
 # /api/route/clear
 
-- Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/RouteClear](../types/autoware_ad_api_msgs/srv/route_clear.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 

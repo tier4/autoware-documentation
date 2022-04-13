@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: function call
+  type: autoware_ad_api_msgs/srv/DoorOperate
+---
+
 # /api/door/operate
 
-- Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/DoorOperate](../types/autoware_ad_api_msgs/srv/door_operate.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Operate the door. For details, see the [door operation](../features/door-operation.md).
+Operate the door. For details, see the [door operation](../../../features/door-operation.md).
 
 ## Request
 

@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: function call
+  type: autoware_ad_api_msgs/srv/DrivingPause
+---
+
 # /api/driving/pause
 
-- Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/DrivingPause](../types/autoware_ad_api_msgs/srv/driving_pause.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Pause or unpause the vehicle. This API changes the [driving state](../features/driving-state.md).
+Pause or unpause the vehicle. This API changes the [driving state](../../../features/driving-state.md).
 
 ## Request
 

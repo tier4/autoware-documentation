@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: notification
+  type: autoware_ad_api_msgs/msg/RouteState
+---
+
 # /api/route/state
 
-- Method: Notification
-- Type: [autoware_ad_api_msgs/msg/RouteState](../types/autoware_ad_api_msgs/msg/route_state.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Get the route state. For details, see the [route state](../features/route-state.md).
+Get the route state. For details, see the [route state](../../../features/route-state.md).
 
 ## Message
 

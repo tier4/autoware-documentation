@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: notification
+  type: autoware_ad_api_msgs/msg/DoorStatusArray
+---
+
 # /api/door/status
 
-- Method: Notification
-- Type: [autoware_ad_api_msgs/msg/DoorStatusArray](../types/autoware_ad_api_msgs/msg/door_status_array.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Get the door status. For details, see the [door operation](../features/door-operation.md).
+Get the door status. For details, see the [door operation](../../../features/door-operation.md).
 
 ## Message
 

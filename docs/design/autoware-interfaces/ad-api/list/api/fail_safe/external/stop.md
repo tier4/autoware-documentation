@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: function call
+  type: autoware_ad_api_msgs/srv/FailSafeExternalStop
+---
+
 # /api/fail_safe/external/stop
 
-- Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/FailSafeExternalStop](../types/autoware_ad_api_msgs/srv/fail_safe_external_stop.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Set or clear the external emergency stop. This API changes the [fail safe state](../features/fail-safe-state.md).
+Set or clear the external emergency stop. This API changes the [fail safe state](../../../../features/fail-safe-state.md).
 
 ## Request
 

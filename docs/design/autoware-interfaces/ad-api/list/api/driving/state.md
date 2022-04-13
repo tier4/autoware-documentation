@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: notification
+  type: autoware_ad_api_msgs/msg/DrivingState
+---
+
 # /api/driving/state
 
-- Method: Notification
-- Type: [autoware_ad_api_msgs/msg/DrivingState](../types/autoware_ad_api_msgs/msg/driving_state.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Get the driving state. For details, see the [driving state](../features/driving-state.md).
+Get the driving state. For details, see the [driving state](../../../features/driving-state.md).
 
 ## Message
 

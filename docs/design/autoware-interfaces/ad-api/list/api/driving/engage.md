@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: function call
+  type: autoware_ad_api_msgs/srv/DrivingEngage
+---
+
 # /api/driving/engage
 
-- Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/DrivingEngage](../types/autoware_ad_api_msgs/srv/driving_engage.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Engage or disengage the vehicle. This API changes the [driving state](../features/driving-state.md).
+Engage or disengage the vehicle. This API changes the [driving state](../../../features/driving-state.md).
 
 ## Request
 

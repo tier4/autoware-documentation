@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: notification
+  type: autoware_ad_api_msgs/msg/AutowareLauncherState
+---
+
 # /api/autoware/launcher/state
 
-- Method: Notification
-- Type: [autoware_ad_api_msgs/msg/AutowareLauncherState](../types/autoware_ad_api_msgs/msg/autoware_launcher_state.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Get the launcher state. For details, see the [launcher state](../features/launcher-state.md).
+Get the launcher state. For details, see the [launcher state](../../../../features/launcher-state.md).
 
 ## Message
 

@@ -1,7 +1,13 @@
+---
+autoware_interface:
+  method: notification
+  type: autoware_ad_api_msgs/msg/RouteData
+---
+
 # /api/route/data
 
-- Method: Notification
-- Type: [autoware_ad_api_msgs/msg/RouteData](../types/autoware_ad_api_msgs/msg/route_data.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 

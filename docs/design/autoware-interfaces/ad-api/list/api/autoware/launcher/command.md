@@ -1,11 +1,17 @@
+---
+autoware_interface:
+  method: function call
+  type: autoware_ad_api_msgs/srv/AutowareLauncherCommand
+---
+
 # /api/autoware/launcher/command
 
-- Method: Function Call
-- Type: [autoware_ad_api_msgs/srv/AutowareLauncherCommand](../types/autoware_ad_api_msgs/srv/autoware_launcher_command.md)
+- Method: {{ autoware_interface.method }}
+- Type: {{ autoware_interface.type | link_api_type }}
 
 ## Description
 
-Launch or terminate Autoware. This API changes the [launcher state](../features/launcher-state.md).
+Launch or terminate Autoware. This API changes the [launcher state](../../../../features/launcher-state.md).
 
 ## Request
 

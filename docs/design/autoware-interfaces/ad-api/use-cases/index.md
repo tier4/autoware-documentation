@@ -7,7 +7,7 @@
 
 ## Use Cases
 
-- Launch Autoware
+- Launch and terminate Autoware
 - Drive manually.
 - Get on and off.
 - [Drive to the designated position](drive-designated-position.md)

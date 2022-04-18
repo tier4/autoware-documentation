@@ -10,18 +10,6 @@ def define_env(env):
         image_url = urllib.parse.quote(f"{env.conf['site_url']}{image_path}", "")
         return f"https://app.diagrams.net/?lightbox=1#U{image_url}"
 
-    @env.macro
-    def adapi(name):
-        match = re.match(r"/api/v\d+/", name)
-        if not match:
-            return name
-        link = name[match.end():].replace("/", "-") + ".md"
-        base = "design/autoware-interfaces/ad-api/list/"
-        path = os.path.dirname(env.page.file.src_path)
-        path = os.path.relpath(base, path)
-        path = os.path.join(path, link)
-        return f"[{name}]({path})"
-
     @env.filter
     def link_api_type(name):
         path = os.path.relpath("design/autoware-interfaces/ad-api/types", env.page.file.src_path)
@@ -34,7 +22,6 @@ def define_env(env):
     def link_api_root(path):
         base = os.path.relpath("design/autoware-interfaces/ad-api", env.page.file.src_path)
         return os.path.join(base, path)
-
 
 def camel_to_snake(text):
     text = re.sub("(.)([A-Z][a-z]+)", R"\1_\2", text)

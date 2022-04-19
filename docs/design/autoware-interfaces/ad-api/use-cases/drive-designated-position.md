@@ -7,10 +7,17 @@
 
 ## Scenario
 
-1. 目的地が設定されているか確認する (route/state=unset)
-1. 目的地を設定する (route/set)
-1. 目的地が設定されたか確認する(route/state=set)
-1. 発車可能か確認する(driving/state=ready)
-1. 発車する(driving/engage)
-1. 発車したか確認する(driving/state=driving)
-1. 目的地に付いたか確認する (route/state=arrived)
+1. Check if the route can be set.
+   - route/state == UNSET
+1. Set the route.
+   - /api/v0/route/set
+1. Check if the route has been set.
+   - route/state=set
+1. Check if the vehicle can depart
+   - driving/state=ready
+1. Depart the vehicle
+   - driving/engage
+1. Check if the vehicle has departed
+   - driving/state=driving
+1. Check if the vehicle has arrived at the destination
+   - route/state=arrived

@@ -2342,13 +2342,34 @@
 </ul>
 <h2 id="scenario">Scenario<a class="headerlink" href="#scenario" title="Permanent link">#</a></h2>
 <ol>
-<li>目的地が設定されているか確認する (route/state=unset)</li>
-<li>目的地を設定する (route/set)</li>
-<li>目的地が設定されたか確認する(route/state=set)</li>
-<li>発車可能か確認する(driving/state=ready)</li>
-<li>発車する(driving/engage)</li>
-<li>発車したか確認する(driving/state=driving)</li>
-<li>目的地に付いたか確認する (route/state=arrived)</li>
+<li>Check if the route can be set.<ul>
+<li>route/state == UNSET</li>
+</ul>
+</li>
+<li>Set the route.<ul>
+<li>/api/v0/route/set</li>
+</ul>
+</li>
+<li>Check if the route has been set.<ul>
+<li>route/state=set</li>
+</ul>
+</li>
+<li>Check if the vehicle can depart<ul>
+<li>driving/state=ready</li>
+</ul>
+</li>
+<li>Depart the vehicle<ul>
+<li>driving/engage</li>
+</ul>
+</li>
+<li>Check if the vehicle has departed<ul>
+<li>driving/state=driving</li>
+</ul>
+</li>
+<li>Check if the vehicle has arrived at the destination<ul>
+<li>route/state=arrived</li>
+</ul>
+</li>
 </ol>
 
               

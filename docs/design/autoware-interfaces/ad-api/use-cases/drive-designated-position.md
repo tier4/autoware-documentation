@@ -8,16 +8,18 @@
 ## Scenario
 
 1. Check if the route can be set.
-   - route/state == UNSET
+   - /api/v0/route/state
 1. Set the route.
    - /api/v0/route/set
-1. Check if the route has been set.
-   - route/state=set
+1. Check if the route can be set.
+   - /api/v0/route/state
 1. Check if the vehicle can depart
-   - driving/state=ready
+   - /api/v0/driving/state
 1. Depart the vehicle
-   - driving/engage
+   - /api/v0/driving/engage
 1. Check if the vehicle has departed
-   - driving/state=driving
+   - /api/v0/driving/state
 1. Check if the vehicle has arrived at the destination
-   - route/state=arrived
+   - /api/v0/route/state
+1. Clear the route.
+   - /api/v0/route/clear

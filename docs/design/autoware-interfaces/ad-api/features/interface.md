@@ -4,9 +4,10 @@
 
 - /api/interface/version
 
-## Version
+## Interface Version
 
-The interface version corresponds to the specification and is independent of the Autoware version.
-The same interface can be used even if the software implementation changes.
+The interface version is used to know the specifications of the interface provided.
+The interface version is separated from the release version of Autoware.
+Therefore, different releases can provide the same interface and the same release can provide different interfaces.
 
 ![interface](./interface.drawio.svg)

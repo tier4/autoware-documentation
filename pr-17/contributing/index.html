@@ -298,8 +298,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../help/" class="md-tabs__link">
-        Help
+      <a href="../support/" class="md-tabs__link">
+        Support
       </a>
     </li>
   
@@ -2066,7 +2066,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../help/">Help</a>
+          <a href="../support/">Support</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2074,10 +2074,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Help" data-md-level="1">
+      <nav class="md-nav" aria-label="Support" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          Help
+          Support
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2089,7 +2089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../help/support-guidelines/" class="md-nav__link">
+      <a href="../support/support-guidelines/" class="md-nav__link">
         Support guidelines
       </a>
     </li>
@@ -2103,7 +2103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../help/troubleshooting/" class="md-nav__link">
+      <a href="../support/troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -2117,7 +2117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../help/docs-guide/" class="md-nav__link">
+      <a href="../support/docs-guide/" class="md-nav__link">
         Docs guide
       </a>
     </li>
@@ -2159,22 +2159,70 @@
       
         <li class="md-nav__item">
   <a href="#code-of-conduct" class="md-nav__link">
-    Code of conduct
+    Code of Conduct
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contribution-workflows" class="md-nav__link">
-    Contribution workflows
+  <a href="#what-should-i-know-before-i-get-started" class="md-nav__link">
+    What should I know before I get started?
   </a>
   
-    <nav class="md-nav" aria-label="Contribution workflows">
+    <nav class="md-nav" aria-label="What should I know before I get started?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autoware-concepts" class="md-nav__link">
+    Autoware concepts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contributing-to-open-source-projects" class="md-nav__link">
+    Contributing to open source projects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-can-i-get-help" class="md-nav__link">
+    How can I get help?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-can-i-contribute" class="md-nav__link">
+    How can I contribute?
+  </a>
+  
+    <nav class="md-nav" aria-label="How can I contribute?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#discussions" class="md-nav__link">
     Discussions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-groups" class="md-nav__link">
+    Working groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-reports" class="md-nav__link">
+    Bug reports
   </a>
   
 </li>
@@ -2210,59 +2258,72 @@
 
 
 <h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">#</a></h1>
-<p>This page explains how to contribute to Autoware.</p>
-<p>First, conform to the <a href="#contribution-workflows">Code of conduct</a> section for the general manners in contributions.</p>
-<p>See the <a href="#contribution-workflows">Contribution workflows</a> section for the workflows.<br />
-Also, make sure the contribution is in line with the following guidelines:</p>
+<p>Thank you for your interest in contributing! Autoware is supported by people like you, and all types and sizes of contribution are welcome.</p>
+<p>As a contributor, here are the guidelines that we would like you to follow for Autoware and its associated repositories.</p>
 <ul>
-<li><a href="coding-guidelines/">Coding guidelines</a>: for contributing source code</li>
-<li><a href="testing-guidelines/">Testing guidelines</a>: for contributing tests</li>
-<li><a href="documentation-guidelines/">Documentation guidelines</a>: for contributing documents</li>
-<li><a href="pull-request-guidelines/">Pull request guidelines</a>: for submitting pull requests</li>
-<li><a href="discussion-guidelines/">Discussion guidelines</a>: for discussing with other contributors</li>
-<li><a href="../help/support-guidelines/">Support guidelines</a>: for finding the right channel when you need help</li>
+<li><a href="#code-of-conduct">Code of Conduct</a></li>
+<li><a href="#what-should-i-know-before-i-get-started">What should I know before I get started?</a><ul>
+<li><a href="#autoware-concepts">Autoware concepts</a></li>
+<li><a href="#contributing-to-open-source-projects">Contributing to open source projects</a></li>
 </ul>
-<p>It is recommended to read the <a href="https://docs.ros.org/en/rolling/Contributing.html">Contributing pages in ROS 2 Docs</a> as well because Autoware's guidelines generally depend on them.</p>
-<p>For general information about OSS contributions, <a href="https://opensource.guide/">Open Source Guides</a> by GitHub is a good resource.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If you want to make changes to the guidelines in this documentation site, you can open a new discussion thread and propose it.</p>
+</li>
+<li><a href="#how-can-I-get-help">How can I get help?</a></li>
+<li><a href="#how-can-i-contribute">How can I contribute?</a><ul>
+<li><a href="#discussions">Participate in discussions</a></li>
+<li><a href="#working-groups">Join a working group</a></li>
+<li><a href="#bug-reports">Report bugs</a></li>
+<li><a href="#pull-requests">Make a pull request</a></li>
+</ul>
+</li>
+</ul>
+<p>Like Autoware itself, these guidelines are being actively developed and suggestions for improvement are always welcome! Guideline changes can be proposed by <a href="https://github.com/autowarefoundation/autoware/discussions/new?category=ideas">creating a discussion in the Ideas category</a>.</p>
+<h2 id="code-of-conduct">Code of Conduct<a class="headerlink" href="#code-of-conduct" title="Permanent link">#</a></h2>
+<p>To ensure the Autoware community stays open and inclusive, please follow our <a href="https://github.com/autowarefoundation/autoware/blob/main/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+<p>If you believe that someone in the community has violated the code of conduct, please make a report by emailing conduct@autoware.org.</p>
+<h2 id="what-should-i-know-before-i-get-started">What should I know before I get started?<a class="headerlink" href="#what-should-i-know-before-i-get-started" title="Permanent link">#</a></h2>
+<h3 id="autoware-concepts">Autoware concepts<a class="headerlink" href="#autoware-concepts" title="Permanent link">#</a></h3>
+<p>To gain a high-level understanding of Autoware's architecture and design, the following pages provide a brief overview:</p>
+<ul>
+<li><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/">Autoware architecture</a></li>
+<li><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/">Autoware concepts</a></li>
+</ul>
+<p>For experienced developers, the <a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/">Autoware interfaces</a> and <a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/components/">individual component pages</a> should also be reviewed to understand the inputs and outputs for each component or module at a more detailed level.</p>
+<h3 id="contributing-to-open-source-projects">Contributing to open source projects<a class="headerlink" href="#contributing-to-open-source-projects" title="Permanent link">#</a></h3>
+<p>If you are new to open source projects, we recommend reading GitHub's <a href="https://opensource.guide/how-to-contribute/">How to Contribute to Open Source guide</a> for an overview of why people contribute to open source projects, what it means to contribute and much more besides.</p>
+<h2 id="how-can-i-get-help">How can I get help?<a class="headerlink" href="#how-can-i-get-help" title="Permanent link">#</a></h2>
+<p>Do not open issues for general support questions as we want to keep GitHub issues for confirmed bug reports. Instead, open a discussion in the Q&amp;A category. For more details on the support mechanisms for Autoware, refer to the <a href="../support/">Support guidelines</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Issues created for questions or unconfirmed bugs will be moved to GitHub discussions by the maintainers.</p>
 </div>
-<h2 id="code-of-conduct">Code of conduct<a class="headerlink" href="#code-of-conduct" title="Permanent link">#</a></h2>
-<p>We welcome contributions from everyone.<br />
-To ensure our community stays open and healthy, we adhere to the <a href="https://www.contributor-covenant.org/">Contributor Covenant</a>, a widely used <a href="https://github.com/autowarefoundation/autoware/blob/main/CODE_OF_CONDUCT.md">code of conduct</a> adopted by many other communities listed <a href="https://www.contributor-covenant.org/adopters/">here</a>.</p>
-<p>Everyone participating in the Autoware community is expected to follow the code of conduct.<br />
-If someone in the community happens to be violating these terms, let the maintainers know, and we will address it as soon as possible.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Note that contributions that ignore guidelines are not contributions but nuisances.</p>
-</div>
-<h2 id="contribution-workflows">Contribution workflows<a class="headerlink" href="#contribution-workflows" title="Permanent link">#</a></h2>
-<p>There are several types of contributions and the workflows differ between the types.
-See the description for your contribution type.</p>
+<h2 id="how-can-i-contribute">How can I contribute?<a class="headerlink" href="#how-can-i-contribute" title="Permanent link">#</a></h2>
 <h3 id="discussions">Discussions<a class="headerlink" href="#discussions" title="Permanent link">#</a></h3>
-<p>You can contribute to Autoware by facilitating discussions:</p>
+<p>You can contribute to Autoware by facilitating and participating in discussions, such as:</p>
 <ul>
-<li>Find a bug and open a new issue.</li>
-<li>Propose an idea of features that will enhance Autoware.</li>
-<li>Join an existing discussion and express your opinion.</li>
-<li>Organize discussions for other contributors.</li>
-<li>Answer questions and support other contributors.</li>
+<li><a href="https://github.com/orgs/autowarefoundation/discussions/categories/feature-requests">Proposing a new feature to enhance Autoware</a></li>
+<li><a href="https://github.com/orgs/autowarefoundation/discussions">Joining an existing discussion and expressing your opinion</a></li>
+<li>Organizing discussions for other contributors</li>
+<li><a href="https://github.com/autowarefoundation/autoware/discussions/categories/q-a?discussions_q=category%3AQ%26A+is%3Aunanswered">Answering questions and supporting other contributors</a></li>
 </ul>
-<p>See our <a href="../help/support-guidelines/">support guidelines</a> for the detailed steps.</p>
+<h3 id="working-groups">Working groups<a class="headerlink" href="#working-groups" title="Permanent link">#</a></h3>
+<p>The <a href="https://github.com/autowarefoundation/autoware-projects/wiki#working-group-list">various working groups</a> within the Autoware Foundation are responsible for accomplishing goals set by the Technical Steering Committee. These working groups are open to everyone, and joining a particular working group will allow you to gain an understanding of current projects, see how those projects are managed within each group and to contribute to issues that will help progress a particular project.</p>
+<p>To see the schedule for upcoming working group meetings, refer to the <a href="https://calendar.google.com/calendar/u/0/embed?src=autoware.org_6lol0ho5ft0217h8c60pi1fm30@group.calendar.google.com">Autoware Foundation events calendar</a>.</p>
+<h3 id="bug-reports">Bug reports<a class="headerlink" href="#bug-reports" title="Permanent link">#</a></h3>
+<p>Before you report a bug, please search the issue tracker for the appropriate repository. It is possible that someone has already reported the same issue and that workarounds exist. If you can't determine the appropriate repository, ask the maintainers for help by creating a new discussion in the <a href="https://github.com/autowarefoundation/autoware/discussions/new?category=q-a">Q&amp;A category</a>.</p>
+<p>When reporting a bug, you should provide a minimal set of instructions to reproduce the issue. Doing so allows us to quickly confirm and focus on the right problem.</p>
+<p>If you want to fix the bug by yourself that will be appreciated, but you should discuss possible approaches with the maintainers in the issue before submitting a pull request.</p>
+<p>[Creating an issue is straightforward])<a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-repository">https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-repository</a>), but if you happen to experience any problems then create a Q&amp;A discussion to ask for help.</p>
 <h3 id="pull-requests">Pull requests<a class="headerlink" href="#pull-requests" title="Permanent link">#</a></h3>
-<p>You can submit a pull request directly (without opening an issue) if it is small like the following:</p>
+<p>You can submit pull requests for small changes such as:</p>
 <ul>
-<li>Update a small part of documents.</li>
-<li>Fix spelling mistakes.</li>
-<li>Fix CI failures.</li>
-<li>Fix warnings detected by compilers or analysis tools.</li>
-<li>Make small changes to a single package.</li>
+<li>Minor documentation updates</li>
+<li>Fixing spelling mistakes</li>
+<li>Fixing CI failures</li>
+<li>Fixing warnings detected by compilers or analysis tools</li>
+<li>Making small changes to a single package</li>
 </ul>
-<p>Otherwise, create an issue or a discussion thread before submitting a pull request and discuss the approach with maintainers.</p>
-<p>Also, regardless of the size of your pull request, follow the pull request template of the target repository.</p>
-<p>See our <a href="pull-request-guidelines/">pull request guidelines</a> for the detailed steps.<br />
-See <a href="license/">License</a> for the license notations.</p>
+<p>If your pull request is a large change not covered by the examples above, discuss with the maintainers before submission. Doing so ensures that the proposed change is in line with Autoware's design philosophy and current development plans. If you're not sure where to have that conversation, then <a href="https://github.com/autowarefoundation/autoware/discussions/new?category=q-a">create a new Q&amp;A discussion</a>.</p>
+<p>For more information on how to submit a good pull request, have a read of our <a href="pull-request-guidelines/">pull request guidelines</a> and don't forget to review the required <a href="license/">license notations</a>!</p>
 
               
             </article>

@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/autoware-documentation/pr-17/tutorials/ad-hoc-simulation/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/autoware-documentation/pr-17/contributing/coding-guidelines/ros-nodes/message-guidelines/">
       
-      <link rel="icon" href="../../assets/images/autoware-foundation.png">
+      <link rel="icon" href="../../../../assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.1">
     
     
       
-        <title>Ad hoc simulation - Autoware Documentation</title>
+        <title>Message guidelines - Autoware Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.e8d9bf0c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -36,11 +36,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../../../assets/css/extra.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ad-hoc-simulation" class="md-skip">
+        <a href="#message-guidelines" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Autoware Documentation" class="md-header__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
+    <a href="../../../.." title="Autoware Documentation" class="md-header__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M39.61 196.8 74.8 96.29C88.27 57.78 124.6 32 165.4 32h181.2c40.8 0 77.1 25.78 90.6 64.29l35.2 100.51c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.33 32-32 32H32c-17.67 0-32-14.3-32-32V256c0-26.7 16.36-49.6 39.61-59.2zm69.49-4.8h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4L109.1 192zM96 256c-17.67 0-32 14.3-32 32s14.33 32 32 32c17.7 0 32-14.3 32-32s-14.3-32-32-32zm320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ad hoc simulation
+              Message guidelines
             
           </span>
         </div>
@@ -200,7 +200,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../../.." class="md-tabs__link">
       Introduction
     </a>
   </li>
@@ -215,8 +215,56 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+      <a href="../../../../installation/" class="md-tabs__link">
         Installation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tutorials/" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../how-to-guides/" class="md-tabs__link">
+        How to guides
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../design/" class="md-tabs__link">
+        Design
       </a>
     </li>
   
@@ -233,55 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
-        Tutorials
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../how-to-guides/" class="md-tabs__link">
-        How to guides
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../design/" class="md-tabs__link">
-        Design
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../contributing/" class="md-tabs__link">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
         Contributing
       </a>
     </li>
@@ -297,7 +297,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../support/" class="md-tabs__link">
+      <a href="../../../../support/" class="md-tabs__link">
         Support
       </a>
     </li>
@@ -331,7 +331,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Autoware Documentation" class="md-nav__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
+    <a href="../../../.." title="Autoware Documentation" class="md-nav__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M39.61 196.8 74.8 96.29C88.27 57.78 124.6 32 165.4 32h181.2c40.8 0 77.1 25.78 90.6 64.29l35.2 100.51c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.33 32-32 32H32c-17.67 0-32-14.3-32-32V256c0-26.7 16.36-49.6 39.61-59.2zm69.49-4.8h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4L109.1 192zM96 256c-17.67 0-32 14.3-32 32s14.33 32 32 32c17.7 0 32-14.3 32-32s-14.3-32-32-32zm320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -400,7 +400,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/">Installation</a>
+          <a href="../../../../installation/">Installation</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -446,7 +446,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/autoware/">Autoware</a>
+          <a href="../../../../installation/autoware/">Autoware</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -469,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/autoware/docker-installation/" class="md-nav__link">
+      <a href="../../../../installation/autoware/docker-installation/" class="md-nav__link">
         Docker installation
       </a>
     </li>
@@ -483,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/autoware/source-installation/" class="md-nav__link">
+      <a href="../../../../installation/autoware/source-installation/" class="md-nav__link">
         Source installation
       </a>
     </li>
@@ -523,7 +523,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/tools-for-users/">Tools for users</a>
+          <a href="../../../../installation/tools-for-users/">Tools for users</a>
           
         </div>
       
@@ -568,7 +568,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/tools-for-developers/">Tools for developers</a>
+          <a href="../../../../installation/tools-for-developers/">Tools for developers</a>
           
         </div>
       
@@ -600,14 +600,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -625,7 +623,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Tutorials</a>
+          <a href="../../../../tutorials/">Tutorials</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -646,16 +644,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
       
       
       
@@ -674,8 +670,8 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">Ad hoc simulation</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../tutorials/ad-hoc-simulation/">Ad hoc simulation</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -698,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="planning-simulation/" class="md-nav__link">
+      <a href="../../../../tutorials/ad-hoc-simulation/planning-simulation/" class="md-nav__link">
         Planning simulation
       </a>
     </li>
@@ -712,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rosbag-replay-simulation/" class="md-nav__link">
+      <a href="../../../../tutorials/ad-hoc-simulation/rosbag-replay-simulation/" class="md-nav__link">
         Rosbag replay simulation
       </a>
     </li>
@@ -726,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="digital-twin-simulation/" class="md-nav__link">
+      <a href="../../../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
         Digital twin simulation
       </a>
     </li>
@@ -772,7 +768,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../scenario-simulation/">Scenario simulation</a>
+          <a href="../../../../tutorials/scenario-simulation/">Scenario simulation</a>
           
             <label for="__nav_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -795,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scenario-simulation/planning-simulation/" class="md-nav__link">
+      <a href="../../../../tutorials/scenario-simulation/planning-simulation/" class="md-nav__link">
         Planning simulation
       </a>
     </li>
@@ -809,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scenario-simulation/rosbag-replay-simulation/" class="md-nav__link">
+      <a href="../../../../tutorials/scenario-simulation/rosbag-replay-simulation/" class="md-nav__link">
         Rosbag replay simulation
       </a>
     </li>
@@ -823,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scenario-simulation/digital-twin-simulation/" class="md-nav__link">
+      <a href="../../../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
         Digital twin simulation
       </a>
     </li>
@@ -871,7 +867,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../how-to-guides/">How to guides</a>
+          <a href="../../../../how-to-guides/">How to guides</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -894,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+      <a href="../../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
         Advanced usage of colcon
       </a>
     </li>
@@ -939,7 +935,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/">Design</a>
+          <a href="../../../../design/">Design</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -981,7 +977,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-concepts/">Autoware concepts</a>
+          <a href="../../../../design/autoware-concepts/">Autoware concepts</a>
           
         </div>
       
@@ -1030,7 +1026,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/">Autoware interfaces</a>
+          <a href="../../../../design/autoware-interfaces/">Autoware interfaces</a>
           
             <label for="__nav_5_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1070,7 +1066,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/ad-api/">AD API</a>
+          <a href="../../../../design/autoware-interfaces/ad-api/">AD API</a>
           
         </div>
       
@@ -1119,7 +1115,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/components/">Components</a>
+          <a href="../../../../design/autoware-interfaces/components/">Components</a>
           
             <label for="__nav_5_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1142,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/autoware-interfaces/components/planning/" class="md-nav__link">
+      <a href="../../../../design/autoware-interfaces/components/planning/" class="md-nav__link">
         Planning
       </a>
     </li>
@@ -1156,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/autoware-interfaces/components/control/" class="md-nav__link">
+      <a href="../../../../design/autoware-interfaces/components/control/" class="md-nav__link">
         Control
       </a>
     </li>
@@ -1170,7 +1166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/autoware-interfaces/components/vehicle-interface/" class="md-nav__link">
+      <a href="../../../../design/autoware-interfaces/components/vehicle-interface/" class="md-nav__link">
         Vehicle Interface
       </a>
     </li>
@@ -1223,7 +1219,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/configuration-management/">Configuration management</a>
+          <a href="../../../../design/configuration-management/">Configuration management</a>
           
             <label for="__nav_5_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1246,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/configuration-management/development-process/" class="md-nav__link">
+      <a href="../../../../design/configuration-management/development-process/" class="md-nav__link">
         Development process
       </a>
     </li>
@@ -1260,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/configuration-management/repository-structure/" class="md-nav__link">
+      <a href="../../../../design/configuration-management/repository-structure/" class="md-nav__link">
         Repository structure
       </a>
     </li>
@@ -1274,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/configuration-management/release-process/" class="md-nav__link">
+      <a href="../../../../design/configuration-management/release-process/" class="md-nav__link">
         Release process
       </a>
     </li>
@@ -1301,12 +1297,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -1332,7 +1330,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../contributing/">Contributing</a>
+          <a href="../../../">Contributing</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1355,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/license/" class="md-nav__link">
+      <a href="../../../license/" class="md-nav__link">
         License
       </a>
     </li>
@@ -1367,14 +1365,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" data-md-state="indeterminate" type="checkbox" id="__nav_6_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" checked>
       
       
       
@@ -1392,7 +1392,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../contributing/coding-guidelines/">Coding guidelines</a>
+          <a href="../../">Coding guidelines</a>
           
             <label for="__nav_6_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1450,7 +1450,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../contributing/coding-guidelines/languages/">Language-specific coding guidelines</a>
+          <a href="../../languages/">Language-specific coding guidelines</a>
           
             <label for="__nav_6_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1473,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/languages/cpp/" class="md-nav__link">
+      <a href="../../languages/cpp/" class="md-nav__link">
         C++
       </a>
     </li>
@@ -1487,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/languages/python/" class="md-nav__link">
+      <a href="../../languages/python/" class="md-nav__link">
         Python
       </a>
     </li>
@@ -1501,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/languages/shell-scripts/" class="md-nav__link">
+      <a href="../../languages/shell-scripts/" class="md-nav__link">
         Shell scripts
       </a>
     </li>
@@ -1515,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/languages/markdown/" class="md-nav__link">
+      <a href="../../languages/markdown/" class="md-nav__link">
         Markdown
       </a>
     </li>
@@ -1529,7 +1529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/languages/cmake/" class="md-nav__link">
+      <a href="../../languages/cmake/" class="md-nav__link">
         CMake
       </a>
     </li>
@@ -1543,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/languages/package-xml/" class="md-nav__link">
+      <a href="../../languages/package-xml/" class="md-nav__link">
         package.xml
       </a>
     </li>
@@ -1557,7 +1557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/languages/ros2-interfaces/" class="md-nav__link">
+      <a href="../../languages/ros2-interfaces/" class="md-nav__link">
         ROS 2 interfaces
       </a>
     </li>
@@ -1571,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/languages/docker/" class="md-nav__link">
+      <a href="../../languages/docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -1585,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/languages/github-actions/" class="md-nav__link">
+      <a href="../../languages/github-actions/" class="md-nav__link">
         GitHub Actions
       </a>
     </li>
@@ -1604,12 +1604,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_6_3_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3_3" type="checkbox" id="__nav_6_3_3" checked>
       
       
       
@@ -1643,7 +1645,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../contributing/coding-guidelines/ros-nodes/">ROS nodes coding guidelines</a>
+          <a href="../">ROS nodes coding guidelines</a>
           
             <label for="__nav_6_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1666,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/class-design/" class="md-nav__link">
+      <a href="../class-design/" class="md-nav__link">
         Class design
       </a>
     </li>
@@ -1680,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/console-logging/" class="md-nav__link">
+      <a href="../console-logging/" class="md-nav__link">
         Console logging
       </a>
     </li>
@@ -1694,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/coordinate-system/" class="md-nav__link">
+      <a href="../coordinate-system/" class="md-nav__link">
         Coordinate system
       </a>
     </li>
@@ -1708,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/directory-structure/" class="md-nav__link">
+      <a href="../directory-structure/" class="md-nav__link">
         Directory structure
       </a>
     </li>
@@ -1722,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/launch-files/" class="md-nav__link">
+      <a href="../launch-files/" class="md-nav__link">
         Launch files
       </a>
     </li>
@@ -1734,11 +1736,107 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/message-guidelines/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Message guidelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Message guidelines
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-units" class="md-nav__link">
+    Default units
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-default-units" class="md-nav__link">
+    Non-default units
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-field-types" class="md-nav__link">
+    Message field types
+  </a>
+  
+    <nav class="md-nav" aria-label="Message field types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    Enumerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-usages" class="md-nav__link">
+    Example usages
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1750,7 +1848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/naming/" class="md-nav__link">
+      <a href="../naming/" class="md-nav__link">
         Topic namespaces
       </a>
     </li>
@@ -1764,7 +1862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/parameters/" class="md-nav__link">
+      <a href="../parameters/" class="md-nav__link">
         Parameters
       </a>
     </li>
@@ -1778,7 +1876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/task-scheduling/" class="md-nav__link">
+      <a href="../task-scheduling/" class="md-nav__link">
         Task scheduling
       </a>
     </li>
@@ -1792,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/coding-guidelines/ros-nodes/topic-namespaces/" class="md-nav__link">
+      <a href="../topic-namespaces/" class="md-nav__link">
         Topic namespaces
       </a>
     </li>
@@ -1839,7 +1937,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../contributing/testing-guidelines/">Testing guidelines</a>
+          <a href="../../../testing-guidelines/">Testing guidelines</a>
           
         </div>
       
@@ -1884,7 +1982,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../contributing/documentation-guidelines/">Documentation guidelines</a>
+          <a href="../../../documentation-guidelines/">Documentation guidelines</a>
           
         </div>
       
@@ -1935,7 +2033,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../contributing/pull-request-guidelines/">Pull request guidelines</a>
+          <a href="../../../pull-request-guidelines/">Pull request guidelines</a>
           
             <label for="__nav_6_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1958,7 +2056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/pull-request-guidelines/commit-guidelines/" class="md-nav__link">
+      <a href="../../../pull-request-guidelines/commit-guidelines/" class="md-nav__link">
         Commit guidelines
       </a>
     </li>
@@ -1972,7 +2070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/pull-request-guidelines/review-guidelines/" class="md-nav__link">
+      <a href="../../../pull-request-guidelines/review-guidelines/" class="md-nav__link">
         Review guidelines
       </a>
     </li>
@@ -1986,7 +2084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/pull-request-guidelines/review-tips/" class="md-nav__link">
+      <a href="../../../pull-request-guidelines/review-tips/" class="md-nav__link">
         Tips
       </a>
     </li>
@@ -2026,7 +2124,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../contributing/discussion-guidelines/">Discussion guidelines</a>
+          <a href="../../../discussion-guidelines/">Discussion guidelines</a>
           
         </div>
       
@@ -2083,7 +2181,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../support/">Support</a>
+          <a href="../../../../support/">Support</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2106,7 +2204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/support-guidelines/" class="md-nav__link">
+      <a href="../../../../support/support-guidelines/" class="md-nav__link">
         Support guidelines
       </a>
     </li>
@@ -2120,7 +2218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/troubleshooting/" class="md-nav__link">
+      <a href="../../../../support/troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -2134,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/docs-guide/" class="md-nav__link">
+      <a href="../../../../support/docs-guide/" class="md-nav__link">
         Docs guide
       </a>
     </li>
@@ -2168,6 +2266,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-units" class="md-nav__link">
+    Default units
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-default-units" class="md-nav__link">
+    Non-default units
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-field-types" class="md-nav__link">
+    Message field types
+  </a>
+  
+    <nav class="md-nav" aria-label="Message field types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    Enumerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-usages" class="md-nav__link">
+    Example usages
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2178,17 +2346,272 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/autowarefoundation/autoware-documentation/edit/main/docs/tutorials/ad-hoc-simulation/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/autowarefoundation/autoware-documentation/edit/main/docs/contributing/coding-guidelines/ros-nodes/message-guidelines.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="ad-hoc-simulation">Ad hoc simulation<a class="headerlink" href="#ad-hoc-simulation" title="Permanent link">#</a></h1>
+<h1 id="message-guidelines">Message guidelines<a class="headerlink" href="#message-guidelines" title="Permanent link">#</a></h1>
+<h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">#</a></h2>
+<p>All messages should follow <a href="https://docs.ros.org/en/galactic/Concepts/About-ROS-Interfaces.html#background">ROS message description specification</a>.</p>
+<p>The accepted formats are:</p>
+<ul>
+<li><code>.msg</code></li>
+<li><code>.srv</code></li>
+<li><code>.action</code></li>
+</ul>
+<h2 id="default-units">Default units<a class="headerlink" href="#default-units" title="Permanent link">#</a></h2>
+<p>All the fields by default have the following units depending on their types:</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>distance</td>
+<td>meter (m)</td>
+</tr>
+<tr>
+<td>angle</td>
+<td>radians (rad)</td>
+</tr>
+<tr>
+<td>time</td>
+<td>second (s)</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>m/s</td>
+</tr>
+<tr>
+<td>velocity</td>
+<td>m/s</td>
+</tr>
+<tr>
+<td>acceleration</td>
+<td>m/s²</td>
+</tr>
+<tr>
+<td>angular vel.</td>
+<td>rad/s</td>
+</tr>
+<tr>
+<td>angular accel.</td>
+<td>rad/s²</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Under Construction</p>
+<p>If a field in a message has any of these default units, don't add any suffix or prefix denoting the type.</p>
 </div>
+<h2 id="non-default-units">Non-default units<a class="headerlink" href="#non-default-units" title="Permanent link">#</a></h2>
+<p>For non-default units, use following suffixes:</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>non-default unit</th>
+<th>suffix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>distance</td>
+<td>nanometer</td>
+<td><code>_nm</code></td>
+</tr>
+<tr>
+<td>distance</td>
+<td>micrometer</td>
+<td><code>_um</code></td>
+</tr>
+<tr>
+<td>distance</td>
+<td>millimeter</td>
+<td><code>_mm</code></td>
+</tr>
+<tr>
+<td>distance</td>
+<td>kilometer</td>
+<td><code>_km</code></td>
+</tr>
+<tr>
+<td>angle</td>
+<td>degree (deg)</td>
+<td><code>_deg</code></td>
+</tr>
+<tr>
+<td>time</td>
+<td>nanosecond</td>
+<td><code>_ns</code></td>
+</tr>
+<tr>
+<td>time</td>
+<td>microsecond</td>
+<td><code>_us</code></td>
+</tr>
+<tr>
+<td>time</td>
+<td>millisecond</td>
+<td><code>_ms</code></td>
+</tr>
+<tr>
+<td>time</td>
+<td>minute</td>
+<td><code>_min</code></td>
+</tr>
+<tr>
+<td>time</td>
+<td>hour (h)</td>
+<td><code>_hour</code></td>
+</tr>
+<tr>
+<td>velocity</td>
+<td>km/h</td>
+<td><code>_kmph</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p>If a unit that you'd like to use doesn't exist here, <a href="https://github.com/autowarefoundation/autoware-documentation/issues">create an issue/PR</a> to add it to this list.</p>
+</div>
+<h2 id="message-field-types">Message field types<a class="headerlink" href="#message-field-types" title="Permanent link">#</a></h2>
+<p>For list of types supported by the ROS interfaces <a href="https://docs.ros.org/en/galactic/Concepts/About-ROS-Interfaces.html#field-types">see here</a>.</p>
+<p>Also copied here for convenience:</p>
+<table>
+<thead>
+<tr>
+<th>Message Field Type</th>
+<th>C++ equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bool</code></td>
+<td><code>bool</code></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td><code>uint8_t</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>char</code></td>
+</tr>
+<tr>
+<td><code>float32</code></td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td><code>float64</code></td>
+<td><code>double</code></td>
+</tr>
+<tr>
+<td><code>int8</code></td>
+<td><code>int8_t</code></td>
+</tr>
+<tr>
+<td><code>uint8</code></td>
+<td><code>uint8_t</code></td>
+</tr>
+<tr>
+<td><code>int16</code></td>
+<td><code>int16_t</code></td>
+</tr>
+<tr>
+<td><code>uint16</code></td>
+<td><code>uint16_t</code></td>
+</tr>
+<tr>
+<td><code>int32</code></td>
+<td><code>int32_t</code></td>
+</tr>
+<tr>
+<td><code>uint32</code></td>
+<td><code>uint32_t</code></td>
+</tr>
+<tr>
+<td><code>int64</code></td>
+<td><code>int64_t</code></td>
+</tr>
+<tr>
+<td><code>uint64</code></td>
+<td><code>uint64_t</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><code>std::string</code></td>
+</tr>
+<tr>
+<td><code>wstring</code></td>
+<td><code>std::u16string</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">#</a></h3>
+<p>For arrays, use <code>unbounded dynamic array</code> type.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>int32[] unbounded_integer_array
+</code></pre></div>
+<h2 id="enumerations">Enumerations<a class="headerlink" href="#enumerations" title="Permanent link">#</a></h2>
+<p>ROS2 interfaces don't support enumerations directly.</p>
+<p>It is possible to define integers constants and assign them to a non-constant integer parameter.</p>
+<div class="admonition success">
+<p>Constants are written in <code>CONSTANT_CASE</code>.</p>
+</div>
+<div class="admonition success">
+<p>Assign a different value to each element of a constant.</p>
+</div>
+<p>Example from <a href="https://github.com/ros2/common_interfaces/blob/f3cb4848560e91596e7688e8ac1816828fa460cb/shape_msgs/msg/SolidPrimitive.msg#L4-L11">shape_msgs/msg/SolidPrimitive.msg</a></p>
+<div class="highlight"><pre><span></span><code>uint8 BOX=1
+uint8 SPHERE=2
+uint8 CYLINDER=3
+uint8 CONE=4
+uint8 PRISM=5
+
+# The type of the shape
+uint8 type
+</code></pre></div>
+<h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">#</a></h2>
+<p>On top of the message, briefly explain what the message contains and/or what it is used for. See <a href="https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Imu.msg#L1-L13">sensor_msgs/msg/Imu.msg</a> for an example.</p>
+<div class="admonition tip">
+<p>If necessary, add line comments before the fields that explain the context and/or meaning.</p>
+</div>
+<div class="admonition tip">
+<p>For simple fields like <code>x, y, z, w</code> you might not need to add comments.</p>
+</div>
+<div class="admonition success">
+<p>Even though it is not strictly checked, try not to pass 100 characters in a line.</p>
+</div>
+<p><em>Example:</em></p>
+<div class="highlight"><pre><span></span><code># Number of times the vehicle performed an emergency brake
+uint32 count_emergency_brake
+
+# Seconds passed since the last emergency brake
+uint64 duration
+</code></pre></div>
+<h2 id="example-usages">Example usages<a class="headerlink" href="#example-usages" title="Permanent link">#</a></h2>
+<ul>
+<li>Don't use unit suffixes for default types:<ul>
+<li>Bad: <code>float32 path_length_m</code></li>
+<li>Good: <code>float32 path_length</code></li>
+</ul>
+</li>
+<li>Don't prefix the units:<ul>
+<li>Bad: <code>float32 kmph_velocity_vehicle</code></li>
+<li>Good: <code>float32 velocity_vehicle_kmph</code></li>
+</ul>
+</li>
+<li>Use recommended suffixes <a href="#non-default-units">if they are available in the table</a>:<ul>
+<li>Bad: <code>float32 velocity_vehicle_km_h</code></li>
+<li>Good: <code>float32 velocity_vehicle_kmph</code></li>
+</ul>
+</li>
+</ul>
 
               
             </article>
@@ -2207,7 +2630,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tutorials" rel="prev">
+        <a href="../launch-files/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Launch files" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2216,20 +2639,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tutorials
+              Launch files
             </div>
           </div>
         </a>
       
       
         
-        <a href="planning-simulation/" class="md-footer__link md-footer__link--next" aria-label="Next: Planning simulation" rel="next">
+        <a href="../naming/" class="md-footer__link md-footer__link--next" aria-label="Next: Topic namespaces" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Planning simulation
+              Topic namespaces
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2263,10 +2686,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8aa65030.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

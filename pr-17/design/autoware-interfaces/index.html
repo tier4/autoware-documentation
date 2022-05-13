@@ -15,7 +15,7 @@
     
     
       
-        <title>Autoware interfaces - Autoware Documentation</title>
+        <title>Autoware Interface Design - Autoware Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#autoware-interfaces" class="md-skip">
+        <a href="#autoware-interface-design" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Autoware interfaces
+              Autoware Interface Design
             
           </span>
         </div>
@@ -2169,6 +2169,138 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    Concept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#communication-method" class="md-nav__link">
+    Communication Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-convention" class="md-nav__link">
+    Naming Convention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restrictions" class="md-nav__link">
+    Restrictions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-structure" class="md-nav__link">
+    Data Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-type-definition" class="md-nav__link">
+    Data Type Definition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constants-and-enumeration" class="md-nav__link">
+    Constants and Enumeration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-stamp" class="md-nav__link">
+    Time Stamp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-header" class="md-nav__link">
+    Request Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-status" class="md-nav__link">
+    Response Status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concern-assumption-and-limitation" class="md-nav__link">
+    Concern, Assumption, and Limitation
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2185,11 +2317,325 @@
 
 
 
-<h1 id="autoware-interfaces">Autoware interfaces<a class="headerlink" href="#autoware-interfaces" title="Permanent link">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Under Construction</p>
-</div>
+<h1 id="autoware-interface-design">Autoware Interface Design<a class="headerlink" href="#autoware-interface-design" title="Permanent link">#</a></h1>
+<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">#</a></h2>
+<p>Autoware defines three categories of interfaces. The first one is Autoware AD API for operating the vehicle from outside the autonomous driving system such as the Fleet Management System (FMS) and Human Machine Interface (HMI) for operators or passengers. The second one is Autoware component interface for components to communicate with each other. The last one is the local interface used inside the component.</p>
+<h2 id="concept">Concept<a class="headerlink" href="#concept" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p>Applications can operate multiple and various vehicles in a common way.</p>
+<p><img alt="unified-access" src="general/unified-access.drawio.svg" /></p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Applications are not affected by version updates and implementation changes.</p>
+<p><img alt="absorb-changes" src="general/absorb-changes.drawio.svg" /></p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Developers only need to know the interface to add new features and hardware.</p>
+<p><img alt="new-feature" src="general/new-feature.drawio.svg" /></p>
+</li>
+</ul>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
+<p>Goals:</p>
+<ul>
+<li>AD API provides functionality to create the following applications:<ul>
+<li>Drive the vehicle on the route or drive to the requested positions in order.</li>
+<li>Operate vehicle behavior such as starting and stopping.</li>
+<li>Display or announce the vehicle status to operators, passengers, and people around.</li>
+<li>Control vehicle devices such as doors.</li>
+<li>Monitor the vehicle or drive it manually.</li>
+</ul>
+</li>
+<li>AD API provides stable and long-term specifications. This enables unified access to all vehicles.</li>
+<li>AD API hides differences in version and implementation and absorbs the impact of changes.</li>
+<li>AD API has a default implementation and can be applied to some simple ODDs with options.</li>
+<li>The AD API implementation is extensible with the third-party components as long as it meets the specifications.</li>
+<li>The component interface provides stable and medium-term specifications. This makes it easier to add components.</li>
+<li>The component interface clarifies the public and private parts of a component and improves maintainability.</li>
+<li>The component interface is extensible with the third-party design to improve the sub-components' reusability.</li>
+</ul>
+<p>Non-goals:</p>
+<ul>
+<li>AD API does not cover security. Use it with other reliable methods.</li>
+<li>The component interface is just a specification, it does not include an implementation.</li>
+</ul>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">#</a></h2>
+<p>The components of Autoware are connected via the component interface.
+Each component uses the interface to provide functionality and to access other components.
+AD API implementation is also a component.
+Since the functional elements required for AD API are defined as the component interface, other components do not need to consider AD API directly.
+Tools for evaluation and debugging, such as simulators, access both AD API and the component interface.</p>
+<p><img alt="architecture" src="general/architecture.drawio.svg" /></p>
+<p>The component interface has a hierarchical specification.
+The top-level architecture consists of some components. Each component has some options of the next-level architecture.
+Developers select one of them when implementing the component. The simplest next-level architecture is monolithic.
+This is an all-in-one and black box implementation, and is suitable for small group development, prototyping, and very complex functions.
+Others are arbitrary architecture consists of sub-components and have advantages for large group development.
+A sub-component can be combined with others that adopt the same architecture.
+Third parties can define and publish their own architecture and interface for open source development.
+It is desirable to propose them for standardization if they are sufficiently evaluated.</p>
+<p><img alt="component" src="general/hierarchy.drawio.svg" /></p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">#</a></h2>
+<h3 id="communication-method">Communication Method<a class="headerlink" href="#communication-method" title="Permanent link">#</a></h3>
+<p>As shown in the table below, interfaces are classified into four communication methods to define their behavior.
+Function Call is a request-response communication and is used for processing that requires immediate results. The others are publish-subscribe communication.
+Notification is used to process data that changes with some event, typically a callback. Streams handle continuously changing data.
+Reliable Stream expects all data to arrive without loss, Realtime Stream expects the latest data to arrive with low delay.</p>
+<table>
+<thead>
+<tr>
+<th>Communication Method</th>
+<th>ROS Implementation</th>
+<th>Optional Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function Call</td>
+<td>Service</td>
+<td>HTTP</td>
+</tr>
+<tr>
+<td>Notification</td>
+<td>Topic (reliable, transient_local)</td>
+<td>MQTT (QoS=2, retain)</td>
+</tr>
+<tr>
+<td>Reliable Stream</td>
+<td>Topic (reliable, volatile)</td>
+<td>MQTT (QoS=2)</td>
+</tr>
+<tr>
+<td>Realtime Stream</td>
+<td>Topic (best_effort, volatile)</td>
+<td>MQTT (QoS=0)</td>
+</tr>
+</tbody>
+</table>
+<p>These methods are provided as services or topics of ROS since Autoware is developed using ROS and mainly communicates with its packages.
+On the other hand, FMS and HMI are often implemented without ROS, Autoware is also expected to communicate with applications that do not use ROS.
+It is wasteful for each of these applications to have an adapter for Autoware, and a more suitable means of communication is required.
+HTTP and MQTT are suggested as additional options because these protocols are widely used and can substitute the behavior of services and topics.
+In that case, text formats such as JSON where field names are repeated in an array of objects, are inefficient and it is necessary to consider the serialization.</p>
+<h3 id="naming-convention">Naming Convention<a class="headerlink" href="#naming-convention" title="Permanent link">#</a></h3>
+<p>The name of the interface must be <code>/&lt;component name&gt;/api/&lt;interface name&gt;</code>,
+where <code>&lt;component name&gt;</code> is the name of the component. For an AD API component, omit this part and start with <code>/api</code>.
+The <code>&lt;interface name&gt;</code> is an arbitrary string separated by slashes.
+Note that this rule causes a restriction that the namespace <code>api</code> must not be used as a name other than AD API and the component interface.</p>
+<p>The following are examples of correct interface names for AD API and the component interface:</p>
+<ul>
+<li>/api/autoware/state</li>
+<li>/api/autoware/engage</li>
+<li>/planning/api/route/set</li>
+<li>/vehicle/api/status</li>
+</ul>
+<p>The following are examples of incorrect interface names for AD API and the component interface:</p>
+<ul>
+<li>/ad_api/autoware/state</li>
+<li>/autoware/engage</li>
+<li>/planning/route/set/api</li>
+<li>/vehicle/my_api/status</li>
+</ul>
+<h3 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">#</a></h3>
+<p>It is recommended to log the interface for analysis of vehicle behavior.
+If logging is needed, rosbag is available for topics, and use logger in rclcpp or rclpy for services.
+Typically, create a wrapper for service and client classes that logs when a service is called.</p>
+<h3 id="restrictions">Restrictions<a class="headerlink" href="#restrictions" title="Permanent link">#</a></h3>
+<p>For each API, consider the restrictions such as following and describe them if necessary.</p>
+<p>Services:</p>
+<ul>
+<li>response time</li>
+<li>pre-condition</li>
+<li>post-condition</li>
+<li>execution order</li>
+<li>concurrent execution</li>
+</ul>
+<p>Topics:</p>
+<ul>
+<li>recommended delay range</li>
+<li>maximum delay</li>
+<li>recommended frequency range</li>
+<li>minimum frequency</li>
+<li>default frequency</li>
+</ul>
+<h2 id="data-structure">Data Structure<a class="headerlink" href="#data-structure" title="Permanent link">#</a></h2>
+<h3 id="data-type-definition">Data Type Definition<a class="headerlink" href="#data-type-definition" title="Permanent link">#</a></h3>
+<p>Do not share the types in AD API unless they are obviously the same to avoid changes in one API affecting another.
+Also, implementation-dependent types, including the component interface, should not be used in AD API for the same reason.
+Use the type in AD API in implementation, or create the same type and copy the data to convert the type.</p>
+<h3 id="constants-and-enumeration">Constants and Enumeration<a class="headerlink" href="#constants-and-enumeration" title="Permanent link">#</a></h3>
+<p>Since ROS don't support enumeration, use constants instead.
+The default value of type such as zero and empty string should not be used to detect that a variable is unassigned.
+Alternatively, assign it a dedicated name to indicate that it is undefined.
+If one type has multiple enumerations, comment on the correspondence between constants and variables.
+Assign unique values to all constants so that it can be distinguished from other enumerations.
+Do not use enumeration values directly, as assignments are subject to change when the version is updated.</p>
+<h3 id="time-stamp">Time Stamp<a class="headerlink" href="#time-stamp" title="Permanent link">#</a></h3>
+<p>Clarify what the timestamp indicates. for example, send time, measurement time, update time, etc. Consider having multiple timestamps if necessary.
+Use <code>std_msgs/msg/Header</code> when using ROS transform.
+Also consider whether the header is common to all data, independent for each data, or additional timestamp is required.</p>
+<h3 id="request-header">Request Header<a class="headerlink" href="#request-header" title="Permanent link">#</a></h3>
+<p>Currently, there is no required header.</p>
+<h3 id="response-status">Response Status<a class="headerlink" href="#response-status" title="Permanent link">#</a></h3>
+<p>The interfaces whose communication method is Function Call use a common response status to unify the error format.
+For those interfaces, include the ResponseStatus shown below in the response with the name status.
+The data <code>status.summary.code</code> is the execution result of the interface, and the caller branches the process according to this value.
+Others are for the users and should not be used directly by the program.
+These data are primarily used to provide users with solution tips and to ask the developer for the cause of the error.</p>
+<p>The typical use of the field <code>details</code> is when an interface calls other interfaces.
+That interface stores response statuses in <code>details</code>, then merges them and sets the result to <code>summary</code>.
+This allows the developer to know which component was causing the error by checking <code>details</code>.</p>
+<ul>
+<li>
+<p>ResponseStatus</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>summary</td>
+<td>ResponseStatusDetail</td>
+<td>status summary</td>
+</tr>
+<tr>
+<td>details</td>
+<td>ResponseStatusDetail Array</td>
+<td>status details</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul>
+<li>
+<p>ResponseStatusDetail</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>uint32</td>
+<td>response status code</td>
+</tr>
+<tr>
+<td>component</td>
+<td>string</td>
+<td>the component that caused the error</td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>error message</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>error information such as detailed message and document URL</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul>
+<li>
+<p>ResponseStatusCode</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0000</td>
+<td>0x0000</td>
+<td>UNKNOWN</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>SUCCESS</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>ACCEPTED</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>NO_EFFECT</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>UNAVAILABLE</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>WARNING</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>ERROR</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>FORBIDDEN</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>BAD_REQUEST</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>NOT_SUPPORTED</td>
+</tr>
+<tr>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
+<td>TIMEOUT</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="concern-assumption-and-limitation">Concern, Assumption, and Limitation<a class="headerlink" href="#concern-assumption-and-limitation" title="Permanent link">#</a></h2>
+<ul>
+<li>The applications use the version information provided by AD API to check compatibility.
+  Unknown versions are also treated as available as long as the major versions match (excluding major version 0).
+  Compatibility between AD API and the component interface is assumed to be maintained by the version management system.</li>
+<li>If an unintended behavior of AD API is detected, the application should take appropriate action.
+  Autoware tries to keep working as long as possible, but it is not guaranteed to be safe.
+  Safety should be considered for the entire system, including the applications.</li>
+</ul>
 
               
             </article>

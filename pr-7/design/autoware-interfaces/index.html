@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/">
       
       <link rel="icon" href="../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -298,8 +298,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../help/" class="md-tabs__link">
-        Help
+      <a href="../../support/" class="md-tabs__link">
+        Support
       </a>
     </li>
   
@@ -1778,6 +1778,8 @@
         
           
         
+          
+        
       
       
         
@@ -1864,6 +1866,20 @@
     <li class="md-nav__item">
       <a href="../../contributing/coding-guidelines/ros-nodes/launch-files/" class="md-nav__link">
         Launch files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/coding-guidelines/ros-nodes/message-guidelines/" class="md-nav__link">
+        Message guidelines
       </a>
     </li>
   
@@ -2209,7 +2225,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../help/">Help</a>
+          <a href="../../support/">Support</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2217,10 +2233,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Help" data-md-level="1">
+      <nav class="md-nav" aria-label="Support" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          Help
+          Support
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2232,7 +2248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../help/support-guidelines/" class="md-nav__link">
+      <a href="../../support/support-guidelines/" class="md-nav__link">
         Support guidelines
       </a>
     </li>
@@ -2246,7 +2262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../help/troubleshooting/" class="md-nav__link">
+      <a href="../../support/troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -2260,7 +2276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../help/docs-guide/" class="md-nav__link">
+      <a href="../../support/docs-guide/" class="md-nav__link">
         Docs guide
       </a>
     </li>
@@ -2444,7 +2460,7 @@
 
 <h1 id="autoware-interface-design">Autoware Interface Design<a class="headerlink" href="#autoware-interface-design" title="Permanent link">#</a></h1>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">#</a></h2>
-<p>Autoware defines two categories of interfaces. The first one is Autoware AD API for operating the vehicle from outside the autonomous driving system such as the Fleet Management System (FMS) and Human Machine Interface (HMI) for operators or passengers. The second one is Autoware Component Interface for internal components to communicate with each other.</p>
+<p>Autoware defines three categories of interfaces. The first one is Autoware AD API for operating the vehicle from outside the autonomous driving system such as the Fleet Management System (FMS) and Human Machine Interface (HMI) for operators or passengers. The second one is Autoware component interface for components to communicate with each other. The last one is the local interface used inside the component.</p>
 <h2 id="concept">Concept<a class="headerlink" href="#concept" title="Permanent link">#</a></h2>
 <ul>
 <li>
@@ -2479,23 +2495,23 @@
 <li>AD API hides differences in version and implementation and absorbs the impact of changes.</li>
 <li>AD API has a default implementation and can be applied to some simple ODDs with options.</li>
 <li>The AD API implementation is extensible with the third-party components as long as it meets the specifications.</li>
-<li>Component Interface provides stable and medium-term specifications. This makes it easier to add components.</li>
-<li>Component Interface clarifies the public and private parts of a component and improves maintainability.</li>
-<li>Component Interface is extensible with the third-party design to improve the sub-components' reusability.</li>
+<li>The component interface provides stable and medium-term specifications. This makes it easier to add components.</li>
+<li>The component interface clarifies the public and private parts of a component and improves maintainability.</li>
+<li>The component interface is extensible with the third-party design to improve the sub-components' reusability.</li>
 </ul>
 <p>Non-goals:</p>
 <ul>
 <li>AD API does not cover security. Use it with other reliable methods.</li>
-<li>Component Interface is just a specification, it does not include an implementation.</li>
+<li>The component interface is just a specification, it does not include an implementation.</li>
 </ul>
 <h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">#</a></h2>
-<p>The components of Autoware are connected via Component Interface.
+<p>The components of Autoware are connected via the component interface.
 Each component uses the interface to provide functionality and to access other components.
 AD API implementation is also a component.
-Since the functional elements required for AD API are defined as Component Interface, other components do not need to consider AD API directly.
-Tools for evaluation and debugging, such as simulators, access both AD API and Component Interface.</p>
+Since the functional elements required for AD API are defined as the component interface, other components do not need to consider AD API directly.
+Tools for evaluation and debugging, such as simulators, access both AD API and the component interface.</p>
 <p><img alt="architecture" src="general/architecture.drawio.svg" /></p>
-<p>Component Interface has a hierarchical specification.
+<p>The component interface has a hierarchical specification.
 The top-level architecture consists of some components. Each component has some options of the next-level architecture.
 Developers select one of them when implementing the component. The simplest next-level architecture is monolithic.
 This is an all-in-one and black box implementation, and is suitable for small group development, prototyping, and very complex functions.
@@ -2547,29 +2563,28 @@ It is wasteful for each of these applications to have an adapter for Autoware, a
 HTTP and MQTT are suggested as additional options because these protocols are widely used and can substitute the behavior of services and topics.
 In that case, text formats such as JSON where field names are repeated in an array of objects, are inefficient and it is necessary to consider the serialization.</p>
 <h3 id="naming-convention">Naming Convention<a class="headerlink" href="#naming-convention" title="Permanent link">#</a></h3>
-<p>The name of the interface must be <code>/&lt;component name&gt;/api/&lt;version&gt;/&lt;interface name&gt;</code>,
+<p>The name of the interface must be <code>/&lt;component name&gt;/api/&lt;interface name&gt;</code>,
 where <code>&lt;component name&gt;</code> is the name of the component. For an AD API component, omit this part and start with <code>/api</code>.
-The <code>&lt;version&gt;</code> is a major version with <code>v</code> such as <code>v1</code>. This can provide older interfaces for backward compatibility.
 The <code>&lt;interface name&gt;</code> is an arbitrary string separated by slashes.
-Note that this rule causes a restriction that the namespace <code>api</code> must not be used as a name other than AD API and Component Interface.</p>
-<p>The following are examples of correct interface names for AD API and Component Interface:</p>
-<ul>
-<li>/api/v1/autoware/state</li>
-<li>/api/v1/autoware/engage</li>
-<li>/planning/api/v1/route/change</li>
-<li>/vehicle/api/v1/status</li>
-</ul>
-<p>The following are examples of incorrect interface names for AD API and Component Interface:</p>
+Note that this rule causes a restriction that the namespace <code>api</code> must not be used as a name other than AD API and the component interface.</p>
+<p>The following are examples of correct interface names for AD API and the component interface:</p>
 <ul>
 <li>/api/autoware/state</li>
-<li>/autoware/state</li>
-<li>/planning/route/api/v1</li>
-<li>/vehicle/my_api/v1/status</li>
+<li>/api/autoware/engage</li>
+<li>/planning/api/route/set</li>
+<li>/vehicle/api/status</li>
+</ul>
+<p>The following are examples of incorrect interface names for AD API and the component interface:</p>
+<ul>
+<li>/ad_api/autoware/state</li>
+<li>/autoware/engage</li>
+<li>/planning/route/set/api</li>
+<li>/vehicle/my_api/status</li>
 </ul>
 <h3 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">#</a></h3>
 <p>It is recommended to log the interface for analysis of vehicle behavior.
 If logging is needed, rosbag is available for topics, and use logger in rclcpp or rclpy for services.
-Typically, create a wrapper for services and clients that logs when a method is called.</p>
+Typically, create a wrapper for service and client classes that logs when a service is called.</p>
 <h3 id="restrictions">Restrictions<a class="headerlink" href="#restrictions" title="Permanent link">#</a></h3>
 <p>For each API, consider the restrictions such as following and describe them if necessary.</p>
 <p>Services:</p>
@@ -2591,7 +2606,7 @@ Typically, create a wrapper for services and clients that logs when a method is 
 <h2 id="data-structure">Data Structure<a class="headerlink" href="#data-structure" title="Permanent link">#</a></h2>
 <h3 id="data-type-definition">Data Type Definition<a class="headerlink" href="#data-type-definition" title="Permanent link">#</a></h3>
 <p>Do not share the types in AD API unless they are obviously the same to avoid changes in one API affecting another.
-Also, implementation-dependent types, including Component Interface, should not be used in AD API for the same reason.
+Also, implementation-dependent types, including the component interface, should not be used in AD API for the same reason.
 Use the type in AD API in implementation, or create the same type and copy the data to convert the type.</p>
 <h3 id="constants-and-enumeration">Constants and Enumeration<a class="headerlink" href="#constants-and-enumeration" title="Permanent link">#</a></h3>
 <p>Since ROS don't support enumeration, use constants instead.
@@ -2614,7 +2629,7 @@ Others are for the users and should not be used directly by the program.
 These data are primarily used to provide users with solution tips and to ask the developer for the cause of the error.</p>
 <p>The typical use of the field <code>details</code> is when an interface calls other interfaces.
 That interface stores response statuses in <code>details</code>, then merges them and sets the result to <code>summary</code>.
-This allows the user to know which component was causing the error by checking <code>details</code>.</p>
+This allows the developer to know which component was causing the error by checking <code>details</code>.</p>
 <ul>
 <li>
 <p>ResponseStatus</p>
@@ -2695,23 +2710,23 @@ This allows the user to know which component was causing the error by checking <
 <td>UNKNOWN</td>
 </tr>
 <tr>
-<td>0x1000</td>
-<td>0x1000</td>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
 <td>OK</td>
 </tr>
 <tr>
-<td>0x1000</td>
-<td>0x1001</td>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
 <td>SUCCESS</td>
 </tr>
 <tr>
-<td>0x1000</td>
-<td>0x1002</td>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
 <td>ACCEPTED</td>
 </tr>
 <tr>
-<td>0x1000</td>
-<td>0x1003</td>
+<td>T.B.D.</td>
+<td>T.B.D.</td>
 <td>NO_EFFECT</td>
 </tr>
 <tr>
@@ -2756,8 +2771,8 @@ This allows the user to know which component was causing the error by checking <
 <h2 id="concern-assumption-and-limitation">Concern, Assumption, and Limitation<a class="headerlink" href="#concern-assumption-and-limitation" title="Permanent link">#</a></h2>
 <ul>
 <li>The applications use the version information provided by AD API to check compatibility.
-  Unknown versions are also treated as available as long as the major versions match when it is 1 or later.
-  Compatibility between AD API and Component Interface is assumed to be maintained by the version management system.</li>
+  Unknown versions are also treated as available as long as the major versions match (excluding major version 0).
+  Compatibility between AD API and the component interface is assumed to be maintained by the version management system.</li>
 <li>If an unintended behavior of AD API is detected, the application should take appropriate action.
   Autoware tries to keep working as long as possible, but it is not guaranteed to be safe.
   Safety should be considered for the entire system, including the applications.</li>
@@ -2839,7 +2854,7 @@ This allows the user to know which component was causing the error by checking <
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

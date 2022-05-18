@@ -437,25 +437,15 @@
       
         
           
-            
-          
-        
-          
         
           
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="autoware/">Autoware</a>
-          
-            <label for="__nav_2_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_2_2">
+          Autoware
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <nav class="md-nav" aria-label="Autoware" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
@@ -463,8 +453,6 @@
           Autoware
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
           
             
               
@@ -526,14 +514,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="tools-for-users/">Tools for users</a>
+          <a href="related-tools/">Related tools</a>
           
         </div>
       
-      <nav class="md-nav" aria-label="Tools for users" data-md-level="2">
+      <nav class="md-nav" aria-label="Related tools" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Tools for users
+          Related tools
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -571,14 +559,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="tools-for-developers/">Tools for developers</a>
+          <a href="additional-settings-for-developers/">Additional settings for developers</a>
           
         </div>
       
-      <nav class="md-nav" aria-label="Tools for developers" data-md-level="2">
+      <nav class="md-nav" aria-label="Additional settings for developers" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
-          Tools for developers
+          Additional settings for developers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2201,22 +2189,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-steps-of-autoware" class="md-nav__link">
-    Installation steps of Autoware
+  <a href="#installing-autoware" class="md-nav__link">
+    Installing Autoware
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Autoware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-docker-installation" class="md-nav__link">
+    1. Docker installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-source-installation" class="md-nav__link">
+    2. Source installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-related-tools" class="md-nav__link">
+    Installing related tools
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-steps-of-tools-for-users" class="md-nav__link">
-    Installation steps of tools for users
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-steps-of-tools-for-developers" class="md-nav__link">
-    Installation steps of tools for developers
+  <a href="#additional-settings-for-developers" class="md-nav__link">
+    Additional settings for developers
   </a>
   
 </li>
@@ -2254,15 +2262,25 @@
 <li>ROS 2 Humble (<strong>will be supported in 2022</strong>)</li>
 </ul>
 <p>Refer to <a href="https://www.ros.org/reps/rep-2000.html">REP-2000</a> for the system dependencies.</p>
-<h2 id="installation-steps-of-autoware">Installation steps of Autoware<a class="headerlink" href="#installation-steps-of-autoware" title="Permanent link">#</a></h2>
-<p>See <a href="autoware">here</a> for how to install Autoware.</p>
-<h2 id="installation-steps-of-tools-for-users">Installation steps of tools for users<a class="headerlink" href="#installation-steps-of-tools-for-users" title="Permanent link">#</a></h2>
+<h2 id="installing-autoware">Installing Autoware<a class="headerlink" href="#installing-autoware" title="Permanent link">#</a></h2>
+<p>There are two ways to set up Autoware. Choose one according to your preference.</p>
+<p>If any issues occur during installation, refer to the <a href="https://autowarefoundation.github.io/autoware-documentation/main/support">Support page</a>.</p>
+<h3 id="1-docker-installation">1. Docker installation<a class="headerlink" href="#1-docker-installation" title="Permanent link">#</a></h3>
+<p>Docker can ensure that all developers in a project have a common, consistent development environment.
+It is recommended for beginners, casual users, people who are unfamiliar with Ubuntu.</p>
+<p>Refer to the <a href="autoware/docker-installation/">Docker installation guide</a> for detailed steps.</p>
+<h3 id="2-source-installation">2. Source installation<a class="headerlink" href="#2-source-installation" title="Permanent link">#</a></h3>
+<p>Source installation is for the cases where more granular control of the installation environment is needed.
+It is recommended for experienced users or people who want to customize their environment.<br />
+Note that some problems may occur depending on your local environment.</p>
+<p>Refer to the <a href="autoware/source-installation/">source installation guide</a> for detailed steps.</p>
+<h2 id="installing-related-tools">Installing related tools<a class="headerlink" href="#installing-related-tools" title="Permanent link">#</a></h2>
 <p>Some other tools are required depending on the evaluation you want to do.
-For example, if you run E2E simulation, you need to install a simulator for that.</p>
-<p>See <a href="tools-for-users">here</a> for how to install the tools.</p>
-<h2 id="installation-steps-of-tools-for-developers">Installation steps of tools for developers<a class="headerlink" href="#installation-steps-of-tools-for-developers" title="Permanent link">#</a></h2>
+For example, to run an end-to-end simulation you need to install an appropriate simulator.</p>
+<p>See <a href="related-tools">here</a> for how to install the tools.</p>
+<h2 id="additional-settings-for-developers">Additional settings for developers<a class="headerlink" href="#additional-settings-for-developers" title="Permanent link">#</a></h2>
 <p>There are also tools and settings for developers, such as Shells or IDEs.</p>
-<p>See <a href="tools-for-developers">here</a> for how to install the tools.</p>
+<p>See <a href="additional-settings-for-developers">here</a> for how to install the tools.</p>
 
               
             </article>
@@ -2297,13 +2315,13 @@ For example, if you run E2E simulation, you need to install a simulator for that
       
       
         
-        <a href="autoware/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation of Autoware" rel="next">
+        <a href="autoware/docker-installation/" class="md-footer__link md-footer__link--next" aria-label="Next: Docker installation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Installation of Autoware
+              Docker installation
             </div>
           </div>
           <div class="md-footer__button md-icon">

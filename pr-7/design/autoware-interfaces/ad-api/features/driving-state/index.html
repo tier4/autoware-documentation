@@ -2312,6 +2312,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-api" class="md-nav__link">
+    Related API
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2329,7 +2351,13 @@
 
 
 <h1 id="driving-state">Driving State<a class="headerlink" href="#driving-state" title="Permanent link">#</a></h1>
-<p>車両の走行に関わる状態を管理する。他の状態遷移を参照している。</p>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
+<p>The driving state shows whether the vehicle is driving or can start driving. The vehicle holds a stop when the state is not DRIVING.
+This state is mainly used to implement a departure button.</p>
+<p>The state changes depending on each state of the vehicle and becomes READY when it is ready to start driving.
+Then, when the service to engage is called, the state becomes DRIVING and the vehicle starts driving.
+Finally, when the vehicle arrives at the destination, the state returns to NOT_READY and it is checked for READY.
+The state can be manually returned to NOT_READY by calling service to disengage.</p>
 <p><img alt="driving-state" src="../driving-state.drawio.svg" /></p>
 <table>
 <thead>
@@ -2340,19 +2368,24 @@
 </thead>
 <tbody>
 <tr>
-<td>PREPARING</td>
-<td>ルートの待ち、ドアの開閉中、自己位置初期化中など発車条件を満たさない状態。</td>
+<td>NOT_READY</td>
+<td>The vehicle cannot start driving for some reason.</td>
 </tr>
 <tr>
 <td>READY</td>
-<td>発車条件を満たしており、ユーザーからの承認操作を待っている状態。</td>
+<td>The vehicle is ready to start driving</td>
 </tr>
 <tr>
 <td>DRIVING</td>
-<td>目的地に向かって走行している状態。</td>
+<td>The vehicle is driving toward the destination.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="related-api">Related API<a class="headerlink" href="#related-api" title="Permanent link">#</a></h2>
+<ul>
+<li>/api/driving/state</li>
+<li>/api/driving/engage</li>
+</ul>
 
               
             </article>

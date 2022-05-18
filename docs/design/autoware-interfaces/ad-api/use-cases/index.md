@@ -7,7 +7,9 @@
 
 ## Use Cases
 
-- Launch and terminate Autoware
-- Drive manually.
-- Get on and off.
+- Startup and shutdown.
+- Initialize the pose.
+- Change the operation mode.
+- Operate manually.
 - [Drive to the designated position](drive-designated-position.md)
+- Get on and off.

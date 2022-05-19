@@ -1,6 +1,5 @@
-collapse_single_pages: true
 nav:
   - index.md
+  - prototyping
   - AD API: ad-api
   - components
-  - prototyping

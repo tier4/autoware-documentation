@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/help/troubleshooting/">
+        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/support/troubleshooting/">
       
       <link rel="icon" href="../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -299,7 +299,7 @@
   
     <li class="md-tabs__item">
       <a href="../" class="md-tabs__link md-tabs__link--active">
-        Help
+        Support
       </a>
     </li>
   
@@ -435,25 +435,15 @@
       
         
           
-            
-          
-        
-          
         
           
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/autoware/">Autoware</a>
-          
-            <label for="__nav_2_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_2_2">
+          Autoware
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <nav class="md-nav" aria-label="Autoware" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
@@ -461,8 +451,6 @@
           Autoware
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
           
             
               
@@ -524,14 +512,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/tools-for-users/">Tools for users</a>
+          <a href="../../installation/related-tools/">Related tools</a>
           
         </div>
       
-      <nav class="md-nav" aria-label="Tools for users" data-md-level="2">
+      <nav class="md-nav" aria-label="Related tools" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Tools for users
+          Related tools
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -569,14 +557,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/tools-for-developers/">Tools for developers</a>
+          <a href="../../installation/additional-settings-for-developers/">Additional settings for developers</a>
           
         </div>
       
-      <nav class="md-nav" aria-label="Tools for developers" data-md-level="2">
+      <nav class="md-nav" aria-label="Additional settings for developers" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
-          Tools for developers
+          Additional settings for developers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1680,6 +1668,8 @@
         
           
         
+          
+        
       
       
         
@@ -1766,6 +1756,20 @@
     <li class="md-nav__item">
       <a href="../../contributing/coding-guidelines/ros-nodes/launch-files/" class="md-nav__link">
         Launch files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/coding-guidelines/ros-nodes/message-guidelines/" class="md-nav__link">
+        Message guidelines
       </a>
     </li>
   
@@ -2113,7 +2117,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Help</a>
+          <a href="../">Support</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2121,10 +2125,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Help" data-md-level="1">
+      <nav class="md-nav" aria-label="Support" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          Help
+          Support
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2184,11 +2188,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-resolve-errors-of-the-setup-script" class="md-nav__link">
-    How to resolve errors of the setup script?
+  <a href="#setup-issues" class="md-nav__link">
+    Setup issues
   </a>
   
-    <nav class="md-nav" aria-label="How to resolve errors of the setup script?">
+    <nav class="md-nav" aria-label="Setup issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2204,23 +2208,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-resolve-build-errors" class="md-nav__link">
-    How to resolve build errors?
+  <a href="#build-issues" class="md-nav__link">
+    Build issues
   </a>
   
-    <nav class="md-nav" aria-label="How to resolve build errors?">
+    <nav class="md-nav" aria-label="Build issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#in-case-you-use-the-latest-version" class="md-nav__link">
-    In case you use the latest version
+  <a href="#insufficient-memory" class="md-nav__link">
+    Insufficient memory
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#in-case-you-use-a-fixed-version" class="md-nav__link">
-    In case you use a fixed version
+  <a href="#errors-when-using-the-latest-version-of-autoware" class="md-nav__link">
+    Errors when using the latest version of Autoware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors-when-using-a-fixed-version-of-autoware" class="md-nav__link">
+    Errors when using a fixed version of Autoware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerrocker-issues" class="md-nav__link">
+    Docker/rocker issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-errors" class="md-nav__link">
+    Runtime errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map-does-not-display-when-running-the-planning-simulator" class="md-nav__link">
+    Map does not display when running the Planning Simulator
   </a>
   
 </li>
@@ -2286,11 +2324,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-resolve-errors-of-the-setup-script" class="md-nav__link">
-    How to resolve errors of the setup script?
+  <a href="#setup-issues" class="md-nav__link">
+    Setup issues
   </a>
   
-    <nav class="md-nav" aria-label="How to resolve errors of the setup script?">
+    <nav class="md-nav" aria-label="Setup issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2306,23 +2344,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-resolve-build-errors" class="md-nav__link">
-    How to resolve build errors?
+  <a href="#build-issues" class="md-nav__link">
+    Build issues
   </a>
   
-    <nav class="md-nav" aria-label="How to resolve build errors?">
+    <nav class="md-nav" aria-label="Build issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#in-case-you-use-the-latest-version" class="md-nav__link">
-    In case you use the latest version
+  <a href="#insufficient-memory" class="md-nav__link">
+    Insufficient memory
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#in-case-you-use-a-fixed-version" class="md-nav__link">
-    In case you use a fixed version
+  <a href="#errors-when-using-the-latest-version-of-autoware" class="md-nav__link">
+    Errors when using the latest version of Autoware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors-when-using-a-fixed-version-of-autoware" class="md-nav__link">
+    Errors when using a fixed version of Autoware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerrocker-issues" class="md-nav__link">
+    Docker/rocker issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-errors" class="md-nav__link">
+    Runtime errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Runtime errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map-does-not-display-when-running-the-planning-simulator" class="md-nav__link">
+    Map does not display when running the Planning Simulator
   </a>
   
 </li>
@@ -2344,17 +2416,31 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/autoware-documentation/edit/docs/tier4/main/help/troubleshooting.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/support/troubleshooting.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h1>
-<h2 id="how-to-resolve-errors-of-the-setup-script">How to resolve errors of the setup script?<a class="headerlink" href="#how-to-resolve-errors-of-the-setup-script" title="Permanent link">#</a></h2>
+<h2 id="setup-issues">Setup issues<a class="headerlink" href="#setup-issues" title="Permanent link">#</a></h2>
 <h3 id="cuda-related-errors">CUDA-related errors<a class="headerlink" href="#cuda-related-errors" title="Permanent link">#</a></h3>
-<p>When installing CUDA, it may cause errors because of version conflicts.
-To resolve this, try either:</p>
+<p>When installing CUDA, errors may occur because of version conflicts. To resolve these types of errors, try one of the following methods:</p>
+<ul>
+<li>
+<p>Unhold all CUDA-related libraries and rerun the setup script.</p>
+<div class="highlight"><pre><span></span><code>sudo apt-mark unhold  <span class="se">\</span>
+  <span class="s2">&quot;cuda*&quot;</span>             <span class="se">\</span>
+  <span class="s2">&quot;libcudnn*&quot;</span>         <span class="se">\</span>
+  <span class="s2">&quot;libnvinfer*&quot;</span>       <span class="se">\</span>
+  <span class="s2">&quot;libnvonnxparsers*&quot;</span> <span class="se">\</span>
+  <span class="s2">&quot;libnvparsers*&quot;</span>     <span class="se">\</span>
+  <span class="s2">&quot;nvidia*&quot;</span>
+
+./setup-dev-env.sh
+</code></pre></div>
+</li>
+</ul>
 <ul>
 <li>
 <p>Uninstall all CUDA-related libraries and rerun the setup script.</p>
@@ -2385,38 +2471,49 @@ sudo apt autoremove
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Note that some components in <code>autoware.universe</code> don't work without CUDA.</p>
-<p>Also, although Autoware could work with different versions of CUDA libraries as well,
-remember it is not officially supported and may sometimes be broken.</p>
+<p>Note that some components in Autoware Universe require CUDA, and only the CUDA version in the <a href="https://github.com/autowarefoundation/autoware/blob/main/amd64.env">env file</a> is supported at this time.
+Autoware may work with other CUDA versions, but those versions are not supported and functionality is not guaranteed.</p>
 </div>
-<h2 id="how-to-resolve-build-errors">How to resolve build errors?<a class="headerlink" href="#how-to-resolve-build-errors" title="Permanent link">#</a></h2>
-<p>When you get build errors, follow the instruction below depending on the version you use.</p>
-<h3 id="in-case-you-use-the-latest-version">In case you use the latest version<a class="headerlink" href="#in-case-you-use-the-latest-version" title="Permanent link">#</a></h3>
-<p>Note that the software may sometimes be broken if you follow the latest version.
-Most issues are due to out-of-date software or old build files.</p>
-<p>To resolve the problem, try cleaning your build artifacts and rebuilding first:</p>
+<h2 id="build-issues">Build issues<a class="headerlink" href="#build-issues" title="Permanent link">#</a></h2>
+<h3 id="insufficient-memory">Insufficient memory<a class="headerlink" href="#insufficient-memory" title="Permanent link">#</a></h3>
+<p>Building Autoware requires a lot of memory, and your machine can freeze or crash if memory runs out during a build. To avoid this problem, 16-32GB of swap should be configured.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Optional: Check the current swapfile</span>
+free -h
+
+<span class="c1"># Remove the current swapfile</span>
+sudo swapoff /swapfile
+sudo rm /swapfile
+
+<span class="c1"># Create a new swapfile</span>
+sudo fallocate -l 32G /swapfile
+sudo chmod <span class="m">600</span> /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
+<span class="c1"># Optional: Check if the change is reflected</span>
+free -h
+</code></pre></div>
+<p>For more detailed configuration steps, along with an explanation of swap, refer to Digital Ocean's <a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-20-04">"How To Add Swap Space on Ubuntu 20.04" tutorial</a></p>
+<h3 id="errors-when-using-the-latest-version-of-autoware">Errors when using the latest version of Autoware<a class="headerlink" href="#errors-when-using-the-latest-version-of-autoware" title="Permanent link">#</a></h3>
+<p>If you are working with the latest version of Autoware, issues can occur due to out-of-date software or old build files.</p>
+<p>To resolve these types of problems, first try cleaning your build artifacts and rebuilding:</p>
 <div class="highlight"><pre><span></span><code>rm -rf build/ install/ log/
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
 </code></pre></div>
-<p>If the error is not resolved, remove <code>src/</code> and update the workspace depending on your installation type:</p>
-<ul>
-<li><a href="../../installation/autoware/docker-installation/#how-to-update-a-workspace">Docker</a></li>
-<li><a href="../../installation/autoware/source-installation/#how-to-update-a-workspace">Source</a></li>
-</ul>
+<p>If the error is not resolved, remove <code>src/</code> and update your workspace according to installation type (<a href="../../installation/autoware/docker-installation/#how-to-update-a-workspace">Docker</a> / <a href="../../installation/autoware/source-installation/#how-to-update-a-workspace">source</a>).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Before removing <code>src/</code>, confirm that there are no necessary modifications left in your local environment.</p>
+<p>Before removing <code>src/</code>, confirm that there are no modifications in your local environment that you want to keep!</p>
 </div>
-<p>If the error still persists, delete the entire workspace and restart from cloning the repository.</p>
+<p>If errors still persist after trying the steps above, delete the entire workspace, clone the repository once again and restart the installation process.</p>
 <div class="highlight"><pre><span></span><code>rm -rf autoware/
 git clone https://github.com/autowarefoundation/autoware.git
 </code></pre></div>
-<h3 id="in-case-you-use-a-fixed-version">In case you use a fixed version<a class="headerlink" href="#in-case-you-use-a-fixed-version" title="Permanent link">#</a></h3>
-<p>It is unusual that an error occurs when you use a fixed version.</p>
-<p>Possible causes are:</p>
+<h3 id="errors-when-using-a-fixed-version-of-autoware">Errors when using a fixed version of Autoware<a class="headerlink" href="#errors-when-using-a-fixed-version-of-autoware" title="Permanent link">#</a></h3>
+<p>In principle, errors should not occur when using a fixed version. That said, possible causes include:</p>
 <ul>
 <li>ROS 2 has been updated with breaking changes.<ul>
-<li>Check out <a href="https://discourse.ros.org/c/release/16">Packaging and Release Management</a> tag on ROS Discourse to confirm that.</li>
+<li>For confirmation, check the <a href="https://discourse.ros.org/c/release/16">Packaging and Release Management</a> tag on ROS Discourse.</li>
 </ul>
 </li>
 <li>Your local environment is broken.<ul>
@@ -2424,19 +2521,49 @@ git clone https://github.com/autowarefoundation/autoware.git
 </ul>
 </li>
 </ul>
-<p>Also, there are two common cases that you misunderstand you use a fixed version.</p>
+<p>In addition to the causes listed above, there are two common misunderstandings around the use of fixed versions.</p>
 <ol>
 <li>
-<p>You used a fixed version only for <code>autowarefoundation/autoware</code>.
-   If you specify a hash of <code>autowarefoundation/autoware</code>, it doesn't mean the version of the entire workspace is fixed.
-   You have to fix the versions in the <code>.repos</code> file to use a completely fixed version.</p>
+<p>You used a fixed version for <code>autowarefoundation/autoware</code> only.
+   All of the repository versions in the <code>.repos</code> file must be specified in order to use a completely fixed version.</p>
 </li>
 <li>
-<p>You didn't update the workspace after you changed the branch of <code>autowarefoundation/autoware</code>.
-   If you change the branch of <code>autowarefoundation/autoware</code>, it doesn't affect the files under <code>src/</code>.
-   You have to run the <code>vcs import</code> command to update them.</p>
+<p>You didn't update the workspace after changing the branch of <code>autowarefoundation/autoware</code>.
+   Changing the branch of <code>autowarefoundation/autoware</code> does not affect the files under <code>src/</code>. You have to run the <code>vcs import</code> command to update them.</p>
 </li>
 </ol>
+<h2 id="dockerrocker-issues">Docker/rocker issues<a class="headerlink" href="#dockerrocker-issues" title="Permanent link">#</a></h2>
+<p>If any errors occur when running Autoware with Docker or rocker, first confirm that your Docker installation is working correctly by running the following commands:</p>
+<div class="highlight"><pre><span></span><code>docker run --rm -it hello-world
+docker run --rm -it ubuntu:latest
+</code></pre></div>
+<p>Next, confirm that you are able to access the base Autoware image that is stored on the GitHub Packages website</p>
+<div class="highlight"><pre><span></span><code>docker run --rm -it ghcr.io/autowarefoundation/autoware-universe:latest
+</code></pre></div>
+<h2 id="runtime-errors">Runtime errors<a class="headerlink" href="#runtime-errors" title="Permanent link">#</a></h2>
+<h3 id="map-does-not-display-when-running-the-planning-simulator">Map does not display when running the Planning Simulator<a class="headerlink" href="#map-does-not-display-when-running-the-planning-simulator" title="Permanent link">#</a></h3>
+<p>When running the Planning Simulator, the most common reason for the map not being displayed in RViz is because <a href="https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/#how-to-run-a-planning-simulation">the map path has not been specified correctly in the launch command</a>. You can confirm if this is the case by searching for <code>Could not find lanelet map under {path-to-map-dir}/lanelet2_map.osm</code> errors in the log.</p>
+<p>Another possible reason is that map loading is taking a long time due to poor DDS performance. To address this issue, first enable localhost-only communication to reduce network traffic, and then <a href="https://docs.ros.org/en/rolling/How-To-Guides/DDS-tuning.html">tune DDS settings</a> if the problem continues to occur.</p>
+<ol>
+<li>
+<p><a href="https://autowarefoundation.github.io/autoware-documentation/main/installation/tools-for-developers/#enabling-localhost-only-communication">Enable localhost-only communication</a></p>
+</li>
+<li>
+<p>Tune DDS settings</p>
+</li>
+</ol>
+<p>Add the following lines to <code>/etc/sysctl.conf</code></p>
+<div class="highlight"><pre><span></span><code>net.ipv4.ipfrag_time<span class="o">=</span><span class="m">3</span>  // generic DDS setting
+net.ipv4.ipfrag_high_thresh<span class="o">=</span><span class="m">134217728</span> // generic DDS setting
+net.core.rmem_max<span class="o">=</span><span class="m">2147483647</span> // only add <span class="k">if</span> CycloneDDS is configured
+net.core.rmem_default<span class="o">=</span><span class="m">8388608</span> // only add <span class="k">if</span> CycloneDDS is confgured
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DDS configuration can be determined by running the following command.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="nv">$RMW_IMPLEMENTATION</span>  // <span class="k">if</span> Cyclone DDS is configured, this <span class="nb">command</span> will <span class="k">return</span> <span class="s2">&quot;rmw_cyclonedds_cpp&quot;</span>
+</code></pre></div>
+</div>
 
               
             </article>
@@ -2492,7 +2619,7 @@ git clone https://github.com/autowarefoundation/autoware.git
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 Tier IV, Inc.
+      Copyright &copy; 2022 TIER IV, Inc.
     </div>
   
   
@@ -2514,7 +2641,7 @@ git clone https://github.com/autowarefoundation/autoware.git
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

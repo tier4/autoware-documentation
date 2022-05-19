@@ -11,7 +11,7 @@ autoware_interface:
 
 ## Description
 
-Get the driving state. For details, see the [driving state](../../../features/driving-state.md).
+Get the driving state. For details, see the [driving state](../../../features/driving.md).
 
 ## Message
 

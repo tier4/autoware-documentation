@@ -3,7 +3,7 @@
 ## Related features
 
 - [Route](../features/route-state.md)
-- [Driving](../features/driving-state.md)
+- [Driving](../features/driving.md)
 
 ## Scenario
 

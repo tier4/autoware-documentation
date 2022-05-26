@@ -1,3 +1,0 @@
-bool stop
----
-autoware_ad_api_msgs/ResponseStatus status

@@ -13,7 +13,6 @@
 # limitations under the License.
 
 import yaml
-from pathlib import Path
 from .util import hook_markdown_link
 
 class AutowareInterface(object):
@@ -41,8 +40,8 @@ class AutowareInterface(object):
         return self.yaml["interface"]["type"]
 
     @property
-    def link(self):
-        return f".{self.name}.md"
+    def file(self):
+        return self.name.strip("/") + ".md"
 
     @property
     def description(self):
@@ -63,15 +62,14 @@ class AutowareInterface(object):
     def generate(self, output_path, templates):
         filename = self.type.replace(" ", "-")
         template = templates.get_template(f"interface-{filename}.jinja2")
-        name = self.name.strip("/") + ".md"
-        path = output_path / name
+        path = output_path / self.file
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(template.render(interface=self))
 
     @staticmethod
     def GenerateIndex(output_path, apis):
         text = "# List of Autoware AD API\n\n"
-        apis = "".join(f"- [{api.name}]({api.link})\n" for api in apis)
+        apis = "".join(f"- [{api.name}]({api.file})\n" for api in apis)
         path = output_path / "index.md"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text + apis)

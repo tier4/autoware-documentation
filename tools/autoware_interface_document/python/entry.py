@@ -18,6 +18,7 @@ from ament_index_python.packages import get_package_share_directory
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 from .interface import AutowareInterface
+from .structure import AutowareStructure
 
 def generate():
     parser = argparse.ArgumentParser()
@@ -35,6 +36,10 @@ def generate():
     for api in apis.values(): api.generate(api_path, templates)
     AutowareInterface.GenerateIndex(api_path, apis.values())
 
+    msgs = list_msgs()
+    for msg in msgs.values(): msg.generate(msg_path, templates)
+    AutowareStructure.GenerateIndex(msg_path, msgs.values())
+
 
 def list_apis(source_path: Path):
     apis = dict()
@@ -49,14 +54,14 @@ def list_apis(source_path: Path):
 
 def list_msgs():
     packages = ["autoware_ad_api_msgs"]
-    msgs = {}
+    msgs = dict()
     for package in packages:
         path = Path(get_package_share_directory(package))
         for file in path.glob("msg/**/*.msg"):
-            msg = InterfaceType(file)
+            msg = AutowareStructure(file)
             msgs[msg.name] = msg
         for file in path.glob("srv/**/*.srv"):
-            msg = InterfaceType(file)
+            msg = AutowareStructure(file)
             msgs[msg.name] = msg
     for msg in msgs.values(): msg.link_relations(msgs)
     for msg in msgs.values(): msg.sort_relations()

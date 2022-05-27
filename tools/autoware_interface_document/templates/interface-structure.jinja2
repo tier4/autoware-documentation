@@ -1,0 +1,25 @@
+# {{ interface.name }}
+
+## Definition
+
+```txt
+{{ interface.text }}
+```
+
+## This type uses
+
+{% if interface.uses | length == 0 %}
+None
+{% endif %}
+{% for msg in interface.uses %}
+- {{ msg.name }}
+{% endfor %}
+
+## This type is used by
+
+{% if interface.used | length == 0 %}
+None
+{% endif %}
+{% for msg in interface.used %}
+- {{ msg.name }}
+{% endfor %}

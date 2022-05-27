@@ -13,16 +13,23 @@ autoware_interface:
 
 Set the route with the waypoint poses. If start pose is not specified, the current pose will be used.
 
+## Restriction
+
+This API can only be used when the route state is UNSET, otherwise an error will be returned.
+
 ## Request
 
 | Name      | Type                          | Description                    |
 | --------- | ----------------------------- | ------------------------------ |
 | header    | std_msgs/Header               | header for pose transformation |
-| name      | string                        | route name                     |
 | start     | geometry_msgs/Pose (optional) | start pose                     |
 | goal      | geometry_msgs/Pose            | goal pose                      |
 | waypoints | geometry_msgs/Pose[]          | waypoint poses                 |
 
 ## Response
 
-None
+### response.status
+
+| Name | Description |
+| ---- | ----------- |
+| 1001 | Test        |

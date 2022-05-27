@@ -1,0 +1,10 @@
+interface:
+  name: /api/route/state
+  data: autoware_ad_api_msgs/msg/RouteNotice
+  type: notification
+
+description: |
+  Get the route with waypoint poses. It is empty if route is not set.
+  The waypoints are empty if the route is set by other format.
+
+message: None

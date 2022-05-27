@@ -17,45 +17,36 @@ import yaml
 import logging
 from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
-from .type import InterfaceName
-from .type import InterfaceType
-
+from .interface import AutowareInterface
+from jinja2 import Environment, FileSystemLoader
 
 def generate():
     parser = argparse.ArgumentParser()
     parser.add_argument("path", default="docs/design/autoware-interfaces/ad-api", nargs="?")
     args = parser.parse_args()
 
-    base_path = Path(args.path)
-    list_path = Path(get_package_share_directory("autoware_interface_document")) / "resource" / "order.yaml"
-    api_path = base_path / "list"
-    msg_path = base_path / "types"
+    source_path = Path(get_package_share_directory("autoware_interface_document")) / "resource"
+    output_path = Path(args.path)
+    api_path = output_path / "list"
+    msg_path = output_path / "types"
 
-    msgs = list_msgs()
-    for msg in msgs.values():
-        msg.write(msg_path)
-    InterfaceType.WriteIndex(msg_path, msgs.values())
+    environment = Environment(loader=FileSystemLoader(source_path / "templates"))
+    template = environment.get_template("autoware-interface.jinja2")
 
-    apis = list_apis(api_path, list_path)
-    for api in apis.values():
-        api.rewrite()
-    InterfaceName.WriteIndex(api_path, apis.values())
+    apis = list_apis(source_path)
+    for api in apis.values(): api.generate(api_path, template)
+    AutowareInterface.GenerateIndex(api_path, apis.values())
 
 
-def list_apis(base_path: Path, list_path: Path):
-    apis = {}
-    for name in yaml.safe_load(list_path.read_text()):
-        apis[name] = None
-    for path in (base_path / "api").glob("**/*.md"):
-        api = InterfaceName(path, path.relative_to(base_path).with_suffix(""))
-        if api.name not in apis:
-            logging.warning(F"API name is not found in list: {api.name}")
-            continue
-        apis[api.name] = api.init()
-    for name in apis:
-        if apis[name] is None:
-            logging.warning(F"API name is not found in file: {name}")
-    return dict(item for item in apis.items() if item[1])
+def list_apis(source_path: Path):
+    apis = dict()
+    for path in (source_path / "list").glob("**/*.yaml"):
+        data = AutowareInterface(path)
+        apis.setdefault(data.name, []).append(data)
+    for name, data in apis.items():
+        if len(data) != 1:
+            logging.error(f"The API name '{name}' is duplicated.")
+    return {name: data[0] for name, data in apis.items()}
 
 
 def list_msgs():

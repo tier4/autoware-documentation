@@ -8,6 +8,10 @@ bool engage
 autoware_ad_api_msgs/ResponseStatus status
 ```
 
-## The types that this uses
+## This type uses
 
-- [autoware_ad_api_msgs/msg/ResponseStatus](../../autoware_ad_api_msgs/msg/response_status.md)
+- autoware_ad_api_msgs/msg/ResponseStatus
+
+## This type is used by
+
+None

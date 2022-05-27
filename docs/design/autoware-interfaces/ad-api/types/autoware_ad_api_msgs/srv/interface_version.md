@@ -8,3 +8,11 @@ uint16 major
 uint16 minor
 uint16 patch
 ```
+
+## This type uses
+
+None
+
+## This type is used by
+
+None

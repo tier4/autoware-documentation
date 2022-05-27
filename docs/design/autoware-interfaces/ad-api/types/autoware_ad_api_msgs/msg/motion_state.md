@@ -3,7 +3,17 @@
 ## Definition
 
 ```txt
-uint32 STOPPED = 1
-uint32 STARTING = 2
-uint32 MOVING = 3
+uint16 STOPPED = 1
+uint16 STARTING = 2
+uint16 MOVING = 3
+
+uint16 state
 ```
+
+## This type uses
+
+None
+
+## This type is used by
+
+None

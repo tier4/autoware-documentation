@@ -6,6 +6,10 @@
 autoware_ad_api_msgs/Route[<=1] route
 ```
 
-## The types that this uses
+## This type uses
 
-- [autoware_ad_api_msgs/msg/Route](../../autoware_ad_api_msgs/msg/route.md)
+- autoware_ad_api_msgs/msg/Route
+
+## This type is used by
+
+None

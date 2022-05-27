@@ -9,7 +9,11 @@ geometry_msgs/Pose goal
 geometry_msgs/Pose[] waypoints
 ```
 
-## The types that use this
+## This type uses
 
-- [autoware_ad_api_msgs/msg/RouteNotice](../../autoware_ad_api_msgs/msg/route_notice.md)
-- [autoware_ad_api_msgs/srv/RouteSet](../../autoware_ad_api_msgs/srv/route_set.md)
+None
+
+## This type is used by
+
+- autoware_ad_api_msgs/msg/RouteNotice
+- autoware_ad_api_msgs/srv/RouteSet

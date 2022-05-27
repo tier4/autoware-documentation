@@ -1,14 +1,13 @@
 # /api/route/state
 
 - Type: notification
-- Data: autoware_ad_api_msgs/msg/RouteNotice
+- Data: autoware_ad_api_msgs/msg/RouteState
 
 ## Description
 
-Get the route with waypoint poses. It is empty if route is not set.
-The waypoints are empty if the route is set by other format.
+Get the route state. For details, see the [route state](../../../features/route.md#route-state).
 
 ## Message
 
 - state (uint16)
-  - route state
+  - A value of [route state](../../../features/route.md#route-state).

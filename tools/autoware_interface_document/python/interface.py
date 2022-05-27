@@ -14,6 +14,7 @@
 
 import yaml
 from pathlib import Path
+from .util import hook_markdown_link
 
 class AutowareInterface(object):
 
@@ -21,6 +22,11 @@ class AutowareInterface(object):
         self.path = path
         self.yaml = yaml.safe_load(path.read_text())
 
+        depth = self.name.count("/")
+        self.yaml["description"] = hook_markdown_link(self.yaml["description"], depth)
+        if self.type == "notification":
+            for field in self.message:
+                field["text"] = hook_markdown_link(field["text"], depth)
 
     @property
     def name(self):
@@ -46,10 +52,17 @@ class AutowareInterface(object):
     def message(self):
         return self.yaml["message"]
 
-    def markdown(self):
-        return "".join([])
+    @property
+    def request(self):
+        return self.yaml["request"]
 
-    def generate(self, output_path, template):
+    @property
+    def response(self):
+        return self.yaml["response"]
+
+    def generate(self, output_path, templates):
+        filename = self.type.replace(" ", "-")
+        template = templates.get_template(f"interface-{filename}.jinja2")
         name = self.name.strip("/") + ".md"
         path = output_path / name
         path.parent.mkdir(parents=True, exist_ok=True)

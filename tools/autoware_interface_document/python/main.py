@@ -13,28 +13,26 @@
 # limitations under the License.
 
 import argparse
-import yaml
 import logging
-from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
-from .interface import AutowareInterface
+from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
+from .interface import AutowareInterface
 
 def generate():
     parser = argparse.ArgumentParser()
     parser.add_argument("path", default="docs/design/autoware-interfaces/ad-api", nargs="?")
     args = parser.parse_args()
 
-    source_path = Path(get_package_share_directory("autoware_interface_document")) / "resource"
+    source_path = Path(get_package_share_directory("autoware_interface_document"))
     output_path = Path(args.path)
     api_path = output_path / "list"
     msg_path = output_path / "types"
 
-    environment = Environment(loader=FileSystemLoader(source_path / "templates"))
-    template = environment.get_template("autoware-interface.jinja2")
+    templates = Environment(loader=FileSystemLoader(source_path / "templates"), trim_blocks=True)
 
-    apis = list_apis(source_path)
-    for api in apis.values(): api.generate(api_path, template)
+    apis = list_apis(source_path / "resource")
+    for api in apis.values(): api.generate(api_path, templates)
     AutowareInterface.GenerateIndex(api_path, apis.values())
 
 

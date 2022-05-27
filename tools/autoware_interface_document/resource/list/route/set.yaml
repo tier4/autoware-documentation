@@ -1,0 +1,29 @@
+interface:
+  name: /api/route/set
+  data: autoware_ad_api_msgs/srv/RouteSet
+  type: function call
+
+description: |-
+  Set the route with the waypoint poses. If start pose is not specified, the current pose will be used.
+
+request:
+  - name: header
+    type: std_msgs/msg/Header
+    text: header for pose transformation
+  - name: start
+    type: geometry_msgs/Pose
+    text: start pose
+  - name: goal
+    type: geometry_msgs/Pose
+    text: goal pose
+  - name: waypoints
+    type: geometry_msgs/Pose[]
+    text: waypoint poses
+
+response:
+  - name: status
+    type: autoware_ad_api_msgs/msg/ResponseStatus
+    text: response status
+
+error-codes:
+  10001: test

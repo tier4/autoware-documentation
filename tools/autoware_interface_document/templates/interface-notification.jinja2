@@ -9,7 +9,10 @@
 
 ## Message
 
-{%- for field in interface.message %}
+{% if interface.message | length == 0 %}
+None
+{% endif %}
+{% for field in interface.message %}
 - {{ field.name }} ({{ field.type }})
   - {{ field.text }}
-{%- endfor %}
+{% endfor %}

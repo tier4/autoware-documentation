@@ -16,7 +16,14 @@
 import re
 
 
+
 def camel_to_snake(text):
     text = re.sub("(.)([A-Z][a-z]+)", R"\1_\2", text)
     text = re.sub("([a-z0-9])([A-Z])", R"\1_\2", text)
     return text.lower()
+
+
+def hook_markdown_link(text, depth):
+    pattern = re.compile(r"\[(.*?)]\(/(.*?)\)")
+    parents = "../" * depth
+    return pattern.sub(f"[\\1]({parents}\\2)", text)

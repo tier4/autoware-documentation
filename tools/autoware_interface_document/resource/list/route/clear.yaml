@@ -1,0 +1,14 @@
+interface:
+  name: /api/route/clear
+  data: autoware_ad_api_msgs/srv/RouteClear
+  type: function call
+
+description: |-
+  Clear the route.
+
+request: []
+
+response:
+  - name: status
+    type: autoware_ad_api_msgs/msg/ResponseStatus
+    text: response status

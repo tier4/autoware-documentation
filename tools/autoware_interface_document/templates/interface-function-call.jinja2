@@ -1,0 +1,28 @@
+# {{ interface.name }}
+
+- Type: {{ interface.type }}
+- Data: {{ interface.data }}
+
+## Description
+
+{{ interface.description }}
+
+## Request
+
+{% if interface.request | length == 0 %}
+None
+{% endif %}
+{% for field in interface.request %}
+- {{ field.name }} ({{ field.type }})
+  - {{ field.text }}
+{% endfor %}
+
+## Response
+
+{% if interface.response | length == 0 %}
+None
+{% endif %}
+{% for field in interface.response %}
+- {{ field.name }} ({{ field.type }})
+  - {{ field.text }}
+{% endfor %}

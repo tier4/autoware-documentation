@@ -13,5 +13,6 @@ None
 
 ## Response
 
-- status (autoware_ad_api_msgs/msg/ResponseStatus)
-  - response status
+| Name   | Type                                    | Description     |
+| ------ | --------------------------------------- | --------------- |
+| status | autoware_ad_api_msgs/msg/ResponseStatus | response status |

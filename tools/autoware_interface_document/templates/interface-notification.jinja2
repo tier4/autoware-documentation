@@ -11,8 +11,10 @@
 
 {% if interface.message | length == 0 %}
 None
+{% else %}
+| Name | Type | Description |
+| ---- | ---- | ----------- |
 {% endif %}
 {% for field in interface.message %}
-- {{ field.name }} ({{ field.type }})
-  - {{ field.text }}
+| {{ field.name }} | {{ field.type }} | {{ field.text }} |
 {% endfor %}

@@ -9,5 +9,6 @@ Get the route state. For details, see the [route state](../../../features/route.
 
 ## Message
 
-- state (uint16)
-  - A value of [route state](../../../features/route.md#route-state).
+| Name  | Type   | Description                                                       |
+| ----- | ------ | ----------------------------------------------------------------- |
+| state | uint16 | A value of [route state](../../../features/route.md#route-state). |

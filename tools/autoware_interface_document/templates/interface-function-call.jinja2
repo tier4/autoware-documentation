@@ -11,18 +11,22 @@
 
 {% if interface.request | length == 0 %}
 None
+{% else %}
+| Name | Type | Description |
+| ---- | ---- | ----------- |
 {% endif %}
 {% for field in interface.request %}
-- {{ field.name }} ({{ field.type }})
-  - {{ field.text }}
+| {{ field.name }} | {{ field.type }} | {{ field.text }} |
 {% endfor %}
 
 ## Response
 
 {% if interface.response | length == 0 %}
 None
+{% else %}
+| Name | Type | Description |
+| ---- | ---- | ----------- |
 {% endif %}
 {% for field in interface.response %}
-- {{ field.name }} ({{ field.type }})
-  - {{ field.text }}
+| {{ field.name }} | {{ field.type }} | {{ field.text }} |
 {% endfor %}

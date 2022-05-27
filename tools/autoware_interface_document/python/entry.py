@@ -41,7 +41,6 @@ def generate():
     AutowareInterface.GenerateIndex(api_path, apis.values())
 
 
-
 def list_msgs():
     packages = ["autoware_ad_api_msgs"]
     msgs = dict()

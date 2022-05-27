@@ -32,24 +32,14 @@ def generate():
 
     templates = Environment(loader=FileSystemLoader(source_path / "templates"), trim_blocks=True)
 
-    apis = list_apis(source_path / "resource")
-    for api in apis.values(): api.generate(api_path, templates)
-    AutowareInterface.GenerateIndex(api_path, apis.values())
-
     msgs = list_msgs()
     for msg in msgs.values(): msg.generate(msg_path, templates)
     AutowareStructure.GenerateIndex(msg_path, msgs.values())
 
+    apis = list_apis(source_path / "resource", msgs)
+    for api in apis.values(): api.generate(api_path, templates)
+    AutowareInterface.GenerateIndex(api_path, apis.values())
 
-def list_apis(source_path: Path):
-    apis = dict()
-    for path in (source_path / "list").glob("**/*.yaml"):
-        data = AutowareInterface(path)
-        apis.setdefault(data.name, []).append(data)
-    for name, data in apis.items():
-        if len(data) != 1:
-            logging.error(f"The API name '{name}' is duplicated.")
-    return {name: data[0] for name, data in apis.items()}
 
 
 def list_msgs():
@@ -66,3 +56,14 @@ def list_msgs():
     for msg in msgs.values(): msg.link_relations(msgs)
     for msg in msgs.values(): msg.sort_relations()
     return dict(sorted(msgs.items()))
+
+
+def list_apis(source_path: Path, msgs: dict):
+    apis = dict()
+    for path in (source_path / "list").glob("**/*.yaml"):
+        data = AutowareInterface(path, msgs)
+        apis.setdefault(data.name, []).append(data)
+    for name, data in apis.items():
+        if len(data) != 1:
+            logging.error(f"The API name '{name}' is duplicated.")
+    return {name: data[0] for name, data in apis.items()}

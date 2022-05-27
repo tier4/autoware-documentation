@@ -1,7 +1,7 @@
 interface:
   name: /api/route/set
-  data: autoware_ad_api_msgs/srv/RouteSet
-  type: function call
+  type: autoware_ad_api_msgs/srv/RouteSet
+  method: function call
 
 description: |-
   Set the route with the waypoint poses. If start pose is not specified, the current pose will be used.

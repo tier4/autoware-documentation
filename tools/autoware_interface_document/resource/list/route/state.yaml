@@ -1,7 +1,7 @@
 interface:
   name: /api/route/state
-  data: autoware_ad_api_msgs/msg/RouteState
-  type: notification
+  type: autoware_ad_api_msgs/msg/RouteState
+  method: notification
 
 description: |-
   Get the route state. For details, see the [route state](/features/route.md#route-state).

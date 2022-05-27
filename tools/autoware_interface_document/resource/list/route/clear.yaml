@@ -1,7 +1,7 @@
 interface:
   name: /api/route/clear
-  data: autoware_ad_api_msgs/srv/RouteClear
-  type: function call
+  type: autoware_ad_api_msgs/srv/RouteClear
+  method: function call
 
 description: |-
   Clear the route.

@@ -17,13 +17,15 @@ from .util import hook_markdown_link
 
 class AutowareInterface(object):
 
-    def __init__(self, path):
+    def __init__(self, path, msgs):
         self.path = path
         self.yaml = yaml.safe_load(path.read_text())
 
         depth = self.name.count("/")
+        self.type = _TypeReference(msgs[self.yaml["interface"]["type"]], depth)
+
         self.yaml["description"] = hook_markdown_link(self.yaml["description"], depth)
-        if self.type == "notification":
+        if self.method == "notification":
             for field in self.message:
                 field["text"] = hook_markdown_link(field["text"], depth)
 
@@ -32,16 +34,12 @@ class AutowareInterface(object):
         return self.yaml["interface"]["name"]
 
     @property
-    def data(self):
-        return self.yaml["interface"]["data"]
-
-    @property
-    def type(self):
-        return self.yaml["interface"]["type"]
-
-    @property
     def file(self):
         return self.name.strip("/") + ".md"
+
+    @property
+    def method(self):
+        return self.yaml["interface"]["method"]
 
     @property
     def description(self):
@@ -60,7 +58,7 @@ class AutowareInterface(object):
         return self.yaml["response"]
 
     def generate(self, output_path, templates):
-        filename = self.type.replace(" ", "-")
+        filename = self.method.replace(" ", "-")
         template = templates.get_template(f"interface-{filename}.jinja2")
         path = output_path / self.file
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -73,3 +71,15 @@ class AutowareInterface(object):
         path = output_path / "index.md"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text + apis)
+
+
+class _TypeReference(object):
+
+    def __init__(self, type, depth):
+        self.type = type
+        self.depth = depth
+
+    @property
+    def link(self):
+        parents = "../" * self.depth + "types/"
+        return f"[{self.type.name}]({parents}{self.type.file})"

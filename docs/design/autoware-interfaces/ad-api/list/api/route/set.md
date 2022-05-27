@@ -1,7 +1,7 @@
 # /api/route/set
 
-- Type: function call
-- Data: autoware_ad_api_msgs/srv/RouteSet
+- Method: function call
+- Type: [autoware_ad_api_msgs/srv/RouteSet](../../../types/autoware_ad_api_msgs/srv/route_set.md)
 
 ## Description
 

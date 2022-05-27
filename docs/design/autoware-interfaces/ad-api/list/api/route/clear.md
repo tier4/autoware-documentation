@@ -1,7 +1,7 @@
 # /api/route/clear
 
-- Type: function call
-- Data: autoware_ad_api_msgs/srv/RouteClear
+- Method: function call
+- Type: [autoware_ad_api_msgs/srv/RouteClear](../../../types/autoware_ad_api_msgs/srv/route_clear.md)
 
 ## Description
 

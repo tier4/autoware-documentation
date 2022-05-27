@@ -7,4 +7,7 @@ description: |
   Get the route with waypoint poses. It is empty if route is not set.
   The waypoints are empty if the route is set by other format.
 
-message: None
+message:
+  - name: state
+    type: uint16
+    text: route state

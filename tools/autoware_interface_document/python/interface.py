@@ -21,6 +21,7 @@ class AutowareInterface(object):
         self.path = path
         self.yaml = yaml.safe_load(path.read_text())
 
+
     @property
     def name(self):
         return self.yaml["interface"]["name"]
@@ -36,6 +37,14 @@ class AutowareInterface(object):
     @property
     def link(self):
         return f".{self.name}.md"
+
+    @property
+    def description(self):
+        return self.yaml["description"]
+
+    @property
+    def message(self):
+        return self.yaml["message"]
 
     def markdown(self):
         return "".join([])

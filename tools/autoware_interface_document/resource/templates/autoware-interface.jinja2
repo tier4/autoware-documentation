@@ -2,3 +2,14 @@
 
 - Type: {{ interface.type }}
 - Data: {{ interface.data }}
+
+## Description
+
+{{ interface.description }}
+
+## Message
+
+{%- for field in interface.message %}
+- {{ field.name }} ({{ field.type }})
+  - {{ field.text }}
+{%- endfor %}

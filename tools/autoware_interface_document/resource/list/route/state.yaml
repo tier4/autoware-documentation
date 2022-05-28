@@ -8,5 +8,4 @@ description: |-
 
 message:
   - name: state
-    type: uint16
     text: A value of [route state](/features/route.md#route-state).

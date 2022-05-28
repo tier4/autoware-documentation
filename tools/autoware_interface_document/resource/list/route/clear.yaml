@@ -10,5 +10,4 @@ request: []
 
 response:
   - name: status
-    type: autoware_ad_api_msgs/msg/ResponseStatus
     text: response status

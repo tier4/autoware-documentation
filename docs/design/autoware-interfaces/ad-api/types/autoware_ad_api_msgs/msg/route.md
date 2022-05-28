@@ -15,5 +15,5 @@ None
 
 ## This type is used by
 
-- autoware_ad_api_msgs/msg/RouteNotice
-- autoware_ad_api_msgs/srv/RouteSet
+- [autoware_ad_api_msgs/msg/RouteNotice](../../autoware_ad_api_msgs/msg/route_notice.md)
+- [autoware_ad_api_msgs/srv/RouteSet](../../autoware_ad_api_msgs/srv/route_set.md)

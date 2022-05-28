@@ -1,0 +1,17 @@
+interface:
+  name: /api/interface/version
+  type: autoware_ad_api_msgs/srv/InterfaceVersion
+  method: function call
+
+description: |-
+  Get the interface version. The version follows SemVer.
+
+request: []
+
+response:
+  - name: major
+    text: major version
+  - name: minor
+    text: minor version
+  - name: patch
+    text: patch version

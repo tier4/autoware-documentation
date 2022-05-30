@@ -15,3 +15,7 @@ The fail safe feature manages the behavior related to the abnormality of the veh
 | MRM_OPERATING       | MRM is being executed because an error has been detected. |
 | MRM_SUCCEEDED       | MRM succeeded. The vehicle is in a safe condition.        |
 | MRM_FAILED          | MRM failed. The vehicle is still in an unsafe condition.  |
+
+## Related API
+
+- /api/fail_safe/state

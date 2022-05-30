@@ -1,0 +1,15 @@
+interface:
+  name: /api/driving/engage
+  type: autoware_ad_api_msgs/srv/DrivingEngage
+  method: function call
+
+description: |-
+  Engage or disengage the vehicle. For details, see the [driving state](/features/driving.md#driving-state).
+
+request:
+  - name: engage
+    text: Set true to engage, false to disengage.
+
+response:
+  - name: status
+    text: response status

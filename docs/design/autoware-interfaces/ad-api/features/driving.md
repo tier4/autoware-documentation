@@ -12,6 +12,8 @@ Next, the state becomes DRIVING if the engage API is called, then the vehicle st
 Finally, the state returns to NOT_READY when the vehicle arrives at the destination.
 The state can be manually returned to NOT_READY by calling disengage API.
 
+## Driving State
+
 ![driving-state](./driving-state.drawio.svg)
 
 | State     | Description                                       |

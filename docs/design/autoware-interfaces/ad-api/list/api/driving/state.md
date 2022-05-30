@@ -9,6 +9,6 @@ Get the driving state. For details, see the [driving state](../../../features/dr
 
 ## Message
 
-| Name  | Type   | Description                                               |
-| ----- | ------ | --------------------------------------------------------- |
-| state | uint16 | A value of [driving state](../../../features/driving.md). |
+| Name  | Type   | Description                                                   |
+| ----- | ------ | ------------------------------------------------------------- |
+| state | uint16 | A value of the [driving state](../../../features/driving.md). |

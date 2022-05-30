@@ -8,4 +8,4 @@ description: |-
 
 message:
   - name: state
-    text: A value of [route state](/features/route.md).
+    text: A value of the [route state](/features/route.md).

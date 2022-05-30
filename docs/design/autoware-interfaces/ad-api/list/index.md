@@ -1,6 +1,7 @@
 # List of Autoware AD API
 
 - [/api/interface/version](api/interface/version.md)
+- [/api/fail_safe/state](api/fail_safe/state.md)
 - [/api/driving/engage](api/driving/engage.md)
 - [/api/driving/state](api/driving/state.md)
 - [/api/route/clear](api/route/clear.md)

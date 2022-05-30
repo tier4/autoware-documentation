@@ -9,6 +9,6 @@ Get the pose reset state. For details, see the [pose reset state](../../../featu
 
 ## Message
 
-| Name  | Type   | Description                                                     |
-| ----- | ------ | --------------------------------------------------------------- |
-| state | uint16 | A value of [pose reset state](../../../features/pose-reset.md). |
+| Name  | Type   | Description                                                         |
+| ----- | ------ | ------------------------------------------------------------------- |
+| state | uint16 | A value of the [pose reset state](../../../features/pose-reset.md). |

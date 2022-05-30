@@ -1,5 +1,7 @@
 # List of Autoware AD API
 
+- [/api/motion/factors](api/motion/factors.md)
+- [/api/motion/state](api/motion/state.md)
 - [/api/interface/version](api/interface/version.md)
 - [/api/fail_safe/state](api/fail_safe/state.md)
 - [/api/driving/engage](api/driving/engage.md)

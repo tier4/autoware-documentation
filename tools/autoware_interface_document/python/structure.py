@@ -28,8 +28,8 @@ class AutowareStructure(object):
     def __init__(self, path):
         self.path = path
         self.text = path.read_text().strip()
-        self.uses = []
-        self.used = []
+        self.uses = set()
+        self.used = set()
         self.spec = _MessageSpec(path.parts[-3], path.parts[-2], path.stem, self.text)
 
     @property
@@ -63,8 +63,6 @@ class AutowareStructure(object):
         path.write_text(text + msgs)
 
     def link_relations(self, types):
-        self.uses = set()
-        self.used = set()
         for name in set(self.spec.uses):
             if name in types:
                 type = types[name]
@@ -122,6 +120,7 @@ class _MessageTypeDummy(object):
     def __init__(self, pkg, msg):
         self.pkg = pkg
         self.msg = msg
+        self.ref = None  # TODO
 
     @property
     def name(self):

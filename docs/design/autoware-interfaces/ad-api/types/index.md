@@ -2,6 +2,8 @@
 
 - [autoware_ad_api_msgs/msg/DrivingState](autoware_ad_api_msgs/msg/driving_state.md)
 - [autoware_ad_api_msgs/msg/FailSafeState](autoware_ad_api_msgs/msg/fail_safe_state.md)
+- [autoware_ad_api_msgs/msg/MotionFactor](autoware_ad_api_msgs/msg/motion_factor.md)
+- [autoware_ad_api_msgs/msg/MotionFactorArray](autoware_ad_api_msgs/msg/motion_factor_array.md)
 - [autoware_ad_api_msgs/msg/MotionState](autoware_ad_api_msgs/msg/motion_state.md)
 - [autoware_ad_api_msgs/msg/PoseResetState](autoware_ad_api_msgs/msg/pose_reset_state.md)
 - [autoware_ad_api_msgs/msg/ResponseStatus](autoware_ad_api_msgs/msg/response_status.md)

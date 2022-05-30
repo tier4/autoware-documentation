@@ -14,8 +14,8 @@ There are two ways to set the route. The one is a generic method that uses pose,
 | -------- | -------------------------------------------------- |
 | WAITING  | The route is not set. Waiting for a route request. |
 | SET      | The route is set.                                  |
-| CHANGING | Trying to change the route.                        |
 | ARRIVED  | The vehicle has arrived at the destination.        |
+| CHANGING | Trying to change the route. Not implemented yet.   |
 
 ## Related API
 
@@ -23,3 +23,4 @@ There are two ways to set the route. The one is a generic method that uses pose,
 - /api/route/clear
 - /api/route/set
 - /api/route/lanelet/set
+- /api/route/lanelet/notice

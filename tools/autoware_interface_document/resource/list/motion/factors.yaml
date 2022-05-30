@@ -1,0 +1,19 @@
+interface:
+  name: /api/motion/factors
+  type: autoware_ad_api_msgs/msg/MotionFactorArray
+  method: realtime stream
+
+description: |-
+  Get the motion factors.
+
+message:
+  - name: factors.pose
+    text: The pose related to the motion factor.
+  - name: factors.distance
+    text: The distance from the vehicle to the above pose.
+  - name: factors.reason
+    text: The reason of the motion factor.
+  - name: factors.status
+    text: The status of the motion factor.
+  - name: factors.detail
+    text: The additional information of the motion factor.

@@ -65,7 +65,7 @@ class AutowareInterface(object):
         return self.yaml["response"]
 
     def generate(self, output_path, templates):
-        filename = self.method.replace(" ", "-")
+        filename = "function-call" if self.method == "function call" else "notification"
         template = templates.get_template(f"interface-{filename}.jinja2")
         path = output_path / self.file
         path.parent.mkdir(parents=True, exist_ok=True)

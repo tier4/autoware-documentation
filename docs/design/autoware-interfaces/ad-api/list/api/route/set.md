@@ -9,12 +9,12 @@ Set the route with the waypoint poses. If start pose is not specified, the curre
 
 ## Request
 
-| Name            | Type                   | Description                    |
-| --------------- | ---------------------- | ------------------------------ |
-| route.header    | std_msgs/msg/Header    | header for pose transformation |
-| route.start     | geometry_msgs/msg/Pose | start pose                     |
-| route.goal      | geometry_msgs/msg/Pose | goal pose                      |
-| route.waypoints | geometry_msgs/msg/Pose | waypoint poses                 |
+| Name      | Type                   | Description                    |
+| --------- | ---------------------- | ------------------------------ |
+| header    | std_msgs/msg/Header    | header for pose transformation |
+| start     | geometry_msgs/msg/Pose | start pose                     |
+| goal      | geometry_msgs/msg/Pose | goal pose                      |
+| waypoints | geometry_msgs/msg/Pose | waypoint poses                 |
 
 ## Response
 

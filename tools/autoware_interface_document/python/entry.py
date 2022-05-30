@@ -14,6 +14,7 @@
 
 import argparse
 import logging
+import shutil
 from ament_index_python.packages import get_package_share_directory
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
@@ -29,8 +30,10 @@ def generate():
     output_path = Path(args.path)
     api_path = output_path / "list"
     msg_path = output_path / "types"
-
     templates = Environment(loader=FileSystemLoader(source_path / "templates"), trim_blocks=True)
+
+    clean_target(api_path)
+    clean_target(msg_path)
 
     msgs = list_msgs()
     for msg in msgs.values(): msg.generate(msg_path, templates)
@@ -39,6 +42,12 @@ def generate():
     apis = list_apis(source_path / "resource", msgs)
     for api in apis.values(): api.generate(api_path, templates)
     AutowareInterface.GenerateIndex(api_path, apis.values())
+
+
+def clean_target(target_path):
+    for path in target_path.iterdir():
+        if path.is_dir():
+            shutil.rmtree(path)
 
 
 def list_msgs():

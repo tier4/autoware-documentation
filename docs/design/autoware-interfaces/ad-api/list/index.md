@@ -6,3 +6,5 @@
 - [/api/route/clear](api/route/clear.md)
 - [/api/route/set](api/route/set.md)
 - [/api/route/state](api/route/state.md)
+- [/api/pose_reset/state](api/pose_reset/state.md)
+- [/api/pose_reset/request](api/pose_reset/request.md)

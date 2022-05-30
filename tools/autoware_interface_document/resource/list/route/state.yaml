@@ -4,8 +4,8 @@ interface:
   method: notification
 
 description: |-
-  Get the route state. For details, see the [route state](/features/route.md#route-state).
+  Get the route state. For details, see the [route state](/features/route.md).
 
 message:
   - name: state
-    text: A value of [route state](/features/route.md#route-state).
+    text: A value of [route state](/features/route.md).

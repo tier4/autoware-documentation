@@ -4,8 +4,8 @@ interface:
   method: notification
 
 description: |-
-  Get the driving state. For details, see the [driving state](/features/driving.md#driving-state).
+  Get the driving state. For details, see the [driving state](/features/driving.md).
 
 message:
   - name: state
-    text: A value of [driving state](/features/driving.md#driving-state).
+    text: A value of [driving state](/features/driving.md).

@@ -5,10 +5,10 @@
 
 ## Description
 
-Get the driving state. For details, see the [driving state](../../../features/driving.md#driving-state).
+Get the driving state. For details, see the [driving state](../../../features/driving.md).
 
 ## Message
 
-| Name  | Type   | Description                                                             |
-| ----- | ------ | ----------------------------------------------------------------------- |
-| state | uint16 | A value of [driving state](../../../features/driving.md#driving-state). |
+| Name  | Type   | Description                                               |
+| ----- | ------ | --------------------------------------------------------- |
+| state | uint16 | A value of [driving state](../../../features/driving.md). |

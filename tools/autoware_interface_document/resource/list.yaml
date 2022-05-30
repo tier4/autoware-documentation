@@ -8,9 +8,8 @@
 - /api/motion/factors
 - /api/operation/mode/notice
 - /api/operation/mode/change
-- /api/pose_initialization/state
-- /api/pose_initialization/request_pose
-- /api/pose_initialization/request_auto
+- /api/pose_reset/state
+- /api/pose_reset/request
 - /api/route/state
 - /api/route/clear
 - /api/route/set

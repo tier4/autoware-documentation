@@ -1,0 +1,15 @@
+interface:
+  name: /api/pose_reset/request
+  type: autoware_ad_api_msgs/srv/PoseResetRequest
+  method: function call
+
+description: |-
+  Request to initialize or reset the vehicle pose. For details, see the [pose reset state](/features/pose-reset.md).
+
+request:
+  - name: pose
+    text: The initial guess for pose estimation. If not specified, the GNSS pose will be used.
+
+response:
+  - name: status
+    text: response status

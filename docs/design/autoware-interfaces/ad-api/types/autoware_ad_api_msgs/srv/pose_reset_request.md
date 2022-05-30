@@ -1,12 +1,9 @@
-# autoware_ad_api_msgs/srv/RouteSet
+# autoware_ad_api_msgs/srv/PoseResetRequest
 
 ## Definition
 
 ```txt
-std_msgs/Header header
-geometry_msgs/Pose[<=1] start
-geometry_msgs/Pose goal
-geometry_msgs/Pose[] waypoints
+geometry_msgs/PoseWithCovarianceStamped[<=1] pose
 ---
 autoware_ad_api_msgs/ResponseStatus status
 ```

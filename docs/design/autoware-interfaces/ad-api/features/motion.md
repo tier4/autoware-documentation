@@ -14,6 +14,12 @@ The motion feature manages the behavior that the vehicle plans.
 | STARTING | The vehicle is about to start (it is still stopped). |
 | MOVING   | The vehicle is moving.                               |
 
+## Motion Factors
+
+!!! warning
+
+    Under Construction
+
 ## Related API
 
 - /api/motion/state

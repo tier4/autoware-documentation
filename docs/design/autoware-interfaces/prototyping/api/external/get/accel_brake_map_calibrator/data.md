@@ -7,8 +7,8 @@
 
 ## Description
 
-AccelBrakeMap のキャリブレーション結果を取得する。
+AccelBrakeMap のキャリブレーション適正候補値を取得する。
 
 ## Requirement
 
-AccelBrakeMap のキャリブレーション結果、及び、評価用のグラフ画像を取得できること。
+AccelBrakeMap のキャリブレーション適正候補値、及び、評価用のグラフ画像を取得できること。

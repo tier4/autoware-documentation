@@ -2527,6 +2527,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2544,6 +2559,15 @@
 
 
 <h1 id="operation-mode">Operation Mode<a class="headerlink" href="#operation-mode" title="Permanent link">#</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
+<p>This feature manages the operator of the vehicle. The operation modes are roughly classified into manual, transition, and autonomous.
+Since Autoware may not be able to guarantee safety, such as switching to autonomous mode during overspeed, it changes to transition mode before autonomous mode.
+During the transition mode, the previous operator should ensure safety. If Autoware succeeds in taking over, the mode changes to autonomous.</p>
+<p>The manual mode is direct, none, local or remote.
+Autoware does not guarantee safety in these modes unless it is stopped by none mode.
+Direct mode is supported on some vehicles that have an interface to operate directly, such as steering and pedals, etc.
+None mode is used to stop the vehicle when the operator is temporarily absent due to a change of operator.
+In local and remote modes, Autoware controls the vehicle based on commands from the operator.</p>
 <p><img alt="operation-mode" src="../operation-mode.drawio.svg" /></p>
 <table>
 <thead>
@@ -2555,23 +2579,27 @@
 <tbody>
 <tr>
 <td>DIRECT</td>
-<td>The vehicle is controlled directly. The behavior depends on the hardware.</td>
+<td>The vehicle is operated directly without Autoware. This mode is only available on some vehicles.</td>
 </tr>
 <tr>
 <td>NONE</td>
-<td>The vehicle is controlled to hold a stop.</td>
+<td>The vehicle is not operated by anyone. Autoware controls the vehicle to hold a stop.</td>
 </tr>
 <tr>
 <td>LOCAL</td>
-<td>The vehicle is controlled by the local operator.</td>
+<td>The vehicle is operated by the local operator. Autoware controls the vehicle based on commands from the operator.</td>
 </tr>
 <tr>
 <td>REMOTE</td>
-<td>The vehicle is controlled by the remote operator.</td>
+<td>The vehicle is operated by the remote operator. Autoware controls the vehicle based on commands from the operator.</td>
 </tr>
 <tr>
 <td>AUTONOMOUS</td>
-<td>The vehicle is autonomously controlled.</td>
+<td>The vehicle is operated autonomously. Autoware controls the vehicle.</td>
+</tr>
+<tr>
+<td>TRANSITION</td>
+<td>The vehicle is operated autonomously. Autoware is trying to take over the operation of the vehicle.</td>
 </tr>
 </tbody>
 </table>

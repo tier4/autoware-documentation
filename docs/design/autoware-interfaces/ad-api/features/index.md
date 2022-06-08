@@ -6,6 +6,7 @@
 - [Motion](motion.md)
 - [Pose Reset](pose-reset.md)
 - [Route](route.md)
+- [Operation Mode](operation-mode.md)
 - [Fail Safe](fail-safe.md)
 
 <!--

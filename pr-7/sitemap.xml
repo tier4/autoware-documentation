@@ -231,7 +231,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/glossary/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/features/</loc>
          <lastmod>2022-06-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -282,6 +282,11 @@
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/features/wip/power-state/</loc>
+         <lastmod>2022-06-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/</loc>
          <lastmod>2022-06-13</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -3,7 +3,7 @@
 ## User Stories
 
 - [Bus Service](bus-service.md)
-- [On Demand Service](on-demand-service.md)
+- [Taxi Service](taxi-service.md)
 
 ## Use Cases
 

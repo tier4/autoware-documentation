@@ -2,7 +2,7 @@
 
 ## Overview
 
-This use case is a bus operation service that goes around the designated stops.
+This use case is a bus service that goes around the designated stops.
 
 ## Scenario
 

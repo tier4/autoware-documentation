@@ -2,7 +2,7 @@
 
 ## Overview
 
-This use case is a on demand service that picks up passengers and drives them to their destination.
+This use case is a taxi service that picks up passengers and drives them to their destination.
 
 ## Scenario
 

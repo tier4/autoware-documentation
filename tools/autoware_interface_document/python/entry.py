@@ -37,11 +37,11 @@ def generate():
 
     msgs = list_msgs()
     for msg in msgs.values(): msg.generate(msg_path, templates)
-    AutowareStructure.GenerateIndex(msg_path, msgs.values())
+    # AutowareStructure.GenerateIndex(msg_path, msgs.values())
 
     apis = list_apis(source_path / "resource", msgs)
     for api in apis.values(): api.generate(api_path, templates)
-    AutowareInterface.GenerateIndex(api_path, apis.values())
+    # AutowareInterface.GenerateIndex(api_path, apis.values())
 
 
 def clean_target(target_path):

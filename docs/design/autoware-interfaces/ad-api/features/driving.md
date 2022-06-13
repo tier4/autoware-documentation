@@ -1,26 +1,31 @@
-# Driving
+# Driving feature
 
 ## Description
 
-The driving feature manages whether the vehicle is driving or can start driving.
-The vehicle holds a stop when the state is not DRIVING.
-This state is mainly used to show the users whether the vehicle can start driving and to implement an HMI for departure.
+This feature manages whether the vehicle is driving or can start driving.
+The user can use this feature to check if the vehicle is ready to drive and instruct it to depart.
 
-First, the driving state is NOT_READY and changes depending on other states of the vehicle.
-The state becomes READY when it is ready to start driving.
-Next, the state becomes DRIVING if the engage API is called, then the vehicle starts driving.
-Finally, the state returns to NOT_READY when the vehicle arrives at the destination.
-The state can be manually returned to NOT_READY by calling disengage API.
+## States
+
+The state transition for driving state is illustrated in the diagram below.
+The vehicle holds a stop when the state is not DRIVING.
+During normal operation, the flow of driving state transitions is as follows:
+
+1. Driving state is initialized to NOT_READY.
+2. The state transitions to READY when all necessary Autoware components have launched successfully and the autonomous system is ready to start driving.
+3. The state becomes DRIVING if the engage API is called and the vehicle starts driving.
+4. The state returns to NOT_READY when the vehicle reaches its destination.
+5. The state can be manually returned to NOT_READY by calling the disengage API.
 
 ## Driving State
 
 ![driving-state](./driving-state.drawio.svg)
 
-| State     | Description                                       |
-| --------- | ------------------------------------------------- |
-| NOT_READY | The vehicle cannot start driving for some reason. |
-| READY     | The vehicle is ready to start driving             |
-| DRIVING   | The vehicle is driving toward the destination.    |
+| State     | Description                                     |
+| --------- | ----------------------------------------------- |
+| NOT_READY | The vehicle is not ready to start driving.      |
+| READY     | The vehicle is ready to start driving           |
+| DRIVING   | The vehicle is driving towards the destination. |
 
 ## Related API
 

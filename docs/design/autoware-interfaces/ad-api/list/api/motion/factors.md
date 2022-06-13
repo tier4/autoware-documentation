@@ -5,7 +5,8 @@
 
 ## Description
 
-Get the motion factors.
+Get the motion factors. They are sorted in ascending order of distance.
+For details, see the [motion factors](../../../features/motion.md).
 
 ## Message
 

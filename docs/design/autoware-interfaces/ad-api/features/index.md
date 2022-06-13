@@ -1,7 +1,7 @@
 # Features of Autoware AD API
 
-- [Launcher](launcher.md)
 - [Interface](interface.md)
+- [Launcher](launcher.md)
 - [Driving](driving.md)
 - [Motion](motion.md)
 - [Pose Reset](pose-reset.md)

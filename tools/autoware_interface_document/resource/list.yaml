@@ -1,21 +1,28 @@
-- /api/interface/version
-- /api/autoware/launcher/state
-- /api/autoware/launcher/command
-- /api/fail_safe/state
-- /api/driving/state
-- /api/driving/engage
-- /api/motion/state
-- /api/motion/factors
-- /api/operation/mode/notice
-- /api/operation/mode/change
-- /api/pose_reset/state
-- /api/pose_reset/request
-- /api/route/state
-- /api/route/clear
-- /api/route/set
-- /api/route/notice
-- /api/route/lanelet/set
-- /api/route/lanelet/notice
-- /api/vehicle/status
-- /api/door/status
-- /api/door/operate
+- interface:
+    - /api/interface/version
+- launcher:
+    - /api/autoware/launcher/state
+    - /api/autoware/launcher/command
+- operation-mode:
+    - /api/operation/mode/notice
+    - /api/operation/mode/change
+- driving:
+    - /api/driving/state
+    - /api/driving/engage
+- motion:
+    - /api/motion/state
+    - /api/motion/factors
+- pose-reset:
+    - /api/pose_reset/state
+    - /api/pose_reset/request
+- route:
+    - /api/route/state
+    - /api/route/clear
+    - /api/route/set
+    - /api/route/lanelet/set
+- fail-safe:
+    - /api/fail_safe/state
+- vehicle:
+    - /api/vehicle/status
+    - /api/door/status
+    - /api/door/operate

@@ -1644,10 +1644,6 @@
         
           
         
-          
-        
-          
-        
       
       
         
@@ -1746,92 +1742,6 @@
         <label class="md-nav__title" for="__nav_5_4_3_3">
           <span class="md-nav__icon md-icon"></span>
           Features
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4_3_4" type="checkbox" id="__nav_5_4_3_4" checked>
-      
-      
-      
-        
-          
-            
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../list/">List</a>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="List" data-md-level="4">
-        <label class="md-nav__title" for="__nav_5_4_3_4">
-          <span class="md-nav__icon md-icon"></span>
-          List
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4_3_5" type="checkbox" id="__nav_5_4_3_5" checked>
-      
-      
-      
-        
-          
-            
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../types/">Types</a>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Types" data-md-level="4">
-        <label class="md-nav__title" for="__nav_5_4_3_5">
-          <span class="md-nav__icon md-icon"></span>
-          Types
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3041,19 +2951,19 @@ In local and remote modes, Autoware controls the vehicle based on commands from 
 </thead>
 <tbody>
 <tr>
-<td>DIRECT</td>
+<td>MANUAL_DIRECT</td>
 <td>The vehicle is operated directly without Autoware. This mode is only available on some vehicles.</td>
 </tr>
 <tr>
-<td>NONE</td>
+<td>STOP</td>
 <td>The vehicle is not operated by anyone. Autoware controls the vehicle to hold a stop.</td>
 </tr>
 <tr>
-<td>LOCAL</td>
+<td>LOCAL_OPERATOR</td>
 <td>The vehicle is operated by the local operator. Autoware controls the vehicle based on commands from the operator.</td>
 </tr>
 <tr>
-<td>REMOTE</td>
+<td>REMOTE_OPERATOR</td>
 <td>The vehicle is operated by the remote operator. Autoware controls the vehicle based on commands from the operator.</td>
 </tr>
 <tr>
@@ -3061,7 +2971,7 @@ In local and remote modes, Autoware controls the vehicle based on commands from 
 <td>The vehicle is operated autonomously. Autoware controls the vehicle.</td>
 </tr>
 <tr>
-<td>TRANSITION</td>
+<td>TRANSITION_TO_AUTO</td>
 <td>The vehicle is operated autonomously. Autoware is trying to take over the operation of the vehicle.</td>
 </tr>
 </tbody>

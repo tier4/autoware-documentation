@@ -35,7 +35,3 @@ string detail
 ## This type uses
 
 None
-
-## This type is used by
-
-- [autoware_ad_api_msgs/msg/MotionFactorArray](../../autoware_ad_api_msgs/msg/motion_factor_array.md)

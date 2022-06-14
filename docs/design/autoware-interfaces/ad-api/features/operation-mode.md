@@ -1,8 +1,11 @@
 # Operation Mode
 
+- [/api/operation/mode/notice](../list/api/operation/mode/notice.md)
+- [/api/operation/mode/change](../list/api/operation/mode/change.md)
+
 ## Description
 
-This feature manages the operator of the vehicle. The operation modes are roughly classified into manual, transition, and autonomous.
+This API manages the operator of the vehicle. The operation modes are roughly classified into manual, transition, and autonomous.
 Since Autoware may not be able to guarantee safety, such as switching to autonomous mode during overspeed, it changes to transition mode before autonomous mode.
 During the transition mode, the previous operator should ensure safety. If Autoware succeeds in taking over, the mode changes to autonomous.
 

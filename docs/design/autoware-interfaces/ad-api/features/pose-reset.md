@@ -1,10 +1,13 @@
 # Pose Reset API
 
+- [/api/pose_reset/state](../list/api/pose_reset/state.md)
+- [/api/pose_reset/request](../list/api/pose_reset/request.md)
+
 ## Description
 
-The pose reset feature manages the initialization of the vehicle pose.
+This API manages the initialization of the vehicle pose.
 
-## Pose Reset State
+## States
 
 ![pose-reset-state](./pose-reset-state.drawio.svg)
 
@@ -13,8 +16,3 @@ The pose reset feature manages the initialization of the vehicle pose.
 | WAITING    | The vehicle pose is not available. Waiting for the reset request.       |
 | PROCESSING | The vehicle pose is not available. The reset is processing.             |
 | COMPLETED  | The vehicle pose is available. The reset request can be accepted again. |
-
-## Related API
-
-- /api/pose_reset/state
-- /api/pose_reset/request

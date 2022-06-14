@@ -1,8 +1,11 @@
 # Motion API
 
+- [/api/motion/state](../list/api/motion/state.md)
+- [/api/motion/factors](../list/api/motion/factors.md)
+
 ## Description
 
-The motion feature manages the behavior that the vehicle plans.
+This API manages the behavior that the vehicle plans.
 
 ## States
 
@@ -36,8 +39,3 @@ For each type, the meanings of the data members are as follows.
   | pose   | The pose to turn on/off the blinker.                         |
   | reason | Reason (e.g. turning, lane change, avoidance).               |
   | status | Whether the direction change has started due to this factor. |
-
-## Related API
-
-- /api/motion/state
-- /api/motion/factors

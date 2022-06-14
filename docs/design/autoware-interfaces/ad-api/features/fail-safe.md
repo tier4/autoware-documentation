@@ -1,10 +1,12 @@
 # Fail Safe API
 
+- [/api/fail_safe/state](../list/api/fail_safe/state.md)
+
 ## Description
 
-The fail safe feature manages the behavior related to the abnormality of the vehicle.
+This API manages the behavior related to the abnormality of the vehicle.
 
-## Fail Safe State
+## States
 
 ![fail-safe-state](./fail-safe-state.drawio.svg)
 
@@ -15,7 +17,3 @@ The fail safe feature manages the behavior related to the abnormality of the veh
 | MRM_OPERATING | MRM is being executed because an error has been detected. |
 | MRM_SUCCEEDED | MRM succeeded. The vehicle is in a safe condition.        |
 | MRM_FAILED    | MRM failed. The vehicle is still in an unsafe condition.  |
-
-## Related API
-
-- /api/fail_safe/state

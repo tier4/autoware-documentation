@@ -1,11 +1,14 @@
 # Launcher API
 
+- [/api/launcher/state](../list/api/launcher/state.md)
+- [/api/launcher/request](../list/api/launcher/request.md)
+
 ## Description
 
-This feature manages the launch and termination of Autoware. Many APIs are only available after launching Autoware.
+This API manages the launch and termination of Autoware. Many APIs are only available after launching Autoware.
 For details, see the page of each API. Unless otherwise stated, the API cannot be used when Autoware is not launched.
 
-## Launcher State
+## States
 
 ![launcher-state](./launcher-state.drawio.svg)
 
@@ -22,8 +25,3 @@ For details, see the page of each API. Unless otherwise stated, the API cannot b
 ```plantuml
 {% include 'design/autoware-interfaces/ad-api/features/launcher-sequence.plantuml' %}
 ```
-
-## Related API
-
-- /api/launcher/state
-- /api/launcher/request

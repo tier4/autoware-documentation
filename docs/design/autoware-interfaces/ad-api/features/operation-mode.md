@@ -14,11 +14,11 @@ In local and remote modes, Autoware controls the vehicle based on commands from 
 
 ![operation-mode](./operation-mode.drawio.svg)
 
-| State      | Description                                                                                                        |
-| ---------- | ------------------------------------------------------------------------------------------------------------------ |
-| DIRECT     | The vehicle is operated directly without Autoware. This mode is only available on some vehicles.                   |
-| NONE       | The vehicle is not operated by anyone. Autoware controls the vehicle to hold a stop.                               |
-| LOCAL      | The vehicle is operated by the local operator. Autoware controls the vehicle based on commands from the operator.  |
-| REMOTE     | The vehicle is operated by the remote operator. Autoware controls the vehicle based on commands from the operator. |
-| AUTONOMOUS | The vehicle is operated autonomously. Autoware controls the vehicle.                                               |
-| TRANSITION | The vehicle is operated autonomously. Autoware is trying to take over the operation of the vehicle.                |
+| State              | Description                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| MANUAL_DIRECT      | The vehicle is operated directly without Autoware. This mode is only available on some vehicles.                   |
+| STOP               | The vehicle is not operated by anyone. Autoware controls the vehicle to hold a stop.                               |
+| LOCAL_OPERATOR     | The vehicle is operated by the local operator. Autoware controls the vehicle based on commands from the operator.  |
+| REMOTE_OPERATOR    | The vehicle is operated by the remote operator. Autoware controls the vehicle based on commands from the operator. |
+| AUTONOMOUS         | The vehicle is operated autonomously. Autoware controls the vehicle.                                               |
+| TRANSITION_TO_AUTO | The vehicle is operated autonomously. Autoware is trying to take over the operation of the vehicle.                |

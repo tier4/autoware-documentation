@@ -5,7 +5,7 @@
 
 ## Description
 
-Get the interface version. The version follows SemVer.
+Get the interface version. The version follows Semantic Versioning.
 
 ## Request
 

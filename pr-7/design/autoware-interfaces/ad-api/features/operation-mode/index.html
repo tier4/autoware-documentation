@@ -2932,8 +2932,12 @@
 
 
 <h1 id="operation-mode">Operation Mode<a class="headerlink" href="#operation-mode" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="../list/api/operation/mode/notice.md">/api/operation/mode/notice</a></li>
+<li><a href="../list/api/operation/mode/change.md">/api/operation/mode/change</a></li>
+</ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>This feature manages the operator of the vehicle. The operation modes are roughly classified into manual, transition, and autonomous.
+<p>This API manages the operator of the vehicle. The operation modes are roughly classified into manual, transition, and autonomous.
 Since Autoware may not be able to guarantee safety, such as switching to autonomous mode during overspeed, it changes to transition mode before autonomous mode.
 During the transition mode, the previous operator should ensure safety. If Autoware succeeds in taking over, the mode changes to autonomous.</p>
 <p>The manual mode is direct, none, local or remote.

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/use-cases/bus-service/">
       
       <link rel="icon" href="../../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.4">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.5">
     
     
       
@@ -2942,16 +2942,57 @@
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
 <p>This use case is a bus service that goes around the designated stops.</p>
 <h2 id="scenario">Scenario<a class="headerlink" href="#scenario" title="Permanent link">#</a></h2>
-<ol>
-<li>Startup the autonomous driving system.</li>
-<li>Drive the vehicle from the garage to the waiting position.</li>
-<li><a href="../drive-designated-position/">Drive the vehicle to the next bus stop.</a></li>
-<li>Get on and off the vehicle.</li>
-<li>Return to step 4 unless it's the last bus stop.</li>
-<li><a href="../drive-designated-position/">Drive the vehicle to the waiting position.</a></li>
-<li>Drive the vehicle from the waiting position to the garage.</li>
-<li>Shutdown the autonomous driving system.</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Operation</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Startup the autonomous driving system.</td>
+<td><a href="../launch-terminate/">Launch and terminate</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Drive the vehicle from the garage to the waiting position.</td>
+<td><a href="../drive-manually/">Drive manually</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Drive the vehicle to the next bus stop.</td>
+<td><a href="../drive-designated-position/">Drive to the designated position</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Get on and off the vehicle.</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Return to step 3 unless it's the last bus stop.</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Drive the vehicle to the waiting position.</td>
+<td><a href="../drive-designated-position/">Drive to the designated position</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Drive the vehicle from the waiting position to the garage.</td>
+<td><a href="../drive-manually/">Drive manually</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Shutdown the autonomous driving system.</td>
+<td><a href="../launch-terminate/">Launch and terminate</a></td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
@@ -3031,7 +3072,7 @@
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.f758a944.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.431f3d41.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

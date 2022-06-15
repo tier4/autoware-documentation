@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/use-cases/launch-terminate-autoware/">
+        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/use-cases/initialize-pose/">
       
       <link rel="icon" href="../../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.4">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.5">
     
     
       
-        <title>Launch and terminate Autoware - Autoware Documentation</title>
+        <title>Initialize the pose - Autoware Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#launch-and-terminate-autoware" class="md-skip">
+        <a href="#initialize-the-pose" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Launch and terminate Autoware
+              Initialize the pose
             
           </span>
         </div>
@@ -2914,8 +2914,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    Scenario
+  <a href="#sequence" class="md-nav__link">
+    Sequence
   </a>
   
 </li>
@@ -2932,23 +2932,30 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/use-cases/launch-terminate-autoware.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/use-cases/initialize-pose.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="launch-and-terminate-autoware">Launch and terminate Autoware<a class="headerlink" href="#launch-and-terminate-autoware" title="Permanent link">#</a></h1>
+<h1 id="initialize-the-pose">Initialize the pose<a class="headerlink" href="#initialize-the-pose" title="Permanent link">#</a></h1>
 <h2 id="related-features">Related features<a class="headerlink" href="#related-features" title="Permanent link">#</a></h2>
 <ul>
-<li>Interface</li>
-<li>Launcher</li>
+<li>Pose</li>
 </ul>
-<h2 id="scenario">Scenario<a class="headerlink" href="#scenario" title="Permanent link">#</a></h2>
-<ol>
-<li>Check the interface version</li>
-<li>Launch components.</li>
-</ol>
+<h2 id="sequence">Sequence<a class="headerlink" href="#sequence" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p>Initialization of the pose using input.</p>
+<p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSI5MXB4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBzdHlsZT0id2lkdGg6MjU1cHg7aGVpZ2h0OjkxcHg7YmFja2dyb3VuZDojRkZGRkZGOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMjU1IDkxIiB3aWR0aD0iMjU1cHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzLz48Zz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtZGFzaGFycmF5OjUuMCw1LjA7IiB4MT0iNzgiIHgyPSI3OCIgeTE9IjM2LjI5NjkiIHkyPSI1Ni4yOTY5Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWRhc2hhcnJheTo1LjAsNS4wOyIgeDE9IjIxOCIgeDI9IjIxOCIgeTE9IjM2LjI5NjkiIHkyPSI1Ni4yOTY5Ii8+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI5NyIgeD0iMzAiIHk9IjUiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI4MyIgeD0iMzciIHk9IjI0Ljk5NTEiPkFwcGxpY2F0aW9uPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iOTciIHg9IjMwIiB5PSI1NS4yOTY5Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iODMiIHg9IjM3IiB5PSI3NS4yOTIiPkFwcGxpY2F0aW9uPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iNjIiIHg9IjE4NyIgeT0iNSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjQ4IiB4PSIxOTQiIHk9IjI0Ljk5NTEiPkFEIEFQSTwvdGV4dD48cmVjdCBmaWxsPSIjRTJFMkYwIiBoZWlnaHQ9IjMwLjI5NjkiIHJ4PSIyLjUiIHJ5PSIyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9IjYyIiB4PSIxODciIHk9IjU1LjI5NjkiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0OCIgeD0iMTk0IiB5PSI3NS4yOTIiPkFEIEFQSTwvdGV4dD48IS0tTUQ1PVsyOWRhZjVhZTczOGFkM2RiMmRmNDE4OWQzZjk4MjZiZl0KQHN0YXJ0dW1sDQpza2lucGFyYW0gUGFydGljaXBhbnRQYWRkaW5nIDI1DQpwYXJ0aWNpcGFudCAiQXBwbGljYXRpb24iIGFzIHN5c3RlbQ0KcGFydGljaXBhbnQgIkFEIEFQSSIgYXMgYXBpDQpAZW5kdW1sDQoKUGxhbnRVTUwgdmVyc2lvbiAxLjIwMjIuNmJldGE1KFVua25vd24gY29tcGlsZSB0aW1lKQooR1BMIHNvdXJjZSBkaXN0cmlidXRpb24pCkphdmEgUnVudGltZTogSmF2YShUTSkgU0UgUnVudGltZSBFbnZpcm9ubWVudApKVk06IEphdmEgSG90U3BvdChUTSkgNjQtQml0IFNlcnZlciBWTQpEZWZhdWx0IEVuY29kaW5nOiBVVEYtOApMYW5ndWFnZTogZW4KQ291bnRyeTogVVMKLS0+PC9nPjwvc3ZnPg==" class="uml" alt="uml diagram" title="" /></p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Initialization of the pose using GNSS.</p>
+<p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSI5MXB4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBzdHlsZT0id2lkdGg6MjU1cHg7aGVpZ2h0OjkxcHg7YmFja2dyb3VuZDojRkZGRkZGOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMjU1IDkxIiB3aWR0aD0iMjU1cHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzLz48Zz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtZGFzaGFycmF5OjUuMCw1LjA7IiB4MT0iNzgiIHgyPSI3OCIgeTE9IjM2LjI5NjkiIHkyPSI1Ni4yOTY5Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWRhc2hhcnJheTo1LjAsNS4wOyIgeDE9IjIxOCIgeDI9IjIxOCIgeTE9IjM2LjI5NjkiIHkyPSI1Ni4yOTY5Ii8+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI5NyIgeD0iMzAiIHk9IjUiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI4MyIgeD0iMzciIHk9IjI0Ljk5NTEiPkFwcGxpY2F0aW9uPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iOTciIHg9IjMwIiB5PSI1NS4yOTY5Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iODMiIHg9IjM3IiB5PSI3NS4yOTIiPkFwcGxpY2F0aW9uPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iNjIiIHg9IjE4NyIgeT0iNSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjQ4IiB4PSIxOTQiIHk9IjI0Ljk5NTEiPkFEIEFQSTwvdGV4dD48cmVjdCBmaWxsPSIjRTJFMkYwIiBoZWlnaHQ9IjMwLjI5NjkiIHJ4PSIyLjUiIHJ5PSIyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9IjYyIiB4PSIxODciIHk9IjU1LjI5NjkiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0OCIgeD0iMTk0IiB5PSI3NS4yOTIiPkFEIEFQSTwvdGV4dD48IS0tTUQ1PVsyOWRhZjVhZTczOGFkM2RiMmRmNDE4OWQzZjk4MjZiZl0KQHN0YXJ0dW1sDQpza2lucGFyYW0gUGFydGljaXBhbnRQYWRkaW5nIDI1DQpwYXJ0aWNpcGFudCAiQXBwbGljYXRpb24iIGFzIHN5c3RlbQ0KcGFydGljaXBhbnQgIkFEIEFQSSIgYXMgYXBpDQpAZW5kdW1sDQoKUGxhbnRVTUwgdmVyc2lvbiAxLjIwMjIuNmJldGE1KFVua25vd24gY29tcGlsZSB0aW1lKQooR1BMIHNvdXJjZSBkaXN0cmlidXRpb24pCkphdmEgUnVudGltZTogSmF2YShUTSkgU0UgUnVudGltZSBFbnZpcm9ubWVudApKVk06IEphdmEgSG90U3BvdChUTSkgNjQtQml0IFNlcnZlciBWTQpEZWZhdWx0IEVuY29kaW5nOiBVVEYtOApMYW5ndWFnZTogZW4KQ291bnRyeTogVVMKLS0+PC9nPjwvc3ZnPg==" class="uml" alt="uml diagram" title="" /></p>
+</li>
+</ul>
 
               
             </article>
@@ -2969,7 +2976,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../drive-designated-position/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Drive to the designated position" rel="prev">
+        <a href="../drive-manually/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Drive manually" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2978,20 +2985,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Drive to the designated position
+              Drive manually
             </div>
           </div>
         </a>
       
       
         
-        <a href="../taxi-service/" class="md-footer__link md-footer__link--next" aria-label="Next: Use Case of Bus Service" rel="next">
+        <a href="../launch-terminate/" class="md-footer__link md-footer__link--next" aria-label="Next: Launch and terminate" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Use Case of Bus Service
+              Launch and terminate
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3028,7 +3035,7 @@
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.f758a944.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.431f3d41.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

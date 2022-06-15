@@ -8,7 +8,7 @@
 ## Use Cases
 
 - [Launch and terminate](launch-terminate.md)
-- Initialize the pose
+- [Initialize the pose](initialize-pose.md)
 - Change the operation mode
 - [Drive manually](drive-manually.md)
 - [Drive to the designated position](drive-designated-position.md)

@@ -1,0 +1,7 @@
+@startuml
+
+skinparam ParticipantPadding 25
+participant "Application" as system
+participant "AD API" as api
+
+@enduml

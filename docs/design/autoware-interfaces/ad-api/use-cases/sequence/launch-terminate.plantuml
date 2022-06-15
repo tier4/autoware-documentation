@@ -16,6 +16,9 @@ os -> ad_api
 activate ad_api
 os --> script --
 
+script -> ad_api ++: get version
+return
+
 script -> ad_api ++: launch
 ad_api -> autoware ++: start
 autoware --> ad_api

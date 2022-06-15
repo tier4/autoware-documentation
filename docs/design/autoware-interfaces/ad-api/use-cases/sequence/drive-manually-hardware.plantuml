@@ -1,0 +1,16 @@
+@startuml
+
+skinparam ParticipantPadding 25
+participant "Application" as system
+participant "AD API" as api
+participant "Vehicle" as vehicle
+participant "Driver" as driver
+
+driver -> vehicle: change the control mode to manual
+
+vehicle --> api: notify the current control mode
+api --> system: notify the current operation mode
+
+driver -> vehicle: drive manually
+
+@enduml

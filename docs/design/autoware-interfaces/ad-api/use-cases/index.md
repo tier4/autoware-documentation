@@ -7,9 +7,9 @@
 
 ## Use Cases
 
-- Startup and shutdown.
-- Initialize the pose.
-- Change the operation mode.
-- Operate manually.
+- [Launch and terminate](launch-terminate.md)
+- Initialize the pose
+- Change the operation mode
+- [Drive manually](drive-manually.md)
 - [Drive to the designated position](drive-designated-position.md)
-- Get on and off.
+- Get on and off

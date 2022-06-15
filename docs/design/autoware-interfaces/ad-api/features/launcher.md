@@ -19,9 +19,3 @@ For details, see the page of each API. Unless otherwise stated, the API cannot b
 | LAUNCHING   | Autoware is launching. The startup process is in progress. |
 | RUNNING     | Autoware is running.                                       |
 | TERMINATING | Autoware is terminating.                                   |
-
-## Sequence
-
-```plantuml
-{% include 'design/autoware-interfaces/ad-api/features/launcher-sequence.plantuml' %}
-```

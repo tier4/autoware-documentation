@@ -32,8 +32,8 @@ def generate():
     msg_path = output_path / "types"
     templates = Environment(loader=FileSystemLoader(source_path / "templates"), trim_blocks=True)
 
-    clean_target(api_path)
-    clean_target(msg_path)
+    # clean_target(api_path)
+    # clean_target(msg_path)
 
     msgs = list_msgs()
     for msg in msgs.values(): msg.generate(msg_path, templates)

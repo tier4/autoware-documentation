@@ -4,10 +4,10 @@ interface:
   method: notification
 
 description: |-
-  Get the fail safe state. For details, see the [fail safe state](/features/fail-safe.md).
+  Get the fail safe state. For details, see the [fail safe state](./index.md).
 
 message:
   - name: state
-    text: A value of the [fail safe state](/features/fail-safe.md).
+    text: A value of the [fail safe state](./index.md).
   - name: auto_recovery
     text: Whether the fail safe state recovers automatically.

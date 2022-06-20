@@ -1,6 +1,6 @@
 # Fail Safe API
 
-- [/api/fail_safe/state](../list/api/fail_safe/state.md)
+- {{ link_ad_api('/api/fail_safe/state') }}
 
 ## Description
 
@@ -8,7 +8,7 @@ This API manages the behavior related to the abnormality of the vehicle.
 
 ## States
 
-![fail-safe-state](./fail-safe-state.drawio.svg)
+![fail-safe-state](./state.drawio.svg)
 
 | State         | Description                                               |
 | ------------- | --------------------------------------------------------- |

@@ -915,6 +915,8 @@
         
           
         
+          
+        
       
       
         
@@ -987,6 +989,20 @@
     <li class="md-nav__item">
       <a href="../../how-to-guides/how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
         How to integrate Autoware with a differential drive vehicle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
       </a>
     </li>
   
@@ -1726,14 +1742,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/ad-api/features/">Features</a>
+          <a href="../../design/autoware-interfaces/ad-api/list/">List</a>
           
         </div>
       
-      <nav class="md-nav" aria-label="Features" data-md-level="4">
+      <nav class="md-nav" aria-label="List" data-md-level="4">
         <label class="md-nav__title" for="__nav_5_4_3_3">
           <span class="md-nav__icon md-icon"></span>
-          Features
+          List
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2150,12 +2166,6 @@
       
         
           
-            
-          
-        
-          
-        
-          
         
           
         
@@ -2173,25 +2183,17 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../coding-guidelines/languages/">Language-specific coding guidelines</a>
-          
-            <label for="__nav_6_3_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_6_3_2">
+          Language-specific guidelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      <nav class="md-nav" aria-label="Language-specific coding guidelines" data-md-level="3">
+      <nav class="md-nav" aria-label="Language-specific guidelines" data-md-level="3">
         <label class="md-nav__title" for="__nav_6_3_2">
           <span class="md-nav__icon md-icon"></span>
-          Language-specific coding guidelines
+          Language-specific guidelines
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
           
             
               
@@ -2283,20 +2285,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/languages/ros2-interfaces/" class="md-nav__link">
-        ROS 2 interfaces
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../coding-guidelines/languages/docker/" class="md-nav__link">
         Docker
       </a>
@@ -2341,10 +2329,6 @@
       
         
           
-            
-          
-        
-          
         
           
         
@@ -2366,25 +2350,17 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../coding-guidelines/ros-nodes/">ROS nodes coding guidelines</a>
-          
-            <label for="__nav_6_3_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_6_3_3">
+          ROS nodes guidelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      <nav class="md-nav" aria-label="ROS nodes coding guidelines" data-md-level="3">
+      <nav class="md-nav" aria-label="ROS nodes guidelines" data-md-level="3">
         <label class="md-nav__title" for="__nav_6_3_3">
           <span class="md-nav__icon md-icon"></span>
-          ROS nodes coding guidelines
+          ROS nodes guidelines
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
           
             
               
@@ -2562,12 +2538,20 @@
             
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index md-nav__link--active">
           <a href="./">Testing guidelines</a>
+          
+            <label for="__nav_6_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -2578,6 +2562,34 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="unit-testing/" class="md-nav__link">
+        Unit testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="integration-testing/" class="md-nav__link">
+        Integration testing
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -2715,7 +2727,7 @@
   
     <li class="md-nav__item">
       <a href="../pull-request-guidelines/review-tips/" class="md-nav__link">
-        Tips
+        Review tips
       </a>
     </li>
   
@@ -2896,6 +2908,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unit-testing" class="md-nav__link">
+    Unit testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-testing" class="md-nav__link">
+    Integration testing
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2913,10 +2947,20 @@
 
 
 <h1 id="testing-guidelines">Testing guidelines<a class="headerlink" href="#testing-guidelines" title="Permanent link">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Under Construction</p>
-</div>
+<h2 id="unit-testing">Unit testing<a class="headerlink" href="#unit-testing" title="Permanent link">#</a></h2>
+<p>Unit testing is a software testing method that tests individual units of source code to determine whether they satisfy the specification.</p>
+<p>For details, see the <a href="unit-testing/">Unit testing guidelines</a>.</p>
+<h2 id="integration-testing">Integration testing<a class="headerlink" href="#integration-testing" title="Permanent link">#</a></h2>
+<p>Integration testing combines and tests the individual software modules as a group, and is done after unit testing.</p>
+<p>While performing integration testing, the following subtypes of tests are written:</p>
+<ol>
+<li>Fault injection testing</li>
+<li>Back-to-back comparison between a model and code</li>
+<li>Requirements-based testing</li>
+<li>Anomaly detection during integration testing</li>
+<li>Random input testing</li>
+</ol>
+<p>For details, see the <a href="integration-testing/">Integration testing guidelines</a>.</p>
 
               
             </article>
@@ -2953,13 +2997,13 @@
       
       
         
-        <a href="../documentation-guidelines/" class="md-footer__link md-footer__link--next" aria-label="Next: Documentation guidelines" rel="next">
+        <a href="unit-testing/" class="md-footer__link md-footer__link--next" aria-label="Next: Unit testing" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Documentation guidelines
+              Unit testing
             </div>
           </div>
           <div class="md-footer__button md-icon">

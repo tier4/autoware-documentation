@@ -915,6 +915,8 @@
         
           
         
+          
+        
       
       
         
@@ -987,6 +989,20 @@
     <li class="md-nav__item">
       <a href="../../how-to-guides/how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
         How to integrate Autoware with a differential drive vehicle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
       </a>
     </li>
   
@@ -1726,14 +1742,14 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/ad-api/features/">Features</a>
+          <a href="../../design/autoware-interfaces/ad-api/list/">List</a>
           
         </div>
       
-      <nav class="md-nav" aria-label="Features" data-md-level="4">
+      <nav class="md-nav" aria-label="List" data-md-level="4">
         <label class="md-nav__title" for="__nav_5_4_3_3">
           <span class="md-nav__icon md-icon"></span>
-          Features
+          List
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2152,12 +2168,6 @@
       
         
           
-            
-          
-        
-          
-        
-          
         
           
         
@@ -2175,25 +2185,17 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="languages/">Language-specific coding guidelines</a>
-          
-            <label for="__nav_6_3_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_6_3_2">
+          Language-specific guidelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      <nav class="md-nav" aria-label="Language-specific coding guidelines" data-md-level="3">
+      <nav class="md-nav" aria-label="Language-specific guidelines" data-md-level="3">
         <label class="md-nav__title" for="__nav_6_3_2">
           <span class="md-nav__icon md-icon"></span>
-          Language-specific coding guidelines
+          Language-specific guidelines
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
           
             
               
@@ -2285,20 +2287,6 @@
   
   
     <li class="md-nav__item">
-      <a href="languages/ros2-interfaces/" class="md-nav__link">
-        ROS 2 interfaces
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="languages/docker/" class="md-nav__link">
         Docker
       </a>
@@ -2343,10 +2331,6 @@
       
         
           
-            
-          
-        
-          
         
           
         
@@ -2368,25 +2352,17 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="ros-nodes/">ROS nodes coding guidelines</a>
-          
-            <label for="__nav_6_3_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_6_3_3">
+          ROS nodes guidelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      <nav class="md-nav" aria-label="ROS nodes coding guidelines" data-md-level="3">
+      <nav class="md-nav" aria-label="ROS nodes guidelines" data-md-level="3">
         <label class="md-nav__title" for="__nav_6_3_3">
           <span class="md-nav__icon md-icon"></span>
-          ROS nodes coding guidelines
+          ROS nodes guidelines
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
           
             
               
@@ -2562,12 +2538,20 @@
             
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../testing-guidelines/">Testing guidelines</a>
+          
+            <label for="__nav_6_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -2578,6 +2562,34 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-guidelines/unit-testing/" class="md-nav__link">
+        Unit testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-guidelines/integration-testing/" class="md-nav__link">
+        Integration testing
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -2715,7 +2727,7 @@
   
     <li class="md-nav__item">
       <a href="../pull-request-guidelines/review-tips/" class="md-nav__link">
-        Tips
+        Review tips
       </a>
     </li>
   
@@ -2933,6 +2945,20 @@
 <p>Under Construction</p>
 </div>
 <h2 id="common-guidelines">Common guidelines<a class="headerlink" href="#common-guidelines" title="Permanent link">#</a></h2>
+<p>Refer to the following links for now:</p>
+<ul>
+<li><a href="https://docs.ros.org/en/humble/Contributing/Developer-Guide.html">https://docs.ros.org/en/humble/Contributing/Developer-Guide.html</a></li>
+</ul>
+<p>Also, keep in mind the following concepts.</p>
+<ul>
+<li>Keep things consistent.</li>
+<li>Automate where possible, using simple checks for formatting, syntax, etc.</li>
+<li>When it comes to code reviews, don't spend too much time on trivial disagreements. For details see:<ul>
+<li><a href="https://en.wikipedia.org/wiki/Law_of_triviality">https://en.wikipedia.org/wiki/Law_of_triviality</a></li>
+<li><a href="https://steemit.com/programming/@emrebeyler/code-reviews-and-parkinson-s-law-of-triviality">https://steemit.com/programming/@emrebeyler/code-reviews-and-parkinson-s-law-of-triviality</a></li>
+</ul>
+</li>
+</ul>
 
               
             </article>
@@ -2969,13 +2995,13 @@
       
       
         
-        <a href="languages/" class="md-footer__link md-footer__link--next" aria-label="Next: Language-specific coding guidelines" rel="next">
+        <a href="languages/cpp/" class="md-footer__link md-footer__link--next" aria-label="Next: C++" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Language-specific coding guidelines
+              C++
             </div>
           </div>
           <div class="md-footer__button md-icon">

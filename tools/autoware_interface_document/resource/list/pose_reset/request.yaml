@@ -4,7 +4,7 @@ interface:
   method: function call
 
 description: |-
-  Request to initialize or reset the vehicle pose. For details, see the [pose reset state](/features/pose-reset.md).
+  Request to initialize or reset the vehicle pose. For details, see the [pose reset state](./index.md).
 
 request:
   - name: pose

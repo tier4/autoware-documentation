@@ -4,8 +4,8 @@ interface:
   method: notification
 
 description: |-
-  Get the pose reset state. For details, see the [pose reset state](/features/pose-reset.md).
+  Get the pose reset state. For details, see the [pose reset state](./index.md).
 
 message:
   - name: state
-    text: A value of the [pose reset state](/features/pose-reset.md).
+    text: A value of the [pose reset state](./index.md).

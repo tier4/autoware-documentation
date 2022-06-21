@@ -1,7 +1,7 @@
 # Pose Reset API
 
-- [/api/pose_reset/state](../list/api/pose_reset/state.md)
-- [/api/pose_reset/request](../list/api/pose_reset/request.md)
+- {{ link_ad_api('/api/pose_reset/state') }}
+- {{ link_ad_api('/api/pose_reset/request') }}
 
 ## Description
 
@@ -9,7 +9,7 @@ This API manages the initialization of the vehicle pose.
 
 ## States
 
-![pose-reset-state](./pose-reset-state.drawio.svg)
+![pose-reset-state](./state.drawio.svg)
 
 | State      | Description                                                             |
 | ---------- | ----------------------------------------------------------------------- |

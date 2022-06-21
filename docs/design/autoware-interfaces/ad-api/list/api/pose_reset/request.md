@@ -5,7 +5,7 @@
 
 ## Description
 
-Request to initialize or reset the vehicle pose. For details, see the [pose reset state](../../../features/pose-reset.md).
+Request to initialize or reset the vehicle pose. For details, see the [pose reset state](./index.md).
 
 ## Request
 

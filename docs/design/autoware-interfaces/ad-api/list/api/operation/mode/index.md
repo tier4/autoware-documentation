@@ -1,7 +1,7 @@
 # Operation Mode
 
-- [/api/operation/mode/notice](../list/api/operation/mode/notice.md)
-- [/api/operation/mode/change](../list/api/operation/mode/change.md)
+- {{ link_ad_api('/api/operation/mode/notice') }}
+- {{ link_ad_api('/api/operation/mode/change') }}
 
 ## Description
 
@@ -15,7 +15,7 @@ Direct mode is supported on some vehicles that have an interface to operate dire
 None mode is used to stop the vehicle when the operator is temporarily absent due to a change of operator.
 In local and remote modes, Autoware controls the vehicle based on commands from the operator.
 
-![operation-mode](./operation-mode.drawio.svg)
+![operation-mode](./mode.drawio.svg)
 
 | State              | Description                                                                                                        |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |

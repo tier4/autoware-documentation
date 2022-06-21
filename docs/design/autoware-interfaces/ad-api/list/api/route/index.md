@@ -1,10 +1,10 @@
 # Route API
 
-- [/api/route/state](../list/api/route/state.md)
-- [/api/route/clear](../list/api/route/clear.md)
-- [/api/route/set](../list/api/route/set.md)
-- [/api/route/lanelet/set](../list/api/route/lanelet/set.md)
-- [/api/route/lanelet/notice](../list/api/route/lanelet/notice.md)
+- {{ link_ad_api('/api/route/state') }}
+- {{ link_ad_api('/api/route/clear') }}
+- {{ link_ad_api('/api/route/set') }}
+- {{ link_ad_api('/api/route/lanelet/set') }}
+- {{ link_ad_api('/api/route/lanelet/notice') }}
 
 ## Description
 
@@ -14,7 +14,7 @@ There are two ways to set the route. The one is a generic method that uses pose,
 
 ## States
 
-![route-state](./route-state.drawio.svg)
+![route-state](./state.drawio.svg)
 
 | State    | Description                                        |
 | -------- | -------------------------------------------------- |

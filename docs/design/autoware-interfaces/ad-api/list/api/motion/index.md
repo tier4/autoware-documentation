@@ -1,7 +1,7 @@
 # Motion API
 
-- [/api/motion/state](../list/api/motion/state.md)
-- [/api/motion/factors](../list/api/motion/factors.md)
+- {{ link_ad_api('/api/motion/state') }}
+- {{ link_ad_api('/api/motion/factors') }}
 
 ## Description
 
@@ -9,7 +9,7 @@ This API manages the behavior that the vehicle plans.
 
 ## States
 
-![motion-state](./motion-state.drawio.svg)
+![motion-state](./state.drawio.svg)
 
 | State    | Description                                          |
 | -------- | ---------------------------------------------------- |

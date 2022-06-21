@@ -5,10 +5,10 @@
 
 ## Description
 
-Get the motion state. For details, see the [motion state](../../../features/motion.md).
+Get the motion state. For details, see the [motion state](./index.md).
 
 ## Message
 
-| Name  | Type   | Description                                                 |
-| ----- | ------ | ----------------------------------------------------------- |
-| state | uint16 | A value of the [motion state](../../../features/motion.md). |
+| Name  | Type   | Description                                |
+| ----- | ------ | ------------------------------------------ |
+| state | uint16 | A value of the [motion state](./index.md). |

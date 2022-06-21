@@ -4,8 +4,8 @@ interface:
   method: notification
 
 description: |-
-  Get the motion state. For details, see the [motion state](/features/motion.md).
+  Get the motion state. For details, see the [motion state](./index.md).
 
 message:
   - name: state
-    text: A value of the [motion state](/features/motion.md).
+    text: A value of the [motion state](./index.md).

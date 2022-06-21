@@ -1,0 +1,11 @@
+interface:
+  name: /api/pose/state
+  type: autoware_ad_api_msgs/msg/PoseState
+  method: notification
+
+description: |-
+  Get the pose state. For details, see the [pose state](./index.md).
+
+message:
+  - name: state
+    text: A value of the [pose state](./index.md).

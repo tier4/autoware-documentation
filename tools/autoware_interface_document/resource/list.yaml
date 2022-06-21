@@ -12,9 +12,9 @@
 - motion:
     - /api/motion/state
     - /api/motion/factors
-- pose-reset:
-    - /api/pose_reset/state
-    - /api/pose_reset/request
+- pose:
+    - /api/pose/state
+    - /api/pose/request
 - route:
     - /api/route/state
     - /api/route/clear

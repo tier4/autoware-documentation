@@ -1,10 +1,10 @@
 interface:
-  name: /api/pose_reset/request
-  type: autoware_ad_api_msgs/srv/PoseResetRequest
+  name: /api/pose/initialize
+  type: autoware_ad_api_msgs/srv/PoseInitialize
   method: function call
 
 description: |-
-  Request to initialize or reset the vehicle pose. For details, see the [pose reset state](./index.md).
+  Request to initialize the vehicle pose. For details, see the [pose state](./index.md).
 
 request:
   - name: pose

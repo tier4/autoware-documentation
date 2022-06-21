@@ -4,7 +4,7 @@
 - [Launcher](./api/launcher/index.md)
 - [Driving](./api/driving/index.md)
 - [Motion](./api/motion/index.md)
-- [Pose Reset](./api/pose_reset/index.md)
+- [Pose](./api/pose/index.md)
 - [Route](./api/route/index.md)
 - [Operation Mode](./api/operation/mode/index.md)
 - [Fail Safe](./api/fail_safe/index.md)

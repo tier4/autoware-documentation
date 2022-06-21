@@ -2,8 +2,8 @@
 
 ## Related features
 
-- [Driving](../features/driving.md)
-- [Route](../features/route.md)
+- [Driving](../list/api/driving/index.md)
+- [Route](../list/api/route/index.md)
 
 ## Sequence
 

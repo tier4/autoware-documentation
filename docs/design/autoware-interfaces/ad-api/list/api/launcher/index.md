@@ -1,7 +1,7 @@
 # Launcher API
 
-- [/api/launcher/state](../list/api/launcher/state.md)
-- [/api/launcher/request](../list/api/launcher/request.md)
+- {{ link_ad_api('/api/launcher/state') }}
+- {{ link_ad_api('/api/launcher/request') }}
 
 ## Description
 
@@ -10,7 +10,7 @@ For details, see the page of each API. Unless otherwise stated, the API cannot b
 
 ## States
 
-![launcher-state](./launcher-state.drawio.svg)
+![launcher-state](./state.drawio.svg)
 
 | State       | Description                                                |
 | ----------- | ---------------------------------------------------------- |

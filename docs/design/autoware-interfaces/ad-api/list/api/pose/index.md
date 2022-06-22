@@ -11,8 +11,8 @@ This API manages the initialization of the vehicle pose.
 
 ![pose-reset-state](./state.drawio.svg)
 
-| State        | Description                                                             |
-| ------------ | ----------------------------------------------------------------------- |
-| UNAVAILABLE  | The vehicle pose is not available. Waiting for the reset request.       |
-| INITIALIZING | The vehicle pose is not available. The reset is processing.             |
-| AVAILABLE    | The vehicle pose is available. The reset request can be accepted again. |
+| State        | Description                                                            |
+| ------------ | ---------------------------------------------------------------------- |
+| UNAVAILABLE  | The vehicle pose is not available. Waiting for initialization request. |
+| INITIALIZING | The vehicle pose is not available. Initialization is in progress.      |
+| AVAILABLE    | The vehicle pose is available. Initialization can be requested again.  |

@@ -9,9 +9,9 @@ Request to initialize the vehicle pose. For details, see the [pose state](./inde
 
 ## Request
 
-| Name | Type                                        | Description                                                                          |
-| ---- | ------------------------------------------- | ------------------------------------------------------------------------------------ |
-| pose | geometry_msgs/msg/PoseWithCovarianceStamped | The initial guess for pose estimation. If not specified, the GNSS pose will be used. |
+| Name | Type                                        | Description                                                                    |
+| ---- | ------------------------------------------- | ------------------------------------------------------------------------------ |
+| pose | geometry_msgs/msg/PoseWithCovarianceStamped | The initial guess for pose estimation. If omitted, the GNSS pose will be used. |
 
 ## Response
 

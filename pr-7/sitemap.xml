@@ -896,6 +896,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/how-to-guides/sensor-calibration/</loc>
+         <lastmod>2022-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/installation/</loc>
          <lastmod>2022-06-22</lastmod>
          <changefreq>daily</changefreq>

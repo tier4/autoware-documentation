@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/use-cases/launch-terminate/">
+        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/how-to-guides/sensor-calibration/">
       
-      <link rel="icon" href="../../../../../assets/images/autoware-foundation.png">
+      <link rel="icon" href="../../assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
     
     
       
-        <title>Launch and terminate - Autoware Documentation</title>
+        <title>How to calibrate your sensors - Autoware Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -38,11 +38,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../assets/css/extra.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#launch-and-terminate" class="md-skip">
+        <a href="#how-to-calibrate-your-sensors" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Autoware Documentation" class="md-header__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
+    <a href="../.." title="Autoware Documentation" class="md-header__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M39.61 196.8 74.8 96.29C88.27 57.78 124.6 32 165.4 32h181.2c40.8 0 77.1 25.78 90.6 64.29l35.2 100.51c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.33 32-32 32H32c-17.67 0-32-14.3-32-32V256c0-26.7 16.36-49.6 39.61-59.2zm69.49-4.8h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4L109.1 192zM96 256c-17.67 0-32 14.3-32 32s14.33 32 32 32c17.7 0 32-14.3 32-32s-14.3-32-32-32zm320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Launch and terminate
+              How to calibrate your sensors
             
           </span>
         </div>
@@ -202,7 +202,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Introduction
     </a>
   </li>
@@ -217,7 +217,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../installation/" class="md-tabs__link">
+      <a href="../../installation/" class="md-tabs__link">
         Installation
       </a>
     </li>
@@ -233,24 +233,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../tutorials/" class="md-tabs__link">
+      <a href="../../tutorials/" class="md-tabs__link">
         Tutorials
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../../how-to-guides/" class="md-tabs__link">
-        How to guides
       </a>
     </li>
   
@@ -267,7 +251,23 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        How to guides
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../design/" class="md-tabs__link">
         Design
       </a>
     </li>
@@ -283,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../contributing/" class="md-tabs__link">
+      <a href="../../contributing/" class="md-tabs__link">
         Contributing
       </a>
     </li>
@@ -299,7 +299,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../support/" class="md-tabs__link">
+      <a href="../../support/" class="md-tabs__link">
         Support
       </a>
     </li>
@@ -333,7 +333,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Autoware Documentation" class="md-nav__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
+    <a href="../.." title="Autoware Documentation" class="md-nav__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M39.61 196.8 74.8 96.29C88.27 57.78 124.6 32 165.4 32h181.2c40.8 0 77.1 25.78 90.6 64.29l35.2 100.51c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.33 32-32 32H32c-17.67 0-32-14.3-32-32V256c0-26.7 16.36-49.6 39.61-59.2zm69.49-4.8h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4L109.1 192zM96 256c-17.67 0-32 14.3-32 32s14.33 32 32 32c17.7 0 32-14.3 32-32s-14.3-32-32-32zm320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
@@ -364,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -402,7 +402,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../installation/">Installation</a>
+          <a href="../../installation/">Installation</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -459,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../installation/autoware/docker-installation/" class="md-nav__link">
+      <a href="../../installation/autoware/docker-installation/" class="md-nav__link">
         Docker installation
       </a>
     </li>
@@ -473,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../installation/autoware/source-installation/" class="md-nav__link">
+      <a href="../../installation/autoware/source-installation/" class="md-nav__link">
         Source installation
       </a>
     </li>
@@ -513,7 +513,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../installation/related-tools/">Related tools</a>
+          <a href="../../installation/related-tools/">Related tools</a>
           
         </div>
       
@@ -558,7 +558,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../installation/additional-settings-for-developers/">Additional settings for developers</a>
+          <a href="../../installation/additional-settings-for-developers/">Additional settings for developers</a>
           
         </div>
       
@@ -613,7 +613,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../tutorials/">Tutorials</a>
+          <a href="../../tutorials/">Tutorials</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -661,7 +661,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../tutorials/ad-hoc-simulation/">Ad hoc simulation</a>
+          <a href="../../tutorials/ad-hoc-simulation/">Ad hoc simulation</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -684,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tutorials/ad-hoc-simulation/planning-simulation/" class="md-nav__link">
+      <a href="../../tutorials/ad-hoc-simulation/planning-simulation/" class="md-nav__link">
         Planning simulation
       </a>
     </li>
@@ -698,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tutorials/ad-hoc-simulation/rosbag-replay-simulation/" class="md-nav__link">
+      <a href="../../tutorials/ad-hoc-simulation/rosbag-replay-simulation/" class="md-nav__link">
         Rosbag replay simulation
       </a>
     </li>
@@ -712,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
+      <a href="../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
         Digital twin simulation
       </a>
     </li>
@@ -803,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tutorials/scenario-simulation/planning-simulation/installation/" class="md-nav__link">
+      <a href="../../tutorials/scenario-simulation/planning-simulation/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -817,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tutorials/scenario-simulation/planning-simulation/scenario-test-simulation/" class="md-nav__link">
+      <a href="../../tutorials/scenario-simulation/planning-simulation/scenario-test-simulation/" class="md-nav__link">
         Scenario test simulation
       </a>
     </li>
@@ -831,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tutorials/scenario-simulation/planning-simulation/random-test-simulation/" class="md-nav__link">
+      <a href="../../tutorials/scenario-simulation/planning-simulation/random-test-simulation/" class="md-nav__link">
         Random test simulation
       </a>
     </li>
@@ -852,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tutorials/scenario-simulation/rosbag-replay-simulation/" class="md-nav__link">
+      <a href="../../tutorials/scenario-simulation/rosbag-replay-simulation/" class="md-nav__link">
         Rosbag replay simulation
       </a>
     </li>
@@ -866,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
+      <a href="../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
         Digital twin simulation
       </a>
     </li>
@@ -893,12 +893,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -922,7 +924,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../how-to-guides/">How to guides</a>
+          <a href="../">How to guides</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -945,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
+      <a href="../running-autoware-without-cuda/" class="md-nav__link">
         Running Autoware without CUDA
       </a>
     </li>
@@ -959,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+      <a href="../advanced-usage-of-colcon/" class="md-nav__link">
         Advanced usage of colcon
       </a>
     </li>
@@ -973,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to-guides/how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
+      <a href="../how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
         How to integrate Autoware with your vehicle
       </a>
     </li>
@@ -987,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to-guides/how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
+      <a href="../how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
         How to integrate Autoware with a differential drive vehicle
       </a>
     </li>
@@ -1001,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+      <a href="../how-to-create-maps-for-autoware/" class="md-nav__link">
         How to create maps for Autoware
       </a>
     </li>
@@ -1021,14 +1023,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -1052,7 +1052,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../">Design</a>
+          <a href="../../design/">Design</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1096,7 +1096,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-concepts/">Autoware concepts</a>
+          <a href="../../design/autoware-concepts/">Autoware concepts</a>
           
             <label for="__nav_5_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1119,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../autoware-concepts/difference-from-ai-and-auto/" class="md-nav__link">
+      <a href="../../design/autoware-concepts/difference-from-ai-and-auto/" class="md-nav__link">
         How is Autoware Core/Universe different from Autoware.AI and Autoware.Auto?
       </a>
     </li>
@@ -1175,7 +1175,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-architecture/">Autoware architecture</a>
+          <a href="../../design/autoware-architecture/">Autoware architecture</a>
           
             <label for="__nav_5_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1215,7 +1215,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-architecture/sensing/">Sensing</a>
+          <a href="../../design/autoware-architecture/sensing/">Sensing</a>
           
         </div>
       
@@ -1258,7 +1258,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-architecture/map/">Map</a>
+          <a href="../../design/autoware-architecture/map/">Map</a>
           
         </div>
       
@@ -1301,7 +1301,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-architecture/localization/">Localization</a>
+          <a href="../../design/autoware-architecture/localization/">Localization</a>
           
         </div>
       
@@ -1344,7 +1344,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-architecture/perception/">Perception</a>
+          <a href="../../design/autoware-architecture/perception/">Perception</a>
           
         </div>
       
@@ -1387,7 +1387,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-architecture/planning/">Planning</a>
+          <a href="../../design/autoware-architecture/planning/">Planning</a>
           
         </div>
       
@@ -1430,7 +1430,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-architecture/control/">Control</a>
+          <a href="../../design/autoware-architecture/control/">Control</a>
           
         </div>
       
@@ -1473,7 +1473,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-architecture/vehicle/">Vehicle</a>
+          <a href="../../design/autoware-architecture/vehicle/">Vehicle</a>
           
         </div>
       
@@ -1516,7 +1516,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../autoware-architecture/node-diagram/">Node diagram</a>
+          <a href="../../design/autoware-architecture/node-diagram/">Node diagram</a>
           
         </div>
       
@@ -1547,16 +1547,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
       
       
       
@@ -1576,7 +1574,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../">Autoware interfaces</a>
+          <a href="../../design/autoware-interfaces/">Autoware interfaces</a>
           
             <label for="__nav_5_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1616,7 +1614,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../prototyping/">TIER IV API</a>
+          <a href="../../design/autoware-interfaces/prototyping/">TIER IV API</a>
           
         </div>
       
@@ -1640,14 +1638,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4_3" type="checkbox" id="__nav_5_4_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4_3" type="checkbox" id="__nav_5_4_3" checked>
       
       
       
@@ -1665,7 +1661,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">AD API</a>
+          <a href="../../design/autoware-interfaces/ad-api/">AD API</a>
           
             <label for="__nav_5_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1686,14 +1682,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4_3_2" type="checkbox" id="__nav_5_4_3_2" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4_3_2" type="checkbox" id="__nav_5_4_3_2" checked>
       
       
       
@@ -1707,7 +1701,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Use cases</a>
+          <a href="../../design/autoware-interfaces/ad-api/use-cases/">Use cases</a>
           
         </div>
       
@@ -1750,7 +1744,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../list/">List</a>
+          <a href="../../design/autoware-interfaces/ad-api/list/">List</a>
           
         </div>
       
@@ -1808,7 +1802,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../components/">Components</a>
+          <a href="../../design/autoware-interfaces/components/">Components</a>
           
             <label for="__nav_5_4_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1831,7 +1825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../components/planning/" class="md-nav__link">
+      <a href="../../design/autoware-interfaces/components/planning/" class="md-nav__link">
         Planning
       </a>
     </li>
@@ -1845,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../components/control/" class="md-nav__link">
+      <a href="../../design/autoware-interfaces/components/control/" class="md-nav__link">
         Control
       </a>
     </li>
@@ -1859,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../components/vehicle-interface/" class="md-nav__link">
+      <a href="../../design/autoware-interfaces/components/vehicle-interface/" class="md-nav__link">
         Vehicle Interface
       </a>
     </li>
@@ -1873,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../components/vehicle-dimensions/" class="md-nav__link">
+      <a href="../../design/autoware-interfaces/components/vehicle-dimensions/" class="md-nav__link">
         Vehicle dimensions
       </a>
     </li>
@@ -1926,7 +1920,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../configuration-management/">Configuration management</a>
+          <a href="../../design/configuration-management/">Configuration management</a>
           
             <label for="__nav_5_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1949,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../configuration-management/development-process/" class="md-nav__link">
+      <a href="../../design/configuration-management/development-process/" class="md-nav__link">
         Development process
       </a>
     </li>
@@ -1963,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../configuration-management/repository-structure/" class="md-nav__link">
+      <a href="../../design/configuration-management/repository-structure/" class="md-nav__link">
         Repository structure
       </a>
     </li>
@@ -1977,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../configuration-management/release-process/" class="md-nav__link">
+      <a href="../../design/configuration-management/release-process/" class="md-nav__link">
         Release process
       </a>
     </li>
@@ -2017,7 +2011,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../node-diagram/">Node diagram</a>
+          <a href="../../design/node-diagram/">Node diagram</a>
           
         </div>
       
@@ -2080,7 +2074,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../contributing/">Contributing</a>
+          <a href="../../contributing/">Contributing</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -2103,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/license/" class="md-nav__link">
+      <a href="../../contributing/license/" class="md-nav__link">
         License
       </a>
     </li>
@@ -2140,7 +2134,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../contributing/coding-guidelines/">Coding guidelines</a>
+          <a href="../../contributing/coding-guidelines/">Coding guidelines</a>
           
             <label for="__nav_6_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2207,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/languages/cpp/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/languages/cpp/" class="md-nav__link">
         C++
       </a>
     </li>
@@ -2221,7 +2215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/languages/python/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/languages/python/" class="md-nav__link">
         Python
       </a>
     </li>
@@ -2235,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/languages/shell-scripts/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/languages/shell-scripts/" class="md-nav__link">
         Shell scripts
       </a>
     </li>
@@ -2249,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/languages/markdown/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/languages/markdown/" class="md-nav__link">
         Markdown
       </a>
     </li>
@@ -2263,7 +2257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/languages/cmake/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/languages/cmake/" class="md-nav__link">
         CMake
       </a>
     </li>
@@ -2277,7 +2271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/languages/package-xml/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/languages/package-xml/" class="md-nav__link">
         package.xml
       </a>
     </li>
@@ -2291,7 +2285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/languages/docker/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/languages/docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -2305,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/languages/github-actions/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/languages/github-actions/" class="md-nav__link">
         GitHub Actions
       </a>
     </li>
@@ -2374,7 +2368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/class-design/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/class-design/" class="md-nav__link">
         Class design
       </a>
     </li>
@@ -2388,7 +2382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/console-logging/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/console-logging/" class="md-nav__link">
         Console logging
       </a>
     </li>
@@ -2402,7 +2396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/coordinate-system/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/coordinate-system/" class="md-nav__link">
         Coordinate system
       </a>
     </li>
@@ -2416,7 +2410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/directory-structure/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/directory-structure/" class="md-nav__link">
         Directory structure
       </a>
     </li>
@@ -2430,7 +2424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/launch-files/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/launch-files/" class="md-nav__link">
         Launch files
       </a>
     </li>
@@ -2444,7 +2438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/message-guidelines/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/message-guidelines/" class="md-nav__link">
         Message guidelines
       </a>
     </li>
@@ -2458,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/naming/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/naming/" class="md-nav__link">
         Topic namespaces
       </a>
     </li>
@@ -2472,7 +2466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/parameters/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/parameters/" class="md-nav__link">
         Parameters
       </a>
     </li>
@@ -2486,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/task-scheduling/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/task-scheduling/" class="md-nav__link">
         Task scheduling
       </a>
     </li>
@@ -2500,7 +2494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/coding-guidelines/ros-nodes/topic-namespaces/" class="md-nav__link">
+      <a href="../../contributing/coding-guidelines/ros-nodes/topic-namespaces/" class="md-nav__link">
         Topic namespaces
       </a>
     </li>
@@ -2551,7 +2545,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../contributing/testing-guidelines/">Testing guidelines</a>
+          <a href="../../contributing/testing-guidelines/">Testing guidelines</a>
           
             <label for="__nav_6_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2574,7 +2568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/testing-guidelines/unit-testing/" class="md-nav__link">
+      <a href="../../contributing/testing-guidelines/unit-testing/" class="md-nav__link">
         Unit testing
       </a>
     </li>
@@ -2588,7 +2582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/testing-guidelines/integration-testing/" class="md-nav__link">
+      <a href="../../contributing/testing-guidelines/integration-testing/" class="md-nav__link">
         Integration testing
       </a>
     </li>
@@ -2628,7 +2622,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../contributing/documentation-guidelines/">Documentation guidelines</a>
+          <a href="../../contributing/documentation-guidelines/">Documentation guidelines</a>
           
         </div>
       
@@ -2679,7 +2673,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../contributing/pull-request-guidelines/">Pull request guidelines</a>
+          <a href="../../contributing/pull-request-guidelines/">Pull request guidelines</a>
           
             <label for="__nav_6_6">
               <span class="md-nav__icon md-icon"></span>
@@ -2702,7 +2696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/pull-request-guidelines/commit-guidelines/" class="md-nav__link">
+      <a href="../../contributing/pull-request-guidelines/commit-guidelines/" class="md-nav__link">
         Commit guidelines
       </a>
     </li>
@@ -2716,7 +2710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/pull-request-guidelines/review-guidelines/" class="md-nav__link">
+      <a href="../../contributing/pull-request-guidelines/review-guidelines/" class="md-nav__link">
         Review guidelines
       </a>
     </li>
@@ -2730,7 +2724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/pull-request-guidelines/review-tips/" class="md-nav__link">
+      <a href="../../contributing/pull-request-guidelines/review-tips/" class="md-nav__link">
         Review tips
       </a>
     </li>
@@ -2770,7 +2764,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../contributing/discussion-guidelines/">Discussion guidelines</a>
+          <a href="../../contributing/discussion-guidelines/">Discussion guidelines</a>
           
         </div>
       
@@ -2827,7 +2821,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../../support/">Support</a>
+          <a href="../../support/">Support</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2850,7 +2844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../support/support-guidelines/" class="md-nav__link">
+      <a href="../../support/support-guidelines/" class="md-nav__link">
         Support guidelines
       </a>
     </li>
@@ -2864,7 +2858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../support/troubleshooting/" class="md-nav__link">
+      <a href="../../support/troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -2878,7 +2872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../support/docs-guide/" class="md-nav__link">
+      <a href="../../support/docs-guide/" class="md-nav__link">
         Docs guide
       </a>
     </li>
@@ -2919,15 +2913,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#related-api" class="md-nav__link">
-    Related API
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sequence" class="md-nav__link">
-    Sequence
+  <a href="#camera-calibration" class="md-nav__link">
+    Camera calibration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lidar-lidar-calibration" class="md-nav__link">
+    Lidar-lidar calibration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lidar-camera-calibration" class="md-nav__link">
+    Lidar-camera calibration
   </a>
   
 </li>
@@ -2944,20 +2952,21 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/use-cases/launch-terminate.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/how-to-guides/sensor-calibration.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="launch-and-terminate">Launch and terminate<a class="headerlink" href="#launch-and-terminate" title="Permanent link">#</a></h1>
-<h2 id="related-api">Related API<a class="headerlink" href="#related-api" title="Permanent link">#</a></h2>
-<ul>
-<li><a href="../../list/api/interface/">Interface</a></li>
-<li><a href="../../list/api/launcher/">Launcher</a></li>
-</ul>
-<h2 id="sequence">Sequence<a class="headerlink" href="#sequence" title="Permanent link">#</a></h2>
-<p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSI2NjVweCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgc3R5bGU9IndpZHRoOjYxN3B4O2hlaWdodDo2NjVweDtiYWNrZ3JvdW5kOiNGRkZGRkY7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2MTcgNjY1IiB3aWR0aD0iNjE3cHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzLz48Zz48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjU1My41OTM4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHdpZHRoPSIxMCIgeD0iMTUzIiB5PSI2Ny40Mjk3Ii8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSIyOCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjE1OCIgeT0iMTY3LjgyODEiLz48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHdpZHRoPSIxMCIgeD0iMTU4IiB5PSI1NTQuODkwNiIvPjxyZWN0IGZpbGw9IiNGRkZGRkYiIGhlaWdodD0iNTE1LjQ2MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSIyNzguNSIgeT0iOTYuNTYyNSIvPjxyZWN0IGZpbGw9IiNGRkZGRkYiIGhlaWdodD0iMzg3LjA2MjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSI0MTgiIHk9IjE4MS44MjgxIi8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSIxNCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjQyMyIgeT0iMjI0Ljk2MDkiLz48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjU3LjEzMjgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSI0MjMiIHk9IjI2OC4wOTM4Ii8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSI1Ny4xMzI4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHdpZHRoPSIxMCIgeD0iNDIzIiB5PSI0NjguNjI1Ii8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSIyMTQuNTMxMyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjU1MCIgeT0iMjk3LjIyNjYiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtZGFzaGFycmF5OjUuMCw1LjA7IiB4MT0iNTgiIHgyPSI1OCIgeTE9IjM2LjI5NjkiIHkyPSI2MzAuMDIzNCIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41O3N0cm9rZS1kYXNoYXJyYXk6NS4wLDUuMDsiIHgxPSIxNTgiIHgyPSIxNTgiIHkxPSIzNi4yOTY5IiB5Mj0iNjMwLjAyMzQiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtZGFzaGFycmF5OjUuMCw1LjA7IiB4MT0iMjgzIiB4Mj0iMjgzIiB5MT0iMzYuMjk2OSIgeTI9IjYzMC4wMjM0Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWRhc2hhcnJheTo1LjAsNS4wOyIgeDE9IjQyMyIgeDI9IjQyMyIgeTE9IjM2LjI5NjkiIHkyPSI2MzAuMDIzNCIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41O3N0cm9rZS1kYXNoYXJyYXk6NS4wLDUuMDsiIHgxPSI1NTUiIHgyPSI1NTUiIHkxPSIzNi4yOTY5IiB5Mj0iNjMwLjAyMzQiLz48cmVjdCBmaWxsPSIjRTJFMkYwIiBoZWlnaHQ9IjMwLjI5NjkiIHJ4PSIyLjUiIHJ5PSIyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9IjQ1IiB4PSIzNiIgeT0iNSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjMxIiB4PSI0MyIgeT0iMjQuOTk1MSI+VXNlcjwvdGV4dD48cmVjdCBmaWxsPSIjRTJFMkYwIiBoZWlnaHQ9IjMwLjI5NjkiIHJ4PSIyLjUiIHJ5PSIyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9IjQ1IiB4PSIzNiIgeT0iNjI5LjAyMzQiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIzMSIgeD0iNDMiIHk9IjY0OS4wMTg2Ij5Vc2VyPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMzQiIHg9IjE0MSIgeT0iNSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjIwIiB4PSIxNDgiIHk9IjI0Ljk5NTEiPk9TPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMzQiIHg9IjE0MSIgeT0iNjI5LjAyMzQiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIyMCIgeD0iMTQ4IiB5PSI2NDkuMDE4NiI+T1M8L3RleHQ+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI5NyIgeD0iMjM1IiB5PSI1Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iODMiIHg9IjI0MiIgeT0iMjQuOTk1MSI+QXBwbGljYXRpb248L3RleHQ+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI5NyIgeD0iMjM1IiB5PSI2MjkuMDIzNCIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjgzIiB4PSIyNDIiIHk9IjY0OS4wMTg2Ij5BcHBsaWNhdGlvbjwvdGV4dD48cmVjdCBmaWxsPSIjRTJFMkYwIiBoZWlnaHQ9IjMwLjI5NjkiIHJ4PSIyLjUiIHJ5PSIyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9IjYyIiB4PSIzOTIiIHk9IjUiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0OCIgeD0iMzk5IiB5PSIyNC45OTUxIj5BRCBBUEk8L3RleHQ+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI2MiIgeD0iMzkyIiB5PSI2MjkuMDIzNCIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjQ4IiB4PSIzOTkiIHk9IjY0OS4wMTg2Ij5BRCBBUEk8L3RleHQ+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI4MiIgeD0iNTE0IiB5PSI1Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNjgiIHg9IjUyMSIgeT0iMjQuOTk1MSI+QXV0b3dhcmU8L3RleHQ+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI4MiIgeD0iNTE0IiB5PSI2MjkuMDIzNCIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjY4IiB4PSI1MjEiIHk9IjY0OS4wMTg2Ij5BdXRvd2FyZTwvdGV4dD48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjU1My41OTM4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHdpZHRoPSIxMCIgeD0iMTUzIiB5PSI2Ny40Mjk3Ii8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSIyOCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjE1OCIgeT0iMTY3LjgyODEiLz48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHdpZHRoPSIxMCIgeD0iMTU4IiB5PSI1NTQuODkwNiIvPjxyZWN0IGZpbGw9IiNGRkZGRkYiIGhlaWdodD0iNTE1LjQ2MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSIyNzguNSIgeT0iOTYuNTYyNSIvPjxyZWN0IGZpbGw9IiNGRkZGRkYiIGhlaWdodD0iMzg3LjA2MjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSI0MTgiIHk9IjE4MS44MjgxIi8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSIxNCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjQyMyIgeT0iMjI0Ljk2MDkiLz48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjU3LjEzMjgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSI0MjMiIHk9IjI2OC4wOTM4Ii8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSI1Ny4xMzI4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHdpZHRoPSIxMCIgeD0iNDIzIiB5PSI0NjguNjI1Ii8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSIyMTQuNTMxMyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjU1MCIgeT0iMjk3LjIyNjYiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjE0MSw2My40Mjk3LDE1MSw2Ny40Mjk3LDE0MSw3MS40Mjk3LDE0NSw2Ny40Mjk3IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI1OC41IiB4Mj0iMTQ3IiB5MT0iNjcuNDI5NyIgeTI9IjY3LjQyOTciLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI2MCIgeD0iNjUuNSIgeT0iNjIuMzYzOCI+cG93ZXIgb248L3RleHQ+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyNjYuNSw5Mi41NjI1LDI3Ni41LDk2LjU2MjUsMjY2LjUsMTAwLjU2MjUsMjcwLjUsOTYuNTYyNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMTYzIiB4Mj0iMjcyLjUiIHkxPSI5Ni41NjI1IiB5Mj0iOTYuNTYyNSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjgwIiB4PSIxNzAiIHk9IjkxLjQ5NjYiPnNlcnZpY2Ugc3RhcnQ8L3RleHQ+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMjg4LjUiIHgyPSIzMzAuNSIgeTE9IjEyNS42OTUzIiB5Mj0iMTI1LjY5NTMiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIzMzAuNSIgeDI9IjMzMC41IiB5MT0iMTI1LjY5NTMiIHkyPSIxMzguNjk1MyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4OS41IiB4Mj0iMzMwLjUiIHkxPSIxMzguNjk1MyIgeTI9IjEzOC42OTUzIi8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyOTkuNSwxMzQuNjk1MywyODkuNSwxMzguNjk1MywyOTkuNSwxNDIuNjk1MywyOTUuNSwxMzguNjk1MyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iOTciIHg9IjI5NS41IiB5PSIxMjAuNjI5NCI+dXBkYXRlIHN5c3RlbTwvdGV4dD48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjE3OSwxNjMuODI4MSwxNjksMTY3LjgyODEsMTc5LDE3MS44MjgxLDE3NSwxNjcuODI4MSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMTczIiB4Mj0iMjc3LjUiIHkxPSIxNjcuODI4MSIgeTI9IjE2Ny44MjgxIi8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iODAiIHg9IjE4NSIgeT0iMTYyLjc2MjIiPnNlcnZpY2Ugc3RhcnQ8L3RleHQ+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI0MDYsMTc3LjgyODEsNDE2LDE4MS44MjgxLDQwNiwxODUuODI4MSw0MTAsMTgxLjgyODEiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjE2OCIgeDI9IjQxMiIgeTE9IjE4MS44MjgxIiB5Mj0iMTgxLjgyODEiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI2Ni41LDE5MS44MjgxLDI3Ni41LDE5NS44MjgxLDI2Ni41LDE5OS44MjgxLDI3MC41LDE5NS44MjgxIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDtzdHJva2UtZGFzaGFycmF5OjIuMCwyLjA7IiB4MT0iMTYzIiB4Mj0iMjcyLjUiIHkxPSIxOTUuODI4MSIgeTI9IjE5NS44MjgxIi8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI0MTEsMjIwLjk2MDksNDIxLDIyNC45NjA5LDQxMSwyMjguOTYwOSw0MTUsMjI0Ljk2MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4OC41IiB4Mj0iNDE3IiB5MT0iMjI0Ljk2MDkiIHkyPSIyMjQuOTYwOSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjcyIiB4PSIyOTUuNSIgeT0iMjE5Ljg5NSI+Z2V0IHZlcnNpb248L3RleHQ+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyOTkuNSwyMzQuOTYwOSwyODkuNSwyMzguOTYwOSwyOTkuNSwyNDIuOTYwOSwyOTUuNSwyMzguOTYwOSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7c3Ryb2tlLWRhc2hhcnJheToyLjAsMi4wOyIgeDE9IjI5My41IiB4Mj0iNDE3IiB5MT0iMjM4Ljk2MDkiIHkyPSIyMzguOTYwOSIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDExLDI2NC4wOTM4LDQyMSwyNjguMDkzOCw0MTEsMjcyLjA5MzgsNDE1LDI2OC4wOTM4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyODguNSIgeDI9IjQxNyIgeTE9IjI2OC4wOTM4IiB5Mj0iMjY4LjA5MzgiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MiIgeD0iMjk1LjUiIHk9IjI2My4wMjc4Ij5sYXVuY2g8L3RleHQ+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI1MzgsMjkzLjIyNjYsNTQ4LDI5Ny4yMjY2LDUzOCwzMDEuMjI2Niw1NDIsMjk3LjIyNjYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjQzMyIgeDI9IjU0NCIgeTE9IjI5Ny4yMjY2IiB5Mj0iMjk3LjIyNjYiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIzMCIgeD0iNDQwIiB5PSIyOTIuMTYwNiI+c3RhcnQ8L3RleHQ+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI0NDQsMzA3LjIyNjYsNDM0LDMxMS4yMjY2LDQ0NCwzMTUuMjI2Niw0NDAsMzExLjIyNjYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wO3N0cm9rZS1kYXNoYXJyYXk6Mi4wLDIuMDsiIHgxPSI0MzgiIHgyPSI1NDkiIHkxPSIzMTEuMjI2NiIgeTI9IjMxMS4yMjY2Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyOTkuNSwzMjEuMjI2NiwyODkuNSwzMjUuMjI2NiwyOTkuNSwzMjkuMjI2NiwyOTUuNSwzMjUuMjI2NiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7c3Ryb2tlLWRhc2hhcnJheToyLjAsMi4wOyIgeDE9IjI5My41IiB4Mj0iNDE3IiB5MT0iMzI1LjIyNjYiIHkyPSIzMjUuMjI2NiIvPjxwYXRoIGQ9Ik01LDM2My4yMjY2IEw1LDM4OC4yMjY2IEw2MTAsMzg4LjIyNjYgTDYxMCwzNzMuMjI2NiBMNjAwLDM2My4yMjY2IEw1LDM2My4yMjY2ICIgZmlsbD0iI0ZFRkZERCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHBhdGggZD0iTTYwMCwzNjMuMjI2NiBMNjAwLDM3My4yMjY2IEw2MTAsMzczLjIyNjYgTDYwMCwzNjMuMjI2NiAiIGZpbGw9IiNGRUZGREQiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjYxIiB4PSIyNzIuNSIgeT0iMzgwLjI5MzUiPkluIHNlcnZpY2U8L3RleHQ+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyNjYuNSw0MzUuNDkyMiwyNzYuNSw0MzkuNDkyMiwyNjYuNSw0NDMuNDkyMiwyNzAuNSw0MzkuNDkyMiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTguNSIgeDI9IjI3Mi41IiB5MT0iNDM5LjQ5MjIiIHkyPSI0MzkuNDkyMiIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjYyIiB4PSI2NS41IiB5PSI0MzQuNDI2MyI+cG93ZXIgb2ZmPC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDExLDQ2NC42MjUsNDIxLDQ2OC42MjUsNDExLDQ3Mi42MjUsNDE1LDQ2OC42MjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4OC41IiB4Mj0iNDE3IiB5MT0iNDY4LjYyNSIgeTI9IjQ2OC42MjUiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI2MyIgeD0iMjk1LjUiIHk9IjQ2My41NTkxIj50ZXJtaW5hdGU8L3RleHQ+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI1MzgsNDkzLjc1NzgsNTQ4LDQ5Ny43NTc4LDUzOCw1MDEuNzU3OCw1NDIsNDk3Ljc1NzgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjQzMyIgeDI9IjU0NCIgeTE9IjQ5Ny43NTc4IiB5Mj0iNDk3Ljc1NzgiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIyOCIgeD0iNDQwIiB5PSI0OTIuNjkxOSI+c3RvcDwvdGV4dD48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjQ0NCw1MDcuNzU3OCw0MzQsNTExLjc1NzgsNDQ0LDUxNS43NTc4LDQ0MCw1MTEuNzU3OCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7c3Ryb2tlLWRhc2hhcnJheToyLjAsMi4wOyIgeDE9IjQzOCIgeDI9IjU1NCIgeTE9IjUxMS43NTc4IiB5Mj0iNTExLjc1NzgiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI5OS41LDUyMS43NTc4LDI4OS41LDUyNS43NTc4LDI5OS41LDUyOS43NTc4LDI5NS41LDUyNS43NTc4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDtzdHJva2UtZGFzaGFycmF5OjIuMCwyLjA7IiB4MT0iMjkzLjUiIHgyPSI0MTciIHkxPSI1MjUuNzU3OCIgeTI9IjUyNS43NTc4Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIxNzksNTUwLjg5MDYsMTY5LDU1NC44OTA2LDE3OSw1NTguODkwNiwxNzUsNTU0Ljg5MDYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjE3MyIgeDI9IjI3Ny41IiB5MT0iNTU0Ljg5MDYiIHkyPSI1NTQuODkwNiIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9Ijc4IiB4PSIxODUiIHk9IjU0OS44MjQ3Ij5zZXJ2aWNlIHN0b3A8L3RleHQ+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI0MTEsNTY0Ljg5MDYsNDIxLDU2OC44OTA2LDQxMSw1NzIuODkwNiw0MTUsNTY4Ljg5MDYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjE2OCIgeDI9IjQxNyIgeTE9IjU2OC44OTA2IiB5Mj0iNTY4Ljg5MDYiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI2Ni41LDU3OC44OTA2LDI3Ni41LDU4Mi44OTA2LDI2Ni41LDU4Ni44OTA2LDI3MC41LDU4Mi44OTA2IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDtzdHJva2UtZGFzaGFycmF5OjIuMCwyLjA7IiB4MT0iMTYzIiB4Mj0iMjcyLjUiIHkxPSI1ODIuODkwNiIgeTI9IjU4Mi44OTA2Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIxNzQsNjA4LjAyMzQsMTY0LDYxMi4wMjM0LDE3NCw2MTYuMDIzNCwxNzAsNjEyLjAyMzQiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjE2OCIgeDI9IjI4Mi41IiB5MT0iNjEyLjAyMzQiIHkyPSI2MTIuMDIzNCIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjYzIiB4PSIxODAiIHk9IjYwNi45NTc1Ij5zaHV0ZG93bjwvdGV4dD48IS0tTUQ1PVswZTM0YTA2YWQ4NTZhNjM4OGY4NjEzZTI1Y2NjYjQ4Zl0KQHN0YXJ0dW1sDQpza2lucGFyYW0gUGFydGljaXBhbnRQYWRkaW5nIDI1DQpwYXJ0aWNpcGFudCAiVXNlciIgYXMgYWN0b3INCnBhcnRpY2lwYW50ICJPUyIgYXMgb3MNCnBhcnRpY2lwYW50ICJBcHBsaWNhdGlvbiIgYXMgc2NyaXB0DQpwYXJ0aWNpcGFudCAiQUQgQVBJIiBhcyBhZF9hcGkNCnBhcnRpY2lwYW50ICJBdXRvd2FyZSIgYXMgYXV0b3dhcmUNCg0KYWN0b3IgLT4gb3MgKys6IHBvd2VyIG9uDQpvcyAtPiBzY3JpcHQgKys6IHNlcnZpY2Ugc3RhcnQNCnNjcmlwdCAtPiBzY3JpcHQ6IHVwZGF0ZSBzeXN0ZW0NCg0Kc2NyaXB0IC0+IG9zICsrOiBzZXJ2aWNlIHN0YXJ0DQpvcyAtPiBhZF9hcGkNCmFjdGl2YXRlIGFkX2FwaQ0Kb3MgLSAtPiBzY3JpcHQgLSAtDQoNCnNjcmlwdCAtPiBhZF9hcGkgKys6IGdldCB2ZXJzaW9uDQpyZXR1cm4NCg0Kc2NyaXB0IC0+IGFkX2FwaSArKzogbGF1bmNoDQphZF9hcGkgLT4gYXV0b3dhcmUgKys6IHN0YXJ0DQphdXRvd2FyZSAtIC0+IGFkX2FwaQ0KYWRfYXBpIC0gLT4gc2NyaXB0IC0gLQ0KDQp8fHwNCg0Kbm90ZSBvdmVyIGFjdG9yLCBhdXRvd2FyZTogSW4gc2VydmljZQ0KDQp8fHwNCg0KYWN0b3IgLT4gc2NyaXB0OiBwb3dlciBvZmYNCnNjcmlwdCAtPiBhZF9hcGkgKys6IHRlcm1pbmF0ZQ0KYWRfYXBpIC0+IGF1dG93YXJlOiBzdG9wDQphdXRvd2FyZSAtIC0+IGFkX2FwaSAtIC0NCmFkX2FwaSAtIC0+IHNjcmlwdCAtIC0NCg0Kc2NyaXB0IC0+IG9zICsrOiBzZXJ2aWNlIHN0b3ANCm9zIC0+IGFkX2FwaQ0KZGVhY3RpdmF0ZSBhZF9hcGkNCm9zIC0gLT4gc2NyaXB0IC0gLQ0KDQpzY3JpcHQgLT4gb3M6IHNodXRkb3duDQpkZWFjdGl2YXRlIHNjcmlwdA0KQGVuZHVtbA0KClBsYW50VU1MIHZlcnNpb24gMS4yMDIyLjdiZXRhMShVbmtub3duIGNvbXBpbGUgdGltZSkKKEdQTCBzb3VyY2UgZGlzdHJpYnV0aW9uKQpKYXZhIFJ1bnRpbWU6IEphdmEoVE0pIFNFIFJ1bnRpbWUgRW52aXJvbm1lbnQKSlZNOiBKYXZhIEhvdFNwb3QoVE0pIDY0LUJpdCBTZXJ2ZXIgVk0KRGVmYXVsdCBFbmNvZGluZzogVVRGLTgKTGFuZ3VhZ2U6IGVuCkNvdW50cnk6IFVTCi0tPjwvZz48L3N2Zz4=" class="uml" alt="uml diagram" title="" /></p>
+<h1 id="how-to-calibrate-your-sensors">How to calibrate your sensors<a class="headerlink" href="#how-to-calibrate-your-sensors" title="Permanent link">#</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>Autoware expects to have multiple sensors attached to the vehicle as input to perception, localization, and planning stack. These sensors must be calibrated correctly and their positions must be defined using either urdf files (as in <a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/tree/main/sample_sensor_kit_description">sample_sensor_kit</a>) or as tf launch files.</p>
+<h2 id="camera-calibration">Camera calibration<a class="headerlink" href="#camera-calibration" title="Permanent link">#</a></h2>
+<p>Navigation2 provides a <a href="https://navigation.ros.org/tutorials/docs/camera_calibration.html">good tutorial for camera internal calibration</a>.</p>
+<h2 id="lidar-lidar-calibration">Lidar-lidar calibration<a class="headerlink" href="#lidar-lidar-calibration" title="Permanent link">#</a></h2>
+<p>TBD</p>
+<h2 id="lidar-camera-calibration">Lidar-camera calibration<a class="headerlink" href="#lidar-camera-calibration" title="Permanent link">#</a></h2>
+<p>TBD</p>
 
               
             </article>
@@ -2978,7 +2987,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../initialize-pose/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Initialize the pose" rel="prev">
+        <a href="../running-autoware-without-cuda/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Running Autoware without CUDA" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2987,20 +2996,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Initialize the pose
+              Running Autoware without CUDA
             </div>
           </div>
         </a>
       
       
         
-        <a href="../taxi-service/" class="md-footer__link md-footer__link--next" aria-label="Next: Use Case of Bus Service" rel="next">
+        <a href="../../installation/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Use Case of Bus Service
+              Installation
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3034,10 +3043,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

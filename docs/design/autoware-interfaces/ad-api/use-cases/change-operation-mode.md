@@ -1,6 +1,6 @@
 # Drive manually
 
-## Related features
+## Related API
 
 - Operation Mode
 

@@ -1,6 +1,6 @@
 # Initialize the pose
 
-## Related features
+## Related API
 
 - Pose
 

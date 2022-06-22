@@ -1,6 +1,6 @@
 # Get on and get off
 
-## Related features
+## Related API
 
 - Door
 

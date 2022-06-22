@@ -1,6 +1,6 @@
 # Drive to the designated position
 
-## Related features
+## Related API
 
 - Driving
 - Route

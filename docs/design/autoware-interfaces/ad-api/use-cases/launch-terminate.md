@@ -1,6 +1,6 @@
 # Launch and terminate
 
-## Related features
+## Related API
 
 - Interface
 - Launcher

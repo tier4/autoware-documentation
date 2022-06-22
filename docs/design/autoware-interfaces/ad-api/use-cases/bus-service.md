@@ -1,8 +1,8 @@
-# Use Case of Bus Service
+# User story of bus service
 
 ## Overview
 
-This use case is a bus service that goes around the designated stops.
+This user story is a bus service that goes around the designated stops.
 
 ## Scenario
 

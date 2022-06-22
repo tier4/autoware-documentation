@@ -18,4 +18,4 @@ Service providers can combine these use cases to define user stories and check i
 - [Initialize the pose](initialize-pose.md)
 - [Change the operation mode](change-operation-mode.md)
 - [Drive to the designated position](drive-designated-position.md)
-- Get on and off
+- [Get on and get off](get-on-off.md)

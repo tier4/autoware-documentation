@@ -5,7 +5,7 @@
 
 ## Description
 
-This API manages the initialization of the vehicle pose.
+This API manages the initialization of the vehicle pose. Autoware requires a global pose as the initial guess for localization.
 
 ## States
 

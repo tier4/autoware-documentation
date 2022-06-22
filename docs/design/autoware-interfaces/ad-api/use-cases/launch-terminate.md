@@ -2,8 +2,8 @@
 
 ## Related API
 
-- Interface
-- Launcher
+- [Interface](../list/api/interface/index.md)
+- [Launcher](../list/api/launcher/index.md)
 
 ## Sequence
 

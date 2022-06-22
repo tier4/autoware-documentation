@@ -2,7 +2,7 @@
 
 ## Related API
 
-- Operation Mode
+- [Operation Mode](../list/api/operation/mode/index.md)
 
 ## Sequence
 

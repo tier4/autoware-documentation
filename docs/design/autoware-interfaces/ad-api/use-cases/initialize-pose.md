@@ -2,7 +2,7 @@
 
 ## Related API
 
-- Pose
+- [Pose](../list/api/pose/index.md)
 
 ## Sequence
 

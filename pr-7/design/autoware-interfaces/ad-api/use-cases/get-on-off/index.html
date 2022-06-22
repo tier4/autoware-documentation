@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/contributing/pull-request-guidelines/">
+        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/use-cases/get-on-off/">
       
-      <link rel="icon" href="../../assets/images/autoware-foundation.png">
+      <link rel="icon" href="../../../../../assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
     
     
       
-        <title>Pull request guidelines - Autoware Documentation</title>
+        <title>Get on and get off - Autoware Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.4a0965b7.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -38,11 +38,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../../../../assets/css/extra.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pull-request-guidelines" class="md-skip">
+        <a href="#get-on-and-get-off" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Autoware Documentation" class="md-header__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
+    <a href="../../../../.." title="Autoware Documentation" class="md-header__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M39.61 196.8 74.8 96.29C88.27 57.78 124.6 32 165.4 32h181.2c40.8 0 77.1 25.78 90.6 64.29l35.2 100.51c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.33 32-32 32H32c-17.67 0-32-14.3-32-32V256c0-26.7 16.36-49.6 39.61-59.2zm69.49-4.8h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4L109.1 192zM96 256c-17.67 0-32 14.3-32 32s14.33 32 32 32c17.7 0 32-14.3 32-32s-14.3-32-32-32zm320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pull request guidelines
+              Get on and get off
             
           </span>
         </div>
@@ -202,7 +202,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../../../.." class="md-tabs__link">
       Introduction
     </a>
   </li>
@@ -217,7 +217,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+      <a href="../../../../../installation/" class="md-tabs__link">
         Installation
       </a>
     </li>
@@ -233,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../tutorials/" class="md-tabs__link">
+      <a href="../../../../../tutorials/" class="md-tabs__link">
         Tutorials
       </a>
     </li>
@@ -249,24 +249,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../how-to-guides/" class="md-tabs__link">
+      <a href="../../../../../how-to-guides/" class="md-tabs__link">
         How to guides
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../design/" class="md-tabs__link">
-        Design
       </a>
     </li>
   
@@ -283,7 +267,23 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+        Design
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../contributing/" class="md-tabs__link">
         Contributing
       </a>
     </li>
@@ -299,7 +299,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../support/" class="md-tabs__link">
+      <a href="../../../../../support/" class="md-tabs__link">
         Support
       </a>
     </li>
@@ -333,7 +333,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Autoware Documentation" class="md-nav__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
+    <a href="../../../../.." title="Autoware Documentation" class="md-nav__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M39.61 196.8 74.8 96.29C88.27 57.78 124.6 32 165.4 32h181.2c40.8 0 77.1 25.78 90.6 64.29l35.2 100.51c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.33 32-32 32H32c-17.67 0-32-14.3-32-32V256c0-26.7 16.36-49.6 39.61-59.2zm69.49-4.8h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4L109.1 192zM96 256c-17.67 0-32 14.3-32 32s14.33 32 32 32c17.7 0 32-14.3 32-32s-14.3-32-32-32zm320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
@@ -364,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -402,7 +402,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/">Installation</a>
+          <a href="../../../../../installation/">Installation</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -459,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/autoware/docker-installation/" class="md-nav__link">
+      <a href="../../../../../installation/autoware/docker-installation/" class="md-nav__link">
         Docker installation
       </a>
     </li>
@@ -473,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/autoware/source-installation/" class="md-nav__link">
+      <a href="../../../../../installation/autoware/source-installation/" class="md-nav__link">
         Source installation
       </a>
     </li>
@@ -513,7 +513,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/related-tools/">Related tools</a>
+          <a href="../../../../../installation/related-tools/">Related tools</a>
           
         </div>
       
@@ -558,7 +558,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../installation/additional-settings-for-developers/">Additional settings for developers</a>
+          <a href="../../../../../installation/additional-settings-for-developers/">Additional settings for developers</a>
           
         </div>
       
@@ -613,7 +613,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../tutorials/">Tutorials</a>
+          <a href="../../../../../tutorials/">Tutorials</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -661,7 +661,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../tutorials/ad-hoc-simulation/">Ad hoc simulation</a>
+          <a href="../../../../../tutorials/ad-hoc-simulation/">Ad hoc simulation</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -684,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/ad-hoc-simulation/planning-simulation/" class="md-nav__link">
+      <a href="../../../../../tutorials/ad-hoc-simulation/planning-simulation/" class="md-nav__link">
         Planning simulation
       </a>
     </li>
@@ -698,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/ad-hoc-simulation/rosbag-replay-simulation/" class="md-nav__link">
+      <a href="../../../../../tutorials/ad-hoc-simulation/rosbag-replay-simulation/" class="md-nav__link">
         Rosbag replay simulation
       </a>
     </li>
@@ -712,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
+      <a href="../../../../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
         Digital twin simulation
       </a>
     </li>
@@ -803,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/scenario-simulation/planning-simulation/installation/" class="md-nav__link">
+      <a href="../../../../../tutorials/scenario-simulation/planning-simulation/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -817,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/scenario-simulation/planning-simulation/scenario-test-simulation/" class="md-nav__link">
+      <a href="../../../../../tutorials/scenario-simulation/planning-simulation/scenario-test-simulation/" class="md-nav__link">
         Scenario test simulation
       </a>
     </li>
@@ -831,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/scenario-simulation/planning-simulation/random-test-simulation/" class="md-nav__link">
+      <a href="../../../../../tutorials/scenario-simulation/planning-simulation/random-test-simulation/" class="md-nav__link">
         Random test simulation
       </a>
     </li>
@@ -852,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/scenario-simulation/rosbag-replay-simulation/" class="md-nav__link">
+      <a href="../../../../../tutorials/scenario-simulation/rosbag-replay-simulation/" class="md-nav__link">
         Rosbag replay simulation
       </a>
     </li>
@@ -866,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
+      <a href="../../../../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
         Digital twin simulation
       </a>
     </li>
@@ -922,7 +922,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../how-to-guides/">How to guides</a>
+          <a href="../../../../../how-to-guides/">How to guides</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -945,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
+      <a href="../../../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
         Running Autoware without CUDA
       </a>
     </li>
@@ -959,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+      <a href="../../../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
         Advanced usage of colcon
       </a>
     </li>
@@ -973,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
+      <a href="../../../../../how-to-guides/how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
         How to integrate Autoware with your vehicle
       </a>
     </li>
@@ -987,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
+      <a href="../../../../../how-to-guides/how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
         How to integrate Autoware with a differential drive vehicle
       </a>
     </li>
@@ -1001,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+      <a href="../../../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
         How to create maps for Autoware
       </a>
     </li>
@@ -1021,12 +1021,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -1050,7 +1052,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/">Design</a>
+          <a href="../../../../">Design</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1094,7 +1096,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-concepts/">Autoware concepts</a>
+          <a href="../../../../autoware-concepts/">Autoware concepts</a>
           
             <label for="__nav_5_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1117,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/autoware-concepts/difference-from-ai-and-auto/" class="md-nav__link">
+      <a href="../../../../autoware-concepts/difference-from-ai-and-auto/" class="md-nav__link">
         How is Autoware Core/Universe different from Autoware.AI and Autoware.Auto?
       </a>
     </li>
@@ -1173,7 +1175,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-architecture/">Autoware architecture</a>
+          <a href="../../../../autoware-architecture/">Autoware architecture</a>
           
             <label for="__nav_5_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1213,7 +1215,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-architecture/sensing/">Sensing</a>
+          <a href="../../../../autoware-architecture/sensing/">Sensing</a>
           
         </div>
       
@@ -1256,7 +1258,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-architecture/map/">Map</a>
+          <a href="../../../../autoware-architecture/map/">Map</a>
           
         </div>
       
@@ -1299,7 +1301,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-architecture/localization/">Localization</a>
+          <a href="../../../../autoware-architecture/localization/">Localization</a>
           
         </div>
       
@@ -1342,7 +1344,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-architecture/perception/">Perception</a>
+          <a href="../../../../autoware-architecture/perception/">Perception</a>
           
         </div>
       
@@ -1385,7 +1387,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-architecture/planning/">Planning</a>
+          <a href="../../../../autoware-architecture/planning/">Planning</a>
           
         </div>
       
@@ -1428,7 +1430,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-architecture/control/">Control</a>
+          <a href="../../../../autoware-architecture/control/">Control</a>
           
         </div>
       
@@ -1471,7 +1473,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-architecture/vehicle/">Vehicle</a>
+          <a href="../../../../autoware-architecture/vehicle/">Vehicle</a>
           
         </div>
       
@@ -1514,7 +1516,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-architecture/node-diagram/">Node diagram</a>
+          <a href="../../../../autoware-architecture/node-diagram/">Node diagram</a>
           
         </div>
       
@@ -1545,14 +1547,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
       
       
       
@@ -1572,7 +1576,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/">Autoware interfaces</a>
+          <a href="../../../">Autoware interfaces</a>
           
             <label for="__nav_5_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1612,7 +1616,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/prototyping/">TIER IV API</a>
+          <a href="../../../prototyping/">TIER IV API</a>
           
         </div>
       
@@ -1636,12 +1640,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4_3" type="checkbox" id="__nav_5_4_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4_3" type="checkbox" id="__nav_5_4_3" checked>
       
       
       
@@ -1659,7 +1665,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/ad-api/">AD API</a>
+          <a href="../../">AD API</a>
           
             <label for="__nav_5_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1680,12 +1686,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4_3_2" type="checkbox" id="__nav_5_4_3_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4_3_2" type="checkbox" id="__nav_5_4_3_2" checked>
       
       
       
@@ -1699,7 +1707,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/ad-api/use-cases/">Use cases</a>
+          <a href="../">Use cases</a>
           
         </div>
       
@@ -1742,7 +1750,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/ad-api/list/">List</a>
+          <a href="../../list/">List</a>
           
         </div>
       
@@ -1800,7 +1808,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/autoware-interfaces/components/">Components</a>
+          <a href="../../../components/">Components</a>
           
             <label for="__nav_5_4_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1823,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/autoware-interfaces/components/planning/" class="md-nav__link">
+      <a href="../../../components/planning/" class="md-nav__link">
         Planning
       </a>
     </li>
@@ -1837,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/autoware-interfaces/components/control/" class="md-nav__link">
+      <a href="../../../components/control/" class="md-nav__link">
         Control
       </a>
     </li>
@@ -1851,7 +1859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/autoware-interfaces/components/vehicle-interface/" class="md-nav__link">
+      <a href="../../../components/vehicle-interface/" class="md-nav__link">
         Vehicle Interface
       </a>
     </li>
@@ -1865,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/autoware-interfaces/components/vehicle-dimensions/" class="md-nav__link">
+      <a href="../../../components/vehicle-dimensions/" class="md-nav__link">
         Vehicle dimensions
       </a>
     </li>
@@ -1918,7 +1926,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/configuration-management/">Configuration management</a>
+          <a href="../../../../configuration-management/">Configuration management</a>
           
             <label for="__nav_5_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1941,7 +1949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/configuration-management/development-process/" class="md-nav__link">
+      <a href="../../../../configuration-management/development-process/" class="md-nav__link">
         Development process
       </a>
     </li>
@@ -1955,7 +1963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/configuration-management/repository-structure/" class="md-nav__link">
+      <a href="../../../../configuration-management/repository-structure/" class="md-nav__link">
         Repository structure
       </a>
     </li>
@@ -1969,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design/configuration-management/release-process/" class="md-nav__link">
+      <a href="../../../../configuration-management/release-process/" class="md-nav__link">
         Release process
       </a>
     </li>
@@ -2009,7 +2017,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../design/node-diagram/">Node diagram</a>
+          <a href="../../../../node-diagram/">Node diagram</a>
           
         </div>
       
@@ -2041,14 +2049,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -2074,7 +2080,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Contributing</a>
+          <a href="../../../../../contributing/">Contributing</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -2097,7 +2103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../license/" class="md-nav__link">
+      <a href="../../../../../contributing/license/" class="md-nav__link">
         License
       </a>
     </li>
@@ -2134,7 +2140,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../coding-guidelines/">Coding guidelines</a>
+          <a href="../../../../../contributing/coding-guidelines/">Coding guidelines</a>
           
             <label for="__nav_6_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2201,7 +2207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/languages/cpp/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/languages/cpp/" class="md-nav__link">
         C++
       </a>
     </li>
@@ -2215,7 +2221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/languages/python/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/languages/python/" class="md-nav__link">
         Python
       </a>
     </li>
@@ -2229,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/languages/shell-scripts/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/languages/shell-scripts/" class="md-nav__link">
         Shell scripts
       </a>
     </li>
@@ -2243,7 +2249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/languages/markdown/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/languages/markdown/" class="md-nav__link">
         Markdown
       </a>
     </li>
@@ -2257,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/languages/cmake/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/languages/cmake/" class="md-nav__link">
         CMake
       </a>
     </li>
@@ -2271,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/languages/package-xml/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/languages/package-xml/" class="md-nav__link">
         package.xml
       </a>
     </li>
@@ -2285,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/languages/docker/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/languages/docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -2299,7 +2305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/languages/github-actions/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/languages/github-actions/" class="md-nav__link">
         GitHub Actions
       </a>
     </li>
@@ -2368,7 +2374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/class-design/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/class-design/" class="md-nav__link">
         Class design
       </a>
     </li>
@@ -2382,7 +2388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/console-logging/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/console-logging/" class="md-nav__link">
         Console logging
       </a>
     </li>
@@ -2396,7 +2402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/coordinate-system/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/coordinate-system/" class="md-nav__link">
         Coordinate system
       </a>
     </li>
@@ -2410,7 +2416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/directory-structure/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/directory-structure/" class="md-nav__link">
         Directory structure
       </a>
     </li>
@@ -2424,7 +2430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/launch-files/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/launch-files/" class="md-nav__link">
         Launch files
       </a>
     </li>
@@ -2438,7 +2444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/message-guidelines/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/message-guidelines/" class="md-nav__link">
         Message guidelines
       </a>
     </li>
@@ -2452,7 +2458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/naming/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/naming/" class="md-nav__link">
         Topic namespaces
       </a>
     </li>
@@ -2466,7 +2472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/parameters/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/parameters/" class="md-nav__link">
         Parameters
       </a>
     </li>
@@ -2480,7 +2486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/task-scheduling/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/task-scheduling/" class="md-nav__link">
         Task scheduling
       </a>
     </li>
@@ -2494,7 +2500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coding-guidelines/ros-nodes/topic-namespaces/" class="md-nav__link">
+      <a href="../../../../../contributing/coding-guidelines/ros-nodes/topic-namespaces/" class="md-nav__link">
         Topic namespaces
       </a>
     </li>
@@ -2545,7 +2551,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../testing-guidelines/">Testing guidelines</a>
+          <a href="../../../../../contributing/testing-guidelines/">Testing guidelines</a>
           
             <label for="__nav_6_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2568,7 +2574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing-guidelines/unit-testing/" class="md-nav__link">
+      <a href="../../../../../contributing/testing-guidelines/unit-testing/" class="md-nav__link">
         Unit testing
       </a>
     </li>
@@ -2582,7 +2588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing-guidelines/integration-testing/" class="md-nav__link">
+      <a href="../../../../../contributing/testing-guidelines/integration-testing/" class="md-nav__link">
         Integration testing
       </a>
     </li>
@@ -2622,7 +2628,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../documentation-guidelines/">Documentation guidelines</a>
+          <a href="../../../../../contributing/documentation-guidelines/">Documentation guidelines</a>
           
         </div>
       
@@ -2646,16 +2652,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" checked>
       
       
       
@@ -2674,8 +2678,8 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">Pull request guidelines</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../../contributing/pull-request-guidelines/">Pull request guidelines</a>
           
             <label for="__nav_6_6">
               <span class="md-nav__icon md-icon"></span>
@@ -2698,7 +2702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="commit-guidelines/" class="md-nav__link">
+      <a href="../../../../../contributing/pull-request-guidelines/commit-guidelines/" class="md-nav__link">
         Commit guidelines
       </a>
     </li>
@@ -2712,7 +2716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="review-guidelines/" class="md-nav__link">
+      <a href="../../../../../contributing/pull-request-guidelines/review-guidelines/" class="md-nav__link">
         Review guidelines
       </a>
     </li>
@@ -2726,7 +2730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="review-tips/" class="md-nav__link">
+      <a href="../../../../../contributing/pull-request-guidelines/review-tips/" class="md-nav__link">
         Review tips
       </a>
     </li>
@@ -2766,7 +2770,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../discussion-guidelines/">Discussion guidelines</a>
+          <a href="../../../../../contributing/discussion-guidelines/">Discussion guidelines</a>
           
         </div>
       
@@ -2823,7 +2827,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../support/">Support</a>
+          <a href="../../../../../support/">Support</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2846,7 +2850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/support-guidelines/" class="md-nav__link">
+      <a href="../../../../../support/support-guidelines/" class="md-nav__link">
         Support guidelines
       </a>
     </li>
@@ -2860,7 +2864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/troubleshooting/" class="md-nav__link">
+      <a href="../../../../../support/troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -2874,7 +2878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/docs-guide/" class="md-nav__link">
+      <a href="../../../../../support/docs-guide/" class="md-nav__link">
         Docs guide
       </a>
     </li>
@@ -2915,71 +2919,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-pull-request-workflow" class="md-nav__link">
-    General pull request workflow
+  <a href="#related-api" class="md-nav__link">
+    Related API
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ci-checks" class="md-nav__link">
-    CI checks
+  <a href="#sequence" class="md-nav__link">
+    Sequence
   </a>
-  
-    <nav class="md-nav" aria-label="CI checks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dco" class="md-nav__link">
-    DCO
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#semantic-pull-request" class="md-nav__link">
-    semantic-pull-request
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre-commit" class="md-nav__link">
-    pre-commit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spell-check-differential" class="md-nav__link">
-    spell-check-differential
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-and-test-differential" class="md-nav__link">
-    build-and-test-differential
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-and-test-differential-self-hosted" class="md-nav__link">
-    build-and-test-differential-self-hosted
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deploy-docs" class="md-nav__link">
-    deploy-docs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2995,128 +2944,19 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/contributing/pull-request-guidelines/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/use-cases/get-on-off.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="pull-request-guidelines">Pull request guidelines<a class="headerlink" href="#pull-request-guidelines" title="Permanent link">#</a></h1>
-<h2 id="general-pull-request-workflow">General pull request workflow<a class="headerlink" href="#general-pull-request-workflow" title="Permanent link">#</a></h2>
-<p>Autoware uses the fork-and-pull model.
-For the detailed explanation of the model, refer to <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests">GitHub Docs</a>.</p>
-<p>The following is a general example of the pull request workflow.</p>
-<ol>
-<li>Create a fork. (for the first time only)</li>
-<li>Create an issue.<ul>
-<li>Discuss the approach to the issue with maintainers.</li>
+<h1 id="get-on-and-get-off">Get on and get off<a class="headerlink" href="#get-on-and-get-off" title="Permanent link">#</a></h1>
+<h2 id="related-api">Related API<a class="headerlink" href="#related-api" title="Permanent link">#</a></h2>
+<ul>
+<li>Door</li>
 </ul>
-</li>
-<li>Write code in the agreed approach.<ul>
-<li>Write the tests and documentation if necessary.</li>
-<li>Follow the guidelines when you write code, tests, and documentation.<ul>
-<li><a href="../coding-guidelines/">Coding guidelines</a></li>
-<li><a href="../testing-guidelines/">Testing guidelines</a></li>
-<li><a href="../documentation-guidelines/">Documentation guidelines</a></li>
-</ul>
-</li>
-<li>Follow the <a href="commit-guidelines/">Commit guidelines</a> when commit your change.</li>
-</ul>
-</li>
-<li>Test the code.<ul>
-<li>In the later review process, you will need to write what tests you have done.</li>
-</ul>
-</li>
-<li>Create a pull request.<ul>
-<li>Read the pull request template carefully and fill the required content.</li>
-<li>Assign reviewers after creating a pull request.<ul>
-<li>If you have no rights to assign reviewers, just mention them instead.</li>
-<li>If you are not sure who to set reviewers, contact to the people written as the <code>maintainer</code> tag in <code>package.xml</code>.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Wait for the pull request to be reviewed.<ul>
-<li>The reviewers will review your code following the <a href="review-guidelines/">review guidelines</a>.<ul>
-<li>Take a look at the guidelines as well because it is good to understand the thoughts of the reviewer's side.</li>
-</ul>
-</li>
-<li>If <a href="#ci-checks">CI checks</a> have failed, fix the errors.</li>
-</ul>
-</li>
-<li>Address the review comments pointed out by the reviewers.<ul>
-<li>If you cannot understand or agree with a review comment, discuss it with the reviewers and find a rational reason.<ul>
-<li>The author should be responsible for the final content of their pull request.</li>
-<li>The reviewers are obligated to make the author understand the meanings of each comment.</li>
-</ul>
-</li>
-<li>After you have done with them, re-request a review to the reviewers and back to 6.</li>
-<li>If there are no more new review comments, the reviewers will approve the pull request and go to 6.</li>
-</ul>
-</li>
-<li>Merge the pull request.<ul>
-<li>Confirm all items of the checklist are checked off before merging.</li>
-<li>Anyone with write access can merge the pull request if there is no special request from maintainers.<ul>
-<li>Generally, the author is expected to merge it to feel responsible for their pull request.</li>
-<li>If the author does not have write access, ask the reviewers or maintainers.</li>
-<li>It is the author's responsibility to care about their own pull request until it is merged.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="ci-checks">CI checks<a class="headerlink" href="#ci-checks" title="Permanent link">#</a></h2>
-<p>Autoware has several checks for a pull request.
-The results are shown at the bottom of the pull request page as below.</p>
-<p><img alt="ci-checks" src="images/ci-checks.png" /></p>
-<p>If the ❌ mark is shown, click the <code>Details</code> button and investigate the failure reason.</p>
-<p>If the <code>Required</code> mark is shown, you cannot merge the pull request unless you resolve the error.
-If not, it is optional, but preferably it should be fixed.</p>
-<p>The following sections explain about common CI checks in Autoware.<br />
-Note that some repositories may have different settings.</p>
-<h3 id="dco">DCO<a class="headerlink" href="#dco" title="Permanent link">#</a></h3>
-<p>The Developer Certificate of Origin (DCO) is a lightweight way for contributors to certify that they wrote or otherwise have the right to submit the code they are contributing to the project.</p>
-<p>This workflow checks whether the pull request fulfills <code>DCO</code>.<br />
-You need to confirm the <a href="https://developercertificate.org/">required items</a> and commit with <code>git commit -s</code>.</p>
-<p>For more information, refer to the <a href="https://github.com/apps/dco">GitHub App page</a>.</p>
-<h3 id="semantic-pull-request">semantic-pull-request<a class="headerlink" href="#semantic-pull-request" title="Permanent link">#</a></h3>
-<p>Autoware uses <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> with the settings of <a href="https://github.com/commitizen/conventional-commit-types">commitizen/conventional-commit-types</a>.</p>
-<p>This workflow checks whether the pull request follows <code>Conventional Commits</code>.</p>
-<p>Note that if there is only one commit in the pull request, you need to make the commit title semantic as well.<br />
-This is due to GitHub's non-intuitive behavior when there is only one commit.
-GitHub uses the commit title for the squashed commit message, instead of the pull request title.</p>
-<p>For more detailed behaviors of this workflow, refer to <a href="https://github.com/amannn/action-semantic-pull-request">amannn/action-semantic-pull-request</a>.</p>
-<p>For the detailed rules, see the <a href="commit-guidelines/">commit guidelines</a>.</p>
-<h3 id="pre-commit">pre-commit<a class="headerlink" href="#pre-commit" title="Permanent link">#</a></h3>
-<p><a href="https://pre-commit.com/">pre-commit</a> is a tool to run formatters or linters when you commit.</p>
-<p>This workflow checks whether the pull request has no error with <code>pre-commit</code>.</p>
-<p>In the workflow <code>pre-commit.ci - pr</code> is enabled in the repository, it will automatically fix errors by <a href="https://pre-commit.ci/">pre-commit.ci</a> as many as possible.<br />
-If there are some errors remain, fix them manually.</p>
-<p>You can run <code>pre-commit</code> in your local environment by the following command:</p>
-<div class="highlight"><pre><span></span><code>pre-commit run -a
-</code></pre></div>
-<p>Or you can install <code>pre-commit</code> to the repository and automatically run it before committing:</p>
-<div class="highlight"><pre><span></span><code>pre-commit install
-</code></pre></div>
-<p>Since it is difficult to detect errors with no false positives, some jobs are split into another config file and marked as optional.<br />
-To check them, use the <code>--config</code> option:</p>
-<div class="highlight"><pre><span></span><code>pre-commit run -a --config .pre-commit-config-optional.yaml
-</code></pre></div>
-<h3 id="spell-check-differential">spell-check-differential<a class="headerlink" href="#spell-check-differential" title="Permanent link">#</a></h3>
-<p>This workflow detects spelling mistakes using <a href="https://github.com/streetsidesoftware/cspell">CSpell</a> with <a href="https://github.com/tier4/autoware-spell-check-dict/blob/main/.cspell.json">our dictionary file</a>.<br />
-You can submit pull requests to <a href="https://github.com/tier4/autoware-spell-check-dict">tier4/autoware-spell-check-dict</a> to update the dictionary.</p>
-<p>Since it is difficult to detect errors with no false positives, it is an optional workflow, but it is preferable to remove spelling mistakes as many as possible.</p>
-<h3 id="build-and-test-differential">build-and-test-differential<a class="headerlink" href="#build-and-test-differential" title="Permanent link">#</a></h3>
-<p>This workflow checks <code>colcon build</code> and <code>colcon test</code> for the pull request.<br />
-To make the CI faster, it doesn't check all packages but only modified packages and the dependencies.</p>
-<h3 id="build-and-test-differential-self-hosted">build-and-test-differential-self-hosted<a class="headerlink" href="#build-and-test-differential-self-hosted" title="Permanent link">#</a></h3>
-<p>This workflow is the <code>ARM64</code> version of <code>build-and-test-differential</code>.<br />
-You need to add the <code>ARM64</code> label to run this workflow.</p>
-<p>For reference information, since ARM machines are not supported by GitHub-hosted runners, we use self-hosted runners prepared by the AWF.<br />
-For the details about self-hosted runners, refer to <a href="https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners">GitHub Docs</a>.</p>
-<h3 id="deploy-docs">deploy-docs<a class="headerlink" href="#deploy-docs" title="Permanent link">#</a></h3>
-<p>This workflow deploys the preview documentation site for the pull request.<br />
-You need to add the <code>documentation</code> label to run this workflow.</p>
+<h2 id="sequence">Sequence<a class="headerlink" href="#sequence" title="Permanent link">#</a></h2>
+<p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSIzMDdweCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgc3R5bGU9IndpZHRoOjY1NXB4O2hlaWdodDozMDdweDtiYWNrZ3JvdW5kOiNGRkZGRkY7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2NTUgMzA3IiB3aWR0aD0iNjU1cHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzLz48Zz48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjU3LjEzMjgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSIyNzguNSIgeT0iNjcuNDI5NyIvPjxyZWN0IGZpbGw9IiNGRkZGRkYiIGhlaWdodD0iNTcuMTMyOCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjI3OC41IiB5PSIxOTYuODI4MSIvPjxyZWN0IGZpbGw9IiNGRkZGRkYiIGhlaWdodD0iMTQiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSI0NTYuNSIgeT0iOTYuNTYyNSIvPjxyZWN0IGZpbGw9IiNGRkZGRkYiIGhlaWdodD0iMTQiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSI0NTYuNSIgeT0iMTUzLjY5NTMiLz48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjE0IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHdpZHRoPSIxMCIgeD0iNDU2LjUiIHk9IjIyNS45NjA5Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7c3Ryb2tlLWRhc2hhcnJheTo1LjAsNS4wOyIgeDE9Ijc4IiB4Mj0iNzgiIHkxPSIzNi4yOTY5IiB5Mj0iMjcxLjk2MDkiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtZGFzaGFycmF5OjUuMCw1LjA7IiB4MT0iMjgzLjUiIHgyPSIyODMuNSIgeTE9IjM2LjI5NjkiIHkyPSIyNzEuOTYwOSIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41O3N0cm9rZS1kYXNoYXJyYXk6NS4wLDUuMDsiIHgxPSI0NjEiIHgyPSI0NjEiIHkxPSIzNi4yOTY5IiB5Mj0iMjcxLjk2MDkiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTtzdHJva2UtZGFzaGFycmF5OjUuMCw1LjA7IiB4MT0iNjAyIiB4Mj0iNjAyIiB5MT0iMzYuMjk2OSIgeTI9IjI3MS45NjA5Ii8+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI5NyIgeD0iMzAiIHk9IjUiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI4MyIgeD0iMzciIHk9IjI0Ljk5NTEiPkFwcGxpY2F0aW9uPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iOTciIHg9IjMwIiB5PSIyNzAuOTYwOSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjgzIiB4PSIzNyIgeT0iMjkwLjk1NjEiPkFwcGxpY2F0aW9uPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iNjIiIHg9IjI1Mi41IiB5PSI1Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNDgiIHg9IjI1OS41IiB5PSIyNC45OTUxIj5BRCBBUEk8L3RleHQ+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI2MiIgeD0iMjUyLjUiIHk9IjI3MC45NjA5Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNDgiIHg9IjI1OS41IiB5PSIyOTAuOTU2MSI+QUQgQVBJPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iNjciIHg9IjQyOCIgeT0iNSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjUzIiB4PSI0MzUiIHk9IjI0Ljk5NTEiPlZlaGljbGU8L3RleHQ+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI2NyIgeD0iNDI4IiB5PSIyNzAuOTYwOSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjUzIiB4PSI0MzUiIHk9IjI5MC45NTYxIj5WZWhpY2xlPC90ZXh0PjxyZWN0IGZpbGw9IiNFMkUyRjAiIGhlaWdodD0iMzAuMjk2OSIgcng9IjIuNSIgcnk9IjIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iOTQiIHg9IjU1NSIgeT0iNSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjgwIiB4PSI1NjIiIHk9IjI0Ljk5NTEiPlBhc3NlbmdlcnM8L3RleHQ+PHJlY3QgZmlsbD0iI0UyRTJGMCIgaGVpZ2h0PSIzMC4yOTY5IiByeD0iMi41IiByeT0iMi41IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIHdpZHRoPSI5NCIgeD0iNTU1IiB5PSIyNzAuOTYwOSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjgwIiB4PSI1NjIiIHk9IjI5MC45NTYxIj5QYXNzZW5nZXJzPC90ZXh0PjxyZWN0IGZpbGw9IiNGRkZGRkYiIGhlaWdodD0iNTcuMTMyOCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjI3OC41IiB5PSI2Ny40Mjk3Ii8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSI1Ny4xMzI4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHdpZHRoPSIxMCIgeD0iMjc4LjUiIHk9IjE5Ni44MjgxIi8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSIxNCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjQ1Ni41IiB5PSI5Ni41NjI1Ii8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSIxNCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB3aWR0aD0iMTAiIHg9IjQ1Ni41IiB5PSIxNTMuNjk1MyIvPjxyZWN0IGZpbGw9IiNGRkZGRkYiIGhlaWdodD0iMTQiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgd2lkdGg9IjEwIiB4PSI0NTYuNSIgeT0iMjI1Ljk2MDkiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI2Ni41LDYzLjQyOTcsMjc2LjUsNjcuNDI5NywyNjYuNSw3MS40Mjk3LDI3MC41LDY3LjQyOTciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9Ijc4LjUiIHgyPSIyNzIuNSIgeTE9IjY3LjQyOTciIHkyPSI2Ny40Mjk3Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTgxIiB4PSI4NS41IiB5PSI2Mi4zNjM4Ij5vcGVuIHRoZSBkb29ycyB0byBnZXQgb24vb2ZmPC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDQ0LjUsOTIuNTYyNSw0NTQuNSw5Ni41NjI1LDQ0NC41LDEwMC41NjI1LDQ0OC41LDk2LjU2MjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4OC41IiB4Mj0iNDUwLjUiIHkxPSI5Ni41NjI1IiB5Mj0iOTYuNTYyNSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjE0OSIgeD0iMjk1LjUiIHk9IjkxLjQ5NjYiPm9wZW4gdGhlIHNwZWNpZmljIGRvb3JzPC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMjk5LjUsMTA2LjU2MjUsMjg5LjUsMTEwLjU2MjUsMjk5LjUsMTE0LjU2MjUsMjk1LjUsMTEwLjU2MjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wO3N0cm9rZS1kYXNoYXJyYXk6Mi4wLDIuMDsiIHgxPSIyOTMuNSIgeDI9IjQ2MC41IiB5MT0iMTEwLjU2MjUiIHkyPSIxMTAuNTYyNSIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iODkuNSwxMjAuNTYyNSw3OS41LDEyNC41NjI1LDg5LjUsMTI4LjU2MjUsODUuNSwxMjQuNTYyNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7c3Ryb2tlLWRhc2hhcnJheToyLjAsMi4wOyIgeDE9IjgzLjUiIHgyPSIyODIuNSIgeTE9IjEyNC41NjI1IiB5Mj0iMTI0LjU2MjUiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjQ3Ny41LDE0OS42OTUzLDQ2Ny41LDE1My42OTUzLDQ3Ny41LDE1Ny42OTUzLDQ3My41LDE1My42OTUzIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI0NzEuNSIgeDI9IjYwMSIgeTE9IjE1My42OTUzIiB5Mj0iMTUzLjY5NTMiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI2MyIgeD0iNDgzLjUiIHk9IjE0OC42Mjk0Ij5nZXQgb24vb2ZmPC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNTkwLDE2My42OTUzLDYwMCwxNjcuNjk1Myw1OTAsMTcxLjY5NTMsNTk0LDE2Ny42OTUzIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDtzdHJva2UtZGFzaGFycmF5OjIuMCwyLjA7IiB4MT0iNDYxLjUiIHgyPSI1OTYiIHkxPSIxNjcuNjk1MyIgeTI9IjE2Ny42OTUzIi8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyNjYuNSwxOTIuODI4MSwyNzYuNSwxOTYuODI4MSwyNjYuNSwyMDAuODI4MSwyNzAuNSwxOTYuODI4MSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNzguNSIgeDI9IjI3Mi41IiB5MT0iMTk2LjgyODEiIHkyPSIxOTYuODI4MSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9Ijk4IiB4PSI4NS41IiB5PSIxOTEuNzYyMiI+Y2xvc2UgdGhlIGRvb3JzPC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDQ0LjUsMjIxLjk2MDksNDU0LjUsMjI1Ljk2MDksNDQ0LjUsMjI5Ljk2MDksNDQ4LjUsMjI1Ljk2MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4OC41IiB4Mj0iNDUwLjUiIHkxPSIyMjUuOTYwOSIgeTI9IjIyNS45NjA5Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTE2IiB4PSIyOTUuNSIgeT0iMjIwLjg5NSI+Y2xvc2UgdGhlIGFsbCBkb29yczwvdGV4dD48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI5OS41LDIzNS45NjA5LDI4OS41LDIzOS45NjA5LDI5OS41LDI0My45NjA5LDI5NS41LDIzOS45NjA5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDtzdHJva2UtZGFzaGFycmF5OjIuMCwyLjA7IiB4MT0iMjkzLjUiIHgyPSI0NjAuNSIgeTE9IjIzOS45NjA5IiB5Mj0iMjM5Ljk2MDkiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9Ijg5LjUsMjQ5Ljk2MDksNzkuNSwyNTMuOTYwOSw4OS41LDI1Ny45NjA5LDg1LjUsMjUzLjk2MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wO3N0cm9rZS1kYXNoYXJyYXk6Mi4wLDIuMDsiIHgxPSI4My41IiB4Mj0iMjgyLjUiIHkxPSIyNTMuOTYwOSIgeTI9IjI1My45NjA5Ii8+PCEtLU1ENT1bMzUxNDJhNDI4ZGE2ZTk4MTdjMTNmMmYwMjAyNjA2NGJdCkBzdGFydHVtbA0Kc2tpbnBhcmFtIFBhcnRpY2lwYW50UGFkZGluZyAyNQ0KcGFydGljaXBhbnQgIkFwcGxpY2F0aW9uIiBhcyBzeXN0ZW0NCnBhcnRpY2lwYW50ICJBRCBBUEkiIGFzIGFwaQ0KcGFydGljaXBhbnQgIlZlaGljbGUiIGFzIHZlaGljbGUNCnBhcnRpY2lwYW50ICJQYXNzZW5nZXJzIiBhcyBwYXNzZW5nZXJzDQoNCnN5c3RlbSAtPiBhcGkgKys6IG9wZW4gdGhlIGRvb3JzIHRvIGdldCBvbi9vZmYNCmFwaSAtPiB2ZWhpY2xlICsrOiBvcGVuIHRoZSBzcGVjaWZpYyBkb29ycw0KcmV0dXJuDQpyZXR1cm4NCg0KcGFzc2VuZ2VycyAtPiB2ZWhpY2xlICsrOiBnZXQgb24vb2ZmDQpyZXR1cm4NCg0Kc3lzdGVtIC0+IGFwaSArKzogY2xvc2UgdGhlIGRvb3JzDQphcGkgLT4gdmVoaWNsZSArKzogY2xvc2UgdGhlIGFsbCBkb29ycw0KcmV0dXJuDQpyZXR1cm4NCkBlbmR1bWwNCgpQbGFudFVNTCB2ZXJzaW9uIDEuMjAyMi42YmV0YTUoVW5rbm93biBjb21waWxlIHRpbWUpCihHUEwgc291cmNlIGRpc3RyaWJ1dGlvbikKSmF2YSBSdW50aW1lOiBKYXZhKFRNKSBTRSBSdW50aW1lIEVudmlyb25tZW50CkpWTTogSmF2YSBIb3RTcG90KFRNKSA2NC1CaXQgU2VydmVyIFZNCkRlZmF1bHQgRW5jb2Rpbmc6IFVURi04Ckxhbmd1YWdlOiBlbgpDb3VudHJ5OiBVUwotLT48L2c+PC9zdmc+" class="uml" alt="uml diagram" title="" /></p>
 
               
             </article>
@@ -3137,7 +2977,7 @@ You need to add the <code>documentation</code> label to run this workflow.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../documentation-guidelines/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Documentation guidelines" rel="prev">
+        <a href="../drive-designated-position/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Drive to the designated position" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3146,20 +2986,20 @@ You need to add the <code>documentation</code> label to run this workflow.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Documentation guidelines
+              Drive to the designated position
             </div>
           </div>
         </a>
       
       
         
-        <a href="commit-guidelines/" class="md-footer__link md-footer__link--next" aria-label="Next: Commit guidelines" rel="next">
+        <a href="../initialize-pose/" class="md-footer__link md-footer__link--next" aria-label="Next: Initialize the pose" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Commit guidelines
+              Initialize the pose
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3193,10 +3033,10 @@ You need to add the <code>documentation</code> label to run this workflow.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.0238f547.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

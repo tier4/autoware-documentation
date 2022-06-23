@@ -127,3 +127,6 @@ iv_msgs/planning/scenario_planning/trajectory:
 iv_msgs/perception/object_recognition/tracking/objects:
   behavior: topic
   type: tier4_perception_msgs/msg/DynamicObjectArray
+autoware/set/start_request:
+  behavior: service
+  type: std_srvs/srv/Trigger

@@ -346,6 +346,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/api/autoware/set/start_request/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/api/external/get/calibration_status/</loc>
          <lastmod>2022-06-24</lastmod>
          <changefreq>daily</changefreq>
@@ -541,7 +546,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/api/iv_msgs/autoware/state/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/api/iv_msgs/perception/object_recognition/tracking/objects/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/api/iv_msgs/planning/scenario_planning/trajectory/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/api/iv_msgs/vehicle/status/control_mode/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/type/autoware_external_api_msgs/srv/GetVersion/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/type/std_srvs/srv/Trigger/</loc>
          <lastmod>2022-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -702,6 +732,21 @@
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/type/tier4_external_api_msgs/srv/SetVelocityLimit/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/type/tier4_planning_msgs/msg/Trajectory/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/type/tier4_system_msgs/msg/AutowareState/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/prototyping/type/tier4_vehicle_msgs/msg/ControlMode/</loc>
          <lastmod>2022-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>

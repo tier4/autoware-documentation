@@ -336,12 +336,42 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/route/lanelet/notice/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/route/lanelet/set/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/driving_state/</loc>
          <lastmod>2022-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/fail_safe_state/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/lanelet_primitive/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/lanelet_route/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/lanelet_route_notice/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/lanelet_segment/</loc>
          <lastmod>2022-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -387,6 +417,11 @@
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/srv/interface_version/</loc>
+         <lastmod>2022-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/srv/lanelet_route_set/</loc>
          <lastmod>2022-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>

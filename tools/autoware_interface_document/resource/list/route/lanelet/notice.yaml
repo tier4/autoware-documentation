@@ -1,0 +1,11 @@
+interface:
+  name: /api/route/lanelet/notice
+  type: autoware_ad_api_msgs/msg/LaneletRouteNotice
+  method: notification
+
+description: |-
+  Get the route with the waypoint segments in lanelet format. It is empty if route is not set.
+
+message:
+  - name: route
+    text: The route in lanelet format

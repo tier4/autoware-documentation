@@ -1,7 +1,5 @@
-import os
-import re
+import os  # for relpath, cannot use pathlib
 import urllib
-
 
 def define_env(env):
 

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/">
       
       <link rel="icon" href="../../../../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -2925,6 +2925,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mode" class="md-nav__link">
+    Mode
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2949,49 +2956,9 @@
 <li><a href="../../../../list/api/operation/mode/change">/api/operation/mode/change</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>This API manages the operator of the vehicle. The operation modes are roughly classified into manual, transition, and autonomous.
-Since Autoware may not be able to guarantee safety, such as switching to autonomous mode during overspeed, it changes to transition mode before autonomous mode.
-During the transition mode, the previous operator should ensure safety. If Autoware succeeds in taking over, the mode changes to autonomous.</p>
-<p>The manual mode is direct, none, local or remote.
-Autoware does not guarantee safety in these modes unless it is stopped by none mode.
-Direct mode is supported on some vehicles that have an interface to operate directly, such as steering and pedals, etc.
-None mode is used to stop the vehicle when the operator is temporarily absent due to a change of operator.
-In local and remote modes, Autoware controls the vehicle based on commands from the operator.</p>
+<p><img alt="operation-architecture" src="architecture.drawio.svg" /></p>
+<h2 id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link">#</a></h2>
 <p><img alt="operation-mode" src="mode.drawio.svg" /></p>
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MANUAL_DIRECT</td>
-<td>The vehicle is operated directly without Autoware. This mode is only available on some vehicles.</td>
-</tr>
-<tr>
-<td>STOP</td>
-<td>The vehicle is not operated by anyone. Autoware controls the vehicle to hold a stop.</td>
-</tr>
-<tr>
-<td>LOCAL_OPERATOR</td>
-<td>The vehicle is operated by the local operator. Autoware controls the vehicle based on commands from the operator.</td>
-</tr>
-<tr>
-<td>REMOTE_OPERATOR</td>
-<td>The vehicle is operated by the remote operator. Autoware controls the vehicle based on commands from the operator.</td>
-</tr>
-<tr>
-<td>AUTONOMOUS</td>
-<td>The vehicle is operated autonomously. Autoware controls the vehicle.</td>
-</tr>
-<tr>
-<td>TRANSITION_TO_AUTO</td>
-<td>The vehicle is operated autonomously. Autoware is trying to take over the operation of the vehicle.</td>
-</tr>
-</tbody>
-</table>
 
               
             </article>

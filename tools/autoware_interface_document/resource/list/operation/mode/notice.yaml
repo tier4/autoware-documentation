@@ -1,0 +1,15 @@
+interface:
+  name: /api/operation/mode/notice
+  type: autoware_ad_api_msgs/msg/OperationModeNotice
+  method: notification
+
+description: |-
+  Get the operation mode. For details, see the [operation mode](./index.md).
+
+message:
+  - name: selector_mode
+    text: The selected command for software control.
+  - name: is_driver_control
+    text: True if direct control by the driver is enabled.
+  - name: is_in_transition
+    text: True if the operation mode is in transition.

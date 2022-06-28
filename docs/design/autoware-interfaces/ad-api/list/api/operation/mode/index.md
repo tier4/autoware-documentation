@@ -37,4 +37,4 @@ The operator who changed the mode should ensure safety while this flag is true. 
 | Name              | Type | Description                                      |
 | ----------------- | ---- | ------------------------------------------------ |
 | is_driver_control | bool | True if direct control by the driver is enabled. |
-| is_in_transition  | bool | True if the mode is in transition.               |
+| is_in_transition  | bool | True if the operation mode is in transition.     |

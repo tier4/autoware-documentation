@@ -1,0 +1,16 @@
+interface:
+  name: /api/operation/mode/change
+  type: autoware_ad_api_msgs/srv/ChangeOperationMode
+  method: function call
+
+description: |-
+  Request to change the operation mode. For details, see the [operation mode](./index.md).
+  This API fail if the vehicle does not support mode change by software.
+
+request:
+  - name: mode
+    text: operation mode
+
+response:
+  - name: status
+    text: response status

@@ -3314,19 +3314,19 @@
 <li>LiDAR</li>
 <li>Optional: Inertial measurement unit</li>
 <li>Optional: Camera</li>
-<li>Optional: GNSS</li>
+<li>Optional: <abbr title="Global Navigation Satellite System">GNSS</abbr></li>
 </ul>
 </li>
 </ul>
 <h2 id="2-create-maps">2. Create maps<a class="headerlink" href="#2-create-maps" title="Permanent link">#</a></h2>
 <p>You need both a pointcloud map and a vector map in order to use Autoware.</p>
 <h3 id="create-a-pointcloud-map">Create a pointcloud map<a class="headerlink" href="#create-a-pointcloud-map" title="Permanent link">#</a></h3>
-<p>Use third-party tools such as a LiDAR-based SLAM (Simultaneous Localization And Mapping) package to create a pointcloud map in the <code>.pcd</code> format.
+<p>Use third-party tools such as a LiDAR-based <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> (Simultaneous Localization And Mapping) package to create a pointcloud map in the <code>.pcd</code> format.
 Some examples are:</p>
 <ul>
 <li><a href="https://github.com/koide3/hdl_graph_slam">HDL</a></li>
 <li><a href="https://github.com/TixiaoShan/LIO-SAM">LIO-SAM</a></li>
-<li><a href="https://github.com/rsasaki0109/lidarslam_ros2">LiDAR-SLAM (ROS 2)</a></li>
+<li><a href="https://github.com/rsasaki0109/lidarslam_ros2">LiDAR-<abbr title="Simultaneous Localization And Mapping">SLAM</abbr> (<abbr title="Robot Operating System">ROS</abbr> 2)</a></li>
 </ul>
 <h3 id="create-vector-map">Create vector map<a class="headerlink" href="#create-vector-map" title="Permanent link">#</a></h3>
 <p>Use third-party tools such as <a href="https://tools.tier4.jp/">TIER IV's Vector Map Builder</a> to create a Lanelet2 format <code>.osm</code> file.</p>
@@ -3368,13 +3368,13 @@ For how to fork a repository, refer to <a href="https://docs.github.com/en/get-s
 </code></pre></div>
 <h3 id="adapt-your_vehicle_launch-for-autoware-launching-system">Adapt YOUR_VEHICLE_launch for autoware launching system<a class="headerlink" href="#adapt-your_vehicle_launch-for-autoware-launching-system" title="Permanent link">#</a></h3>
 <h4 id="at-your_vehicle_description">At YOUR_VEHICLE_description<a class="headerlink" href="#at-your_vehicle_description" title="Permanent link">#</a></h4>
-<p>Define URDF and parameters in the vehicle description package (refer to the <a href="https://github.com/autowarefoundation/sample_vehicle_launch/tree/main/sample_vehicle_description">sample vehicle description package</a> for an example).</p>
+<p>Define <abbr title="Universal Robotic Description Format">URDF</abbr> and parameters in the vehicle description package (refer to the <a href="https://github.com/autowarefoundation/sample_vehicle_launch/tree/main/sample_vehicle_description">sample vehicle description package</a> for an example).</p>
 <h4 id="at-your_vehicle_launch">At YOUR_VEHICLE_launch<a class="headerlink" href="#at-your_vehicle_launch" title="Permanent link">#</a></h4>
 <p>Create a launch file (refer to the <a href="https://github.com/autowarefoundation/sample_vehicle_launch/tree/main/sample_vehicle_launch">sample vehicle launch package</a> for example).
 If you have multiple vehicles with the same hardware setup, you can specify <code>vehicle_id</code> to distinguish them.</p>
 <h3 id="adapt-your_sensor_kit_description-for-autoware-launching-system">Adapt YOUR_SENSOR_KIT_description for autoware launching system<a class="headerlink" href="#adapt-your_sensor_kit_description-for-autoware-launching-system" title="Permanent link">#</a></h3>
 <h4 id="at-your_sensor_kit_description">At YOUR_SENSOR_KIT_description<a class="headerlink" href="#at-your_sensor_kit_description" title="Permanent link">#</a></h4>
-<p>Define URDF and extrinsic parameters for all the sensors here (refer to the <a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/tree/main/sample_sensor_kit_description">sample sensor kit description package</a> for example).
+<p>Define <abbr title="Universal Robotic Description Format">URDF</abbr> and extrinsic parameters for all the sensors here (refer to the <a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/tree/main/sample_sensor_kit_description">sample sensor kit description package</a> for example).
 Note that you need to calibrate extrinsic parameters for all the sensors beforehand.</p>
 <h4 id="at-your_sensor_kit_launch">At YOUR_SENSOR_KIT_launch<a class="headerlink" href="#at-your_sensor_kit_launch" title="Permanent link">#</a></h4>
 <p>Create <code>launch/sensing.launch.xml</code> that launches the interfaces of all the sensors on the vehicle. (refer to the <a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/tree/main/sample_sensor_kit_launch">sample sensor kit launch package</a> for example).</p>
@@ -3403,7 +3403,7 @@ You can also refer to TIER IV's <a href="https://github.com/tier4/pacmod_interfa
 <div class="highlight"><pre><span></span><code>ros2 launch autoware_launch autoware.launch.xml vehicle_model:<span class="o">=</span>YOUR_VEHICLE sensor_kit:<span class="o">=</span>YOUR_SENSOR_KIT map_path:<span class="o">=</span>/PATH/TO/YOUR/MAP
 </code></pre></div>
 <h3 id="set-initial-pose">Set initial pose<a class="headerlink" href="#set-initial-pose" title="Permanent link">#</a></h3>
-<p>If GNSS is available, Autoware automatically initializes the vehicle's pose.</p>
+<p>If <abbr title="Global Navigation Satellite System">GNSS</abbr> is available, Autoware automatically initializes the vehicle's pose.</p>
 <p>If not, you need to set the initial pose using the RViz GUI.</p>
 <ol>
 <li>Click the 2D Pose estimate button in the toolbar, or hit the P key</li>
@@ -3428,6 +3428,7 @@ The panel can be found in <code>Panels &gt; Add New Panel &gt; tier4_state_rviz_
 <h2 id="7-tune-parameters-for-your-vehicle-environment">7. Tune parameters for your vehicle &amp; environment<a class="headerlink" href="#7-tune-parameters-for-your-vehicle-environment" title="Permanent link">#</a></h2>
 <p>You may need to tune your parameters depending on the domain in which you will operate your vehicle.</p>
 <p>If you have any issues or questions, feel free to create an <a href="https://github.com/orgs/autowarefoundation/discussions">Autoware Foundation GitHub Discussion</a> in the Q&amp;A category!</p>
+<!-- prettier-ignore -->
 
               
             </article>

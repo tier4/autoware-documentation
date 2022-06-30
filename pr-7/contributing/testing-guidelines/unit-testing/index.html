@@ -3030,7 +3030,7 @@ Unit testing helps ensure that the code behaves as intended and prevents acciden
 The same framework is also used to analyze the test results.</p>
 <p><code>ament_cmake</code> provides several convenience functions to make it easy to register tests in a CMake-based package and to ensure that JUnit-compatible result files are generated.
 It currently supports a few different testing frameworks like <code>pytest</code>, <code>gtest</code>, and <code>gmock</code>.</p>
-<p>In order to prevent tests running in parallel from interfering with each other when publishing and subscribing to ROS topics,
+<p>In order to prevent tests running in parallel from interfering with each other when publishing and subscribing to <abbr title="Robot Operating System">ROS</abbr> topics,
 it is recommended to use commands from <a href="https://github.com/ros2/ament_cmake_ros/tree/master/ament_cmake_ros/cmake"><code>ament_cmake_ros</code></a> to run tests in isolation.</p>
 <p>See below for an example of using <code>ament_add_ros_isolated_gtest</code> with <code>colcon test</code>.
 All other tests follow a similar pattern.</p>
@@ -3148,6 +3148,7 @@ There is also the <code>~/workspace/log/latest_*/</code> directory containing sy
 a code coverage metric is a measure of how much of the program code has been exercised (covered) during testing.</p>
 <p>In the Autoware repositories, <a href="https://app.codecov.io/gh/autowarefoundation/autoware.universe/">Codecov</a> is used to automatically calculate coverage of any open pull request.</p>
 <p>More details about the code coverage metrics can be found in the <a href="https://docs.codecov.com/docs/about-code-coverage">Codecov documentation</a>.</p>
+<!-- prettier-ignore -->
 
               
             </article>

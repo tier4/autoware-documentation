@@ -3230,8 +3230,8 @@ git clone https://github.com/autowarefoundation/autoware.git
 <h3 id="errors-when-using-a-fixed-version-of-autoware">Errors when using a fixed version of Autoware<a class="headerlink" href="#errors-when-using-a-fixed-version-of-autoware" title="Permanent link">#</a></h3>
 <p>In principle, errors should not occur when using a fixed version. That said, possible causes include:</p>
 <ul>
-<li>ROS 2 has been updated with breaking changes.<ul>
-<li>For confirmation, check the <a href="https://discourse.ros.org/c/release/16">Packaging and Release Management</a> tag on ROS Discourse.</li>
+<li><abbr title="Robot Operating System">ROS</abbr> 2 has been updated with breaking changes.<ul>
+<li>For confirmation, check the <a href="https://discourse.ros.org/c/release/16">Packaging and Release Management</a> tag on <abbr title="Robot Operating System">ROS</abbr> Discourse.</li>
 </ul>
 </li>
 <li>Your local environment is broken.<ul>
@@ -3282,6 +3282,7 @@ net.core.rmem_default<span class="o">=</span><span class="m">8388608</span> // o
 <p>If you get the error message <code>selected interface "{your-interface-name}" is not multicast-capable: disabling multicast</code>, run the following command to allow multicast.</p>
 <div class="highlight"><pre><span></span><code>sudo ip link <span class="nb">set</span> multicast on <span class="o">{</span>your-interface-name<span class="o">}</span>
 </code></pre></div>
+<!-- prettier-ignore -->
 
               
             </article>

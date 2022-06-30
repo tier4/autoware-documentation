@@ -3075,7 +3075,7 @@
 <h1 id="how-to-integrate-autoware-with-a-differential-drive-vehicle">How to integrate Autoware with a differential drive vehicle<a class="headerlink" href="#how-to-integrate-autoware-with-a-differential-drive-vehicle" title="Permanent link">#</a></h1>
 <h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">#</a></h2>
 <p>Currently, Autoware assumes that vehicles use an Ackermann kinematic model with Ackermann steering.
-Thus, Autoware adopts the Ackermann command format for the Control module's output (see <a href="http://docs.ros.org/en/api/ackermann_msgs/html/msg/AckermannDrive.html">the AckermannDrive ROS message definition</a> for an overview of Ackermann commands, and <a href="https://gitlab.com/autowarefoundation/autoware.auto/autoware_auto_msgs/-/blob/master/autoware_auto_control_msgs/msg/AckermannControlCommand.idl">the AckermannControlCommands struct</a> used in Autoware for more details).</p>
+Thus, Autoware adopts the Ackermann command format for the Control module's output (see <a href="http://docs.ros.org/en/api/ackermann_msgs/html/msg/AckermannDrive.html">the AckermannDrive <abbr title="Robot Operating System">ROS</abbr> message definition</a> for an overview of Ackermann commands, and <a href="https://gitlab.com/autowarefoundation/autoware.auto/autoware_auto_msgs/-/blob/master/autoware_auto_control_msgs/msg/AckermannControlCommand.idl">the AckermannControlCommands struct</a> used in Autoware for more details).</p>
 <p>However, it is possible to integrate Autoware with a vehicle that follows a differential drive kinematic model, as commonly used by small mobile robots.</p>
 <h2 id="2-procedure">2. Procedure<a class="headerlink" href="#2-procedure" title="Permanent link">#</a></h2>
 <p>One simple way of using Autoware with a differential drive vehicle is to create a <code>vehicle_interface</code> package that translates Ackermann commands to differential drive commands.
@@ -3124,6 +3124,7 @@ Setting it to be the same value as <code>wheel_tread</code> is one possible choi
 <h3 id="motion-model-incompatibility">Motion model incompatibility<a class="headerlink" href="#motion-model-incompatibility" title="Permanent link">#</a></h3>
 <p>Since Autoware assumes that vehicles use a steering system, it is not possible to take advantage of the flexibility of a differential drive system's motion model.</p>
 <p>For example, when planning a parking maneuver with the <code>freespace_planner</code> module, Autoware may drive the differential drive vehicle forward and backward, even if the vehicle can be parked with a simpler trajectory that uses pure rotational movement.</p>
+<!-- prettier-ignore -->
 
               
             </article>

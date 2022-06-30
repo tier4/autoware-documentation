@@ -3058,7 +3058,7 @@
 
 <h1 id="autoware-interface-design">Autoware interface design<a class="headerlink" href="#autoware-interface-design" title="Permanent link">#</a></h1>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">#</a></h2>
-<p>Autoware defines three categories of interfaces. The first one is Autoware AD API for operating the vehicle from outside the autonomous driving system such as the Fleet Management System (FMS) and Human Machine Interface (HMI) for operators or passengers. The second one is Autoware component interface for components to communicate with each other. The last one is the local interface used inside the component.</p>
+<p>Autoware defines three categories of interfaces. The first one is Autoware AD API for operating the vehicle from outside the autonomous driving system such as the Fleet Management System (<abbr title="Fleet Management System">FMS</abbr>) and Human Machine Interface (<abbr title="Human Machine Interface">HMI</abbr>) for operators or passengers. The second one is Autoware component interface for components to communicate with each other. The last one is the local interface used inside the component.</p>
 <h2 id="concept">Concept<a class="headerlink" href="#concept" title="Permanent link">#</a></h2>
 <ul>
 <li>
@@ -3128,7 +3128,7 @@ Reliable Stream expects all data to arrive without loss, Realtime Stream expects
 <thead>
 <tr>
 <th>Communication Method</th>
-<th>ROS Implementation</th>
+<th><abbr title="Robot Operating System">ROS</abbr> Implementation</th>
 <th>Optional Implementation</th>
 </tr>
 </thead>
@@ -3155,8 +3155,8 @@ Reliable Stream expects all data to arrive without loss, Realtime Stream expects
 </tr>
 </tbody>
 </table>
-<p>These methods are provided as services or topics of ROS since Autoware is developed using ROS and mainly communicates with its packages.
-On the other hand, FMS and HMI are often implemented without ROS, Autoware is also expected to communicate with applications that do not use ROS.
+<p>These methods are provided as services or topics of <abbr title="Robot Operating System">ROS</abbr> since Autoware is developed using <abbr title="Robot Operating System">ROS</abbr> and mainly communicates with its packages.
+On the other hand, <abbr title="Fleet Management System">FMS</abbr> and <abbr title="Human Machine Interface">HMI</abbr> are often implemented without <abbr title="Robot Operating System">ROS</abbr>, Autoware is also expected to communicate with applications that do not use <abbr title="Robot Operating System">ROS</abbr>.
 It is wasteful for each of these applications to have an adapter for Autoware, and a more suitable means of communication is required.
 HTTP and MQTT are suggested as additional options because these protocols are widely used and can substitute the behavior of services and topics.
 In that case, text formats such as JSON where field names are repeated in an array of objects, are inefficient and it is necessary to consider the serialization.</p>
@@ -3207,7 +3207,7 @@ Typically, create a wrapper for service and client classes that logs when a serv
 Also, implementation-dependent types, including the component interface, should not be used in AD API for the same reason.
 Use the type in AD API in implementation, or create the same type and copy the data to convert the type.</p>
 <h3 id="constants-and-enumeration">Constants and enumeration<a class="headerlink" href="#constants-and-enumeration" title="Permanent link">#</a></h3>
-<p>Since ROS don't support enumeration, use constants instead.
+<p>Since <abbr title="Robot Operating System">ROS</abbr> don't support enumeration, use constants instead.
 The default value of type such as zero and empty string should not be used to detect that a variable is unassigned.
 Alternatively, assign it a dedicated name to indicate that it is undefined.
 If one type has multiple enumerations, comment on the correspondence between constants and variables.
@@ -3215,7 +3215,7 @@ Assign unique values to all constants so that it can be distinguished from other
 Do not use enumeration values directly, as assignments are subject to change when the version is updated.</p>
 <h3 id="time-stamp">Time stamp<a class="headerlink" href="#time-stamp" title="Permanent link">#</a></h3>
 <p>Clarify what the timestamp indicates. for example, send time, measurement time, update time, etc. Consider having multiple timestamps if necessary.
-Use <code>std_msgs/msg/Header</code> when using ROS transform.
+Use <code>std_msgs/msg/Header</code> when using <abbr title="Robot Operating System">ROS</abbr> transform.
 Also consider whether the header is common to all data, independent for each data, or additional timestamp is required.</p>
 <h3 id="request-header">Request header<a class="headerlink" href="#request-header" title="Permanent link">#</a></h3>
 <p>Currently, there is no required header.</p>
@@ -3232,6 +3232,7 @@ See <a href="https://github.com/autowarefoundation/autoware.universe/blob/main/c
   Autoware tries to keep working as long as possible, but it is not guaranteed to be safe.
   Safety should be considered for the entire system, including the applications.</li>
 </ul>
+<!-- prettier-ignore -->
 
               
             </article>

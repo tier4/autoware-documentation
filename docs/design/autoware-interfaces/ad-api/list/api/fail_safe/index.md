@@ -5,6 +5,7 @@
 ## Description
 
 This API manages the behavior related to the abnormality of the vehicle.
+Provides the state of Request to Intervene (RTI) and Minimum Risk Maneuver (MRM).
 
 ## States
 

@@ -5,6 +5,6 @@
 - [Driving](./api/driving/index.md)
 - [Motion](./api/motion/index.md)
 - [Pose](./api/pose/index.md)
-- [Route](./api/route/index.md)
+- [Routing](./api/routing/index.md)
 - [Operation Mode](./api/operation/mode/index.md)
 - [Fail Safe](./api/fail_safe/index.md)

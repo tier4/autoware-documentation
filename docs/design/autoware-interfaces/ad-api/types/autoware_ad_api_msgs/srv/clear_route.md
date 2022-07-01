@@ -1,4 +1,4 @@
-# autoware_ad_api_msgs/srv/RouteClear
+# autoware_ad_api_msgs/srv/ClearRoute
 
 ## Definition
 

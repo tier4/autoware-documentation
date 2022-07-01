@@ -1,4 +1,4 @@
-# autoware_ad_api_msgs/srv/RouteSet
+# autoware_ad_api_msgs/srv/SetRoutePoints
 
 ## Definition
 

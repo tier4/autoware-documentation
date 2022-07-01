@@ -3,7 +3,7 @@
 ## Related API
 
 - [Driving](../list/api/driving/index.md)
-- [Route](../list/api/route/index.md)
+- [Routing](../list/api/routing/index.md)
 
 ## Sequence
 

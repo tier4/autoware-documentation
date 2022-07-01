@@ -1,6 +1,6 @@
 interface:
-  name: /api/route/set
-  type: autoware_ad_api_msgs/srv/RouteSet
+  name: /api/routing/set_route_points
+  type: autoware_ad_api_msgs/srv/SetRoutePoints
   method: function call
 
 description: |-

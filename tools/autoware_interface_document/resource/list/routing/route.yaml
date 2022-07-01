@@ -1,6 +1,6 @@
 interface:
-  name: /api/route/lanelet/notice
-  type: autoware_ad_api_msgs/msg/LaneletRouteNotice
+  name: /api/routing/route
+  type: autoware_ad_api_msgs/msg/RouteOptional
   method: notification
 
 description: |-

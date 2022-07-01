@@ -1,6 +1,6 @@
 interface:
-  name: /api/route/lanelet/set
-  type: autoware_ad_api_msgs/srv/LaneletRouteSet
+  name: /api/routing/set_route
+  type: autoware_ad_api_msgs/srv/SetRoute
   method: function call
 
 description: |-

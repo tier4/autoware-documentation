@@ -30,11 +30,11 @@ class AutowareInterface(object):
                 field["text"] = hook_markdown_link(field["text"], depth)
 
         for field in self.yaml.get("message", []):
-            field["type"] = self.type.type.get_field("msg", field["name"]).name
+            field["type"] = self.type.type.spec.access(field["name"]).text
         for field in self.yaml.get("request", []):
-            field["type"] = self.type.type.get_field("req", field["name"]).name
+            field["type"] = self.type.type.spec.req.access(field["name"]).text
         for field in self.yaml.get("response", []):
-            field["type"] = self.type.type.get_field("res", field["name"]).name
+            field["type"] = self.type.type.spec.res.access(field["name"]).text
 
     @property
     def name(self):

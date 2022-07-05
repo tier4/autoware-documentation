@@ -30,7 +30,14 @@ class AutowareStructure(object):
         self.text = path.read_text().strip()
         self.uses = set()
         self.used = set()
-        self.spec = _MessageSpec(path.parts[-3], path.parts[-2], path.stem, self.text)
+        self.spec = self.__spec(path.parts[-3], path.parts[-2], path.stem, self.text)
+
+    @staticmethod
+    def __spec(package, type, name, definition):
+        if type == "msg":
+            return _MessageSpec(parse_message_string(package, name, definition))
+        if type == "srv":
+            return _ServiceSpec(parse_service_string(package, name, definition))
 
     @property
     def name(self):
@@ -40,13 +47,6 @@ class AutowareStructure(object):
     def file(self):
         parts = self.name.split("/")
         return "/".join([*parts[:-1], camel_to_snake(parts[-1])]) + ".md"
-
-    def get_field(self, group, path):
-        field = self
-        for name in path.split("."):
-            field = field.spec.fields[group][name].type
-            group = "msg"
-        return field
 
     def generate(self, output_path, templates):
         template = templates.get_template(f"interface-structure.jinja2")
@@ -68,38 +68,53 @@ class AutowareStructure(object):
                 type = types[name]
                 self.uses.add(type)
                 type.used.add(self)
-        for fields in self.spec.fields.values():
-            for field in fields.values():
-                field.type = types.get(field.type.name, field.type)
+        self.spec.link(types)
+
 
     def sort_relations(self):
         self.uses = list(sorted(self.uses, key=lambda t: t.name))
         self.used = list(sorted(self.used, key=lambda t: t.name))
 
 
-class _MessageSpec(object):
+class _ServiceSpec(object):
 
-    def __init__(self, package, type, name, definition):
-        self.fields = dict()
-        if type == "msg":
-            spec = parse_message_string(package, name, definition)
-            self.fields["msg"] = self.__fields(spec.fields)
-        if type == "srv":
-            spec = parse_service_string(package, name, definition)
-            self.fields["req"] = self.__fields(spec.request.fields)
-            self.fields["res"] = self.__fields(spec.response.fields)
+    def __init__(self, spec):
+        self.req = _MessageSpec(spec.request)
+        self.res = _MessageSpec(spec.response)
 
-    @staticmethod
-    def __fields(fields):
-        fields = [_MessageField(field) for field in fields]
-        return {field.name: field for field in fields}
+    def link(self, types):
+        pass
 
     @property
     def uses(self):
-        for fields in self.fields.values():
-            for field in fields.values():
-                if not field.type.is_primitive:
-                    yield field.type.name
+        for name in self.req.uses:
+            yield name
+        for name in self.res.uses:
+            yield name
+
+
+class _MessageSpec(object):
+
+    def __init__(self, spec):
+        self.fields = [_MessageField(field) for field in spec.fields]
+        self.fields = {field.name: field for field in self.fields}
+
+    def access(self, path):
+        parts = path.split(".")
+        field = self.fields[parts[0]]
+        for part in parts[1:]:
+            field = field.type.ref.spec.fields[part]
+        return field
+
+    def link(self, types):
+        for field in self.fields.values():
+            field.type.ref = types.get(field.type.name)
+
+    @property
+    def uses(self):
+        for field in self.fields.values():
+            if not field.type.is_primitive:
+                yield field.type.name
 
 
 class _MessageField(object):
@@ -107,12 +122,17 @@ class _MessageField(object):
     def __init__(self, field):
         self.name = field.name
         self.type = _MessageTypeDummy(field.type.pkg_name, field.type.type)
-        self.list = self.__list(field.type) if field.type.is_array else None
+        self.list = self.__list(field.type) if field.type.is_array else ""
+
+    @property
+    def text(self):
+        return self.type.name + self.list
 
     @staticmethod
     def __list(type):
-        bound = "<=" if type.is_upper_bound else ""
-        return f"[{bound}{type.array_size}]"
+        sign = "<=" if type.is_upper_bound else ""
+        size = "" if type.array_size is None else type.array_size
+        return f"[{sign}{size}]"
 
 
 class _MessageTypeDummy(object):
@@ -120,7 +140,7 @@ class _MessageTypeDummy(object):
     def __init__(self, pkg, msg):
         self.pkg = pkg
         self.msg = msg
-        self.ref = None  # TODO
+        self.ref = None
 
     @property
     def name(self):

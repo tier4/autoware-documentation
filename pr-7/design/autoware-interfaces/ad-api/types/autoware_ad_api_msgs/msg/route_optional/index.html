@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/route/state/">
+        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/route_optional/">
       
       <link rel="icon" href="../../../../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
-        <title>/api/route/state - Autoware Documentation</title>
+        <title>autoware_ad_api_msgs/msg/RouteOptional - Autoware Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apiroutestate" class="md-skip">
+        <a href="#autoware_ad_api_msgsmsgrouteoptional" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              /api/route/state
+              autoware_ad_api_msgs/msg/RouteOptional
             
           </span>
         </div>
@@ -1729,14 +1729,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4_3_3" type="checkbox" id="__nav_5_4_3_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4_3_3" type="checkbox" id="__nav_5_4_3_3" checked>
       
       
       
@@ -1750,7 +1748,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../">List</a>
+          <a href="../../../../list/">List</a>
           
         </div>
       
@@ -2919,15 +2917,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
+  <a href="#definition" class="md-nav__link">
+    Definition
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#message" class="md-nav__link">
-    Message
+  <a href="#this-type-uses" class="md-nav__link">
+    This type uses
   </a>
   
 </li>
@@ -2944,36 +2942,20 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/list/api/route/state.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/route_optional.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="apiroutestate">/api/route/state<a class="headerlink" href="#apiroutestate" title="Permanent link">#</a></h1>
+<h1 id="autoware_ad_api_msgsmsgrouteoptional">autoware_ad_api_msgs/msg/RouteOptional<a class="headerlink" href="#autoware_ad_api_msgsmsgrouteoptional" title="Permanent link">#</a></h1>
+<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>autoware_ad_api_msgs/Route[&lt;=1] route
+</code></pre></div>
+<h2 id="this-type-uses">This type uses<a class="headerlink" href="#this-type-uses" title="Permanent link">#</a></h2>
 <ul>
-<li>Method: notification</li>
-<li>Type: <a href="../../../../types/autoware_ad_api_msgs/msg/route_state/">autoware_ad_api_msgs/msg/RouteState</a></li>
+<li><a href="../route/">autoware_ad_api_msgs/msg/Route</a></li>
 </ul>
-<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Get the route state. For details, see the <a href="../">route state</a>.</p>
-<h2 id="message">Message<a class="headerlink" href="#message" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>state</td>
-<td>uint16</td>
-<td>A value of the <a href="../">route state</a>.</td>
-</tr>
-</tbody>
-</table>
 <!-- prettier-ignore -->
 
               
@@ -2995,7 +2977,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../set/" class="md-footer__link md-footer__link--prev" aria-label="Previous: /api/route/set" rel="prev">
+        <a href="../route/" class="md-footer__link md-footer__link--prev" aria-label="Previous: autoware_ad_api_msgs/msg/Route" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3004,20 +2986,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              /api/route/set
+              autoware_ad_api_msgs/msg/Route
             </div>
           </div>
         </a>
       
       
         
-        <a href="../lanelet/notice/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/route/lanelet/notice" rel="next">
+        <a href="../route_primitive/" class="md-footer__link md-footer__link--next" aria-label="Next: autoware_ad_api_msgs/msg/RoutePrimitive" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              /api/route/lanelet/notice
+              autoware_ad_api_msgs/msg/RoutePrimitive
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3054,7 +3036,7 @@
     <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

@@ -7,6 +7,8 @@
 
 This API manages the behavior that the vehicle plans.
 
+![motion-factors](./factors.drawio.svg)
+
 ## States
 
 ![motion-state](./state.drawio.svg)

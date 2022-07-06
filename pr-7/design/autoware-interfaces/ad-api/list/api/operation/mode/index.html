@@ -2926,23 +2926,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mode" class="md-nav__link">
-    Mode
+  <a href="#states" class="md-nav__link">
+    States
   </a>
   
-    <nav class="md-nav" aria-label="Mode">
+    <nav class="md-nav" aria-label="States">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#selector" class="md-nav__link">
-    Selector
+  <a href="#autoware-control-flag" class="md-nav__link">
+    Autoware control flag
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
-    Variables
+  <a href="#operation-mode-and-change-flags" class="md-nav__link">
+    Operation mode and change flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-flag" class="md-nav__link">
+    Transition flag
   </a>
   
 </li>
@@ -2972,71 +2979,34 @@
 
 <h1 id="operation-mode">Operation Mode<a class="headerlink" href="#operation-mode" title="Permanent link">#</a></h1>
 <ul>
-<li><a href="../../../../list/api/operation/mode/notice">/api/operation/mode/notice</a></li>
-<li><a href="../../../../list/api/operation/mode/change">/api/operation/mode/change</a></li>
+<li>/api/operation/mode/state</li>
+<li>/api/operation/mode/change_to_autonomous</li>
+<li>/api/operation/mode/change_to_stop</li>
+<li>/api/operation/mode/change_to_local</li>
+<li>/api/operation/mode/change_to_remote</li>
+<li>/api/operation/mode/engage</li>
+<li>/api/operation/mode/disengage</li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>As shown below, Autoware has five operation modes, driver, local, remote, stop and autonomous.
-Driver mode is supported on some vehicles that have an interface to operate directly, such as steering and pedals, etc.
-The other modes are controlled by software. Typically, local mode is a joystick and remote mode is web application.
-Stop mode is used to stop the vehicle when changing modes. Autonomous mode is for driving with Autoware.</p>
-<p><img alt="operation-architecture" src="architecture.drawio.svg" /></p>
-<h2 id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link">#</a></h2>
-<p>The selector mode indicates the command source during software control.
-The flag <code>is_driver_control</code> indicates whether direct control by the driver is enabled.</p>
+<p>As shown below, Autoware assumes that the vehicle interface has two modes, Autoware control and direct control.
+In direct control mode, the vehicle is operated using devices such as steering and pedals.
+If the vehicle does not support direct control mode, it is always treated as Autoware control mode.</p>
+<p>Autoware control mode has four operation modes. driver, local, remote, stop and autonomous.
+Typically, local mode is a joystick and remote mode is web application.
+Stop mode is used to keep the vehicle stopped. Autonomous mode is for driving with Autoware.</p>
+<p><img alt="operation-mode-architecture" src="architecture.drawio.svg" /></p>
+<h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
+<h3 id="autoware-control-flag">Autoware control flag<a class="headerlink" href="#autoware-control-flag" title="Permanent link">#</a></h3>
+<p>The flag <code>is_in_autoware_control</code> indicates if the vehicle is controlled by Autoware.
+The engage and disenage APIs can be used if the mode can be switched by software.
+These APIs will always fail if the vehicle does not support mode switching or is switched by hardware.</p>
+<h3 id="operation-mode-and-change-flags">Operation mode and change flags<a class="headerlink" href="#operation-mode-and-change-flags" title="Permanent link">#</a></h3>
+<p>The state <code>operation_mode</code> indicates what command is used when Autoware control is enabled.
+The flags <code>change_to_*</code> can be used to check if it is possible to transition to each mode.</p>
+<h3 id="transition-flag">Transition flag<a class="headerlink" href="#transition-flag" title="Permanent link">#</a></h3>
 <p>Since Autoware may not be able to guarantee safety, such as switching to autonomous mode during overspeed.
 There is the flag <code>is_in_transition</code> for this situation and it will be true when changing modes.
 The operator who changed the mode should ensure safety while this flag is true. The flag will be false when the mode change is complete.</p>
-<p><img alt="operation-mode" src="mode.drawio.svg" /></p>
-<h3 id="selector">Selector<a class="headerlink" href="#selector" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>STOP</td>
-<td>The stop command is selected to stop the vehicle.</td>
-</tr>
-<tr>
-<td>AUTONOMOUS</td>
-<td>The autonomous command is selected for autonomous driving.</td>
-</tr>
-<tr>
-<td>LOCAL</td>
-<td>The local command is selected.</td>
-</tr>
-<tr>
-<td>REMOTE</td>
-<td>The remote command is selected.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>is_driver_control</td>
-<td>bool</td>
-<td>True if direct control by the driver is enabled.</td>
-</tr>
-<tr>
-<td>is_in_transition</td>
-<td>bool</td>
-<td>True if the operation mode is in transition.</td>
-</tr>
-</tbody>
-</table>
 <!-- prettier-ignore -->
 
               
@@ -3074,13 +3044,13 @@ The operator who changed the mode should ensure safety while this flag is true. 
       
       
         
-        <a href="change/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/operation/mode/change" rel="next">
+        <a href="../../pose/" class="md-footer__link md-footer__link--next" aria-label="Next: Pose API" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              /api/operation/mode/change
+              Pose API
             </div>
           </div>
           <div class="md-footer__button md-icon">

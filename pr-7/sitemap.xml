@@ -241,21 +241,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/driving/</loc>
-         <lastmod>2022-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/driving/engage/</loc>
-         <lastmod>2022-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/driving/state/</loc>
-         <lastmod>2022-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/fail_safe/</loc>
          <lastmod>2022-07-06</lastmod>
          <changefreq>daily</changefreq>
@@ -297,6 +282,41 @@
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/</loc>
+         <lastmod>2022-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/change_to_autonomous/</loc>
+         <lastmod>2022-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/change_to_local/</loc>
+         <lastmod>2022-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/change_to_remote/</loc>
+         <lastmod>2022-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/change_to_stop/</loc>
+         <lastmod>2022-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/disengage/</loc>
+         <lastmod>2022-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/engage/</loc>
+         <lastmod>2022-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/state/</loc>
          <lastmod>2022-07-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -346,11 +366,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/driving_state/</loc>
-         <lastmod>2022-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/fail_safe_state/</loc>
          <lastmod>2022-07-06</lastmod>
          <changefreq>daily</changefreq>
@@ -371,7 +386,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/operation_mode_notice/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/operation_mode_state/</loc>
          <lastmod>2022-07-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -417,11 +432,6 @@
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/srv/clear_route/</loc>
-         <lastmod>2022-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/srv/driving_engage/</loc>
          <lastmod>2022-07-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -912,6 +922,11 @@
     </url>
     <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/how-to-guides/how-to-create-maps-for-autoware/</loc>
+         <lastmod>2022-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/how-to-guides/how-to-determine-component-dependencies/</loc>
          <lastmod>2022-07-06</lastmod>
          <changefreq>daily</changefreq>
     </url>

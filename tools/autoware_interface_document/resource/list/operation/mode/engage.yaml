@@ -1,0 +1,14 @@
+interface:
+  name: /api/operation/mode/engage
+  type: autoware_ad_api_msgs/srv/ChangeOperationMode
+  method: function call
+
+description: |-
+  Enable vehicle control by Autoware. For details, see the [operation mode](./index.md).
+  This API fail if the vehicle does not support mode change by software.
+
+request: []
+
+response:
+  - name: status
+    text: response status

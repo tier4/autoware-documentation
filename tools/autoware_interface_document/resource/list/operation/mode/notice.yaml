@@ -1,15 +1,23 @@
 interface:
-  name: /api/operation/mode/notice
-  type: autoware_ad_api_msgs/msg/OperationModeNotice
+  name: /api/operation/mode/state
+  type: autoware_ad_api_msgs/msg/OperationModeState
   method: notification
 
 description: |-
-  Get the operation mode. For details, see the [operation mode](./index.md).
+  Get the operation mode state. For details, see the [operation mode](./index.md).
 
 message:
-  - name: selector_mode
-    text: The selected command for software control.
-  - name: is_driver_control
+  - name: operation_mode
+    text: The selected command for Autoware control.
+  - name: is_in_autoware_control
     text: True if direct control by the driver is enabled.
   - name: is_in_transition
     text: True if the operation mode is in transition.
+  - name: change_to_stop
+    text: True if the operation mode can be changed to stop.
+  - name: change_to_autonomous
+    text: True if the operation mode can be changed to autonomous.
+  - name: change_to_local
+    text: True if the operation mode can be changed to local.
+  - name: change_to_remote
+    text: True if the operation mode can be changed to remote.

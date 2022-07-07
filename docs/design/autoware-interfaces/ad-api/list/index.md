@@ -4,6 +4,6 @@
 - [Launcher](./api/launcher/index.md)
 - [Operation Mode](./api/operation/mode/index.md)
 - [Routing](./api/routing/index.md)
+- [Localization](./api/localization/index.md)
 - [Motion](./api/motion/index.md)
-- [Pose](./api/pose/index.md)
 - [Fail-safe](./api/fail_safe/index.md)

@@ -1,0 +1,11 @@
+interface:
+  name: /api/localization/initialization_state
+  type: autoware_ad_api_msgs/msg/LocalizationInitializationState
+  method: notification
+
+description: |-
+  Get the initialization state of localization. For details, see the [localization initialization state](./index.md).
+
+message:
+  - name: state
+    text: A value of the [localization initialization state](./index.md).

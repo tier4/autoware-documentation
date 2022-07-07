@@ -1,0 +1,15 @@
+interface:
+  name: /api/localization/initialize
+  type: autoware_ad_api_msgs/srv/InitializeLocalization
+  method: function call
+
+description: |-
+  Request to initialize localization. For details, see the [pose state](./index.md).
+
+request:
+  - name: pose
+    text: A global pose as the initial guess. If omitted, the GNSS pose will be used.
+
+response:
+  - name: status
+    text: response status

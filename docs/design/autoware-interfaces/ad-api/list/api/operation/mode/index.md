@@ -13,10 +13,14 @@
 As shown below, Autoware assumes that the vehicle interface has two modes, Autoware control and direct control.
 In direct control mode, the vehicle is operated using devices such as steering and pedals.
 If the vehicle does not support direct control mode, it is always treated as Autoware control mode.
+Autoware control mode has four operation modes.
 
-Autoware control mode has four operation modes. driver, local, remote, stop and autonomous.
-Typically, local mode is a joystick and remote mode is web application.
-Stop mode is used to keep the vehicle stopped. Autonomous mode is for driving with Autoware.
+| Mode       | Description                                                                   |
+| ---------- | ----------------------------------------------------------------------------- |
+| Stop       | Keep the vehicle stopped.                                                     |
+| Autonomous | Autonomously control the vehicle.                                             |
+| Local      | Manually control the vehicle from nearby with some device such as a joystick. |
+| Remote     | Manually control the vehicle from a web application on the cloud.             |
 
 ![operation-mode-architecture](./architecture.drawio.svg)
 

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/how-to-guides/how-to-create-maps-for-autoware/">
       
       <link rel="icon" href="../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -919,6 +919,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -947,50 +951,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../running-autoware-without-cuda/" class="md-nav__link">
-        Running Autoware without CUDA
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../advanced-usage-of-colcon/" class="md-nav__link">
         Advanced usage of colcon
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
-        How to integrate Autoware with your vehicle
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
-        How to integrate Autoware with a differential drive vehicle
       </a>
     </li>
   
@@ -1101,6 +1063,76 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
+        How to integrate Autoware with your vehicle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
+        How to integrate Autoware with a differential drive vehicle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running-autoware-without-cuda/" class="md-nav__link">
+        Running Autoware without CUDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
+      </a>
     </li>
   
 
@@ -3094,12 +3126,12 @@
 <h3 id="point-cloud-map-specifications">Point cloud map specifications<a class="headerlink" href="#point-cloud-map-specifications" title="Permanent link">#</a></h3>
 <ul>
 <li>It must cover the entire operational area of the vehicle and should include an additional buffer zone of at least 200 m in all directions.</li>
-<li>It must be saved using the <a href="https://pointclouds.org/documentation/tutorials/pcd_file_format.html">PCD (Point Cloud Data) file format</a>, but can be a single PCD file or divided into multiple PCD files.</li>
+<li>It must be saved using the <a href="https://pointclouds.org/documentation/tutorials/pcd_file_format.html"><abbr title="Point Cloud Data">PCD</abbr> (Point Cloud Data) file format</a>, but can be a single <abbr title="Point Cloud Data">PCD</abbr> file or divided into multiple <abbr title="Point Cloud Data">PCD</abbr> files.</li>
 <li>Each point in the map must contain X, Y, and Z coordinates.</li>
 <li>An intensity or RGB value for each point may be optionally included.</li>
-<li>Its file size must be smaller than 1 GB, <a href="https://github.com/ros/ros_comm/issues/902">as per the current ROS message size limit</a>.</li>
+<li>Its file size must be smaller than 1 GB, <a href="https://github.com/ros/ros_comm/issues/902">as per the current <abbr title="Robot Operating System">ROS</abbr> message size limit</a>.</li>
 <li>Its resolution should be at least 0.2 m to yield reliable localization results.</li>
-<li>It can be in either local or global coordinates, but must be in global coordinates (georeferenced) to use GNSS data for localization.</li>
+<li>It can be in either local or global coordinates, but must be in global coordinates (georeferenced) to use <abbr title="Global Navigation Satellite System">GNSS</abbr> data for localization.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3108,11 +3140,11 @@ However, MGRS is a preferred coordinate system for georeferenced maps.
 In a map with MGRS coordinate system, the X and Y coordinates of each point represent the point's location within the 100,000-meter square, while the Z coordinate represents the point's elevation.</p>
 </div>
 <h3 id="creating-a-point-cloud-map">Creating a point cloud map<a class="headerlink" href="#creating-a-point-cloud-map" title="Permanent link">#</a></h3>
-<p>Traditionally, a Mobile Mapping System (MMS) is used in order to create highly accurate large-scale point cloud maps. However, since a MMS requires high-end sensors for precise positioning, its operational cost can be very expensive and may not be suitable for a relatively small driving environment. Alternatively, a Simultaneous Localization And Mapping (SLAM) algorithm can be used to create a point cloud map from recorded LiDAR scans.</p>
-<p>Commonly used open-source SLAM implementations are <a href="https://github.com/rsasaki0109/lidarslam_ros2">lidarslam-ros2</a> (LiDAR, IMU*) and <a href="https://github.com/TixiaoShan/LIO-SAM/tree/ros2">LIO-SAM</a> (LiDAR, IMU, GNSS). The required sensor data for each algorithm is specified in the parentheses, where an asterisk (*) indicates that such sensor data is optional. For supported LiDAR models, please check the Github repository of each algorithm. While these ROS 2-based SLAM implementations can be easily installed and used directly on the same machine that runs Autoware, it is important to note that they may not be as well-tested or as mature as ROS 1-based alternatives.</p>
-<p>The notable open-source SLAM implementations that are based on ROS 1 include <a href="https://github.com/koide3/hdl_graph_slam">hdl-graph-slam</a> (LiDAR, IMU*, GNSS*), <a href="https://github.com/facontidavide/LeGO-LOAM-BOR">LeGO-LOAM</a> (LiDAR, IMU*), <a href="https://github.com/RobustFieldAutonomyLab/LeGO-LOAM">LeGO-LOAM-BOR</a> (LiDAR), and <a href="https://github.com/TixiaoShan/LIO-SAM">LIO-SAM</a> (LiDAR, IMU, GNSS).
-Most of these algorithms already have a built-in loop-closure and pose graph optimization. However, if the built-in, automatic loop-closure fails or does not work correctly, you can use <a href="https://github.com/SMRT-AIST/interactive_slam">Interactive SLAM</a> to adjust and optimize a pose graph manually.</p>
-<p>Since Autoware is based on ROS 2, it could be problematic if you want to install ROS 1-based SLAM implementations on the same machine. To avoid this problem, you can use <a href="https://www.docker.com/">Docker</a> or simply install them on a different machine. Another problem is the ROSBAG version; these SLAM implementations require ROSBAG 1 instead of ROSBAG 2 used by Autoware. For the ROSBAG version problem, you may use this <a href="https://gitlab.com/MapIV/rosbags">stand-alone converter</a> to convert a ROSBAG 2 file to a ROSBAG 1 file and vice versa.</p>
+<p>Traditionally, a Mobile Mapping System (<abbr title="Mobile Mapping System">MMS</abbr>) is used in order to create highly accurate large-scale point cloud maps. However, since a <abbr title="Mobile Mapping System">MMS</abbr> requires high-end sensors for precise positioning, its operational cost can be very expensive and may not be suitable for a relatively small driving environment. Alternatively, a Simultaneous Localization And Mapping (<abbr title="Simultaneous Localization And Mapping">SLAM</abbr>) algorithm can be used to create a point cloud map from recorded LiDAR scans.</p>
+<p>Commonly used open-source <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations are <a href="https://github.com/rsasaki0109/lidarslam_ros2">lidarslam-ros2</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>*) and <a href="https://github.com/TixiaoShan/LIO-SAM/tree/ros2">LIO-SAM</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>, <abbr title="Global Navigation Satellite System">GNSS</abbr>). The required sensor data for each algorithm is specified in the parentheses, where an asterisk (*) indicates that such sensor data is optional. For supported LiDAR models, please check the Github repository of each algorithm. While these <abbr title="Robot Operating System">ROS</abbr> 2-based <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations can be easily installed and used directly on the same machine that runs Autoware, it is important to note that they may not be as well-tested or as mature as <abbr title="Robot Operating System">ROS</abbr> 1-based alternatives.</p>
+<p>The notable open-source <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations that are based on <abbr title="Robot Operating System">ROS</abbr> 1 include <a href="https://github.com/koide3/hdl_graph_slam">hdl-graph-slam</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>*, <abbr title="Global Navigation Satellite System">GNSS</abbr>*), <a href="https://github.com/facontidavide/LeGO-LOAM-BOR">LeGO-LOAM</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>*), <a href="https://github.com/RobustFieldAutonomyLab/LeGO-LOAM">LeGO-LOAM-BOR</a> (LiDAR), and <a href="https://github.com/TixiaoShan/LIO-SAM">LIO-SAM</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>, <abbr title="Global Navigation Satellite System">GNSS</abbr>).
+Most of these algorithms already have a built-in loop-closure and pose graph optimization. However, if the built-in, automatic loop-closure fails or does not work correctly, you can use <a href="https://github.com/SMRT-AIST/interactive_slam">Interactive <abbr title="Simultaneous Localization And Mapping">SLAM</abbr></a> to adjust and optimize a pose graph manually.</p>
+<p>Since Autoware is based on <abbr title="Robot Operating System">ROS</abbr> 2, it could be problematic if you want to install <abbr title="Robot Operating System">ROS</abbr> 1-based <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations on the same machine. To avoid this problem, you can use <a href="https://www.docker.com/">Docker</a> or simply install them on a different machine. Another problem is the ROSBAG version; these <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations require ROSBAG 1 instead of ROSBAG 2 used by Autoware. For the ROSBAG version problem, you may use this <a href="https://gitlab.com/MapIV/rosbags">stand-alone converter</a> to convert a ROSBAG 2 file to a ROSBAG 1 file and vice versa.</p>
 <p>If you prefer proprietary software that is easy to use, you can try a fully automatic mapping tool from <a href="https://www.map4.jp/">MAP IV, Inc.</a>, <a href="https://www.map4.jp/map4_engine_en"><em>MapIV Engine</em></a>. They currently provide a trial license for Autoware users free of charge.</p>
 <h2 id="vector-maps">Vector maps<a class="headerlink" href="#vector-maps" title="Permanent link">#</a></h2>
 <p>A vector map contains highly accurate information about a road network, lane geometry, and traffic lights. It is required for route planning, traffic light detection, and predicting the trajectories of other vehicles and pedestrians.</p>
@@ -3148,17 +3180,17 @@ Although <a href="https://josm.openstreetmap.de/">JOSM</a> is another open-sourc
 <tbody>
 <tr>
 <td><a href="https://www.map4.jp/">MAP IV, Inc.</a></td>
-<td>SLAM</td>
+<td><abbr title="Simultaneous Localization And Mapping">SLAM</abbr></td>
 <td>Point cloud and vector maps</td>
 </tr>
 <tr>
 <td><a href="https://www.aisantec.co.jp/">AISAN TECHNOLOGY CO., LTD.</a></td>
-<td>MMS</td>
+<td><abbr title="Mobile Mapping System">MMS</abbr></td>
 <td>Point cloud and vector maps</td>
 </tr>
 <tr>
 <td><a href="https://www.tomtom.com/">TomTom</a></td>
-<td>MMS</td>
+<td><abbr title="Mobile Mapping System">MMS</abbr></td>
 <td>Vector map*</td>
 </tr>
 </tbody>
@@ -3169,6 +3201,7 @@ Although <a href="https://josm.openstreetmap.de/">JOSM</a> is another open-sourc
 The open-source <a href="https://github.com/tomtom-international/AutoStreamForAutoware">AutoStreamForAutoware tool</a> can be used to convert an AutoStream map to a Lanelet2 map.
 However, the converter is still in its early stages and has some <a href="https://github.com/tomtom-international/AutoStreamForAutoware/blob/main/docs/known-issues.md">known limitations</a>.</p>
 </div>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3189,7 +3222,7 @@ However, the converter is still in its early stages and has some <a href="https:
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to integrate Autoware with a differential drive vehicle" rel="prev">
+        <a href="../advanced-usage-of-colcon/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Advanced usage of colcon" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3198,20 +3231,20 @@ However, the converter is still in its early stages and has some <a href="https:
               <span class="md-footer__direction">
                 Previous
               </span>
-              How to integrate Autoware with a differential drive vehicle
+              Advanced usage of colcon
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../design/" class="md-footer__link md-footer__link--next" aria-label="Next: Autoware&#39;s Design" rel="next">
+        <a href="../how-to-determine-component-dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: How to determine component dependencies" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Autoware's Design
+              How to determine component dependencies
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3248,7 +3281,7 @@ However, the converter is still in its early stages and has some <a href="https:
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

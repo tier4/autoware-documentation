@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/installation/autoware/source-installation/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -1003,6 +1003,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -1031,8 +1035,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
-        Running Autoware without CUDA
+      <a href="../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+        Advanced usage of colcon
       </a>
     </li>
   
@@ -1045,8 +1049,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
-        Advanced usage of colcon
+      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
       </a>
     </li>
   
@@ -1087,8 +1105,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
+        Running Autoware without CUDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
       </a>
     </li>
   
@@ -3075,12 +3107,12 @@
 </ul>
 <ul>
 <li>
-<p>ROS</p>
+<p><abbr title="Robot Operating System">ROS</abbr></p>
 <ul>
-<li>ROS 2 Galactic</li>
-<li>ROS 2 Humble (<strong>will be supported from Q3 2022</strong>)</li>
+<li><abbr title="Robot Operating System">ROS</abbr> 2 Galactic</li>
+<li><abbr title="Robot Operating System">ROS</abbr> 2 Humble (<strong>will be supported from Q3 2022</strong>)</li>
 </ul>
-<p>For ROS 2 system dependencies, refer to <a href="https://www.ros.org/reps/rep-2000.html">REP-2000</a> .</p>
+<p>For <abbr title="Robot Operating System">ROS</abbr> 2 system dependencies, refer to <a href="https://www.ros.org/reps/rep-2000.html">REP-2000</a> .</p>
 </li>
 </ul>
 <ul>
@@ -3114,8 +3146,8 @@ sudo apt-get -y install git
 </ul>
 <h3 id="installing-dependencies-manually">Installing dependencies manually<a class="headerlink" href="#installing-dependencies-manually" title="Permanent link">#</a></h3>
 <ul>
-<li><a href="https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/ros2#manual-installation">Install ROS 2</a></li>
-<li><a href="https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/ros2_dev_tools#manual-installation">Install ROS 2 Dev Tools</a></li>
+<li><a href="https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/ros2#manual-installation">Install <abbr title="Robot Operating System">ROS</abbr> 2</a></li>
+<li><a href="https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/ros2_dev_tools#manual-installation">Install <abbr title="Robot Operating System">ROS</abbr> 2 Dev Tools</a></li>
 <li><a href="https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/rmw_implementation#manual-installation">Install the RMW Implementation</a></li>
 <li><a href="https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/pacmod#manual-installation">Install pacmod</a></li>
 <li><a href="https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/autoware_core#manual-installation">Install Autoware Core dependencies</a></li>
@@ -3140,8 +3172,8 @@ vcs import src &lt; autoware.repos
 </code></pre></div>
 </li>
 <li>
-<p>Install dependent ROS packages.</p>
-<p>Autoware requires some ROS 2 packages in addition to the core components.
+<p>Install dependent <abbr title="Robot Operating System">ROS</abbr> packages.</p>
+<p>Autoware requires some <abbr title="Robot Operating System">ROS</abbr> 2 packages in addition to the core components.
  The tool <code>rosdep</code> allows an automatic search and installation of such dependencies.
  You might need to run <code>rosdep update</code> before <code>rosdep install</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> /opt/ros/galactic/setup.bash
@@ -3183,7 +3215,7 @@ vcs pull src
 <p>For more information, refer to the <a href="https://github.com/dirk-thomas/vcstool">official documentation</a>.</p>
 </li>
 <li>
-<p>Install dependent ROS packages.</p>
+<p>Install dependent <abbr title="Robot Operating System">ROS</abbr> packages.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> /opt/ros/galactic/setup.bash
 rosdep install -y --from-paths src --ignore-src --rosdistro <span class="nv">$ROS_DISTRO</span>
 </code></pre></div>
@@ -3194,6 +3226,7 @@ rosdep install -y --from-paths src --ignore-src --rosdistro <span class="nv">$RO
 </code></pre></div>
 </li>
 </ol>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3273,7 +3306,7 @@ rosdep install -y --from-paths src --ignore-src --rosdistro <span class="nv">$RO
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/how-to-guides/running-autoware-without-cuda/">
       
       <link rel="icon" href="../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -919,6 +919,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -939,6 +943,76 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-usage-of-colcon/" class="md-nav__link">
+        Advanced usage of colcon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
+        How to integrate Autoware with your vehicle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
+        How to integrate Autoware with a differential drive vehicle
+      </a>
+    </li>
+  
+
             
           
             
@@ -1009,50 +1083,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-usage-of-colcon/" class="md-nav__link">
-        Advanced usage of colcon
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
-        How to integrate Autoware with your vehicle
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
-        How to integrate Autoware with a differential drive vehicle
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
       </a>
     </li>
   
@@ -3012,7 +3044,8 @@ The following subsections briefly explain how to run each algorithm in such an e
 <li><code>traffic_light_classifier</code></li>
 </ul>
 <p>To run traffic light detection without CUDA, set <a href="https://github.com/autowarefoundation/autoware.universe/blob/9445f3a7acd645d12a64507c3d3bfa57e74a3634/launch/tier4_perception_launch/launch/traffic_light_recognition/traffic_light.launch.xml#L3"><code>enable_fine_detection</code> to <code>false</code> in the traffic light launch file</a>. Doing so disables the <code>traffic_light_ssd_fine_detector</code> such that traffic light detection is handled by the <code>map_based_traffic_light_detector</code> module instead.</p>
-<p>To run traffic light classification without CUDA, set <a href="https://github.com/autowarefoundation/autoware.universe/blob/9445f3a7acd645d12a64507c3d3bfa57e74a3634/perception/traffic_light_classifier/launch/traffic_light_classifier.launch.xml#L7"><code>use_gpu</code> to <code>false</code> in the traffic light classifier launch file</a>. Doing so will force the <code>traffic_light_classifier</code> to use a different classification algorithm that does not require CUDA or a GPU.</p>
+<p>To run traffic light classification without CUDA, set <a href="https://github.com/autowarefoundation/autoware.universe/blob/9445f3a7acd645d12a64507c3d3bfa57e74a3634/perception/traffic_light_classifier/launch/traffic_light_classifier.launch.xml#L7"><code>use_gpu</code> to <code>false</code> in the traffic light classifier launch file</a>. Doing so will force the <code>traffic_light_classifier</code> to use a different classification algorithm that does not require CUDA or a <abbr title="Graphics Processing Unit">GPU</abbr>.</p>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3033,7 +3066,7 @@ The following subsections briefly explain how to run each algorithm in such an e
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: How-to guides" rel="prev">
+        <a href="../how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to integrate Autoware with a differential drive vehicle" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3042,20 +3075,20 @@ The following subsections briefly explain how to run each algorithm in such an e
               <span class="md-footer__direction">
                 Previous
               </span>
-              How-to guides
+              How to integrate Autoware with a differential drive vehicle
             </div>
           </div>
         </a>
       
       
         
-        <a href="../advanced-usage-of-colcon/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced usage of colcon" rel="next">
+        <a href="../sensor-calibration/" class="md-footer__link md-footer__link--next" aria-label="Next: How to calibrate your sensors" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Advanced usage of colcon
+              How to calibrate your sensors
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3092,7 +3125,7 @@ The following subsections briefly explain how to run each algorithm in such an e
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

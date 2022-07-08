@@ -11,15 +11,15 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/design/autoware-interfaces/">
       
       <link rel="icon" href="../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
-        <title>Autoware Interface Design - Autoware Documentation</title>
+        <title>Autoware interface design - Autoware Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Autoware Interface Design
+              Autoware interface design
             
           </span>
         </div>
@@ -917,6 +917,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -945,8 +949,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
-        Running Autoware without CUDA
+      <a href="../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+        Advanced usage of colcon
       </a>
     </li>
   
@@ -959,8 +963,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
-        Advanced usage of colcon
+      <a href="../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
       </a>
     </li>
   
@@ -1001,8 +1019,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
+        Running Autoware without CUDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
       </a>
     </li>
   
@@ -2951,15 +2983,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#communication-method" class="md-nav__link">
-    Communication Method
+  <a href="#communication-methods" class="md-nav__link">
+    Communication methods
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#naming-convention" class="md-nav__link">
-    Naming Convention
+    Naming convention
   </a>
   
 </li>
@@ -2985,43 +3017,43 @@
       
         <li class="md-nav__item">
   <a href="#data-structure" class="md-nav__link">
-    Data Structure
+    Data structure
   </a>
   
-    <nav class="md-nav" aria-label="Data Structure">
+    <nav class="md-nav" aria-label="Data structure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#data-type-definition" class="md-nav__link">
-    Data Type Definition
+    Data type definition
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#constants-and-enumeration" class="md-nav__link">
-    Constants and Enumeration
+    Constants and enumeration
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#time-stamp" class="md-nav__link">
-    Time Stamp
+    Time stamp
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#request-header" class="md-nav__link">
-    Request Header
+    Request header
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#response-status" class="md-nav__link">
-    Response Status
+    Response status
   </a>
   
 </li>
@@ -3032,8 +3064,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#concern-assumption-and-limitation" class="md-nav__link">
-    Concern, Assumption, and Limitation
+  <a href="#concerns-assumptions-and-limitations" class="md-nav__link">
+    Concerns, assumptions and limitations
   </a>
   
 </li>
@@ -3056,9 +3088,9 @@
 
 
 
-<h1 id="autoware-interface-design">Autoware Interface Design<a class="headerlink" href="#autoware-interface-design" title="Permanent link">#</a></h1>
+<h1 id="autoware-interface-design">Autoware interface design<a class="headerlink" href="#autoware-interface-design" title="Permanent link">#</a></h1>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">#</a></h2>
-<p>Autoware defines three categories of interfaces. The first one is Autoware AD API for operating the vehicle from outside the autonomous driving system such as the Fleet Management System (FMS) and Human Machine Interface (HMI) for operators or passengers. The second one is Autoware component interface for components to communicate with each other. The last one is the local interface used inside the component.</p>
+<p>Autoware defines three categories of interfaces. The first one is Autoware AD API for operating the vehicle from outside the autonomous driving system such as the Fleet Management System (<abbr title="Fleet Management System">FMS</abbr>) and Human Machine Interface (<abbr title="Human Machine Interface">HMI</abbr>) for operators or passengers. The second one is Autoware component interface for components to communicate with each other. The last one is the local interface used inside the component.</p>
 <h2 id="concept">Concept<a class="headerlink" href="#concept" title="Permanent link">#</a></h2>
 <ul>
 <li>
@@ -3119,7 +3151,7 @@ Third parties can define and publish their own architecture and interface for op
 It is desirable to propose them for standardization if they are sufficiently evaluated.</p>
 <p><img alt="component" src="general/hierarchy.drawio.svg" /></p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">#</a></h2>
-<h3 id="communication-method">Communication Method<a class="headerlink" href="#communication-method" title="Permanent link">#</a></h3>
+<h3 id="communication-methods">Communication methods<a class="headerlink" href="#communication-methods" title="Permanent link">#</a></h3>
 <p>As shown in the table below, interfaces are classified into four communication methods to define their behavior.
 Function Call is a request-response communication and is used for processing that requires immediate results. The others are publish-subscribe communication.
 Notification is used to process data that changes with some event, typically a callback. Streams handle continuously changing data.
@@ -3128,7 +3160,7 @@ Reliable Stream expects all data to arrive without loss, Realtime Stream expects
 <thead>
 <tr>
 <th>Communication Method</th>
-<th>ROS Implementation</th>
+<th><abbr title="Robot Operating System">ROS</abbr> Implementation</th>
 <th>Optional Implementation</th>
 </tr>
 </thead>
@@ -3155,12 +3187,12 @@ Reliable Stream expects all data to arrive without loss, Realtime Stream expects
 </tr>
 </tbody>
 </table>
-<p>These methods are provided as services or topics of ROS since Autoware is developed using ROS and mainly communicates with its packages.
-On the other hand, FMS and HMI are often implemented without ROS, Autoware is also expected to communicate with applications that do not use ROS.
+<p>These methods are provided as services or topics of <abbr title="Robot Operating System">ROS</abbr> since Autoware is developed using <abbr title="Robot Operating System">ROS</abbr> and mainly communicates with its packages.
+On the other hand, <abbr title="Fleet Management System">FMS</abbr> and <abbr title="Human Machine Interface">HMI</abbr> are often implemented without <abbr title="Robot Operating System">ROS</abbr>, Autoware is also expected to communicate with applications that do not use <abbr title="Robot Operating System">ROS</abbr>.
 It is wasteful for each of these applications to have an adapter for Autoware, and a more suitable means of communication is required.
 HTTP and MQTT are suggested as additional options because these protocols are widely used and can substitute the behavior of services and topics.
 In that case, text formats such as JSON where field names are repeated in an array of objects, are inefficient and it is necessary to consider the serialization.</p>
-<h3 id="naming-convention">Naming Convention<a class="headerlink" href="#naming-convention" title="Permanent link">#</a></h3>
+<h3 id="naming-convention">Naming convention<a class="headerlink" href="#naming-convention" title="Permanent link">#</a></h3>
 <p>The name of the interface must be <code>/&lt;component name&gt;/api/&lt;interface name&gt;</code>,
 where <code>&lt;component name&gt;</code> is the name of the component. For an AD API component, omit this part and start with <code>/api</code>.
 The <code>&lt;interface name&gt;</code> is an arbitrary string separated by slashes.
@@ -3201,172 +3233,29 @@ Typically, create a wrapper for service and client classes that logs when a serv
 <li>minimum frequency</li>
 <li>default frequency</li>
 </ul>
-<h2 id="data-structure">Data Structure<a class="headerlink" href="#data-structure" title="Permanent link">#</a></h2>
-<h3 id="data-type-definition">Data Type Definition<a class="headerlink" href="#data-type-definition" title="Permanent link">#</a></h3>
+<h2 id="data-structure">Data structure<a class="headerlink" href="#data-structure" title="Permanent link">#</a></h2>
+<h3 id="data-type-definition">Data type definition<a class="headerlink" href="#data-type-definition" title="Permanent link">#</a></h3>
 <p>Do not share the types in AD API unless they are obviously the same to avoid changes in one API affecting another.
 Also, implementation-dependent types, including the component interface, should not be used in AD API for the same reason.
 Use the type in AD API in implementation, or create the same type and copy the data to convert the type.</p>
-<h3 id="constants-and-enumeration">Constants and Enumeration<a class="headerlink" href="#constants-and-enumeration" title="Permanent link">#</a></h3>
-<p>Since ROS don't support enumeration, use constants instead.
+<h3 id="constants-and-enumeration">Constants and enumeration<a class="headerlink" href="#constants-and-enumeration" title="Permanent link">#</a></h3>
+<p>Since <abbr title="Robot Operating System">ROS</abbr> don't support enumeration, use constants instead.
 The default value of type such as zero and empty string should not be used to detect that a variable is unassigned.
 Alternatively, assign it a dedicated name to indicate that it is undefined.
 If one type has multiple enumerations, comment on the correspondence between constants and variables.
 Assign unique values to all constants so that it can be distinguished from other enumerations.
 Do not use enumeration values directly, as assignments are subject to change when the version is updated.</p>
-<h3 id="time-stamp">Time Stamp<a class="headerlink" href="#time-stamp" title="Permanent link">#</a></h3>
+<h3 id="time-stamp">Time stamp<a class="headerlink" href="#time-stamp" title="Permanent link">#</a></h3>
 <p>Clarify what the timestamp indicates. for example, send time, measurement time, update time, etc. Consider having multiple timestamps if necessary.
-Use <code>std_msgs/msg/Header</code> when using ROS transform.
+Use <code>std_msgs/msg/Header</code> when using <abbr title="Robot Operating System">ROS</abbr> transform.
 Also consider whether the header is common to all data, independent for each data, or additional timestamp is required.</p>
-<h3 id="request-header">Request Header<a class="headerlink" href="#request-header" title="Permanent link">#</a></h3>
+<h3 id="request-header">Request header<a class="headerlink" href="#request-header" title="Permanent link">#</a></h3>
 <p>Currently, there is no required header.</p>
-<h3 id="response-status">Response Status<a class="headerlink" href="#response-status" title="Permanent link">#</a></h3>
+<h3 id="response-status">Response status<a class="headerlink" href="#response-status" title="Permanent link">#</a></h3>
 <p>The interfaces whose communication method is Function Call use a common response status to unify the error format.
-For those interfaces, include the ResponseStatus shown below in the response with the name status.
-The data <code>status.summary.code</code> is the execution result of the interface, and the caller branches the process according to this value.
-Others are for the users and should not be used directly by the program.
-These data are primarily used to provide users with solution tips and to ask the developer for the cause of the error.</p>
-<p>The typical use of the field <code>details</code> is when an interface calls other interfaces.
-That interface stores response statuses in <code>details</code>, then merges them and sets the result to <code>summary</code>.
-This allows the developer to know which component was causing the error by checking <code>details</code>.</p>
-<ul>
-<li>
-<p>ResponseStatus</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>summary</td>
-<td>ResponseStatusDetail</td>
-<td>status summary</td>
-</tr>
-<tr>
-<td>details</td>
-<td>ResponseStatusDetail Array</td>
-<td>status details</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<ul>
-<li>
-<p>ResponseStatusDetail</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>code</td>
-<td>uint32</td>
-<td>response status code</td>
-</tr>
-<tr>
-<td>component</td>
-<td>string</td>
-<td>the component that caused the error</td>
-</tr>
-<tr>
-<td>message</td>
-<td>string</td>
-<td>error message</td>
-</tr>
-<tr>
-<td>description</td>
-<td>string</td>
-<td>error information such as detailed message and document URL</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<ul>
-<li>
-<p>ResponseStatusCode</p>
-<table>
-<thead>
-<tr>
-<th>Group</th>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x0000</td>
-<td>0x0000</td>
-<td>UNKNOWN</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>OK</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>SUCCESS</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>ACCEPTED</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>NO_EFFECT</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>UNAVAILABLE</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>WARNING</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>ERROR</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>FORBIDDEN</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>BAD_REQUEST</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>NOT_SUPPORTED</td>
-</tr>
-<tr>
-<td>T.B.D.</td>
-<td>T.B.D.</td>
-<td>TIMEOUT</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<h2 id="concern-assumption-and-limitation">Concern, Assumption, and Limitation<a class="headerlink" href="#concern-assumption-and-limitation" title="Permanent link">#</a></h2>
+These interfaces should include a variable of ResponseStatus with the name status in the response.
+See <a href="https://github.com/autowarefoundation/autoware.universe/blob/main/common/autoware_ad_api_msgs/README.md#responsestatus">autoware_ad_api_msgs/msg/ResponseStatus</a> for details.</p>
+<h2 id="concerns-assumptions-and-limitations">Concerns, assumptions and limitations<a class="headerlink" href="#concerns-assumptions-and-limitations" title="Permanent link">#</a></h2>
 <ul>
 <li>The applications use the version information provided by AD API to check compatibility.
   Unknown versions are also treated as available as long as the major versions match (excluding major version 0).
@@ -3375,6 +3264,7 @@ This allows the developer to know which component was causing the error by check
   Autoware tries to keep working as long as possible, but it is not guaranteed to be safe.
   Safety should be considered for the entire system, including the applications.</li>
 </ul>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3454,7 +3344,7 @@ This allows the developer to know which component was causing the error by check
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

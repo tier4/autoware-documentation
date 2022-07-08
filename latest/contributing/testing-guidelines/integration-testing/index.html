@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/contributing/testing-guidelines/integration-testing/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -917,6 +917,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -945,8 +949,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
-        Running Autoware without CUDA
+      <a href="../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+        Advanced usage of colcon
       </a>
     </li>
   
@@ -959,8 +963,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
-        Advanced usage of colcon
+      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
       </a>
     </li>
   
@@ -1001,8 +1019,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
+        Running Autoware without CUDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
       </a>
     </li>
   
@@ -3122,7 +3154,7 @@ The set of modules is tested against the defined integration test plan,
 and the output is a set of properly integrated software modules that is ready for system testing.</p>
 <h2 id="value-of-integration-testing">Value of integration testing<a class="headerlink" href="#value-of-integration-testing" title="Permanent link">#</a></h2>
 <p>Integration tests determine if independently developed software modules work correctly when the modules are connected to each other.
-In ROS 2, the software modules are called nodes.
+In <abbr title="Robot Operating System">ROS</abbr> 2, the software modules are called nodes.
 Testing a single node is a special type of integration test that is commonly referred to as component testing.</p>
 <p>Integration tests help to find the following types of errors:</p>
 <ul>
@@ -3130,8 +3162,8 @@ Testing a single node is a special type of integration test that is commonly ref
 <li>Edge cases that were not touched by unit testing, such as a critical timing issue, network communication delays, disk I/O failures, and other such problems that can occur in production environments.</li>
 <li>Issues that can occur while the system is under high CPU/memory load, such as <code>malloc</code> failures. This can be tested using tools like <code>stress</code> and <code>udpreplay</code> to test the performance of nodes with real data.</li>
 </ul>
-<p>With ROS 2, it is possible to program complex autonomous-driving applications with a large number of nodes.
-Therefore, a lot of effort has been made to provide an integration-test framework that helps developers test the interaction of ROS 2 nodes.</p>
+<p>With <abbr title="Robot Operating System">ROS</abbr> 2, it is possible to program complex autonomous-driving applications with a large number of nodes.
+Therefore, a lot of effort has been made to provide an integration-test framework that helps developers test the interaction of <abbr title="Robot Operating System">ROS</abbr> 2 nodes.</p>
 <h2 id="integration-test-framework">Integration-test framework<a class="headerlink" href="#integration-test-framework" title="Permanent link">#</a></h2>
 <p>A typical integration-test framework has three parts:</p>
 <ol>
@@ -3245,7 +3277,7 @@ something that cannot be done with the <a href="#smoke-tests">smoke testing API<
 <ul>
 <li>Since the node need time to process the input lanelet2 map, we use a <code>TimerAction</code> to delay the start of the test by 1s.</li>
 <li>In the example above, the <code>context</code> is empty but it can be used to pass objects to the test cases.</li>
-<li>You can find an example of using the <code>context</code> in the <a href="https://github.com/ros2/launch/blob/humble/launch_testing/test/launch_testing/examples/context_launch_test.py">ROS 2 context_launch_test.py</a> test example.</li>
+<li>You can find an example of using the <code>context</code> in the <a href="https://github.com/ros2/launch/blob/humble/launch_testing/test/launch_testing/examples/context_launch_test.py"><abbr title="Robot Operating System">ROS</abbr> 2 context_launch_test.py</a> test example.</li>
 </ul>
 </div>
 <p>Finally, a test is executed after the node executable has been shut down (<code>post_shutdown_test</code>).
@@ -3334,6 +3366,7 @@ Some boilerplate code is required to access output by creating a node and a subs
 <li><a href="https://github.com/ros2/launch/tree/master/launch_testing">launch testing</a> launches nodes and runs tests.</li>
 <li><a href="../">Testing guidelines</a> describes the different types of tests performed in Autoware and links to the corresponding guidelines.</li>
 </ul>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3413,7 +3446,7 @@ Some boilerplate code is required to access output by creating a node and a subs
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

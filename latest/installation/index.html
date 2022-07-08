@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/installation/">
       
       <link rel="icon" href="../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
@@ -919,6 +919,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -947,8 +951,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
-        Running Autoware without CUDA
+      <a href="../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+        Advanced usage of colcon
       </a>
     </li>
   
@@ -961,8 +965,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
-        Advanced usage of colcon
+      <a href="../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
       </a>
     </li>
   
@@ -1003,8 +1021,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
+        Running Autoware without CUDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-guides/sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
       </a>
     </li>
   
@@ -3012,22 +3044,22 @@
 <p class="admonition-title">Info</p>
 <p>Autoware is scalable and can be customized to work with distributed or less powerful hardware.
 The minimum hardware requirements given below are just a general recommendation.
-However, performance will be improved with more cores, RAM and a higher-spec graphics card or GPU core.</p>
+However, performance will be improved with more cores, RAM and a higher-spec graphics card or <abbr title="Graphics Processing Unit">GPU</abbr> core.</p>
 </div>
 <ul>
 <li>CPU with 8 cores</li>
 <li>16GB RAM</li>
-<li>[Optional] NVIDIA GPU (4GB RAM)</li>
+<li>[Optional] NVIDIA <abbr title="Graphics Processing Unit">GPU</abbr> (4GB RAM)</li>
 </ul>
 <blockquote>
-<p>Although GPU is not required to run basic functionality, it is mandatory to enable the following neural network related functions:</p>
+<p>Although <abbr title="Graphics Processing Unit">GPU</abbr> is not required to run basic functionality, it is mandatory to enable the following neural network related functions:</p>
 <ul>
 <li>LiDAR based object detection</li>
 <li>Camera based object detection</li>
 <li>Traffic light detection and classification</li>
 </ul>
 </blockquote>
-<p>For details of how to enable object detection and traffic light detection/classification without a GPU, refer to the <a href="https://autowarefoundation.github.io/autoware-documentation/main/how-to-guides/running-autoware-without-cuda/">Running Autoware without CUDA</a>.</p>
+<p>For details of how to enable object detection and traffic light detection/classification without a <abbr title="Graphics Processing Unit">GPU</abbr>, refer to the <a href="https://autowarefoundation.github.io/autoware-documentation/main/how-to-guides/running-autoware-without-cuda/">Running Autoware without CUDA</a>.</p>
 <h2 id="installing-autoware">Installing Autoware<a class="headerlink" href="#installing-autoware" title="Permanent link">#</a></h2>
 <p>There are two ways to set up Autoware. Choose one according to your preference.</p>
 <p>If any issues occur during installation, refer to the <a href="https://autowarefoundation.github.io/autoware-documentation/main/support">Support page</a>.</p>
@@ -3047,6 +3079,7 @@ For example, to run an end-to-end simulation you need to install an appropriate 
 <h2 id="additional-settings-for-developers">Additional settings for developers<a class="headerlink" href="#additional-settings-for-developers" title="Permanent link">#</a></h2>
 <p>There are also tools and settings for developers, such as Shells or IDEs.</p>
 <p>For more information, see <a href="additional-settings-for-developers">here</a>.</p>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3126,7 +3159,7 @@ For example, to run an end-to-end simulation you need to install an appropriate 
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

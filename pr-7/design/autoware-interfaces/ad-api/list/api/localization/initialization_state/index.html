@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/pose/state/">
+        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/localization/initialization_state/">
       
       <link rel="icon" href="../../../../../../../assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
-        <title>/api/pose/state - Autoware Documentation</title>
+        <title>/api/localization/initialization_state - Autoware Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apiposestate" class="md-skip">
+        <a href="#apilocalizationinitialization_state" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              /api/pose/state
+              /api/localization/initialization_state
             
           </span>
         </div>
@@ -2976,19 +2976,19 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/list/api/pose/state.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/list/api/localization/initialization_state.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="apiposestate">/api/pose/state<a class="headerlink" href="#apiposestate" title="Permanent link">#</a></h1>
+<h1 id="apilocalizationinitialization_state">/api/localization/initialization_state<a class="headerlink" href="#apilocalizationinitialization_state" title="Permanent link">#</a></h1>
 <ul>
 <li>Method: notification</li>
-<li>Type: <a href="../../../../types/autoware_ad_api_msgs/msg/pose_state/">autoware_ad_api_msgs/msg/PoseState</a></li>
+<li>Type: <a href="../../../../types/autoware_ad_api_msgs/msg/localization_initialization_state/">autoware_ad_api_msgs/msg/LocalizationInitializationState</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Get the pose state. For details, see the <a href="../">pose state</a>.</p>
+<p>Get the initialization state of localization. For details, see the <a href="../">localization initialization state</a>.</p>
 <h2 id="message">Message<a class="headerlink" href="#message" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -3002,7 +3002,7 @@
 <tr>
 <td>state</td>
 <td>uint16</td>
-<td>A value of the <a href="../">pose state</a>.</td>
+<td>A value of the <a href="../">localization initialization state</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -3027,7 +3027,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../initialize/" class="md-footer__link md-footer__link--prev" aria-label="Previous: /api/pose/initialize" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Pose API" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3036,20 +3036,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              /api/pose/initialize
+              Pose API
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../routing/" class="md-footer__link md-footer__link--next" aria-label="Next: Route API" rel="next">
+        <a href="../initialize/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/localization/initialize" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Route API
+              /api/localization/initialize
             </div>
           </div>
           <div class="md-footer__button md-icon">

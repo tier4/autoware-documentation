@@ -2,7 +2,7 @@
 
 ## Related API
 
-- [Pose](../list/api/pose/index.md)
+- [Pose](../list/api/localization/index.md)
 
 ## Sequence
 

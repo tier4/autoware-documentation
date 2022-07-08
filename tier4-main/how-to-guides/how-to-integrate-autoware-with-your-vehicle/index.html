@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/how-to-guides/how-to-integrate-autoware-with-your-vehicle/">
       
       <link rel="icon" href="../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -919,6 +919,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -947,8 +951,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../running-autoware-without-cuda/" class="md-nav__link">
-        Running Autoware without CUDA
+      <a href="../advanced-usage-of-colcon/" class="md-nav__link">
+        Advanced usage of colcon
       </a>
     </li>
   
@@ -961,8 +965,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-usage-of-colcon/" class="md-nav__link">
-        Advanced usage of colcon
+      <a href="../how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
       </a>
     </li>
   
@@ -1207,8 +1225,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../running-autoware-without-cuda/" class="md-nav__link">
+        Running Autoware without CUDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
       </a>
     </li>
   
@@ -3314,19 +3346,19 @@
 <li>LiDAR</li>
 <li>Optional: Inertial measurement unit</li>
 <li>Optional: Camera</li>
-<li>Optional: GNSS</li>
+<li>Optional: <abbr title="Global Navigation Satellite System">GNSS</abbr></li>
 </ul>
 </li>
 </ul>
 <h2 id="2-create-maps">2. Create maps<a class="headerlink" href="#2-create-maps" title="Permanent link">#</a></h2>
 <p>You need both a pointcloud map and a vector map in order to use Autoware.</p>
 <h3 id="create-a-pointcloud-map">Create a pointcloud map<a class="headerlink" href="#create-a-pointcloud-map" title="Permanent link">#</a></h3>
-<p>Use third-party tools such as a LiDAR-based SLAM (Simultaneous Localization And Mapping) package to create a pointcloud map in the <code>.pcd</code> format.
+<p>Use third-party tools such as a LiDAR-based <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> (Simultaneous Localization And Mapping) package to create a pointcloud map in the <code>.pcd</code> format.
 Some examples are:</p>
 <ul>
 <li><a href="https://github.com/koide3/hdl_graph_slam">HDL</a></li>
 <li><a href="https://github.com/TixiaoShan/LIO-SAM">LIO-SAM</a></li>
-<li><a href="https://github.com/rsasaki0109/lidarslam_ros2">LiDAR-SLAM (ROS 2)</a></li>
+<li><a href="https://github.com/rsasaki0109/lidarslam_ros2">LiDAR-<abbr title="Simultaneous Localization And Mapping">SLAM</abbr> (<abbr title="Robot Operating System">ROS</abbr> 2)</a></li>
 </ul>
 <h3 id="create-vector-map">Create vector map<a class="headerlink" href="#create-vector-map" title="Permanent link">#</a></h3>
 <p>Use third-party tools such as <a href="https://tools.tier4.jp/">TIER IV's Vector Map Builder</a> to create a Lanelet2 format <code>.osm</code> file.</p>
@@ -3368,13 +3400,13 @@ For how to fork a repository, refer to <a href="https://docs.github.com/en/get-s
 </code></pre></div>
 <h3 id="adapt-your_vehicle_launch-for-autoware-launching-system">Adapt YOUR_VEHICLE_launch for autoware launching system<a class="headerlink" href="#adapt-your_vehicle_launch-for-autoware-launching-system" title="Permanent link">#</a></h3>
 <h4 id="at-your_vehicle_description">At YOUR_VEHICLE_description<a class="headerlink" href="#at-your_vehicle_description" title="Permanent link">#</a></h4>
-<p>Define URDF and parameters in the vehicle description package (refer to the <a href="https://github.com/autowarefoundation/sample_vehicle_launch/tree/main/sample_vehicle_description">sample vehicle description package</a> for an example).</p>
+<p>Define <abbr title="Universal Robotic Description Format">URDF</abbr> and parameters in the vehicle description package (refer to the <a href="https://github.com/autowarefoundation/sample_vehicle_launch/tree/main/sample_vehicle_description">sample vehicle description package</a> for an example).</p>
 <h4 id="at-your_vehicle_launch">At YOUR_VEHICLE_launch<a class="headerlink" href="#at-your_vehicle_launch" title="Permanent link">#</a></h4>
 <p>Create a launch file (refer to the <a href="https://github.com/autowarefoundation/sample_vehicle_launch/tree/main/sample_vehicle_launch">sample vehicle launch package</a> for example).
 If you have multiple vehicles with the same hardware setup, you can specify <code>vehicle_id</code> to distinguish them.</p>
 <h3 id="adapt-your_sensor_kit_description-for-autoware-launching-system">Adapt YOUR_SENSOR_KIT_description for autoware launching system<a class="headerlink" href="#adapt-your_sensor_kit_description-for-autoware-launching-system" title="Permanent link">#</a></h3>
 <h4 id="at-your_sensor_kit_description">At YOUR_SENSOR_KIT_description<a class="headerlink" href="#at-your_sensor_kit_description" title="Permanent link">#</a></h4>
-<p>Define URDF and extrinsic parameters for all the sensors here (refer to the <a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/tree/main/sample_sensor_kit_description">sample sensor kit description package</a> for example).
+<p>Define <abbr title="Universal Robotic Description Format">URDF</abbr> and extrinsic parameters for all the sensors here (refer to the <a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/tree/main/sample_sensor_kit_description">sample sensor kit description package</a> for example).
 Note that you need to calibrate extrinsic parameters for all the sensors beforehand.</p>
 <h4 id="at-your_sensor_kit_launch">At YOUR_SENSOR_KIT_launch<a class="headerlink" href="#at-your_sensor_kit_launch" title="Permanent link">#</a></h4>
 <p>Create <code>launch/sensing.launch.xml</code> that launches the interfaces of all the sensors on the vehicle. (refer to the <a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/tree/main/sample_sensor_kit_launch">sample sensor kit launch package</a> for example).</p>
@@ -3403,7 +3435,7 @@ You can also refer to TIER IV's <a href="https://github.com/tier4/pacmod_interfa
 <div class="highlight"><pre><span></span><code>ros2 launch autoware_launch autoware.launch.xml vehicle_model:<span class="o">=</span>YOUR_VEHICLE sensor_kit:<span class="o">=</span>YOUR_SENSOR_KIT map_path:<span class="o">=</span>/PATH/TO/YOUR/MAP
 </code></pre></div>
 <h3 id="set-initial-pose">Set initial pose<a class="headerlink" href="#set-initial-pose" title="Permanent link">#</a></h3>
-<p>If GNSS is available, Autoware automatically initializes the vehicle's pose.</p>
+<p>If <abbr title="Global Navigation Satellite System">GNSS</abbr> is available, Autoware automatically initializes the vehicle's pose.</p>
 <p>If not, you need to set the initial pose using the RViz GUI.</p>
 <ol>
 <li>Click the 2D Pose estimate button in the toolbar, or hit the P key</li>
@@ -3428,6 +3460,7 @@ The panel can be found in <code>Panels &gt; Add New Panel &gt; tier4_state_rviz_
 <h2 id="7-tune-parameters-for-your-vehicle-environment">7. Tune parameters for your vehicle &amp; environment<a class="headerlink" href="#7-tune-parameters-for-your-vehicle-environment" title="Permanent link">#</a></h2>
 <p>You may need to tune your parameters depending on the domain in which you will operate your vehicle.</p>
 <p>If you have any issues or questions, feel free to create an <a href="https://github.com/orgs/autowarefoundation/discussions">Autoware Foundation GitHub Discussion</a> in the Q&amp;A category!</p>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3448,7 +3481,7 @@ The panel can be found in <code>Panels &gt; Add New Panel &gt; tier4_state_rviz_
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../advanced-usage-of-colcon/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Advanced usage of colcon" rel="prev">
+        <a href="../how-to-determine-component-dependencies/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to determine component dependencies" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3457,7 +3490,7 @@ The panel can be found in <code>Panels &gt; Add New Panel &gt; tier4_state_rviz_
               <span class="md-footer__direction">
                 Previous
               </span>
-              Advanced usage of colcon
+              How to determine component dependencies
             </div>
           </div>
         </a>
@@ -3507,7 +3540,7 @@ The panel can be found in <code>Panels &gt; Add New Panel &gt; tier4_state_rviz_
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

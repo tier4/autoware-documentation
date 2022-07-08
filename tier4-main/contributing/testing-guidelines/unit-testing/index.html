@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/contributing/testing-guidelines/unit-testing/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -917,6 +917,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -945,8 +949,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
-        Running Autoware without CUDA
+      <a href="../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+        Advanced usage of colcon
       </a>
     </li>
   
@@ -959,8 +963,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
-        Advanced usage of colcon
+      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
       </a>
     </li>
   
@@ -1001,8 +1019,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
+        Running Autoware without CUDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
       </a>
     </li>
   
@@ -3030,7 +3062,7 @@ Unit testing helps ensure that the code behaves as intended and prevents acciden
 The same framework is also used to analyze the test results.</p>
 <p><code>ament_cmake</code> provides several convenience functions to make it easy to register tests in a CMake-based package and to ensure that JUnit-compatible result files are generated.
 It currently supports a few different testing frameworks like <code>pytest</code>, <code>gtest</code>, and <code>gmock</code>.</p>
-<p>In order to prevent tests running in parallel from interfering with each other when publishing and subscribing to ROS topics,
+<p>In order to prevent tests running in parallel from interfering with each other when publishing and subscribing to <abbr title="Robot Operating System">ROS</abbr> topics,
 it is recommended to use commands from <a href="https://github.com/ros2/ament_cmake_ros/tree/master/ament_cmake_ros/cmake"><code>ament_cmake_ros</code></a> to run tests in isolation.</p>
 <p>See below for an example of using <code>ament_add_ros_isolated_gtest</code> with <code>colcon test</code>.
 All other tests follow a similar pattern.</p>
@@ -3148,6 +3180,7 @@ There is also the <code>~/workspace/log/latest_*/</code> directory containing sy
 a code coverage metric is a measure of how much of the program code has been exercised (covered) during testing.</p>
 <p>In the Autoware repositories, <a href="https://app.codecov.io/gh/autowarefoundation/autoware.universe/">Codecov</a> is used to automatically calculate coverage of any open pull request.</p>
 <p>More details about the code coverage metrics can be found in the <a href="https://docs.codecov.com/docs/about-code-coverage">Codecov documentation</a>.</p>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3227,7 +3260,7 @@ a code coverage metric is a measure of how much of the program code has been exe
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

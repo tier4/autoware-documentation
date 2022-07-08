@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-concepts/difference-from-ai-and-auto/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -917,6 +917,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -945,8 +949,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
-        Running Autoware without CUDA
+      <a href="../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+        Advanced usage of colcon
       </a>
     </li>
   
@@ -959,8 +963,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
-        Advanced usage of colcon
+      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
       </a>
     </li>
   
@@ -1001,8 +1019,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
+        Running Autoware without CUDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
       </a>
     </li>
   
@@ -3012,21 +3044,21 @@
 <p>Autoware is the world's first "all-in-one" open-source software for self-driving vehicles.
 Since it was first released in 2015, there have been multiple releases made with differing underlying concepts, each one aimed at improving the software.</p>
 <h2 id="autowareai">Autoware.AI<a class="headerlink" href="#autowareai" title="Permanent link">#</a></h2>
-<p><a href="https://github.com/Autoware-AI/autoware.ai">Autoware.AI</a> is the first distribution of Autoware that was released based on ROS 1. The repository contains a variety of packages covering different aspects of autonomous driving technologies - sensing, actuation, localization, mapping, perception and planning.</p>
+<p><a href="https://github.com/Autoware-AI/autoware.ai">Autoware.AI</a> is the first distribution of Autoware that was released based on <abbr title="Robot Operating System">ROS</abbr> 1. The repository contains a variety of packages covering different aspects of autonomous driving technologies - sensing, actuation, localization, mapping, perception and planning.</p>
 <p>While it was successful in attracting many developers and contributions, it was difficult to improve Autoware.AI's capabilities for a number of reasons:</p>
 <ul>
 <li>A lack of concrete architecture design leading to a lot of built-up technical debt, such as tight coupling between modules and unclear module responsibility.</li>
 <li>Differing coding standards for each package, with very low test coverage.</li>
 </ul>
 <p>Furthermore, there was no clear definition of the conditions under which an Autoware-enabled autonomous vehicle could operate, nor of the use cases or situations supported (eg: the ability to overtake a stationary vehicle).</p>
-<p>From the lessons learned from Autoware.AI development, a different development process was taken for Autoware.Auto to develop a ROS 2 version of Autoware.</p>
+<p>From the lessons learned from Autoware.AI development, a different development process was taken for Autoware.Auto to develop a <abbr title="Robot Operating System">ROS</abbr> 2 version of Autoware.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Autoware.AI is currently in maintenance mode and will reach end-of-life at the end of 2022.</p>
 </div>
 <h2 id="autowareauto">Autoware.Auto<a class="headerlink" href="#autowareauto" title="Permanent link">#</a></h2>
-<p><a href="https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto">Autoware.Auto</a> is the second distribution of Autoware that was released based on ROS 2. As part of the transition to ROS 2, it was decided to avoid simply porting Autoware.AI from ROS 1 to ROS 2. Instead, the codebase was rewritten from scratch with proper engineering practices, including defining target use cases and ODDs (eg: Autonomous Valet Parking [AVP], Cargo Delivery, etc.), designing a proper architecture, writing design documents and test code.</p>
-<p>Autoware.Auto development seemed to work fine initially, but after completing the AVP and and Cargo Delivery ODD projects, we started to see the following issues:</p>
+<p><a href="https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto">Autoware.Auto</a> is the second distribution of Autoware that was released based on <abbr title="Robot Operating System">ROS</abbr> 2. As part of the transition to <abbr title="Robot Operating System">ROS</abbr> 2, it was decided to avoid simply porting Autoware.AI from <abbr title="Robot Operating System">ROS</abbr> 1 to <abbr title="Robot Operating System">ROS</abbr> 2. Instead, the codebase was rewritten from scratch with proper engineering practices, including defining target use cases and ODDs (eg: Autonomous Valet Parking [<abbr title="Autonomous Valet Parking">AVP</abbr>], Cargo Delivery, etc.), designing a proper architecture, writing design documents and test code.</p>
+<p>Autoware.Auto development seemed to work fine initially, but after completing the <abbr title="Autonomous Valet Parking">AVP</abbr> and and Cargo Delivery <abbr title="Operational Design Domain">ODD</abbr> projects, we started to see the following issues:</p>
 <ul>
 <li>The barrier to new engineers was too high.<ul>
 <li>A lot of work was required to merge new features into Autoware.Auto, and so it was difficult for researchers and students to contribute to development.</li>
@@ -3047,6 +3079,7 @@ Since it was first released in 2015, there have been multiple releases made with
 <li>Any advanced features added to Universe that are useful to the wider Autoware community will be reviewed and considered for potential inclusion in the main Autoware Core codebase.</li>
 </ul>
 <p>This way, the primary requirement of having a stable and safe autonomous driving system can be achieved, whilst simultaneously enabling access to state-of-the-art features created by third-party contributors. For more details about the design of Autoware Core/Universe, refer to the <a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/">Autoware concepts documentation page</a>.</p>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3126,7 +3159,7 @@ Since it was first released in 2015, there have been multiple releases made with
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

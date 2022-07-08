@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/installation/additional-settings-for-developers/">
       
       <link rel="icon" href="../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -921,6 +921,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -949,8 +953,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
-        Running Autoware without CUDA
+      <a href="../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
+        Advanced usage of colcon
       </a>
     </li>
   
@@ -963,8 +967,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/advanced-usage-of-colcon/" class="md-nav__link">
-        Advanced usage of colcon
+      <a href="../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
+        How to create maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
+        How to determine component dependencies
       </a>
     </li>
   
@@ -1005,8 +1023,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../how-to-guides/running-autoware-without-cuda/" class="md-nav__link">
+        Running Autoware without CUDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/sensor-calibration/" class="md-nav__link">
+        How to calibrate your sensors
       </a>
     </li>
   
@@ -2974,32 +3006,33 @@
 
 
 <h1 id="additional-settings-for-developers">Additional settings for developers<a class="headerlink" href="#additional-settings-for-developers" title="Permanent link">#</a></h1>
-<h2 id="ros-2-settings">ROS 2 settings<a class="headerlink" href="#ros-2-settings" title="Permanent link">#</a></h2>
+<h2 id="ros-2-settings"><abbr title="Robot Operating System">ROS</abbr> 2 settings<a class="headerlink" href="#ros-2-settings" title="Permanent link">#</a></h2>
 <h3 id="colorizing-logger-output">Colorizing logger output<a class="headerlink" href="#colorizing-logger-output" title="Permanent link">#</a></h3>
-<p>By default, ROS 2 logger doesn't colorize the output.
+<p>By default, <abbr title="Robot Operating System">ROS</abbr> 2 logger doesn't colorize the output.
 To colorize it, write the following in your <code>.bashrc</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">RCUTILS_COLORIZED_OUTPUT</span><span class="o">=</span><span class="m">1</span>
 </code></pre></div>
 <h3 id="customizing-the-format-of-logger-output">Customizing the format of logger output<a class="headerlink" href="#customizing-the-format-of-logger-output" title="Permanent link">#</a></h3>
-<p>By default, ROS 2 logger doesn't output detailed information such as file name, function name, or line number.
+<p>By default, <abbr title="Robot Operating System">ROS</abbr> 2 logger doesn't output detailed information such as file name, function name, or line number.
 To customize it, write the following in your <code>.bashrc</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">RCUTILS_CONSOLE_OUTPUT_FORMAT</span><span class="o">=</span><span class="s2">&quot;[{severity} {time}] [{name}]: {message} ({function_name}() at {file_name}:{line_number})&quot;</span>
 </code></pre></div>
 <p>For more options, see <a href="https://docs.ros.org/en/rolling/Tutorials/Logging-and-logger-configuration.html#console-output-formatting">here</a>.</p>
 <h3 id="enabling-localhost-only-communication">Enabling localhost-only communication<a class="headerlink" href="#enabling-localhost-only-communication" title="Permanent link">#</a></h3>
-<p>By default, ROS 2 communicates using multi-cast, which may unnecessarily increase the network traffic.
+<p>By default, <abbr title="Robot Operating System">ROS</abbr> 2 communicates using multi-cast, which may unnecessarily increase the network traffic.
 To avoid it, write the following in your <code>.bashrc</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">ROS_LOCALHOST_ONLY</span><span class="o">=</span><span class="m">1</span>
 </code></pre></div>
 <h3 id="setting-up-ros_domain_id">Setting up <code>ROS_DOMAIN_ID</code><a class="headerlink" href="#setting-up-ros_domain_id" title="Permanent link">#</a></h3>
-<p>ROS 2 uses <code>ROS_DOMAIN_ID</code> to create groups and communicate between machines in the groups.
-Since all ROS 2 nodes use domain ID <code>0</code> by default, it may cause unintended interference.</p>
+<p><abbr title="Robot Operating System">ROS</abbr> 2 uses <code>ROS_DOMAIN_ID</code> to create groups and communicate between machines in the groups.
+Since all <abbr title="Robot Operating System">ROS</abbr> 2 nodes use domain ID <code>0</code> by default, it may cause unintended interference.</p>
 <p>To avoid it, set a different domain ID for each group in your <code>.bashrc</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Replace X with the Domain ID you want to use</span>
 <span class="c1"># Domain ID should be a number in range [0, 101] (inclusive)</span>
 <span class="nb">export</span> <span class="nv">ROS_DOMAIN_ID</span><span class="o">=</span>X
 </code></pre></div>
 <p>For more information, see <a href="https://docs.ros.org/en/foxy/Concepts/About-Domain-ID.html#the-ros-domain-id">here</a>.</p>
+<!-- prettier-ignore -->
 
               
             </article>
@@ -3079,7 +3112,7 @@ Since all ROS 2 nodes use domain ID <code>0</code> by default, it may cause unin
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

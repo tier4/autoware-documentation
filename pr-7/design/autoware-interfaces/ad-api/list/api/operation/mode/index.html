@@ -3016,16 +3016,40 @@
 <li><a href="change_to_stop">/api/operation/mode/change_to_stop</a></li>
 <li><a href="change_to_local">/api/operation/mode/change_to_local</a></li>
 <li><a href="change_to_remote">/api/operation/mode/change_to_remote</a></li>
-<li><a href="engage">/api/operation/mode/engage</a></li>
-<li><a href="disengage">/api/operation/mode/disengage</a></li>
+<li><a href="enable_autoware_control">/api/operation/mode/enable_autoware_control</a></li>
+<li><a href="disable_autoware_control">/api/operation/mode/disable_autoware_control</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>As shown below, Autoware assumes that the vehicle interface has two modes, Autoware control and direct control.
 In direct control mode, the vehicle is operated using devices such as steering and pedals.
-If the vehicle does not support direct control mode, it is always treated as Autoware control mode.</p>
-<p>Autoware control mode has four operation modes. driver, local, remote, stop and autonomous.
-Typically, local mode is a joystick and remote mode is web application.
-Stop mode is used to keep the vehicle stopped. Autonomous mode is for driving with Autoware.</p>
+If the vehicle does not support direct control mode, it is always treated as Autoware control mode.
+Autoware control mode has four operation modes.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stop</td>
+<td>Keep the vehicle stopped.</td>
+</tr>
+<tr>
+<td>Autonomous</td>
+<td>Autonomously control the vehicle.</td>
+</tr>
+<tr>
+<td>Local</td>
+<td>Manually control the vehicle from nearby with some device such as a joystick.</td>
+</tr>
+<tr>
+<td>Remote</td>
+<td>Manually control the vehicle from a web application on the cloud.</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="operation-mode-architecture" src="architecture.drawio.svg" /></p>
 <h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
 <h3 id="autoware-control-flag">Autoware control flag<a class="headerlink" href="#autoware-control-flag" title="Permanent link">#</a></h3>

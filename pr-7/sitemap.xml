@@ -321,12 +321,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/disengage/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/disable_autoware_control/</loc>
          <lastmod>2022-07-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/engage/</loc>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/operation/mode/enable_autoware_control/</loc>
          <lastmod>2022-07-08</lastmod>
          <changefreq>daily</changefreq>
     </url>

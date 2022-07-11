@@ -5,11 +5,13 @@
 ## Description
 
 This API manages the behavior related to the abnormality of the vehicle.
-Provides the state of Request to Intervene (RTI) and Minimum Risk Maneuver (MRM).
+Provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) and Minimal Risk Condition (MRC).
 
 ## States
 
-![fail-safe-state](./state.drawio.svg)
+### MRM
+
+![fail-safe-state-mrm](./state-mrm.drawio.svg)
 
 | State         | Description                                               |
 | ------------- | --------------------------------------------------------- |
@@ -18,3 +20,13 @@ Provides the state of Request to Intervene (RTI) and Minimum Risk Maneuver (MRM)
 | MRM_OPERATING | MRM is being executed because an error has been detected. |
 | MRM_SUCCEEDED | MRM succeeded. The vehicle is in a safe condition.        |
 | MRM_FAILED    | MRM failed. The vehicle is still in an unsafe condition.  |
+
+### MRC
+
+![fail-safe-state-mrc](./state-mrc.drawio.svg)
+
+| State            | Description |
+| ---------------- | ----------- |
+| NONE             |             |
+| COMFORTABLE_STOP |             |
+| SUDDEN_STOP      |             |

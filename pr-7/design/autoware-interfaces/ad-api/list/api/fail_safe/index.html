@@ -2962,6 +2962,26 @@
     States
   </a>
   
+    <nav class="md-nav" aria-label="States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mrm" class="md-nav__link">
+    MRM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrc" class="md-nav__link">
+    MRC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2988,9 +3008,10 @@
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>This API manages the behavior related to the abnormality of the vehicle.
-Provides the state of Request to Intervene (RTI) and Minimum Risk Maneuver (MRM).</p>
+Provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) and Minimal Risk Condition (MRC).</p>
 <h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
-<p><img alt="fail-safe-state" src="state.drawio.svg" /></p>
+<h3 id="mrm">MRM<a class="headerlink" href="#mrm" title="Permanent link">#</a></h3>
+<p><img alt="fail-safe-state-mrm" src="state-mrm.drawio.svg" /></p>
 <table>
 <thead>
 <tr>
@@ -3018,6 +3039,30 @@ Provides the state of Request to Intervene (RTI) and Minimum Risk Maneuver (MRM)
 <tr>
 <td>MRM_FAILED</td>
 <td>MRM failed. The vehicle is still in an unsafe condition.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mrc">MRC<a class="headerlink" href="#mrc" title="Permanent link">#</a></h3>
+<p><img alt="fail-safe-state-mrc" src="state-mrc.drawio.svg" /></p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NONE</td>
+<td></td>
+</tr>
+<tr>
+<td>COMFORTABLE_STOP</td>
+<td></td>
+</tr>
+<tr>
+<td>SUDDEN_STOP</td>
+<td></td>
 </tr>
 </tbody>
 </table>

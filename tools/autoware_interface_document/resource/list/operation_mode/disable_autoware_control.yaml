@@ -1,10 +1,10 @@
 interface:
-  name: /api/operation/mode/enable_autoware_control
+  name: /api/operation_mode/disable_autoware_control
   type: autoware_ad_api_msgs/srv/ChangeOperationMode
   method: function call
 
 description: |-
-  Enable vehicle control by Autoware. For details, see the [operation mode](./index.md).
+  Disable vehicle control by Autoware. For details, see the [operation mode](./index.md).
   This API fails if the vehicle does not support mode change by software.
 
 request: []

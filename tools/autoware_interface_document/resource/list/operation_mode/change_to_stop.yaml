@@ -1,10 +1,10 @@
 interface:
-  name: /api/operation/mode/change_to_remote
+  name: /api/operation_mode/change_to_stop
   type: autoware_ad_api_msgs/srv/ChangeOperationMode
   method: function call
 
 description: |-
-  Change the operation mode to remote. For details, see the [operation mode](./index.md).
+  Change the operation mode to stop. For details, see the [operation mode](./index.md).
 
 request: []
 

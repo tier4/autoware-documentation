@@ -1,10 +1,10 @@
 interface:
-  name: /api/operation/mode/change_to_local
+  name: /api/operation_mode/change_to_autonomous
   type: autoware_ad_api_msgs/srv/ChangeOperationMode
   method: function call
 
 description: |-
-  Change the operation mode to local. For details, see the [operation mode](./index.md).
+  Change the operation mode to autonomous. For details, see the [operation mode](./index.md).
 
 request: []
 

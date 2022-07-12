@@ -1,5 +1,5 @@
 interface:
-  name: /api/operation/mode/state
+  name: /api/operation_mode/state
   type: autoware_ad_api_msgs/msg/OperationModeState
   method: notification
 

@@ -9,7 +9,7 @@ description: |-
 message:
   - name: operation_mode
     text: The selected command for Autoware control.
-  - name: is_in_autoware_control
+  - name: is_autoware_control_enabled
     text: True if direct control by the driver is enabled.
   - name: is_in_transition
     text: True if the operation mode is in transition.

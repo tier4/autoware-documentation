@@ -1,5 +1,7 @@
 # List of TIER IV API
 
+これらは TIER IV の独自実装であり、段階的に [AD API](../ad-api/list/index.md) に統合する予定です。
+
 | Type    | Name                                                                                                                           | Data                                                                                                                                 |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
 | service | [/api/external/get/version](./api/external/get/version.md)                                                                     | [autoware_external_api_msgs/srv/GetVersion](./type/autoware_external_api_msgs/srv/GetVersion.md)                                     |

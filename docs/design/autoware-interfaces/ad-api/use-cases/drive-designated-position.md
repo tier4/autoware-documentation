@@ -2,7 +2,7 @@
 
 ## Related API
 
-- [Operation Mode](../list/api/operation/mode/index.md)
+- [Operation Mode](../list/api/operation_mode/index.md)
 - [Routing](../list/api/routing/index.md)
 
 ## Sequence

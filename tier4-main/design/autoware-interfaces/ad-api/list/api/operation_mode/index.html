@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/ad-api/list/api/driving/">
+        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/ad-api/list/api/operation_mode/">
       
       <link rel="icon" href="../../../../../../assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
-        <title>Driving API - Autoware Documentation</title>
+        <title>Operation Mode - Autoware Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#driving-api" class="md-skip">
+        <a href="#operation-mode" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Driving API
+              Operation Mode
             
           </span>
         </div>
@@ -2962,6 +2962,33 @@
     States
   </a>
   
+    <nav class="md-nav" aria-label="States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autoware-control-flag" class="md-nav__link">
+    Autoware control flag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation-mode-and-change-flags" class="md-nav__link">
+    Operation mode and change flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-flag" class="md-nav__link">
+    Transition flag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2976,54 +3003,66 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/list/api/driving/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/list/api/operation_mode/index.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="driving-api">Driving API<a class="headerlink" href="#driving-api" title="Permanent link">#</a></h1>
+<h1 id="operation-mode">Operation Mode<a class="headerlink" href="#operation-mode" title="Permanent link">#</a></h1>
 <ul>
-<li><a href="../../../list/api/driving/state">/api/driving/state</a></li>
-<li><a href="../../../list/api/driving/engage">/api/driving/engage</a></li>
+<li><a href="../../../list/api/operation_mode/state">/api/operation_mode/state</a></li>
+<li><a href="../../../list/api/operation_mode/change_to_autonomous">/api/operation_mode/change_to_autonomous</a></li>
+<li><a href="../../../list/api/operation_mode/change_to_stop">/api/operation_mode/change_to_stop</a></li>
+<li><a href="../../../list/api/operation_mode/change_to_local">/api/operation_mode/change_to_local</a></li>
+<li><a href="../../../list/api/operation_mode/change_to_remote">/api/operation_mode/change_to_remote</a></li>
+<li><a href="../../../list/api/operation_mode/enable_autoware_control">/api/operation_mode/enable_autoware_control</a></li>
+<li><a href="../../../list/api/operation_mode/disable_autoware_control">/api/operation_mode/disable_autoware_control</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>This API manages whether the vehicle is driving or can start driving.
-The user can use this API to check if the vehicle is ready to drive and instruct it to depart.</p>
-<h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
-<p>The state transition for driving state is illustrated in the diagram below.
-The vehicle holds a stop when the state is not DRIVING.
-During normal operation, the flow of driving state transitions is as follows:</p>
-<ol>
-<li>Driving state is initialized to NOT_READY.</li>
-<li>The state transitions to READY when the autonomous system is ready to start driving.</li>
-<li>The state becomes DRIVING if the engage API is called and the vehicle starts driving.</li>
-<li>The state returns to NOT_READY when the vehicle reaches its destination.</li>
-<li>The state can be manually returned to NOT_READY by calling the disengage API.</li>
-</ol>
-<p><img alt="driving-state" src="state.drawio.svg" /></p>
+<p>As shown below, Autoware assumes that the vehicle interface has two modes, Autoware control and direct control.
+In direct control mode, the vehicle is operated using devices such as steering and pedals.
+If the vehicle does not support direct control mode, it is always treated as Autoware control mode.
+Autoware control mode has four operation modes.</p>
 <table>
 <thead>
 <tr>
-<th>State</th>
+<th>Mode</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>NOT_READY</td>
-<td>The vehicle is not ready to start driving.</td>
+<td>Stop</td>
+<td>Keep the vehicle stopped.</td>
 </tr>
 <tr>
-<td>READY</td>
-<td>The vehicle is ready to start driving</td>
+<td>Autonomous</td>
+<td>Autonomously control the vehicle.</td>
 </tr>
 <tr>
-<td>DRIVING</td>
-<td>The vehicle is driving towards the destination.</td>
+<td>Local</td>
+<td>Manually control the vehicle from nearby with some device such as a joystick.</td>
+</tr>
+<tr>
+<td>Remote</td>
+<td>Manually control the vehicle from a web application on the cloud.</td>
 </tr>
 </tbody>
 </table>
+<p><img alt="operation-mode-architecture" src="architecture.drawio.svg" /></p>
+<h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
+<h3 id="autoware-control-flag">Autoware control flag<a class="headerlink" href="#autoware-control-flag" title="Permanent link">#</a></h3>
+<p>The flag <code>is_autoware_control_enabled</code> indicates if the vehicle is controlled by Autoware.
+The enable and disable APIs can be used if the control can be switched by software.
+These APIs will always fail if the vehicle does not support mode switching or is switched by hardware.</p>
+<h3 id="operation-mode-and-change-flags">Operation mode and change flags<a class="headerlink" href="#operation-mode-and-change-flags" title="Permanent link">#</a></h3>
+<p>The state <code>operation_mode</code> indicates what command is used when Autoware control is enabled.
+The flags <code>change_to_*</code> can be used to check if it is possible to transition to each mode.</p>
+<h3 id="transition-flag">Transition flag<a class="headerlink" href="#transition-flag" title="Permanent link">#</a></h3>
+<p>Since Autoware may not be able to guarantee safety, such as switching to autonomous mode during overspeed.
+There is the flag <code>is_in_transition</code> for this situation and it will be true when changing modes.
+The operator who changed the mode should ensure safety while this flag is true. The flag will be false when the mode change is complete.</p>
 <!-- prettier-ignore -->
 
               
@@ -3045,7 +3084,7 @@ During normal operation, the flow of driving state transitions is as follows:</p
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: List of Autoware AD API" rel="prev">
+        <a href="../localization/initialize/" class="md-footer__link md-footer__link--prev" aria-label="Previous: /api/localization/initialize" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3054,20 +3093,20 @@ During normal operation, the flow of driving state transitions is as follows:</p
               <span class="md-footer__direction">
                 Previous
               </span>
-              List of Autoware AD API
+              /api/localization/initialize
             </div>
           </div>
         </a>
       
       
         
-        <a href="engage/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/driving/engage" rel="next">
+        <a href="change_to_autonomous/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/operation_mode/change_to_autonomous" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              /api/driving/engage
+              /api/operation_mode/change_to_autonomous
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -3030,8 +3030,11 @@
 <li><a href="factors">/api/planning/factors</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>This API manages the behavior that the vehicle plans.</p>
+<p>This API manages the behavior that the vehicle plans.
+Applications can announce to the people around and display the vehicle behavior to the operator.</p>
 <h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
+<p>The planning state manages the stop and start of the vehicle.
+Once</p>
 <p><img alt="planning-state" src="docs/state.drawio.svg" /></p>
 <table>
 <thead>
@@ -3047,7 +3050,7 @@
 </tr>
 <tr>
 <td>STARTING</td>
-<td>The vehicle is requesting to start. (it is still stopped).</td>
+<td>The vehicle is stopped, but is requesting to start.</td>
 </tr>
 <tr>
 <td>MOVING</td>
@@ -3057,7 +3060,6 @@
 </table>
 <h2 id="factors">Factors<a class="headerlink" href="#factors" title="Permanent link">#</a></h2>
 <p>The planning factors are information on the behavior that the vehicle plans.
-They are sorted in ascending order of distance.
 There are two types of factors, stop and direction change.
 For each type, the meanings of the data members are as follows.</p>
 <p><img alt="planning-factors" src="docs/factors.drawio.svg" /></p>

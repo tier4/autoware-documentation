@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/motion/factors/">
+        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/planning/factors/">
       
       <link rel="icon" href="../../../../../../../assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
-        <title>/api/motion/factors - Autoware Documentation</title>
+        <title>/api/planning/factors - Autoware Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apimotionfactors" class="md-skip">
+        <a href="#apiplanningfactors" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              /api/motion/factors
+              /api/planning/factors
             
           </span>
         </div>
@@ -2976,20 +2976,20 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/list/api/motion/factors.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/list/api/planning/factors.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="apimotionfactors">/api/motion/factors<a class="headerlink" href="#apimotionfactors" title="Permanent link">#</a></h1>
+<h1 id="apiplanningfactors">/api/planning/factors<a class="headerlink" href="#apiplanningfactors" title="Permanent link">#</a></h1>
 <ul>
 <li>Method: realtime stream</li>
-<li>Type: <a href="../../../../types/autoware_ad_api_msgs/msg/motion_factor_array/">autoware_ad_api_msgs/msg/MotionFactorArray</a></li>
+<li>Type: <a href="../../../../types/autoware_ad_api_msgs/msg/planning_factor_array/">autoware_ad_api_msgs/msg/FactorArray</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Get the motion factors. They are sorted in ascending order of distance.
-For details, see the <a href="../">motion factors</a>.</p>
+<p>Get the planning factors. They are sorted in ascending order of distance.
+For details, see the <a href="../">planning factors</a>.</p>
 <h2 id="message">Message<a class="headerlink" href="#message" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -3003,7 +3003,7 @@ For details, see the <a href="../">motion factors</a>.</p>
 <tr>
 <td>factors.pose</td>
 <td>geometry_msgs/msg/Pose</td>
-<td>The pose related to the motion factor.</td>
+<td>The pose related to the planning factor.</td>
 </tr>
 <tr>
 <td>factors.distance</td>
@@ -3013,17 +3013,17 @@ For details, see the <a href="../">motion factors</a>.</p>
 <tr>
 <td>factors.reason</td>
 <td>uint16</td>
-<td>The reason of the motion factor.</td>
+<td>The reason of the planning factor.</td>
 </tr>
 <tr>
 <td>factors.status</td>
 <td>uint16</td>
-<td>The status of the motion factor.</td>
+<td>The status of the planning factor.</td>
 </tr>
 <tr>
 <td>factors.detail</td>
 <td>string</td>
-<td>The additional information of the motion factor.</td>
+<td>The additional information of the planning factor.</td>
 </tr>
 </tbody>
 </table>
@@ -3048,7 +3048,7 @@ For details, see the <a href="../">motion factors</a>.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Motion API" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Planning API" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3057,20 +3057,20 @@ For details, see the <a href="../">motion factors</a>.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Motion API
+              Planning API
             </div>
           </div>
         </a>
       
       
         
-        <a href="../state/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/motion/state" rel="next">
+        <a href="../state/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/planning/state" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              /api/motion/state
+              /api/planning/state
             </div>
           </div>
           <div class="md-footer__button md-icon">

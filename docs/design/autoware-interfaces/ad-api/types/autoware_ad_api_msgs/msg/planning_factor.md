@@ -1,4 +1,4 @@
-# autoware_ad_api_msgs/msg/MotionFactor
+# autoware_ad_api_msgs/msg/PlanningFactor
 
 ## Definition
 

@@ -1,4 +1,4 @@
-# Motion API
+# Planning API
 
 - {{ link_ad_api('/api/planning/state') }}
 - {{ link_ad_api('/api/planning/start') }}
@@ -10,7 +10,7 @@ This API manages the behavior that the vehicle plans.
 
 ## States
 
-![motion-state](./state.drawio.svg)
+![planning-state](./state.drawio.svg)
 
 | State    | Description                                                |
 | -------- | ---------------------------------------------------------- |
@@ -20,12 +20,12 @@ This API manages the behavior that the vehicle plans.
 
 ## Factors
 
-The motion factors are information on the behavior that the vehicle plans.
+The planning factors are information on the behavior that the vehicle plans.
 They are sorted in ascending order of distance.
 There are two types of factors, stop and direction change.
 For each type, the meanings of the data members are as follows.
 
-![motion-factors](./factors.drawio.svg)
+![planning-factors](./factors.drawio.svg)
 
 - stop type
 

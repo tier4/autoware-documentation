@@ -7,21 +7,24 @@
 ## Description
 
 This API manages the behavior that the vehicle plans.
+Applications can announce to the people around and display the vehicle behavior to the operator.
 
 ## States
 
+The planning state manages the stop and start of the vehicle.
+Once
+
 ![planning-state](./docs/state.drawio.svg)
 
-| State    | Description                                                |
-| -------- | ---------------------------------------------------------- |
-| STOPPED  | The vehicle is stopped.                                    |
-| STARTING | The vehicle is requesting to start. (it is still stopped). |
-| MOVING   | The vehicle is moving.                                     |
+| State    | Description                                         |
+| -------- | --------------------------------------------------- |
+| STOPPED  | The vehicle is stopped.                             |
+| STARTING | The vehicle is stopped, but is requesting to start. |
+| MOVING   | The vehicle is moving.                              |
 
 ## Factors
 
 The planning factors are information on the behavior that the vehicle plans.
-They are sorted in ascending order of distance.
 There are two types of factors, stop and direction change.
 For each type, the meanings of the data members are as follows.
 

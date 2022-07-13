@@ -10,7 +10,7 @@ This API manages the behavior that the vehicle plans.
 
 ## States
 
-![planning-state](./state.drawio.svg)
+![planning-state](./docs/state.drawio.svg)
 
 | State    | Description                                                |
 | -------- | ---------------------------------------------------------- |
@@ -25,20 +25,42 @@ They are sorted in ascending order of distance.
 There are two types of factors, stop and direction change.
 For each type, the meanings of the data members are as follows.
 
-![planning-factors](./factors.drawio.svg)
+![planning-factors](./docs/factors.drawio.svg)
 
-- stop type
+| Type                        | Behavior         | Description |
+| --------------------------- | ---------------- | ----------- |
+| STOP_SIGN                   | planned stop     |             |
+| USER_DEFINED_DETECTION_AREA | planned stop     |             |
+| INTERSECTION                | planned stop     |             |
+| CROSSWALK                   | planned stop     |             |
+| FROM_PRIVATE_ROAD           | planned stop     |             |
+| SIDEWALK                    | planned stop     |             |
+| NO_STOPPING_AREA            | planned stop     |             |
+| TRAFFIC_LIGHT               | planned stop     |             |
+| INFRASTRUCTURE_COOPERATION  | planned stop     |             |
+| REAR_CHECK                  | planned stop     |             |
+| FRONT_OBSTACLE              | planned stop     |             |
+| SURROUND_OBSTACLE           | immediate stop   |             |
+| LANE_CHANGE                 | lane change      |             |
+| AVOIDANCE1                  | lane change      |             |
+| AVOIDANCE2                  | lane change      |             |
+| DIRECTION_CHANGE            | direction change |             |
+| PULL_OVER                   | direction change |             |
+| PULL_OUT                    | direction change |             |
+| EMERGENCY_STOP_OPERATION    | (dependent)      |             |
 
-  | Name   | Description                                                   |
-  | ------ | ------------------------------------------------------------- |
-  | pose   | The pose of the stop point.                                   |
-  | reason | Reason (e.g. stop line, crosswalk, obstacle, traffic signal). |
-  | status | Whether the vehicle is stopped due to this factor.            |
+### Planned stop
 
-- direction change type
+![planned-stop-factor](./docs/factors-planned-stop.drawio.svg)
 
-  | Name   | Description                                                  |
-  | ------ | ------------------------------------------------------------ |
-  | pose   | The pose to turn on/off the blinker.                         |
-  | reason | Reason (e.g. turning, lane change, avoidance).               |
-  | status | Whether the direction change has started due to this factor. |
+### Immediate stop
+
+![immediate-stop-factor](./docs/factors-immediate-stop.drawio.svg)
+
+### Direction change
+
+![direction-change-factor](./docs/factors-direction-change.drawio.svg)
+
+### Lane change
+
+![lane-change-factor](./docs/factors-lane-change.drawio.svg)

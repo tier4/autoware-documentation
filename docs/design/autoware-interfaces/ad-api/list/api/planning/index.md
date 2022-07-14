@@ -7,30 +7,34 @@
 ## Description
 
 This API manages the behavior that the vehicle plans.
-Applications can announce to the people around and display the vehicle behavior to the operator.
+Applications can notify the vehicle behavior to the people around and visualize it for operator and passengers.
 
 ## States
 
 The planning state manages the stop and start of the vehicle.
-Once
+Once the vehicle has stopped, the state will be STOPPED.
+After this, when the vehicle tries to start (is still stopped), the state will be STARTING.
+In this state, calling the start API changes the state to MOVING and the vehicle starts.
+This mechanism can add processing such as announcements before the vehicle starts.
+Depending on the configuration, the state may transition directly from STOPPED to MOVING.
 
 ![planning-state](./docs/state.drawio.svg)
 
-| State    | Description                                         |
-| -------- | --------------------------------------------------- |
-| STOPPED  | The vehicle is stopped.                             |
-| STARTING | The vehicle is stopped, but is requesting to start. |
-| MOVING   | The vehicle is moving.                              |
+| State    | Description                                     |
+| -------- | ----------------------------------------------- |
+| STOPPED  | The vehicle is stopped.                         |
+| STARTING | The vehicle is stopped, but is trying to start. |
+| MOVING   | The vehicle is moving.                          |
 
 ## Factors
 
-The planning factors are information on the behavior that the vehicle plans.
-There are two types of factors, stop and direction change.
-For each type, the meanings of the data members are as follows.
+The planning factors is an array of information on the behavior that the vehicle plans.
+Each factor has type shown below, pose, distance from the vehicle head to that pose, status, and detailed data depending on its type.
+See the description of each behavior below for pose and status. And see the description of factor types for detailed data.
 
 ![planning-factors](./docs/factors.drawio.svg)
 
-| Type                        | Behavior         | Description |
+| Factor Type                 | Behavior         | Description |
 | --------------------------- | ---------------- | ----------- |
 | STOP_SIGN                   | planned stop     |             |
 | USER_DEFINED_DETECTION_AREA | planned stop     |             |
@@ -54,16 +58,41 @@ For each type, the meanings of the data members are as follows.
 
 ### Planned stop
 
+The planned stop is a ordinary and predictable stop at the target position.
+As the vehicle approaches the stop position, this factor appears with status APPROACHING.
+And when the vehicle reaches that position and stops, the status will be STOPPED.
+The pose always indicates the stop position.
+
 ![planned-stop-factor](./docs/factors-planned-stop.drawio.svg)
 
 ### Immediate stop
+
+The immediate stop does not have the specified stop position.
+Usually the vehicle stop as soon as possible under permitted conditions.
+This factor will appear with status STOPPING when a stop is needed.
+And when the vehicle stops, the status will be STOPPED.
+The pose indicates the vehicle head or the predicted stop position if possible.
 
 ![immediate-stop-factor](./docs/factors-immediate-stop.drawio.svg)
 
 ### Direction change
 
+The direction change is a steering that requires turn indicators such as turning left or right.
+As the vehicle approaches the position to start steering, this factor appears with status APPROACHING.
+And when the vehicle reaches that position, the status will be ACTIVATED.
+The pose indicates the start position when APPROACHING and the end position when ACTIVATED.
+
 ![direction-change-factor](./docs/factors-direction-change.drawio.svg)
 
 ### Lane change
+
+The lane change is basically the same as the direction change.
+But the vehicle will start steering at any position in the range depending on the situation.
+As the vehicle approaches the start position of the range, this factor appears with status APPROACHING.
+And when the vehicle reaches that position, the status will be ACTIVATING.
+Then, when it becomes possible to change lanes, the vehicle will start steering and the status will be ACTIVATED.
+If the vehicle reaches the end position of the range, it will stop and the status will be STOPPED.
+The pose indicates the start of the range (A) when APPROACHING and the start of the range (B) when ACTIVATING or STOPPED.
+The position to end steering (C and D) for ACTIVATED depends on the position to start steering.
 
 ![lane-change-factor](./docs/factors-lane-change.drawio.svg)

@@ -2,7 +2,18 @@
 
 ## Prerequisites
 
-- [Ubuntu 20.04](https://releases.ubuntu.com/20.04/)
+- OS
+
+  - [Ubuntu 20.04](https://releases.ubuntu.com/20.04/)
+  - [Ubuntu 22.04](https://releases.ubuntu.com/22.04/) (**will be supported from Q3 2022**)
+
+- ROS
+
+  - ROS 2 Galactic
+  - ROS 2 Humble (**will be supported from Q3 2022**)
+
+  For ROS 2 system dependencies, refer to [REP-2000](https://www.ros.org/reps/rep-2000.html) .
+
 - [Git](https://git-scm.com/)
   - [Registering SSH keys to GitHub](https://github.com/settings/keys) is preferable.
 
@@ -20,24 +31,35 @@ sudo apt-get -y install git
    cd autoware
    ```
 
-2. Install the dependencies.
+2. You can install the dependencies either manually or using the provided Ansible script.
 
-   We use [Ansible](https://www.ansible.com/) to simplify the steps.
-   Please see the Ansible playbooks and roles if you want to know exactly what packages are installed.
+> Note: Before installing NVIDIA libraries, confirm and agree with the licenses.
 
-   > Note: Before installing NVIDIA libraries, confirm and agree with the licenses.
+- [CUDA](https://docs.nvidia.com/cuda/eula/index.html)
+- [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/sla/index.html)
+- [TensorRT](https://docs.nvidia.com/deeplearning/tensorrt/sla/index.html)
 
-   - [CUDA](https://docs.nvidia.com/cuda/eula/index.html)
-   - [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/sla/index.html)
-   - [TensorRT](https://docs.nvidia.com/deeplearning/tensorrt/sla/index.html)
+### Installing dependencies manually
 
-   ```bash
-   ./setup-dev-env.sh
-   ```
+- [Install ROS 2](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/ros2#manual-installation)
+- [Install ROS 2 Dev Tools](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/ros2_dev_tools#manual-installation)
+- [Install the RMW Implementation](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/rmw_implementation#manual-installation)
+- [Install pacmod](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/pacmod#manual-installation)
+- [Install Autoware Core dependencies](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/autoware_core#manual-installation)
+- [Install Autoware Universe dependencies](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/autoware_universe#manual-installation)
+- [Install pre-commit dependencies](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/pre_commit#manual-installation)
+- [Install Nvidia CUDA](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/cuda#manual-installation)
+- [Install Nvidia cuDNN and TensorRT](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/tensorrt#manual-installation)
 
-!!!warning
+### Installing dependencies using Ansible
 
-    Be very careful with this method. Make sure you read and confirmed all the steps in the ansible configuration before using it.
+Be very careful with this method. Make sure you read and confirmed all the steps in the Ansible configuration before using it.
+
+If you've manually installed the dependencies, you can skip this section.
+
+```bash
+./setup-dev-env.sh
+```
 
 ## How to set up a workspace
 
@@ -55,16 +77,17 @@ sudo apt-get -y install git
 
    Autoware requires some ROS 2 packages in addition to the core components.
    The tool `rosdep` allows an automatic search and installation of such dependencies.
+   You might need to run `rosdep update` before `rosdep install`.
 
    ```bash
    source /opt/ros/galactic/setup.bash
-   rosdep install --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+   rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
    ```
 
 3. Build the workspace.
 
-   Autoware uses [colcon](https://colcon.readthedocs.io/en/released/index.html) to build workspaces.
-   Refer to the documentation for more advanced options.
+   Autoware uses [colcon](https://github.com/colcon) to build workspaces.
+   For more advanced options, refer to the [documentation](https://colcon.readthedocs.io/).
 
    ```bash
    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
@@ -83,7 +106,7 @@ sudo apt-get -y install git
 
    ```bash
    vcs import src < autoware.repos
-   vcs pull
+   vcs pull src
    ```
 
    For Git users:
@@ -93,13 +116,13 @@ sudo apt-get -y install git
    - `vcs pull` is similar to `git pull`.
      - Note that it doesn't switch branches.
 
-   Refer to the [official documentation](https://github.com/dirk-thomas/vcstool) for more information.
+   For more information, refer to the [official documentation](https://github.com/dirk-thomas/vcstool).
 
 3. Install dependent ROS packages.
 
    ```bash
    source /opt/ros/galactic/setup.bash
-   rosdep install --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+   rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
    ```
 
 4. Build the workspace.

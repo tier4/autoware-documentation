@@ -22,7 +22,7 @@ from .markdown import MarkdownTable
 
 def generate():
     parser = argparse.ArgumentParser()
-    parser.add_argument('path', default='docs/design/autoware-interface/prototyping', nargs='?')
+    parser.add_argument('path', default='docs/design/autoware-interfaces/prototyping', nargs='?')
     args = parser.parse_args()
 
     target = pathlib.Path(args.path)
@@ -50,29 +50,28 @@ def generate():
 
 
 def generate_list(target, groups):
-    with target.joinpath('api/list.md').open('w') as fp:
-        fp.write('# List of Autoware API\n\n')
+    with target.joinpath('index.md').open('w') as fp:
+        fp.write('# List of TIER IV API\n\n')
         for group, specs in groups:
             table = MarkdownTable('Type', 'Name', 'Data')
             for spec in specs:
                 spec_name = make_page_link(spec)
                 type_name = make_type_link(spec)
                 table.line(spec.behavior, spec_name, type_name)
-            fp.write('## {} API\n\n'.format(group.capitalize()))
             fp.write(table.text() + '\n')
 
 
 def make_page_link(spec : AutowareAPI):
     if spec.page is None:
         return spec.spec_name
-    spec_link = '../..' + spec.spec_name
+    spec_link = '.' + spec.spec_name + '.md'
     return '[{}]({})'.format(spec.spec_name, spec_link)
 
 
 def make_type_link(spec : AutowareAPI):
     if spec.typedef.page is None:
         return spec.data_type
-    data_link = '../../type/' + spec.data_type
+    data_link = './type/' + spec.data_type + '.md'
     return '[{}]({})'.format(spec.data_type, data_link)
 
 

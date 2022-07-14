@@ -1,9 +1,9 @@
 site_name: Autoware Documentation
 site_url: https://tier4.github.io/autoware-documentation
 repo_url: https://github.com/tier4/autoware-documentation
-edit_uri: edit/docs/tier4/main/
+edit_uri: https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/
 docs_dir: docs
-copyright: Copyright &copy; 2022 Tier IV, Inc.
+copyright: Copyright &copy; 2022 TIER IV, Inc.
 
 theme:
   name: material
@@ -57,6 +57,7 @@ plugins:
   - search
 
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
   - codehilite:
@@ -66,12 +67,15 @@ markdown_extensions:
   - mdx_math
   - mdx_truly_sane_lists:
       nested_indent: 2
-  - mdx_unimoji
   - plantuml_markdown:
       server: http://www.plantuml.com/plantuml
       format: svg
   - pymdownx.arithmatex
+  - pymdownx.details
   - pymdownx.highlight
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

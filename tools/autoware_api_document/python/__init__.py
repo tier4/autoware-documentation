@@ -51,14 +51,14 @@ def generate():
 
 def generate_list(target, groups):
     with target.joinpath('index.md').open('w') as fp:
-        fp.write('# List of Autoware API\n\n')
+        fp.write('# List of TIER IV API\n\n')
+        fp.write('これらは TIER IV の独自実装であり、段階的に [AD API](../ad-api/list/index.md) に統合する予定です。\n\n')
         for group, specs in groups:
             table = MarkdownTable('Type', 'Name', 'Data')
             for spec in specs:
                 spec_name = make_page_link(spec)
                 type_name = make_type_link(spec)
                 table.line(spec.behavior, spec_name, type_name)
-            fp.write('## {} API\n\n'.format(group.capitalize()))
             fp.write(table.text() + '\n')
 
 

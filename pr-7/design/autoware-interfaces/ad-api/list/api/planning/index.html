@@ -3031,10 +3031,14 @@
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>This API manages the behavior that the vehicle plans.
-Applications can announce to the people around and display the vehicle behavior to the operator.</p>
+Applications can notify the vehicle behavior to the people around and visualize it for operator and passengers.</p>
 <h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
 <p>The planning state manages the stop and start of the vehicle.
-Once</p>
+Once the vehicle has stopped, the state will be STOPPED.
+After this, when the vehicle tries to start (is still stopped), the state will be STARTING.
+In this state, calling the start API changes the state to MOVING and the vehicle starts.
+This mechanism can add processing such as announcements before the vehicle starts.
+Depending on the configuration, the state may transition directly from STOPPED to MOVING.</p>
 <p><img alt="planning-state" src="docs/state.drawio.svg" /></p>
 <table>
 <thead>
@@ -3050,7 +3054,7 @@ Once</p>
 </tr>
 <tr>
 <td>STARTING</td>
-<td>The vehicle is stopped, but is requesting to start.</td>
+<td>The vehicle is stopped, but is trying to start.</td>
 </tr>
 <tr>
 <td>MOVING</td>
@@ -3059,123 +3063,134 @@ Once</p>
 </tbody>
 </table>
 <h2 id="factors">Factors<a class="headerlink" href="#factors" title="Permanent link">#</a></h2>
-<p>The planning factors are information on the behavior that the vehicle plans.
-There are two types of factors, stop and direction change.
-For each type, the meanings of the data members are as follows.</p>
+<p>The planning factors is an array of information on the behavior that the vehicle plans.
+Each factor has type shown below, pose, distance from the vehicle head to that pose, status, and detailed data depending on its type.
+See the description of each behavior below for pose and status. And see the description of factor types for detailed data.</p>
 <p><img alt="planning-factors" src="docs/factors.drawio.svg" /></p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
+<th>Factor Type</th>
 <th>Behavior</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>STOP_SIGN</td>
-<td>planned stop</td>
-<td></td>
-</tr>
-<tr>
-<td>USER_DEFINED_DETECTION_AREA</td>
-<td>planned stop</td>
-<td></td>
-</tr>
-<tr>
-<td>INTERSECTION</td>
-<td>planned stop</td>
-<td></td>
-</tr>
-<tr>
-<td>CROSSWALK</td>
-<td>planned stop</td>
-<td></td>
-</tr>
-<tr>
-<td>FROM_PRIVATE_ROAD</td>
-<td>planned stop</td>
-<td></td>
-</tr>
-<tr>
-<td>SIDEWALK</td>
-<td>planned stop</td>
-<td></td>
-</tr>
-<tr>
-<td>NO_STOPPING_AREA</td>
-<td>planned stop</td>
-<td></td>
-</tr>
-<tr>
-<td>TRAFFIC_LIGHT</td>
-<td>planned stop</td>
-<td></td>
-</tr>
-<tr>
-<td>INFRASTRUCTURE_COOPERATION</td>
-<td>planned stop</td>
-<td></td>
-</tr>
-<tr>
-<td>REAR_CHECK</td>
-<td>planned stop</td>
-<td></td>
+<td>SURROUND_OBSTACLE</td>
+<td>immediate stop</td>
+<td>There are obstacles nearby.</td>
 </tr>
 <tr>
 <td>FRONT_OBSTACLE</td>
 <td>planned stop</td>
-<td></td>
+<td>There are obstacles ahead.</td>
 </tr>
 <tr>
-<td>SURROUND_OBSTACLE</td>
-<td>immediate stop</td>
-<td></td>
+<td>INTERSECTION</td>
+<td>planned stop</td>
+<td>There are obstacles in other lanes in the path.</td>
+</tr>
+<tr>
+<td>CROSSWALK</td>
+<td>planned stop</td>
+<td>There are obstacles on the crosswalk.</td>
+</tr>
+<tr>
+<td>REAR_CHECK</td>
+<td>planned stop</td>
+<td>There are obstacles behind like shoulder checks.</td>
+</tr>
+<tr>
+<td>USER_DEFINED_DETECTION_AREA</td>
+<td>planned stop</td>
+<td>There are obstacles in the predefined detection area.</td>
+</tr>
+<tr>
+<td>NO_STOPPING_AREA</td>
+<td>planned stop</td>
+<td>There is not enough space beyond the no stopping area.</td>
+</tr>
+<tr>
+<td>STOP_SIGN</td>
+<td>planned stop</td>
+<td>A stop by a stop sign.</td>
+</tr>
+<tr>
+<td>TRAFFIC_LIGHT</td>
+<td>planned stop</td>
+<td>A stop by a traffic signal</td>
+</tr>
+<tr>
+<td>V2I_GATE_CONTROL</td>
+<td>planned stop</td>
+<td>A stop by a V2I gate.</td>
+</tr>
+<tr>
+<td>FROM_PRIVATE_ROAD</td>
+<td>planned stop</td>
+<td>A stop before merging from private area.</td>
+</tr>
+<tr>
+<td>SIDEWALK</td>
+<td>planned stop</td>
+<td>A stop before crossing the sidewalk.</td>
 </tr>
 <tr>
 <td>LANE_CHANGE</td>
 <td>lane change</td>
-<td></td>
+<td>A lane change.</td>
 </tr>
 <tr>
 <td>AVOIDANCE1</td>
 <td>lane change</td>
-<td></td>
+<td>A lane change to avoid obstacles when avoiding.</td>
 </tr>
 <tr>
 <td>AVOIDANCE2</td>
 <td>lane change</td>
-<td></td>
+<td>A lane change to avoid obstacles when returning.</td>
 </tr>
 <tr>
 <td>DIRECTION_CHANGE</td>
 <td>direction change</td>
-<td></td>
-</tr>
-<tr>
-<td>PULL_OVER</td>
-<td>direction change</td>
-<td></td>
-</tr>
-<tr>
-<td>PULL_OUT</td>
-<td>direction change</td>
-<td></td>
+<td>A direction change such as turning left or right</td>
 </tr>
 <tr>
 <td>EMERGENCY_STOP_OPERATION</td>
-<td>(dependent)</td>
-<td></td>
+<td>T.B.D.</td>
+<td>A stop by emergency instruction from the operator.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="planned-stop">Planned stop<a class="headerlink" href="#planned-stop" title="Permanent link">#</a></h3>
+<p>The planned stop is a ordinary and predictable stop at the target position.
+As the vehicle approaches the stop position, this factor appears with status APPROACHING.
+And when the vehicle reaches that position and stops, the status will be STOPPED.
+The pose always indicates the stop position.</p>
 <p><img alt="planned-stop-factor" src="docs/factors-planned-stop.drawio.svg" /></p>
 <h3 id="immediate-stop">Immediate stop<a class="headerlink" href="#immediate-stop" title="Permanent link">#</a></h3>
+<p>The immediate stop does not have the specified stop position.
+Usually the vehicle stop as soon as possible under permitted conditions.
+This factor will appear with status STOPPING when a stop is needed.
+And when the vehicle stops, the status will be STOPPED.
+The pose indicates the vehicle head or the predicted stop position if possible.</p>
 <p><img alt="immediate-stop-factor" src="docs/factors-immediate-stop.drawio.svg" /></p>
 <h3 id="direction-change">Direction change<a class="headerlink" href="#direction-change" title="Permanent link">#</a></h3>
+<p>The direction change is a steering that requires turn indicators such as turning left or right.
+As the vehicle approaches the position to start steering, this factor appears with status APPROACHING.
+And when the vehicle reaches that position, the status will be ACTIVATED.
+The pose indicates the start position when APPROACHING and the end position when ACTIVATED.</p>
 <p><img alt="direction-change-factor" src="docs/factors-direction-change.drawio.svg" /></p>
 <h3 id="lane-change">Lane change<a class="headerlink" href="#lane-change" title="Permanent link">#</a></h3>
+<p>The lane change is basically the same as the direction change.
+But the vehicle will start steering at any position in the range depending on the situation.
+As the vehicle approaches the start position of the range, this factor appears with status APPROACHING.
+And when the vehicle reaches that position, the status will be ACTIVATING.
+Then, when it becomes possible to change lanes, the vehicle will start steering and the status will be ACTIVATED.
+If the vehicle reaches the end position of the range, it will stop and the status will be STOPPED.
+The pose indicates the start of the range (A) when APPROACHING and the start of the range (B) when ACTIVATING or STOPPED.
+The position to end steering (C and D) for ACTIVATED depends on the position to start steering.</p>
 <p><img alt="lane-change-factor" src="docs/factors-lane-change.drawio.svg" /></p>
 <!-- prettier-ignore -->
 

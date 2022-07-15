@@ -531,6 +531,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/pilot-auto/</loc>
+         <lastmod>2022-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/pilot-auto/api/ecu/execute_shutdown/</loc>
+         <lastmod>2022-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/pilot-auto/api/ecu/prepare_shutdown/</loc>
+         <lastmod>2022-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/pilot-auto/api/ecu/state/</loc>
+         <lastmod>2022-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/prototyping/</loc>
          <lastmod>2022-07-15</lastmod>
          <changefreq>daily</changefreq>

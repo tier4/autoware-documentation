@@ -1,5 +1,6 @@
 nav:
   - index.md
-  - TIER IV API: prototyping
+  - External API: prototyping
+  - Pilot.Auto API: pilot-auto
   - AD API: ad-api
   - components

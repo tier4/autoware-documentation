@@ -2985,10 +2985,10 @@
 <h1 id="apiplanningfactors">/api/planning/factors<a class="headerlink" href="#apiplanningfactors" title="Permanent link">#</a></h1>
 <ul>
 <li>Method: realtime stream</li>
-<li>Type: <a href="../../../../types/autoware_ad_api_msgs/msg/planning_factor_array/">autoware_ad_api_msgs/msg/FactorArray</a></li>
+<li>Type: <a href="../../../../types/autoware_ad_api_msgs/msg/planning_factor_array/">autoware_ad_api_msgs/msg/PlanningFactorArray</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>Get the planning factors. They are sorted in ascending order of distance.
+<p>Get the planning factors, sorted in ascending order of distance.
 For details, see the <a href="../">planning factors</a>.</p>
 <h2 id="message">Message<a class="headerlink" href="#message" title="Permanent link">#</a></h2>
 <table>
@@ -3008,12 +3008,12 @@ For details, see the <a href="../">planning factors</a>.</p>
 <tr>
 <td>factors.distance</td>
 <td>float32</td>
-<td>The distance from the vehicle to the above pose.</td>
+<td>The distance from the vehicle head to the above pose.</td>
 </tr>
 <tr>
-<td>factors.reason</td>
+<td>factors.type</td>
 <td>uint16</td>
-<td>The reason of the planning factor.</td>
+<td>The type of the planning factor.</td>
 </tr>
 <tr>
 <td>factors.status</td>
@@ -3048,7 +3048,7 @@ For details, see the <a href="../">planning factors</a>.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Planning API" rel="prev">
+        <a href="../allow_start/" class="md-footer__link md-footer__link--prev" aria-label="Previous: /api/planning/allow_start" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3057,7 +3057,7 @@ For details, see the <a href="../">planning factors</a>.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Planning API
+              /api/planning/allow_start
             </div>
           </div>
         </a>

@@ -15,7 +15,7 @@
     
     
       
-        <title>List of Autoware API - Autoware Documentation</title>
+        <title>List of TIER IV API - Autoware Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#list-of-autoware-api" class="md-skip">
+        <a href="#list-of-tier-iv-api" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              List of Autoware API
+              List of TIER IV API
             
           </span>
         </div>
@@ -2942,21 +2942,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#external-api" class="md-nav__link">
-    External API
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2973,8 +2958,8 @@
 
 
 
-<h1 id="list-of-autoware-api">List of Autoware API<a class="headerlink" href="#list-of-autoware-api" title="Permanent link">#</a></h1>
-<h2 id="external-api">External API<a class="headerlink" href="#external-api" title="Permanent link">#</a></h2>
+<h1 id="list-of-tier-iv-api">List of TIER IV API<a class="headerlink" href="#list-of-tier-iv-api" title="Permanent link">#</a></h1>
+<p>これらは TIER IV の独自実装であり、段階的に <a href="../ad-api/list/">AD API</a> に統合する予定です。</p>
 <table>
 <thead>
 <tr>
@@ -3053,6 +3038,11 @@
 <td>service</td>
 <td><a href="api/external/set/initialize_pose_auto/">/api/external/set/initialize_pose_auto</a></td>
 <td><a href="type/tier4_external_api_msgs/srv/InitializePoseAuto/">tier4_external_api_msgs/srv/InitializePoseAuto</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/localization_scores/">/api/external/get/localization_scores</a></td>
+<td><a href="type/tier4_external_api_msgs/msg/LocalizationScoreArray/">tier4_external_api_msgs/msg/LocalizationScoreArray</a></td>
 </tr>
 <tr>
 <td>service</td>
@@ -3178,6 +3168,31 @@
 <td>service</td>
 <td><a href="api/external/get/accel_brake_map_calibrator/data/">/api/external/get/accel_brake_map_calibrator/data</a></td>
 <td><a href="type/tier4_external_api_msgs/srv/GetAccelBrakeMapCalibrationData/">tier4_external_api_msgs/srv/GetAccelBrakeMapCalibrationData</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/iv_msgs/autoware/state/">/api/iv_msgs/autoware/state</a></td>
+<td><a href="type/tier4_system_msgs/msg/AutowareState/">tier4_system_msgs/msg/AutowareState</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/iv_msgs/vehicle/status/control_mode/">/api/iv_msgs/vehicle/status/control_mode</a></td>
+<td><a href="type/tier4_vehicle_msgs/msg/ControlMode/">tier4_vehicle_msgs/msg/ControlMode</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/iv_msgs/planning/scenario_planning/trajectory/">/api/iv_msgs/planning/scenario_planning/trajectory</a></td>
+<td><a href="type/tier4_planning_msgs/msg/Trajectory/">tier4_planning_msgs/msg/Trajectory</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/iv_msgs/perception/object_recognition/tracking/objects/">/api/iv_msgs/perception/object_recognition/tracking/objects</a></td>
+<td>tier4_perception_msgs/msg/DynamicObjectArray</td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/autoware/set/start_request/">/api/autoware/set/start_request</a></td>
+<td><a href="type/std_srvs/srv/Trigger/">std_srvs/srv/Trigger</a></td>
 </tr>
 </tbody>
 </table>

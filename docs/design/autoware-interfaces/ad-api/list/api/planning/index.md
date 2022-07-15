@@ -34,27 +34,25 @@ See the description of each behavior below for pose and status. And see the desc
 
 ![planning-factors](./docs/factors.drawio.svg)
 
-| Factor Type                 | Behavior         | Description |
-| --------------------------- | ---------------- | ----------- |
-| STOP_SIGN                   | planned stop     |             |
-| USER_DEFINED_DETECTION_AREA | planned stop     |             |
-| INTERSECTION                | planned stop     |             |
-| CROSSWALK                   | planned stop     |             |
-| FROM_PRIVATE_ROAD           | planned stop     |             |
-| SIDEWALK                    | planned stop     |             |
-| NO_STOPPING_AREA            | planned stop     |             |
-| TRAFFIC_LIGHT               | planned stop     |             |
-| INFRASTRUCTURE_COOPERATION  | planned stop     |             |
-| REAR_CHECK                  | planned stop     |             |
-| FRONT_OBSTACLE              | planned stop     |             |
-| SURROUND_OBSTACLE           | immediate stop   |             |
-| LANE_CHANGE                 | lane change      |             |
-| AVOIDANCE1                  | lane change      |             |
-| AVOIDANCE2                  | lane change      |             |
-| DIRECTION_CHANGE            | direction change |             |
-| PULL_OVER                   | direction change |             |
-| PULL_OUT                    | direction change |             |
-| EMERGENCY_STOP_OPERATION    | (dependent)      |             |
+| Factor Type                 | Behavior         | Description                                            |
+| --------------------------- | ---------------- | ------------------------------------------------------ |
+| SURROUND_OBSTACLE           | immediate stop   | There are obstacles nearby.                            |
+| FRONT_OBSTACLE              | planned stop     | There are obstacles ahead.                             |
+| INTERSECTION                | planned stop     | There are obstacles in other lanes in the path.        |
+| CROSSWALK                   | planned stop     | There are obstacles on the crosswalk.                  |
+| REAR_CHECK                  | planned stop     | There are obstacles behind like shoulder checks.       |
+| USER_DEFINED_DETECTION_AREA | planned stop     | There are obstacles in the predefined detection area.  |
+| NO_STOPPING_AREA            | planned stop     | There is not enough space beyond the no stopping area. |
+| STOP_SIGN                   | planned stop     | A stop by a stop sign.                                 |
+| TRAFFIC_LIGHT               | planned stop     | A stop by a traffic signal                             |
+| V2I_GATE_CONTROL            | planned stop     | A stop by a V2I gate.                                  |
+| FROM_PRIVATE_ROAD           | planned stop     | A stop before merging from private area.               |
+| SIDEWALK                    | planned stop     | A stop before crossing the sidewalk.                   |
+| LANE_CHANGE                 | lane change      | A lane change.                                         |
+| AVOIDANCE1                  | lane change      | A lane change to avoid obstacles when avoiding.        |
+| AVOIDANCE2                  | lane change      | A lane change to avoid obstacles when returning.       |
+| DIRECTION_CHANGE            | direction change | A direction change such as turning left or right       |
+| EMERGENCY_STOP_OPERATION    | T.B.D.           | A stop by emergency instruction from the operator.     |
 
 ### Planned stop
 

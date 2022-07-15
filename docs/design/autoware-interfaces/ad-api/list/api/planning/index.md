@@ -1,7 +1,7 @@
 # Planning API
 
+- {{ link_ad_api('/api/planning/allow_start') }}
 - {{ link_ad_api('/api/planning/state') }}
-- {{ link_ad_api('/api/planning/start') }}
 - {{ link_ad_api('/api/planning/factors') }}
 
 ## Description

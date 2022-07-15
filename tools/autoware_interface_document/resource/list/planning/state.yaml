@@ -1,0 +1,11 @@
+interface:
+  name: /api/planning/state
+  type: autoware_ad_api_msgs/msg/PlanningState
+  method: notification
+
+description: |-
+  Get the planning state. For details, see the [planning state](./index.md).
+
+message:
+  - name: state
+    text: A value of the [planning state](./index.md).

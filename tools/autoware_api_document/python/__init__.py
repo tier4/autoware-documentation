@@ -51,7 +51,7 @@ def generate():
 
 def generate_list(target, groups):
     with target.joinpath('index.md').open('w') as fp:
-        fp.write('# List of TIER IV API\n\n')
+        fp.write('# List of TIER IV External API\n\n')
         fp.write('これらは TIER IV の独自実装であり、段階的に [AD API](../ad-api/list/index.md) に統合する予定です。\n\n')
         for group, specs in groups:
             table = MarkdownTable('Type', 'Name', 'Data')

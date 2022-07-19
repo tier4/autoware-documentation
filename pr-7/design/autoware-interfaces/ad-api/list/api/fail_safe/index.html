@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/fail_safe/">
       
       <link rel="icon" href="../../../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -3007,25 +3007,12 @@
     States
   </a>
   
-    <nav class="md-nav" aria-label="States">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mrm" class="md-nav__link">
-    MRM
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#mrc" class="md-nav__link">
-    MRC
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    Behavior
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3049,14 +3036,20 @@
 
 <h1 id="fail-safe-api">Fail-safe API<a class="headerlink" href="#fail-safe-api" title="Permanent link">#</a></h1>
 <ul>
-<li><a href="state">/api/fail_safe/state</a></li>
+<li><a href="mrm/state">/api/fail_safe/mrm/state</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>This API manages the behavior related to the abnormality of the vehicle.
-Provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) and Minimal Risk Condition (MRC).</p>
+It provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) and Minimal Risk Condition (MRC).
+As shown below, Autoware has the gate to switches between the command during normal operation and the command during abnormal operation.
+For safety, Autoware switches the operation to MRM when an abnormality is detected.
+Since the required behavior differs depending on the situation, MRM is implemented in various places as a specific mode in a normal module or as an independent module.
+The fail-safe module selects the behavior of MRM according to the abnormality and switches the gate output to that command.</p>
+<p><img alt="fail-safe-architecture" src="architecture.drawio.svg" /></p>
 <h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
-<h3 id="mrm">MRM<a class="headerlink" href="#mrm" title="Permanent link">#</a></h3>
-<p><img alt="fail-safe-state-mrm" src="state-mrm.drawio.svg" /></p>
+<p>The MRM state indicates whether MRM is operating. This state also provides success or failure.
+Generally, MRM will switch to another behavior if it fails,</p>
+<p><img alt="mrm-state" src="mrm-state.drawio.svg" /></p>
 <table>
 <thead>
 <tr>
@@ -3067,15 +3060,11 @@ Provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) an
 <tbody>
 <tr>
 <td>NORMAL</td>
-<td>The vehicle is normal.</td>
-</tr>
-<tr>
-<td>RTI_OPERATING</td>
-<td>The vehicle is normal, but the risk is high.</td>
+<td>The vehicle is normal. MRM is not operating.</td>
 </tr>
 <tr>
 <td>MRM_OPERATING</td>
-<td>MRM is being executed because an error has been detected.</td>
+<td>MRM is operating because an abnormality has been detected.</td>
 </tr>
 <tr>
 <td>MRM_SUCCEEDED</td>
@@ -3087,8 +3076,10 @@ Provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) an
 </tr>
 </tbody>
 </table>
-<h3 id="mrc">MRC<a class="headerlink" href="#mrc" title="Permanent link">#</a></h3>
-<p><img alt="fail-safe-state-mrc" src="state-mrc.drawio.svg" /></p>
+<h2 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">#</a></h2>
+<p>There is a dependency between MRM behaviors. For example, it switches from a comfortable stop to a sudden stop, but not the other way around.
+This is service dependent. Autoware supports the following transitions by default.</p>
+<p><img alt="mrm-behavior" src="mrm-behavior.drawio.svg" /></p>
 <table>
 <thead>
 <tr>
@@ -3099,15 +3090,15 @@ Provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) an
 <tbody>
 <tr>
 <td>NONE</td>
-<td></td>
+<td>MRM is not operating or is operating but no special behavior is required.</td>
 </tr>
 <tr>
 <td>COMFORTABLE_STOP</td>
-<td></td>
+<td>The vehicle will stop quickly with a comfortable deceleration.</td>
 </tr>
 <tr>
 <td>SUDDEN_STOP</td>
-<td></td>
+<td>The vehicle will stop immediately with as much deceleration as possible.</td>
 </tr>
 </tbody>
 </table>
@@ -3148,13 +3139,13 @@ Provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) an
       
       
         
-        <a href="state/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/fail_safe/state" rel="next">
+        <a href="mrm/state/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/fail_safe/mrm/state" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              /api/fail_safe/state
+              /api/fail_safe/mrm/state
             </div>
           </div>
           <div class="md-footer__button md-icon">

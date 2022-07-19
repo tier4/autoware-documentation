@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/types/autoware_ad_api_msgs/msg/fail_safe_state/">
       
       <link rel="icon" href="../../../../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -3027,15 +3027,24 @@
 
 <h1 id="autoware_ad_api_msgsmsgfailsafestate">autoware_ad_api_msgs/msg/FailSafeState<a class="headerlink" href="#autoware_ad_api_msgsmsgfailsafestate" title="Permanent link">#</a></h1>
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>uint16 UNKNOWN = 0
-uint16 NORMAL = 1
-uint16 RTI_OPERATING = 2
-uint16 MRM_OPERATING = 3
-uint16 MRM_SUCCEEDED = 4
-uint16 MRM_FAILED = 5
+<div class="highlight"><pre><span></span><code># constants for both
+uint16 UNKNOWN = 0
 
+# constants for stamp
+uint16 NORMAL = 1
+uint16 MRM_OPERATING = 2
+uint16 MRM_SUCCEEDED = 3
+uint16 MRM_FAILED = 4
+
+# constants for behavior
+uint16 NONE = 101
+uint16 SUDDEN_STOP = 102
+uint16 COMFORTABLE_STOP = 103
+
+# variables
+builtin_interfaces/Time stamp
 uint16 state
-bool auto_recovery
+uint16 behavior
 </code></pre></div>
 <h2 id="this-type-uses">This type uses<a class="headerlink" href="#this-type-uses" title="Permanent link">#</a></h2>
 <p>None</p>

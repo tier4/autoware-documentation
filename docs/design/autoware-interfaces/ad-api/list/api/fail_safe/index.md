@@ -6,7 +6,7 @@
 
 This API manages the behavior related to the abnormality of the vehicle.
 It provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) and Minimal Risk Condition (MRC).
-As shown below, Autoware has the gate to switches between the command during normal operation and the command during abnormal operation.
+As shown below, Autoware has the gate to switch between the command during normal operation and the command during abnormal operation.
 For safety, Autoware switches the operation to MRM when an abnormality is detected.
 Since the required behavior differs depending on the situation, MRM is implemented in various places as a specific mode in a normal module or as an independent module.
 The fail-safe module selects the behavior of MRM according to the abnormality and switches the gate output to that command.

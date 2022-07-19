@@ -11,6 +11,7 @@ uint16 LOCAL = 3
 uint16 REMOTE = 4
 
 # variables
+builtin_interfaces/Time stamp
 uint16 operation_mode
 bool is_autoware_control_enabled
 bool is_in_transition

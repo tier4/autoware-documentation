@@ -1,0 +1,13 @@
+interface:
+  name: /api/fail_safe/mrm/state
+  type: autoware_ad_api_msgs/msg/FailSafeState
+  method: notification
+
+description: |-
+  Get the fail-safe state. For details, see the [fail-safe](../index.md).
+
+message:
+  - name: state
+    text: The state of MRM operation.
+  - name: behavior
+    text: The currently selected behavior of MRM.

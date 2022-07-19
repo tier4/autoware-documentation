@@ -16,7 +16,7 @@ The fail-safe module selects the behavior of MRM according to the abnormality an
 ## States
 
 The MRM state indicates whether MRM is operating. This state also provides success or failure.
-Generally, MRM will switch to another behavior if it fails,
+Generally, MRM will switch to another behavior if it fails.
 
 ![mrm-state](./mrm-state.drawio.svg)
 

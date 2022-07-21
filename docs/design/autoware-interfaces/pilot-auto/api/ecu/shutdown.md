@@ -1,4 +1,4 @@
-# /pilot_auto/api/ecu/execute_shutdown
+# /pilot_auto/api/ecu/shutdown
 
 - Type: Service
 

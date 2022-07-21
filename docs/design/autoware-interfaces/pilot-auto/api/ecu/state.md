@@ -17,5 +17,7 @@ uint16 SHUTDOWN_READY = 4
 uint16 STARTUP_TIMEOUT = 1001
 uint16 SHUTDOWN_TIMEOUT = 1002
 
+builtin_interfaces/Time stamp
 uint16 state
+builtin_interfaces/Time stamp  # estimation time with a margin required for shutdown
 ```

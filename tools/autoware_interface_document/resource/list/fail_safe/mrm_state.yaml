@@ -1,10 +1,10 @@
 interface:
-  name: /api/fail_safe/mrm/state
-  type: autoware_ad_api_msgs/msg/FailSafeState
+  name: /api/fail_safe/mrm_state
+  type: autoware_ad_api_msgs/msg/MrmState
   method: notification
 
 description: |-
-  Get the fail-safe state. For details, see the [fail-safe](../index.md).
+  Get the MRM state. For details, see the [fail-safe](./index.md).
 
 message:
   - name: state

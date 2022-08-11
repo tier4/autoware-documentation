@@ -711,10 +711,47 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2_4" type="checkbox" id="__nav_3_2_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4">
+          Digital twin simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital twin simulation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Digital twin simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../../../../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
+      <a href="../../../../../../../tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial/" class="md-nav__link">
+        AWSIM simulator setup
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -742,8 +779,6 @@
       
       
       
-        
-          
         
           
         
@@ -860,20 +895,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -963,8 +984,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../../../../../../how-to-guides/creating-maps-for-autoware/" class="md-nav__link">
+        Creating maps for Autoware
       </a>
     </li>
   
@@ -977,8 +998,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
-        How to determine component dependencies
+      <a href="../../../../../../../how-to-guides/determining-component-dependencies/" class="md-nav__link">
+        Determining component dependencies
       </a>
     </li>
   
@@ -991,8 +1012,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../how-to-guides/how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
-        How to integrate Autoware with your vehicle
+      <a href="../../../../../../../how-to-guides/integrating-autoware-with-your-vehicle/" class="md-nav__link">
+        Integrating Autoware with your vehicle
       </a>
     </li>
   
@@ -1005,8 +1026,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../how-to-guides/how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
-        How to integrate Autoware with a differential drive vehicle
+      <a href="../../../../../../../how-to-guides/integrating-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
+        Integrating Autoware with a differential drive vehicle
       </a>
     </li>
   
@@ -1033,8 +1054,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../how-to-guides/sensor-calibration/" class="md-nav__link">
-        How to calibrate your sensors
+      <a href="../../../../../../../how-to-guides/calibrating-your-sensors/" class="md-nav__link">
+        Calibrating your sensors
       </a>
     </li>
   
@@ -3075,7 +3096,7 @@
 <h1 id="apiroutingroute">/api/routing/route<a class="headerlink" href="#apiroutingroute" title="Permanent link">#</a></h1>
 <ul>
 <li>Method: notification</li>
-<li>Type: <a href="../../../../types/autoware_ad_api_msgs/msg/route_optional/">autoware_ad_api_msgs/msg/RouteOptional</a></li>
+<li>Type: <a href="../../../../types/autoware_ad_api_msgs/msg/route/">autoware_ad_api_msgs/msg/Route</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>Get the route with the waypoint segments in lanelet format. It is empty if route is not set.</p>
@@ -3090,8 +3111,13 @@
 </thead>
 <tbody>
 <tr>
-<td>route</td>
-<td>autoware_ad_api_msgs/msg/Route[&lt;=1]</td>
+<td>header</td>
+<td>std_msgs/msg/Header</td>
+<td>header for pose transformation</td>
+</tr>
+<tr>
+<td>body</td>
+<td>autoware_ad_api_msgs/msg/RouteBody[&lt;=1]</td>
 <td>The route in lanelet format</td>
 </tr>
 </tbody>

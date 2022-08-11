@@ -11,11 +11,11 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-architecture/vehicle/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Vehicle component design - Autoware Documentation</title>
+        <title>Vehicle Interface design - Autoware Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vehicle-component-design" class="md-skip">
+        <a href="#vehicle-interface-design" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vehicle component design
+              Vehicle Interface design
             
           </span>
         </div>
@@ -711,10 +711,47 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2_4" type="checkbox" id="__nav_3_2_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4">
+          Digital twin simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital twin simulation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Digital twin simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
+      <a href="../../../tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial/" class="md-nav__link">
+        AWSIM simulator setup
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -742,8 +779,6 @@
       
       
       
-        
-          
         
           
         
@@ -860,20 +895,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -963,8 +984,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../../how-to-guides/creating-maps-for-autoware/" class="md-nav__link">
+        Creating maps for Autoware
       </a>
     </li>
   
@@ -977,8 +998,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
-        How to determine component dependencies
+      <a href="../../../how-to-guides/determining-component-dependencies/" class="md-nav__link">
+        Determining component dependencies
       </a>
     </li>
   
@@ -991,8 +1012,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
-        How to integrate Autoware with your vehicle
+      <a href="../../../how-to-guides/integrating-autoware-with-your-vehicle/" class="md-nav__link">
+        Integrating Autoware with your vehicle
       </a>
     </li>
   
@@ -1005,8 +1026,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
-        How to integrate Autoware with a differential drive vehicle
+      <a href="../../../how-to-guides/integrating-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
+        Integrating Autoware with a differential drive vehicle
       </a>
     </li>
   
@@ -1033,8 +1054,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/sensor-calibration/" class="md-nav__link">
-        How to calibrate your sensors
+      <a href="../../../how-to-guides/calibrating-your-sensors/" class="md-nav__link">
+        Calibrating your sensors
       </a>
     </li>
   
@@ -2942,6 +2963,63 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-requirements" class="md-nav__link">
+    1. Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architecture" class="md-nav__link">
+    2. Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-features" class="md-nav__link">
+    3. Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-interface-and-data-structure" class="md-nav__link">
+    4. Interface and Data Structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-concerns-assumptions-and-limitations" class="md-nav__link">
+    5. Concerns, Assumptions, and Limitations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-examples-of-accuracy-requirements-by-odd" class="md-nav__link">
+    6. Examples of accuracy requirements by ODD
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2958,11 +3036,140 @@
 
 
 
-<h1 id="vehicle-component-design">Vehicle component design<a class="headerlink" href="#vehicle-component-design" title="Permanent link">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Under Construction</p>
-</div>
+<h1 id="vehicle-interface-design">Vehicle Interface design<a class="headerlink" href="#vehicle-interface-design" title="Permanent link">#</a></h1>
+<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">#</a></h2>
+<p>The Vehicle Interface component provides an interface between Autoware and a vehicle that passes control signals to the vehicle’s drive-by-wire system and receives vehicle information that is passed back to Autoware.</p>
+<h2 id="1-requirements">1. Requirements<a class="headerlink" href="#1-requirements" title="Permanent link">#</a></h2>
+<p>Goals:</p>
+<ul>
+<li>The Vehicle Interface component converts Autoware commands to a vehicle-specific format and converts vehicle status in a vehicle-specific format to Autoware messages.</li>
+<li>The interface between Autoware and the Vehicle component is abstracted and independent of hardware.</li>
+<li>The interface is extensible such that additional vehicle-specific commands can be easily added. For example, headlight control.</li>
+</ul>
+<p>Non-goals:</p>
+<ul>
+<li>Accuracy of responses from the vehicle will not be defined, but example accuracy requirements from reference designs are provided as examples.</li>
+<li>Response speed will not be defined.</li>
+</ul>
+<h2 id="2-architecture">2. Architecture<a class="headerlink" href="#2-architecture" title="Permanent link">#</a></h2>
+<p>The Vehicle Interface component consists of the following components:</p>
+<ul>
+<li>A Raw Vehicle Command Converter component that will pass through vehicle commands from the Control component if velocity/acceleration control is supported by the drive-by-wire system. Otherwise, the Control commands will be modified according to the control method (eg: converting a target acceleration from the Control component to a vehicle specific accel/brake pedal value through the use of an acceleration map)</li>
+<li>A Vehicle Interface component (vehicle specific) that acts as an interface between Autoware and a vehicle to communicate control signals and to obtain information about the vehicle (steer output, tyre angle etc)</li>
+</ul>
+<p>Each component contains static nodes of Autoware, while each module can be dynamically loaded and unloaded (corresponding to C++ classes). The mechanism of the Vehicle Interface component is depicted by the following figures:</p>
+<p><img alt="Vehicle Interface overview" src="image/vehicle_interface_architecture.png" /></p>
+<p><img alt="Vehicle Interface overview" src="image/vehicle_interface_overview.png" /></p>
+<h2 id="3-features">3. Features<a class="headerlink" href="#3-features" title="Permanent link">#</a></h2>
+<p>The Vehicle Interface component can provide the following features in functionality and capability:</p>
+<ul>
+<li>
+<p>Basic functions</p>
+<ul>
+<li>Converting Autoware control commands to vehicle specific command</li>
+<li>Converting vehicle specific status information (velocity, steering) to Autoware status message</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Diagnostics<ul>
+<li>List available features</li>
+<li>Provide a warning if the Control component tries to use a feature that is not available in the Vehicle Interface component</li>
+</ul>
+</li>
+</ul>
+<p>Additional functionality and capability features may be added, depending on the vehicle hardware. Some example features are listed below:</p>
+<ul>
+<li>Safety features<ul>
+<li>Disengage autonomous driving via manual intervention.<ul>
+<li>This can be done through the use of an emergency disengage button, or by a safety driver manually turning the steering wheel or pressing the brake</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Optional controls<ul>
+<li>Turn indicator</li>
+<li>Handbrake</li>
+<li>Headlights</li>
+<li>Hazard lights</li>
+<li>Doors</li>
+<li>Horn</li>
+<li>Wipers</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-interface-and-data-structure">4. Interface and Data Structure<a class="headerlink" href="#4-interface-and-data-structure" title="Permanent link">#</a></h2>
+<p>The interface of the Vehicle Interface component for other components running in the same process space to access the functionality and capability of the Vehicle Interface component is defined as follows.</p>
+<p>From Control</p>
+<ul>
+<li>Actuation Command<ul>
+<li>target acceleration, braking, and steering angle</li>
+</ul>
+</li>
+</ul>
+<p>From Planning</p>
+<ul>
+<li>Vehicle Specific Commands (optional and a separate message for each type)<ul>
+<li>Shift</li>
+<li>Door</li>
+<li>Wiper</li>
+<li>etc</li>
+</ul>
+</li>
+</ul>
+<p>From the vehicle</p>
+<ul>
+<li>Vehicle status messages<ul>
+<li>Vehicle-specific format messages for conversion into Autoware-specific format messages<ul>
+<li>Velocity status</li>
+<li>Steering status (optional)</li>
+<li>Shift status (optional)</li>
+<li>Turn signal status (optional)</li>
+<li>Actuation status (optional)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The output interface of the Vehicle Interface component:</p>
+<ul>
+<li>Vehicle control messages to the vehicle<ul>
+<li>Control signals to drive the vehicle</li>
+<li>Depends on the vehicle type/protocol, but should include steering and velocity commands at a minimum</li>
+</ul>
+</li>
+<li>Vehicle status messages to Autoware</li>
+<li>Actuation Status<ul>
+<li>Acceleration, brake, steering status</li>
+</ul>
+</li>
+<li>Vehicle odometry (output to Localization)<ul>
+<li>Vehicle twist information</li>
+</ul>
+</li>
+<li>Control mode<ul>
+<li>Information about whether the vehicle is under autonomous control or manual control</li>
+</ul>
+</li>
+<li>Shift status (optional)<ul>
+<li>Vehicle shift status</li>
+</ul>
+</li>
+<li>Turn signal status (optional)<ul>
+<li>Vehicle turn signal status</li>
+</ul>
+</li>
+</ul>
+<p>The data structure for the internal representation of semantics for the objects and trajectories used in the Vehicle Interface component is defined as follows:</p>
+<h2 id="5-concerns-assumptions-and-limitations">5. Concerns, Assumptions, and Limitations<a class="headerlink" href="#5-concerns-assumptions-and-limitations" title="Permanent link">#</a></h2>
+<p>Concerns</p>
+<ul>
+<li>Architectural trade-offs and scalability</li>
+</ul>
+<p>Assumptions</p>
+<p>-</p>
+<p>Limitations</p>
+<h2 id="6-examples-of-accuracy-requirements-by-odd">6. Examples of accuracy requirements by <abbr title="Operational Design Domain">ODD</abbr><a class="headerlink" href="#6-examples-of-accuracy-requirements-by-odd" title="Permanent link">#</a></h2>
 <!-- prettier-ignore -->
 
               

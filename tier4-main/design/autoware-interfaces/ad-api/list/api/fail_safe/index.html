@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/design/autoware-interfaces/ad-api/list/api/fail_safe/">
       
       <link rel="icon" href="../../../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -711,10 +711,47 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2_4" type="checkbox" id="__nav_3_2_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4">
+          Digital twin simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital twin simulation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Digital twin simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../../../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
+      <a href="../../../../../../tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial/" class="md-nav__link">
+        AWSIM simulator setup
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -742,8 +779,6 @@
       
       
       
-        
-          
         
           
         
@@ -860,20 +895,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -963,8 +984,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../../../../../how-to-guides/creating-maps-for-autoware/" class="md-nav__link">
+        Creating maps for Autoware
       </a>
     </li>
   
@@ -977,8 +998,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
-        How to determine component dependencies
+      <a href="../../../../../../how-to-guides/determining-component-dependencies/" class="md-nav__link">
+        Determining component dependencies
       </a>
     </li>
   
@@ -991,8 +1012,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../how-to-guides/how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
-        How to integrate Autoware with your vehicle
+      <a href="../../../../../../how-to-guides/integrating-autoware-with-your-vehicle/" class="md-nav__link">
+        Integrating Autoware with your vehicle
       </a>
     </li>
   
@@ -1005,8 +1026,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../how-to-guides/how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
-        How to integrate Autoware with a differential drive vehicle
+      <a href="../../../../../../how-to-guides/integrating-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
+        Integrating Autoware with a differential drive vehicle
       </a>
     </li>
   
@@ -1033,8 +1054,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../how-to-guides/sensor-calibration/" class="md-nav__link">
-        How to calibrate your sensors
+      <a href="../../../../../../how-to-guides/calibrating-your-sensors/" class="md-nav__link">
+        Calibrating your sensors
       </a>
     </li>
   
@@ -2964,6 +2985,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    Behavior
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2984,13 +3012,20 @@
 
 <h1 id="fail-safe-api">Fail-safe API<a class="headerlink" href="#fail-safe-api" title="Permanent link">#</a></h1>
 <ul>
-<li><a href="../../../list/api/fail_safe/state">/api/fail_safe/state</a></li>
+<li><a href="../../../list/api/fail_safe/mrm_state">/api/fail_safe/mrm_state</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
 <p>This API manages the behavior related to the abnormality of the vehicle.
-Provides the state of Request to Intervene (RTI) and Minimum Risk Maneuver (MRM).</p>
+It provides the state of Request to Intervene (RTI), Minimal Risk Maneuver (MRM) and Minimal Risk Condition (MRC).
+As shown below, Autoware has the gate to switch between the command during normal operation and the command during abnormal operation.
+For safety, Autoware switches the operation to MRM when an abnormality is detected.
+Since the required behavior differs depending on the situation, MRM is implemented in various places as a specific mode in a normal module or as an independent module.
+The fail-safe module selects the behavior of MRM according to the abnormality and switches the gate output to that command.</p>
+<p><img alt="fail-safe-architecture" src="architecture.drawio.svg" /></p>
 <h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
-<p><img alt="fail-safe-state" src="state.drawio.svg" /></p>
+<p>The MRM state indicates whether MRM is operating. This state also provides success or failure.
+Generally, MRM will switch to another behavior if it fails.</p>
+<p><img alt="mrm-state" src="mrm-state.drawio.svg" /></p>
 <table>
 <thead>
 <tr>
@@ -3000,24 +3035,46 @@ Provides the state of Request to Intervene (RTI) and Minimum Risk Maneuver (MRM)
 </thead>
 <tbody>
 <tr>
-<td>NORMAL</td>
-<td>The vehicle is normal.</td>
+<td>NONE</td>
+<td>MRM is not operating.</td>
 </tr>
 <tr>
-<td>RTI_OPERATING</td>
-<td>The vehicle is normal, but the risk is high.</td>
+<td>OPERATING</td>
+<td>MRM is operating because an abnormality has been detected.</td>
 </tr>
 <tr>
-<td>MRM_OPERATING</td>
-<td>MRM is being executed because an error has been detected.</td>
-</tr>
-<tr>
-<td>MRM_SUCCEEDED</td>
+<td>SUCCEEDED</td>
 <td>MRM succeeded. The vehicle is in a safe condition.</td>
 </tr>
 <tr>
-<td>MRM_FAILED</td>
+<td>FAILED</td>
 <td>MRM failed. The vehicle is still in an unsafe condition.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">#</a></h2>
+<p>There is a dependency between MRM behaviors. For example, it switches from a comfortable stop to a emergency stop, but not the other way around.
+This is service dependent. Autoware supports the following transitions by default.</p>
+<p><img alt="mrm-behavior" src="mrm-behavior.drawio.svg" /></p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NONE</td>
+<td>MRM is not operating or is operating but no special behavior is required.</td>
+</tr>
+<tr>
+<td>COMFORTABLE_STOP</td>
+<td>The vehicle will stop quickly with a comfortable deceleration.</td>
+</tr>
+<tr>
+<td>EMERGENCY_STOP</td>
+<td>The vehicle will stop immediately with as much deceleration as possible.</td>
 </tr>
 </tbody>
 </table>
@@ -3058,13 +3115,13 @@ Provides the state of Request to Intervene (RTI) and Minimum Risk Maneuver (MRM)
       
       
         
-        <a href="state/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/fail_safe/state" rel="next">
+        <a href="mrm_state/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/fail_safe/mrm_state" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              /api/fail_safe/state
+              /api/fail_safe/mrm_state
             </div>
           </div>
           <div class="md-footer__button md-icon">

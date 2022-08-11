@@ -1,9 +1,12 @@
 # List of Autoware AD API
 
 - [Interface](./api/interface/index.md)
-- [Launcher](./api/launcher/index.md)
 - [Operation Mode](./api/operation_mode/index.md)
 - [Routing](./api/routing/index.md)
 - [Localization](./api/localization/index.md)
 - [Planning](./api/planning/index.md)
 - [Fail-safe](./api/fail_safe/index.md)
+
+検討中
+
+- [Launcher](./api/launcher/index.md)

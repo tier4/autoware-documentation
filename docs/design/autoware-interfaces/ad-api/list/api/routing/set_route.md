@@ -12,7 +12,6 @@ Set the route with the waypoint segments in lanelet format. If start pose is not
 | Name     | Type                                    | Description                         |
 | -------- | --------------------------------------- | ----------------------------------- |
 | header   | std_msgs/msg/Header                     | header for pose transformation      |
-| start    | geometry_msgs/msg/Pose[<=1]             | start pose                          |
 | goal     | geometry_msgs/msg/Pose                  | goal pose                           |
 | segments | autoware_ad_api_msgs/msg/RouteSegment[] | waypoint segments in lanelet format |
 

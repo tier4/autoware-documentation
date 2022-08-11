@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/how-to-guides/how-to-create-maps-for-autoware/">
+        <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/how-to-guides/integrating-autoware-with-a-diff-drive-vehicle/">
       
       <link rel="icon" href="../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>How to create maps for Autoware - Autoware Documentation</title>
+        <title>Integrating Autoware with a differential drive vehicle - Autoware Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-create-maps-for-autoware" class="md-skip">
+        <a href="#integrating-autoware-with-a-differential-drive-vehicle" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to create maps for Autoware
+              Integrating Autoware with a differential drive vehicle
             
           </span>
         </div>
@@ -711,10 +711,47 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2_4" type="checkbox" id="__nav_3_2_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4">
+          Digital twin simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital twin simulation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Digital twin simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
+      <a href="../../tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial/" class="md-nav__link">
+        AWSIM simulator setup
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -742,8 +779,6 @@
       
       
       
-        
-          
         
           
         
@@ -860,20 +895,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -963,6 +984,48 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../creating-maps-for-autoware/" class="md-nav__link">
+        Creating maps for Autoware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../determining-component-dependencies/" class="md-nav__link">
+        Determining component dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrating-autoware-with-your-vehicle/" class="md-nav__link">
+        Integrating Autoware with your vehicle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -975,12 +1038,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          How to create maps for Autoware
+          Integrating Autoware with a differential drive vehicle
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        How to create maps for Autoware
+        Integrating Autoware with a differential drive vehicle
       </a>
       
         
@@ -999,23 +1062,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#point-cloud-maps" class="md-nav__link">
-    Point cloud maps
+  <a href="#1-introduction" class="md-nav__link">
+    1. Introduction
   </a>
   
-    <nav class="md-nav" aria-label="Point cloud maps">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-procedure" class="md-nav__link">
+    2. Procedure
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Procedure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#point-cloud-map-specifications" class="md-nav__link">
-    Point cloud map specifications
+  <a href="#21-create-a-vehicle_interface-package-for-differential-drive-vehicle" class="md-nav__link">
+    2.1 Create a vehicle_interface package for differential drive vehicle
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-a-point-cloud-map" class="md-nav__link">
-    Creating a point cloud map
+  <a href="#22-set-an-appropriate-wheel_base" class="md-nav__link">
+    2.2 Set an appropriate wheel_base
   </a>
   
 </li>
@@ -1026,36 +1096,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vector-maps" class="md-nav__link">
-    Vector maps
+  <a href="#3-known-issues" class="md-nav__link">
+    3. Known issues
   </a>
   
-    <nav class="md-nav" aria-label="Vector maps">
+    <nav class="md-nav" aria-label="3. Known issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vector-map-specifications" class="md-nav__link">
-    Vector map specifications
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-vector-map" class="md-nav__link">
-    Creating a vector map
+  <a href="#motion-model-incompatibility" class="md-nav__link">
+    Motion model incompatibility
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autoware-compatible-map-providers" class="md-nav__link">
-    Autoware-compatible map providers
-  </a>
   
 </li>
       
@@ -1063,48 +1119,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-determine-component-dependencies/" class="md-nav__link">
-        How to determine component dependencies
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
-        How to integrate Autoware with your vehicle
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
-        How to integrate Autoware with a differential drive vehicle
-      </a>
     </li>
   
 
@@ -1130,8 +1144,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../sensor-calibration/" class="md-nav__link">
-        How to calibrate your sensors
+      <a href="../calibrating-your-sensors/" class="md-nav__link">
+        Calibrating your sensors
       </a>
     </li>
   
@@ -3040,23 +3054,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#point-cloud-maps" class="md-nav__link">
-    Point cloud maps
+  <a href="#1-introduction" class="md-nav__link">
+    1. Introduction
   </a>
   
-    <nav class="md-nav" aria-label="Point cloud maps">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-procedure" class="md-nav__link">
+    2. Procedure
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Procedure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#point-cloud-map-specifications" class="md-nav__link">
-    Point cloud map specifications
+  <a href="#21-create-a-vehicle_interface-package-for-differential-drive-vehicle" class="md-nav__link">
+    2.1 Create a vehicle_interface package for differential drive vehicle
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-a-point-cloud-map" class="md-nav__link">
-    Creating a point cloud map
+  <a href="#22-set-an-appropriate-wheel_base" class="md-nav__link">
+    2.2 Set an appropriate wheel_base
   </a>
   
 </li>
@@ -3067,36 +3088,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vector-maps" class="md-nav__link">
-    Vector maps
+  <a href="#3-known-issues" class="md-nav__link">
+    3. Known issues
   </a>
   
-    <nav class="md-nav" aria-label="Vector maps">
+    <nav class="md-nav" aria-label="3. Known issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vector-map-specifications" class="md-nav__link">
-    Vector map specifications
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-vector-map" class="md-nav__link">
-    Creating a vector map
+  <a href="#motion-model-incompatibility" class="md-nav__link">
+    Motion model incompatibility
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autoware-compatible-map-providers" class="md-nav__link">
-    Autoware-compatible map providers
-  </a>
   
 </li>
       
@@ -3112,95 +3119,64 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/how-to-guides/how-to-create-maps-for-autoware.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/how-to-guides/integrating-autoware-with-a-diff-drive-vehicle.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="how-to-create-maps-for-autoware">How to create maps for Autoware<a class="headerlink" href="#how-to-create-maps-for-autoware" title="Permanent link">#</a></h1>
-<p>Autoware relies on high-definition point cloud maps and vector maps of the driving environment to perform various tasks such as localization, route planning, traffic light detection, and predicting the trajectories of pedestrians and other vehicles.</p>
-<p>The specifications for point cloud and vector maps required by Autoware are given below, along with examples of both open-source and proprietary software that you can use to create them.</p>
-<h2 id="point-cloud-maps">Point cloud maps<a class="headerlink" href="#point-cloud-maps" title="Permanent link">#</a></h2>
-<p>A 3D point cloud map is primarily used for LiDAR-based localization in Autoware. In order to determine the current position and orientation of the vehicle, a live scan captured from one or more LiDAR units is matched against a pre-generated 3D point cloud map. Therefore, an accurate point cloud map is crucial for good localization results.</p>
-<h3 id="point-cloud-map-specifications">Point cloud map specifications<a class="headerlink" href="#point-cloud-map-specifications" title="Permanent link">#</a></h3>
+<h1 id="integrating-autoware-with-a-differential-drive-vehicle">Integrating Autoware with a differential drive vehicle<a class="headerlink" href="#integrating-autoware-with-a-differential-drive-vehicle" title="Permanent link">#</a></h1>
+<h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">#</a></h2>
+<p>Currently, Autoware assumes that vehicles use an Ackermann kinematic model with Ackermann steering.
+Thus, Autoware adopts the Ackermann command format for the Control module's output (see <a href="http://docs.ros.org/en/api/ackermann_msgs/html/msg/AckermannDrive.html">the AckermannDrive <abbr title="Robot Operating System">ROS</abbr> message definition</a> for an overview of Ackermann commands, and <a href="https://gitlab.com/autowarefoundation/autoware.auto/autoware_auto_msgs/-/blob/master/autoware_auto_control_msgs/msg/AckermannControlCommand.idl">the AckermannControlCommands struct</a> used in Autoware for more details).</p>
+<p>However, it is possible to integrate Autoware with a vehicle that follows a differential drive kinematic model, as commonly used by small mobile robots.</p>
+<h2 id="2-procedure">2. Procedure<a class="headerlink" href="#2-procedure" title="Permanent link">#</a></h2>
+<p>One simple way of using Autoware with a differential drive vehicle is to create a <code>vehicle_interface</code> package that translates Ackermann commands to differential drive commands.
+Here are two points that you need to consider:</p>
 <ul>
-<li>It must cover the entire operational area of the vehicle and should include an additional buffer zone of at least 200 m in all directions.</li>
-<li>It must be saved using the <a href="https://pointclouds.org/documentation/tutorials/pcd_file_format.html"><abbr title="Point Cloud Data">PCD</abbr> (Point Cloud Data) file format</a>, but can be a single <abbr title="Point Cloud Data">PCD</abbr> file or divided into multiple <abbr title="Point Cloud Data">PCD</abbr> files.</li>
-<li>Each point in the map must contain X, Y, and Z coordinates.</li>
-<li>An intensity or RGB value for each point may be optionally included.</li>
-<li>Its file size must be smaller than 1 GB, <a href="https://github.com/ros/ros_comm/issues/902">as per the current <abbr title="Robot Operating System">ROS</abbr> message size limit</a>.</li>
-<li>Its resolution should be at least 0.2 m to yield reliable localization results.</li>
-<li>It can be in either local or global coordinates, but must be in global coordinates (georeferenced) to use <abbr title="Global Navigation Satellite System">GNSS</abbr> data for localization.</li>
+<li>Create <code>vehicle_interface</code> package for differential drive vehicle</li>
+<li>Set an appropriate <code>wheel_base</code></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Three global coordinate systems are supported by Autoware, including <a href="https://en.wikipedia.org/wiki/Military_Grid_Reference_System">Military Grid Reference System (MGRS)</a>, <a href="https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system">Universal Transverse Mercator (UTM)</a>, and <a href="https://ja.wikipedia.org/wiki/%E5%B9%B3%E9%9D%A2%E7%9B%B4%E8%A7%92%E5%BA%A7%E6%A8%99%E7%B3%BB">Japan Rectangular Coordinate System</a>.
-However, MGRS is a preferred coordinate system for georeferenced maps.
-In a map with MGRS coordinate system, the X and Y coordinates of each point represent the point's location within the 100,000-meter square, while the Z coordinate represents the point's elevation.</p>
+<h3 id="21-create-a-vehicle_interface-package-for-differential-drive-vehicle">2.1 Create a <code>vehicle_interface</code> package for differential drive vehicle<a class="headerlink" href="#21-create-a-vehicle_interface-package-for-differential-drive-vehicle" title="Permanent link">#</a></h3>
+<p>An Ackermann command in Autoware consists of two main control inputs:</p>
+<ul>
+<li>steering angle (<span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>)</li>
+<li>velocity (<span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>)</li>
+</ul>
+<p>Conversely, a typical differential drive command consists of the following inputs:</p>
+<ul>
+<li>left wheel velocity (<span class="arithmatex"><span class="MathJax_Preview">v_l</span><script type="math/tex">v_l</script></span>)</li>
+<li>right wheel velocity (<span class="arithmatex"><span class="MathJax_Preview">v_r</span><script type="math/tex">v_r</script></span>)</li>
+</ul>
+<p>So, one way in which an Ackermann command can be converted to a differential drive command is by using the following equations:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+v_l = v - \frac{l\omega}{2},
+v_r = v + \frac{l\omega}{2}
 </div>
-<h3 id="creating-a-point-cloud-map">Creating a point cloud map<a class="headerlink" href="#creating-a-point-cloud-map" title="Permanent link">#</a></h3>
-<p>Traditionally, a Mobile Mapping System (<abbr title="Mobile Mapping System">MMS</abbr>) is used in order to create highly accurate large-scale point cloud maps. However, since a <abbr title="Mobile Mapping System">MMS</abbr> requires high-end sensors for precise positioning, its operational cost can be very expensive and may not be suitable for a relatively small driving environment. Alternatively, a Simultaneous Localization And Mapping (<abbr title="Simultaneous Localization And Mapping">SLAM</abbr>) algorithm can be used to create a point cloud map from recorded LiDAR scans.</p>
-<p>Commonly used open-source <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations are <a href="https://github.com/rsasaki0109/lidarslam_ros2">lidarslam-ros2</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>*) and <a href="https://github.com/TixiaoShan/LIO-SAM/tree/ros2">LIO-SAM</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>, <abbr title="Global Navigation Satellite System">GNSS</abbr>). The required sensor data for each algorithm is specified in the parentheses, where an asterisk (*) indicates that such sensor data is optional. For supported LiDAR models, please check the Github repository of each algorithm. While these <abbr title="Robot Operating System">ROS</abbr> 2-based <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations can be easily installed and used directly on the same machine that runs Autoware, it is important to note that they may not be as well-tested or as mature as <abbr title="Robot Operating System">ROS</abbr> 1-based alternatives.</p>
-<p>The notable open-source <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations that are based on <abbr title="Robot Operating System">ROS</abbr> 1 include <a href="https://github.com/koide3/hdl_graph_slam">hdl-graph-slam</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>*, <abbr title="Global Navigation Satellite System">GNSS</abbr>*), <a href="https://github.com/facontidavide/LeGO-LOAM-BOR">LeGO-LOAM</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>*), <a href="https://github.com/RobustFieldAutonomyLab/LeGO-LOAM">LeGO-LOAM-BOR</a> (LiDAR), and <a href="https://github.com/TixiaoShan/LIO-SAM">LIO-SAM</a> (LiDAR, <abbr title="Inertial Measurement Unit">IMU</abbr>, <abbr title="Global Navigation Satellite System">GNSS</abbr>).
-Most of these algorithms already have a built-in loop-closure and pose graph optimization. However, if the built-in, automatic loop-closure fails or does not work correctly, you can use <a href="https://github.com/SMRT-AIST/interactive_slam">Interactive <abbr title="Simultaneous Localization And Mapping">SLAM</abbr></a> to adjust and optimize a pose graph manually.</p>
-<p>Since Autoware is based on <abbr title="Robot Operating System">ROS</abbr> 2, it could be problematic if you want to install <abbr title="Robot Operating System">ROS</abbr> 1-based <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations on the same machine. To avoid this problem, you can use <a href="https://www.docker.com/">Docker</a> or simply install them on a different machine. Another problem is the ROSBAG version; these <abbr title="Simultaneous Localization And Mapping">SLAM</abbr> implementations require ROSBAG 1 instead of ROSBAG 2 used by Autoware. For the ROSBAG version problem, you may use this <a href="https://gitlab.com/MapIV/rosbags">stand-alone converter</a> to convert a ROSBAG 2 file to a ROSBAG 1 file and vice versa.</p>
-<p>If you prefer proprietary software that is easy to use, you can try a fully automatic mapping tool from <a href="https://www.map4.jp/">MAP IV, Inc.</a>, <a href="https://www.map4.jp/map4_engine_en"><em>MapIV Engine</em></a>. They currently provide a trial license for Autoware users free of charge.</p>
-<h2 id="vector-maps">Vector maps<a class="headerlink" href="#vector-maps" title="Permanent link">#</a></h2>
-<p>A vector map contains highly accurate information about a road network, lane geometry, and traffic lights. It is required for route planning, traffic light detection, and predicting the trajectories of other vehicles and pedestrians.</p>
-<h3 id="vector-map-specifications">Vector map specifications<a class="headerlink" href="#vector-map-specifications" title="Permanent link">#</a></h3>
-<ul>
-<li>It must cover the entire operational area of the vehicle and should include an additional buffer zone of at least 200 m in all directions.</li>
-<li>It must be in <a href="https://github.com/fzi-forschungszentrum-informatik/Lanelet2">Lanelet2</a> format, with <a href="https://github.com/autowarefoundation/autoware.universe/blob/main/map/lanelet2_extension/docs/lanelet2_format_extension.md">additional modifications required by Autoware</a>.</li>
-<li>It must contain the shape and position information of lanes, traffic lights, stop lines, crosswalks, parking spaces, and parking lots.</li>
-<li>Each lanelet in the map must contain information regarding its right of way, speed limit, traffic direction, associated traffic lights, stop lines, and traffic signs.</li>
-<li>Except at the beginning or end of a road, each lanelet in the map must be correctly connected to its predecessor, successors, left neighbor, and right neighbor.</li>
-</ul>
-<h3 id="creating-a-vector-map">Creating a vector map<a class="headerlink" href="#creating-a-vector-map" title="Permanent link">#</a></h3>
-<p>The easiest way to create an Autoware-compatible vector map is to use <a href="https://tools.tier4.jp/feature/vector_map_builder_ll2/">Vector Map Builder</a>, a free web-based tool provided by <a href="https://www.tier4.jp/">TIER IV, Inc.</a>.
-Vector Map Builder allows you to create lanes and add additional regulatory elements such as stop signs or traffic lights using a point cloud map as a reference.</p>
-<p>For open-source software options, <a href="https://github.com/autocore-ai/MapToolbox">MapToolbox</a> is a plugin for <a href="https://unity.com/">Unity</a> specifically designed to create Lanelet2 maps for Autoware.
-Although <a href="https://josm.openstreetmap.de/">JOSM</a> is another open-source tool that can be used to create Lanelet2 maps, be aware that a number of modifications must be done manually to make the map compatible with Autoware. This process can be tedious and time-consuming, so the use of JOSM is not recommended.</p>
-<h2 id="autoware-compatible-map-providers">Autoware-compatible map providers<a class="headerlink" href="#autoware-compatible-map-providers" title="Permanent link">#</a></h2>
-<p>If it is not possible to create HD maps yourself, you can use a mapping service from the following Autoware-compatible map providers instead:</p>
-<ul>
-<li><a href="https://www.map4.jp/">MAP IV, Inc.</a></li>
-<li><a href="https://www.aisantec.co.jp/">AISAN TECHNOLOGY CO., LTD.</a></li>
-<li><a href="https://www.tomtom.com/">TomTom</a></li>
-</ul>
-<p>The table below shows each company's mapping technology and the types of HD maps they support.</p>
-<table>
-<thead>
-<tr>
-<th><strong>Company</strong></th>
-<th><strong>Mapping technology</strong></th>
-<th><strong>Available maps</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://www.map4.jp/">MAP IV, Inc.</a></td>
-<td><abbr title="Simultaneous Localization And Mapping">SLAM</abbr></td>
-<td>Point cloud and vector maps</td>
-</tr>
-<tr>
-<td><a href="https://www.aisantec.co.jp/">AISAN TECHNOLOGY CO., LTD.</a></td>
-<td><abbr title="Mobile Mapping System">MMS</abbr></td>
-<td>Point cloud and vector maps</td>
-</tr>
-<tr>
-<td><a href="https://www.tomtom.com/">TomTom</a></td>
-<td><abbr title="Mobile Mapping System">MMS</abbr></td>
-<td>Vector map*</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Maps provided by TomTom use their proprietary AutoStream format, not Lanelet2.
-The open-source <a href="https://github.com/tomtom-international/AutoStreamForAutoware">AutoStreamForAutoware tool</a> can be used to convert an AutoStream map to a Lanelet2 map.
-However, the converter is still in its early stages and has some <a href="https://github.com/tomtom-international/AutoStreamForAutoware/blob/main/docs/known-issues.md">known limitations</a>.</p>
+<script type="math/tex; mode=display">
+v_l = v - \frac{l\omega}{2},
+v_r = v + \frac{l\omega}{2}
+</script>
 </div>
+<p>where <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> denotes wheel tread.</p>
+<p>For information about other factors that need to be considered when creating a <code>vehicle_interface</code> package, refer to the <a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/components/vehicle-interface/"><code>vehicle_interface</code> component page</a>.</p>
+<h3 id="22-set-an-appropriate-wheel_base">2.2 Set an appropriate <code>wheel_base</code><a class="headerlink" href="#22-set-an-appropriate-wheel_base" title="Permanent link">#</a></h3>
+<p>A differential drive robot does not necessarily have front and rear wheels, which means that the wheelbase (the horizontal distance between the axles of the front and rear wheels) cannot be defined. However, Autoware expects <code>wheel_base</code> to be set in <code>vehicle_info.param.yaml</code> with some value.
+Thus, you need to set a pseudo value for <code>wheel_base</code>.</p>
+<p>The appropriate pseudo value for <code>wheel_base</code> depends on the size of your vehicle.
+Setting it to be the same value as <code>wheel_tread</code> is one possible choice.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>If the <code>wheel_base</code> value is set too small then the vehicle may behave unexpectedly. For example, the vehicle may drive beyond the bounds of a calculated path.</li>
+<li>Conversely, if <code>wheel_base</code> is set too large, the vehicle's range of motion will be restricted. The reason being that Autoware's Planning module will calculate an overly conservative trajectory based on the assumed vehicle length.</li>
+</ul>
+</div>
+<h2 id="3-known-issues">3. Known issues<a class="headerlink" href="#3-known-issues" title="Permanent link">#</a></h2>
+<h3 id="motion-model-incompatibility">Motion model incompatibility<a class="headerlink" href="#motion-model-incompatibility" title="Permanent link">#</a></h3>
+<p>Since Autoware assumes that vehicles use a steering system, it is not possible to take advantage of the flexibility of a differential drive system's motion model.</p>
+<p>For example, when planning a parking maneuver with the <code>freespace_planner</code> module, Autoware may drive the differential drive vehicle forward and backward, even if the vehicle can be parked with a simpler trajectory that uses pure rotational movement.</p>
 <!-- prettier-ignore -->
 
               
@@ -3222,7 +3198,7 @@ However, the converter is still in its early stages and has some <a href="https:
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../advanced-usage-of-colcon/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Advanced usage of colcon" rel="prev">
+        <a href="../integrating-autoware-with-your-vehicle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Integrating Autoware with your vehicle" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3231,20 +3207,20 @@ However, the converter is still in its early stages and has some <a href="https:
               <span class="md-footer__direction">
                 Previous
               </span>
-              Advanced usage of colcon
+              Integrating Autoware with your vehicle
             </div>
           </div>
         </a>
       
       
         
-        <a href="../how-to-determine-component-dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: How to determine component dependencies" rel="next">
+        <a href="../running-autoware-without-cuda/" class="md-footer__link md-footer__link--next" aria-label="Next: Running Autoware without CUDA" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              How to determine component dependencies
+              Running Autoware without CUDA
             </div>
           </div>
           <div class="md-footer__button md-icon">

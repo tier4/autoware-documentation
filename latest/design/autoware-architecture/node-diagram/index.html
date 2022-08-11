@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/design/autoware-architecture/node-diagram/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -711,10 +711,47 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2_4" type="checkbox" id="__nav_3_2_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4">
+          Digital twin simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital twin simulation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Digital twin simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../tutorials/ad-hoc-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
+      <a href="../../../tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial/" class="md-nav__link">
+        AWSIM simulator setup
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -742,8 +779,6 @@
       
       
       
-        
-          
         
           
         
@@ -860,20 +895,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/scenario-simulation/digital-twin-simulation/" class="md-nav__link">
-        Digital twin simulation
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -963,8 +984,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-create-maps-for-autoware/" class="md-nav__link">
-        How to create maps for Autoware
+      <a href="../../../how-to-guides/creating-maps-for-autoware/" class="md-nav__link">
+        Creating maps for Autoware
       </a>
     </li>
   
@@ -977,8 +998,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-determine-component-dependencies/" class="md-nav__link">
-        How to determine component dependencies
+      <a href="../../../how-to-guides/determining-component-dependencies/" class="md-nav__link">
+        Determining component dependencies
       </a>
     </li>
   
@@ -991,8 +1012,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-integrate-autoware-with-your-vehicle/" class="md-nav__link">
-        How to integrate Autoware with your vehicle
+      <a href="../../../how-to-guides/integrating-autoware-with-your-vehicle/" class="md-nav__link">
+        Integrating Autoware with your vehicle
       </a>
     </li>
   
@@ -1005,8 +1026,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/how-to-integrate-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
-        How to integrate Autoware with a differential drive vehicle
+      <a href="../../../how-to-guides/integrating-autoware-with-a-diff-drive-vehicle/" class="md-nav__link">
+        Integrating Autoware with a differential drive vehicle
       </a>
     </li>
   
@@ -1033,8 +1054,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to-guides/sensor-calibration/" class="md-nav__link">
-        How to calibrate your sensors
+      <a href="../../../how-to-guides/calibrating-your-sensors/" class="md-nav__link">
+        Calibrating your sensors
       </a>
     </li>
   
@@ -2942,6 +2963,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#autoware-core" class="md-nav__link">
+    Autoware Core
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoware-universe" class="md-nav__link">
+    Autoware Universe
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2959,10 +3002,14 @@
 
 
 <h1 id="node-diagram">Node diagram<a class="headerlink" href="#node-diagram" title="Permanent link">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Under Construction</p>
-</div>
+<p>This page depicts the node diagram designs for Autoware Core/Universe architecture.</p>
+<h2 id="autoware-core">Autoware Core<a class="headerlink" href="#autoware-core" title="Permanent link">#</a></h2>
+<p>TBD.</p>
+<h2 id="autoware-universe">Autoware Universe<a class="headerlink" href="#autoware-universe" title="Permanent link">#</a></h2>
+<p><img alt="Node diagram" src="overall-node-diagram-autoware-universe.drawio.svg" />
+Note that the diagram is for reference. We are planning to update this diagram every release and may have old information between the releases.
+If you wish to check the latest node diagram use rqt_graph after launching the Autoware.
+<a href="https://app.diagrams.net/?lightbox=1#Uhttps%3A%2F%2Fautowarefoundation.github.io%2Fautoware-documentation%2Flatest%2Fdesign%2Fnode-diagram%2Foverall-node-diagram-autoware-universe.drawio.svg">Open in draw.io for fullscreen</a></p>
 <!-- prettier-ignore -->
 
               
@@ -2984,7 +3031,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../vehicle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Vehicle component design" rel="prev">
+        <a href="../vehicle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Vehicle Interface design" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2993,7 +3040,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Vehicle component design
+              Vehicle Interface design
             </div>
           </div>
         </a>

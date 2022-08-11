@@ -1,11 +1,13 @@
 interface:
   name: /api/routing/route
-  type: autoware_ad_api_msgs/msg/RouteOptional
+  type: autoware_ad_api_msgs/msg/Route
   method: notification
 
 description: |-
   Get the route with the waypoint segments in lanelet format. It is empty if route is not set.
 
 message:
-  - name: route
+  - name: header
+    text: header for pose transformation
+  - name: body
     text: The route in lanelet format

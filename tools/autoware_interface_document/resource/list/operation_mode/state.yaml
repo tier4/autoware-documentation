@@ -7,17 +7,17 @@ description: |-
   Get the operation mode state. For details, see the [operation mode](./index.md).
 
 message:
-  - name: operation_mode
+  - name: mode
     text: The selected command for Autoware control.
   - name: is_autoware_control_enabled
     text: True if vehicle control by Autoware is enabled.
   - name: is_in_transition
     text: True if the operation mode is in transition.
-  - name: change_to_stop
+  - name: is_stop_mode_available
     text: True if the operation mode can be changed to stop.
-  - name: change_to_autonomous
+  - name: is_autonomous_mode_available
     text: True if the operation mode can be changed to autonomous.
-  - name: change_to_local
+  - name: is_local_mode_available
     text: True if the operation mode can be changed to local.
-  - name: change_to_remote
+  - name: is_remote_mode_available
     text: True if the operation mode can be changed to remote.

@@ -9,8 +9,6 @@ description: |-
 request:
   - name: header
     text: header for pose transformation
-  - name: start
-    text: start pose
   - name: goal
     text: goal pose
   - name: segments

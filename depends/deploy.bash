@@ -1,5 +1,5 @@
 #!/bin/bash
 source install/setup.bash
 ros2 run autoware_interface_document generate
-pre-commit run -a
-mike deploy HEAD
+find docs/design/autoware-interfaces/ad-api | xargs pre-commit run --files
+# mike deploy HEAD

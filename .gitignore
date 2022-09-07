@@ -1,3 +1,8 @@
+# ROS
+/build
+/install
+/log
+
 # JetBrains IDEs
 /.idea/
 

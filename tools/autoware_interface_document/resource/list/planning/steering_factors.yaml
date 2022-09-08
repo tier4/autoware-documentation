@@ -1,0 +1,22 @@
+interface:
+  name: /api/planning/steering_factors
+  type: autoware_ad_api_msgs/msg/SteeringFactorArray
+  method: realtime stream
+
+description: |-
+  Get the steering factors, sorted in ascending order of distance.
+  For details, see the [planning](./index.md).
+
+message:
+  - name: factors.pose
+    text: The pose related to the steering factor.
+  - name: factors.distance
+    text: The distance from the vehicle head to the above pose.
+  - name: factors.type
+    text: The type of the steering factor.
+  - name: factors.direction
+    text: The direction of the steering factor.
+  - name: factors.status
+    text: The status of the steering factor.
+  - name: factors.detail
+    text: The additional information of the steering factor.

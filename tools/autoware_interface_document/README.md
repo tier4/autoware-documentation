@@ -1,5 +1,9 @@
 # autoware interface document generator
 
+## Design
+
+![generate](./docs/generate.drawio.svg)
+
 ## Usage
 
 Clone dependent packages.

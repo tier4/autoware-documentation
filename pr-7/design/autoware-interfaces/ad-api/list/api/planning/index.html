@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/pr-7/design/autoware-interfaces/ad-api/list/api/planning/">
       
       <link rel="icon" href="../../../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6b80c2a2.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -42,7 +42,7 @@
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,9 +80,7 @@
     </div>
     
       <div data-md-component="outdated" hidden>
-        <aside class="md-banner md-banner--warning">
-          
-        </aside>
+        
       </div>
     
     
@@ -95,7 +93,7 @@
     <a href="../../../../../.." title="Autoware Documentation" class="md-header__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M39.61 196.8 74.8 96.29C88.27 57.78 124.6 32 165.4 32h181.2c40.8 0 77.1 25.78 90.6 64.29l35.2 100.51c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.33 32-32 32H32c-17.67 0-32-14.3-32-32V256c0-26.7 16.36-49.6 39.61-59.2zm69.49-4.8h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4L109.1 192zM96 256c-17.67 0-32 14.3-32 32s14.33 32 32 32c17.7 0 32-14.3 32-32s-14.3-32-32-32zm320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288c0-17.7-14.3-32-32-32s-32 14.3-32 32 14.3 32 32 32 32-14.3 32-32zm288 32c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -180,7 +178,7 @@
         <a href="https://github.com/tier4/autoware-documentation" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -336,7 +334,7 @@
     <a href="../../../../../.." title="Autoware Documentation" class="md-nav__button md-logo" aria-label="Autoware Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M39.61 196.8 74.8 96.29C88.27 57.78 124.6 32 165.4 32h181.2c40.8 0 77.1 25.78 90.6 64.29l35.2 100.51c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.33 32-32 32H32c-17.67 0-32-14.3-32-32V256c0-26.7 16.36-49.6 39.61-59.2zm69.49-4.8h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4L109.1 192zM96 256c-17.67 0-32 14.3-32 32s14.33 32 32 32c17.7 0 32-14.3 32-32s-14.3-32-32-32zm320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288c0-17.7-14.3-32-32-32s-32 14.3-32 32 14.3 32 32 32 32-14.3 32-32zm288 32c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32z"/></svg>
 
     </a>
     Autoware Documentation
@@ -346,7 +344,7 @@
       <a href="https://github.com/tier4/autoware-documentation" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -3069,50 +3067,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#states" class="md-nav__link">
-    States
+  <a href="#velocity-factors" class="md-nav__link">
+    Velocity factors
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#factors" class="md-nav__link">
-    Factors
+  <a href="#steering-factors" class="md-nav__link">
+    Steering factors
   </a>
-  
-    <nav class="md-nav" aria-label="Factors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#planned-stop" class="md-nav__link">
-    Planned stop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#immediate-stop" class="md-nav__link">
-    Immediate stop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#direction-change" class="md-nav__link">
-    Direction change
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lane-change" class="md-nav__link">
-    Lane change
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3128,182 +3092,162 @@
             <article class="md-content__inner md-typeset">
               
                 
+
   <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/design/autoware-interfaces/ad-api/list/api/planning/index.md" title="Edit this page" class="md-content__button md-icon">
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-
 <h1 id="planning-api">Planning API<a class="headerlink" href="#planning-api" title="Permanent link">#</a></h1>
 <ul>
-<li><a href="allow_start">/api/planning/allow_start</a></li>
-<li><a href="state">/api/planning/state</a></li>
-<li><a href="factors">/api/planning/factors</a></li>
+<li><a href="velocity_factors">/api/planning/velocity_factors</a></li>
+<li><a href="steering_factors">/api/planning/steering_factors</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h2>
-<p>This API manages the behavior that the vehicle plans.
+<p>This API manages the planned behavior of the vehicle.
 Applications can notify the vehicle behavior to the people around and visualize it for operator and passengers.</p>
-<h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">#</a></h2>
-<p>The planning state manages the stop and start of the vehicle.
-Once the vehicle has stopped, the state will be STOPPED.
-After this, when the vehicle tries to start (is still stopped), the state will be STARTING.
-In this state, calling the start API changes the state to MOVING and the vehicle starts.
-This mechanism can add processing such as announcements before the vehicle starts.
-Depending on the configuration, the state may transition directly from STOPPED to MOVING.</p>
-<p><img alt="planning-state" src="docs/state.drawio.svg" /></p>
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>STOPPED</td>
-<td>The vehicle is stopped.</td>
-</tr>
-<tr>
-<td>STARTING</td>
-<td>The vehicle is stopped, but is trying to start.</td>
-</tr>
-<tr>
-<td>MOVING</td>
-<td>The vehicle is moving.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="factors">Factors<a class="headerlink" href="#factors" title="Permanent link">#</a></h2>
-<p>The planning factors is an array of information on the behavior that the vehicle plans.
-Each factor has a type (shown below), pose, distance from the vehicle head to that pose, status, and detailed data depending on its type.
-See the description of each behavior below for pose and status. And see the description of factor types for detailed data.</p>
-<p><img alt="planning-factors" src="docs/factors.drawio.svg" /></p>
+<h2 id="velocity-factors">Velocity factors<a class="headerlink" href="#velocity-factors" title="Permanent link">#</a></h2>
+<p>The velocity factors is an array of information on the behavior that the vehicle stops (or slows down).
+Each factor has a type shown below, pose, distance from the vehicle head to that pose, status, and detailed data depending on its type.
+As the vehicle approaches the stop position, this factor appears with a status of APPROACHING.
+And when the vehicle reaches that position and stops, the status will be STOPPED.
+The pose indicates the stop position or the vehicle head if the stop position cannot be calculated.</p>
+<p><img alt="velocity-factors" src="docs/velocity-factors.drawio.svg" /></p>
 <table>
 <thead>
 <tr>
 <th>Factor Type</th>
-<th>Behavior</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>SURROUNDING_OBSTACLE</td>
-<td>immediate stop</td>
 <td>There are obstacles immediately around the vehicle.</td>
 </tr>
 <tr>
 <td>ROUTE_OBSTACLE</td>
-<td>planned stop</td>
 <td>There are obstacles along the route ahead.</td>
 </tr>
 <tr>
 <td>INTERSECTION</td>
-<td>planned stop</td>
 <td>There are obstacles in other lanes in the path.</td>
 </tr>
 <tr>
 <td>CROSSWALK</td>
-<td>planned stop</td>
 <td>There are obstacles on the crosswalk.</td>
 </tr>
 <tr>
 <td>REAR_CHECK</td>
-<td>planned stop</td>
 <td>There are obstacles behind that would be in a human driver's blind spot.</td>
 </tr>
 <tr>
 <td>USER_DEFINED_DETECTION_AREA</td>
-<td>planned stop</td>
 <td>There are obstacles in the predefined detection area.</td>
 </tr>
 <tr>
 <td>NO_STOPPING_AREA</td>
-<td>planned stop</td>
 <td>There is not enough space beyond the no stopping area.</td>
 </tr>
 <tr>
 <td>STOP_SIGN</td>
-<td>planned stop</td>
 <td>A stop by a stop sign.</td>
 </tr>
 <tr>
 <td>TRAFFIC_SIGNAL</td>
-<td>planned stop</td>
 <td>A stop by a traffic signal.</td>
 </tr>
 <tr>
-<td>V2I_GATE_CONTROL</td>
-<td>planned stop</td>
-<td>A stop by a V2I gate.</td>
+<td>V2I_GATE_CONTROL_ENTER</td>
+<td>A stop by a V2I gate entering.</td>
+</tr>
+<tr>
+<td>V2I_GATE_CONTROL_LEAVE</td>
+<td>A stop by a V2I gate leaving.</td>
 </tr>
 <tr>
 <td>MERGE</td>
-<td>planned stop</td>
 <td>A stop before merging lanes.</td>
 </tr>
 <tr>
 <td>SIDEWALK</td>
-<td>planned stop</td>
 <td>A stop before crossing the sidewalk.</td>
 </tr>
 <tr>
 <td>LANE_CHANGE</td>
-<td>lane change</td>
 <td>A lane change.</td>
 </tr>
 <tr>
-<td>AVOIDANCE1</td>
-<td>lane change</td>
-<td>A lane change to avoid an obstacle in the current lane.</td>
+<td>AVOIDANCE</td>
+<td>A path change to avoid an obstacle in the current lane.</td>
 </tr>
 <tr>
-<td>AVOIDANCE2</td>
-<td>lane change</td>
-<td>A lane change to return to the original lane after avoiding an obstacle.</td>
-</tr>
-<tr>
-<td>DIRECTION_CHANGE</td>
-<td>direction change</td>
-<td>A direction change such as turning left or right.</td>
-</tr>
-<tr>
-<td>EMERGENCY_STOP_OPERATION</td>
-<td>T.B.D.</td>
+<td>EMERGENCY_OPERATION</td>
 <td>A stop by emergency instruction from the operator.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="planned-stop">Planned stop<a class="headerlink" href="#planned-stop" title="Permanent link">#</a></h3>
-<p>The planned stop is a ordinary and predictable stop at the target position.
-As the vehicle approaches the stop position, this factor appears with a status of APPROACHING.
-And when the vehicle reaches that position and stops, the status will be STOPPED.
-The pose always indicates the stop position.</p>
-<p><img alt="planned-stop-factor" src="docs/factors-planned-stop.drawio.svg" /></p>
-<h3 id="immediate-stop">Immediate stop<a class="headerlink" href="#immediate-stop" title="Permanent link">#</a></h3>
-<p>The immediate stop does not have a specified stop position.
-Usually the vehicle stop as soon as possible under the permitted conditions.
-This factor will appear with a status of STOPPING when a stop is needed.
-And when the vehicle stops, the status will be STOPPED.
-The pose indicates the vehicle head or the predicted stop position if possible.</p>
-<p><img alt="immediate-stop-factor" src="docs/factors-immediate-stop.drawio.svg" /></p>
-<h3 id="direction-change">Direction change<a class="headerlink" href="#direction-change" title="Permanent link">#</a></h3>
-<p>The direction change is a maneuver that requires use of turn indicators, such as when turning left or right.
+<h2 id="steering-factors">Steering factors<a class="headerlink" href="#steering-factors" title="Permanent link">#</a></h2>
+<p>The steering factors is an array of information on the maneuver that requires use of turn indicators, such as turning left or right.
+Each factor has a type shown below, pose, distance from the vehicle head to that pose, status, and detailed data depending on its type.
 As the vehicle approaches the position to start steering, this factor appears with a status of APPROACHING.
-And when the vehicle reaches that position, the status will be ACTIVATED.
-The pose indicates the start position when APPROACHING and the end position when ACTIVATED.</p>
-<p><img alt="direction-change-factor" src="docs/factors-direction-change.drawio.svg" /></p>
-<h3 id="lane-change">Lane change<a class="headerlink" href="#lane-change" title="Permanent link">#</a></h3>
-<p>The lane change is basically the same as the direction change.
-But the vehicle will start steering at any position in the range depending on the situation.
+And when the vehicle reaches that position, the status will be TURNING.
+The pose indicates the start position when APPROACHING and the end position when TURNING.</p>
+<p><img alt="steering-factors-1" src="docs/steering-factors-1.drawio.svg" /></p>
+<p>In cases such as lane change and avoidance, the vehicle will start steering at any position in the range depending on the situation.
 As the vehicle approaches the start position of the range, this factor appears with a status of APPROACHING.
-And when the vehicle reaches that position, the status will be ACTIVATING.
-Then, when it is possible to change lanes, the vehicle will start steering and the status will be ACTIVATED.
-If the vehicle reaches the end position of the range, it will stop and the status will be STOPPED.
-The pose indicates the start of the range (A) when APPROACHING and the end of the range (B) when ACTIVATING or STOPPED.
-The position to end steering (C and D) for ACTIVATED depends on the position to start steering.</p>
-<p><img alt="lane-change-factor" src="docs/factors-lane-change.drawio.svg" /></p>
+And when the vehicle reaches that position, the status will be TRYING.
+Then, when it is possible, the vehicle will start steering and the status will be TURNING.
+The pose indicates the start of the range (A) when APPROACHING and the end of the range (B) when TRYING.
+The position to end steering (C to D) for TURNING depends on the position to start steering.</p>
+<p><img alt="steering-factors-2" src="docs/steering-factors-2.drawio.svg" /></p>
+<table>
+<thead>
+<tr>
+<th>Factor Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INTERSECTION</td>
+<td>A turning left or right at an intersection.</td>
+</tr>
+<tr>
+<td>LANE_CHANGE</td>
+<td>A lane change.</td>
+</tr>
+<tr>
+<td>AVOIDANCE_PATH_CHANGE</td>
+<td>A path change to avoid an obstacle in the current lane.</td>
+</tr>
+<tr>
+<td>AVOIDANCE_PATH_RETURN</td>
+<td>A path change to return to the original lane after avoiding an obstacle.</td>
+</tr>
+<tr>
+<td>STATION</td>
+<td>T.B.D. (bus stop)</td>
+</tr>
+<tr>
+<td>PULL_OUT</td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>PULL_OVER</td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>EMERGENCY_OPERATION</td>
+<td>A path change by emergency instruction from the operator.</td>
+</tr>
+</tbody>
+</table>
 <!-- prettier-ignore -->
+
+
+
 
               
             </article>
@@ -3340,13 +3284,13 @@ The position to end steering (C and D) for ACTIVATED depends on the position to 
       
       
         
-        <a href="allow_start/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/planning/allow_start" rel="next">
+        <a href="steering_factors/" class="md-footer__link md-footer__link--next" aria-label="Next: /api/planning/steering_factors" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              /api/planning/allow_start
+              /api/planning/steering_factors
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3380,10 +3324,11 @@ The position to end steering (C and D) for ACTIVATED depends on the position to 
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.2ab50757.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

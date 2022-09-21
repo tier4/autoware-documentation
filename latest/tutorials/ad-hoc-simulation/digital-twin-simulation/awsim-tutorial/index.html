@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial/">
       
       <link rel="icon" href="../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
@@ -19,13 +19,14 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6b80c2a2.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
+
     
     
     
@@ -46,6 +47,7 @@
     
       
 
+    
     
     
   </head>
@@ -154,7 +156,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -283,6 +285,22 @@
     <li class="md-tabs__item">
       <a href="../../../../contributing/" class="md-tabs__link">
         Contributing
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../datasets/" class="md-tabs__link">
+        Datasets
       </a>
     </li>
   
@@ -782,6 +800,13 @@
         <li class="md-nav__item">
   <a href="#hardware-requirements" class="md-nav__link">
     Hardware requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
@@ -2812,6 +2837,8 @@
         
           
         
+          
+        
       
       
         
@@ -2832,6 +2859,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contributing/pull-request-guidelines/ci-checks/" class="md-nav__link">
+        CI checks
+      </a>
+    </li>
+  
+
             
           
             
@@ -2954,6 +2995,50 @@
             
           
         
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../datasets/">Datasets</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Datasets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Datasets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+          
+            
+          
+        
           
         
           
@@ -2967,14 +3052,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../../support/">Support</a>
           
-            <label for="__nav_7">
+            <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Support" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Support
         </label>
@@ -3064,6 +3149,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#preparation" class="md-nav__link">
     Preparation
   </a>
@@ -3119,10 +3211,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
   <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial.md" title="Edit this page" class="md-content__button md-icon">
     
@@ -3133,7 +3226,7 @@
 <h1 id="awsim-simulator-setup">AWSIM simulator setup<a class="headerlink" href="#awsim-simulator-setup" title="Permanent link">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The binary is just a sample one for the initial testing, the official one from TIER IV will be released in October</p>
+<p>The binary is just a sample one for the initial testing, for <abbr title="Autoware Foundation">AWF</abbr> developers only. To get access, please contact Wojciech Jaworski on Autoware Discord. The official binary from TIER IV will be released in October.</p>
 </div>
 <h2 id="hardware-requirements">Hardware requirements<a class="headerlink" href="#hardware-requirements" title="Permanent link">#</a></h2>
 <table>
@@ -3158,6 +3251,84 @@
 </tr>
 </tbody>
 </table>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Nvidia <abbr title="Graphics Processing Unit">GPU</abbr> driver (Skip if already installed)</p>
+<ol>
+<li>Add Nvidia driver to apt repository</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:graphics-drivers/ppa
+</code></pre></div>
+<ol>
+<li>Check supported Nvidia driver versions</li>
+</ol>
+<div class="highlight"><pre><span></span><code>$ ubuntu-drivers <span class="nv">devices</span>
+<span class="o">==</span> /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0 <span class="o">==</span>
+modalias : pci:v000010DEd00001F91sv000017AAsd0000229Fbc03sc00i00
+vendor : NVIDIA Corporation
+driver : nvidia-driver-435 - distro non-free
+driver : nvidia-driver-440-server - distro non-free
+driver : nvidia-driver-418-server - distro non-free
+driver : nvidia-driver-450 - third-party free recommended
+driver : nvidia-driver-440 - distro non-free
+driver : xserver-xorg-video-nouveau - distro free <span class="nb">builtin</span>
+
+<span class="o">==</span> /sys/devices/pci0000:00/0000:00:1d.6/0000:52:00.0 <span class="o">==</span>
+modalias : pci:v00008086d00002723sv00008086sd00000080bc02sc80i00
+vendor : Intel Corporation
+manual_install: True
+driver : backport-iwlwifi-dkms - distro free
+</code></pre></div>
+<ol>
+<li>Install the recommended version</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo apt install nvidia-driver-450
+</code></pre></div>
+<ol>
+<li>reboot and check nvidia-smi</li>
+</ol>
+<div class="highlight"><pre><span></span><code>$ nvidia-smi
+Fri Aug <span class="m">14</span> <span class="m">18</span>:18:17 <span class="m">2020</span>
++-----------------------------------------------------------------------------+
+<span class="p">|</span> NVIDIA-SMI <span class="m">450</span>.57 Driver Version: <span class="m">450</span>.57 CUDA Version: <span class="m">11</span>.0 <span class="p">|</span>
+<span class="p">|</span>-------------------------------+----------------------+----------------------+
+<span class="p">|</span> GPU Name Persistence-M<span class="p">|</span> Bus-Id Disp.A <span class="p">|</span> Volatile Uncorr. ECC <span class="p">|</span>
+<span class="p">|</span> Fan Temp Perf Pwr:Usage/Cap<span class="p">|</span> Memory-Usage <span class="p">|</span> GPU-Util Compute M. <span class="p">|</span>
+<span class="p">|</span> <span class="p">|</span> <span class="p">|</span> MIG M. <span class="p">|</span>
+<span class="p">|</span><span class="o">===============================</span>+<span class="o">======================</span>+<span class="o">======================</span><span class="p">|</span>
+<span class="p">|</span> <span class="m">0</span> GeForce GTX <span class="m">165</span>... Off <span class="p">|</span> <span class="m">00000000</span>:01:00.0 On <span class="p">|</span> N/A <span class="p">|</span>
+<span class="p">|</span> N/A 40C P8 4W / N/A <span class="p">|</span> 540MiB / 3903MiB <span class="p">|</span> <span class="m">1</span>% Default <span class="p">|</span>
+<span class="p">|</span> <span class="p">|</span> <span class="p">|</span> N/A <span class="p">|</span>
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+<span class="p">|</span> Processes: <span class="p">|</span>
+<span class="p">|</span> GPU GI CI PID Type Process name GPU Memory <span class="p">|</span>
+<span class="p">|</span> ID ID Usage <span class="p">|</span>
+<span class="p">|</span><span class="o">=============================================================================</span><span class="p">|</span>
+<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">1264</span> G /usr/lib/xorg/Xorg 26MiB <span class="p">|</span>
+<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">1406</span> G /usr/bin/gnome-shell 47MiB <span class="p">|</span>
+<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">1606</span> G /usr/lib/xorg/Xorg 202MiB <span class="p">|</span>
+<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">1739</span> G /usr/bin/gnome-shell 110MiB <span class="p">|</span>
+<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">3697</span> G ...AAAAAAAAA<span class="o">=</span> --shared-files 149MiB <span class="p">|</span>
++-----------------------------------------------------------------------------+
+</code></pre></div>
+</li>
+<li>
+<p>Vulkun Graphics Library (Skip if already installed)</p>
+<ol>
+<li>Update apt</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo apt update
+</code></pre></div>
+<ol>
+<li>install libvulkan1</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo apt install libvulkan1
+</code></pre></div>
+</li>
+</ol>
 <h2 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">#</a></h2>
 <ul>
 <li>Install Autoware following the <a href="https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/">official guide</a></li>
@@ -3270,6 +3441,10 @@ ros2 topic pub /autoware/engage autoware_auto_vehicle_msgs/msg/Engage <span clas
 <p><img alt="AWSIM with autoware" src="../images/awf_awsim.png" /></p>
 <h3 id="npc-control-optional">NPC Control (optional)<a class="headerlink" href="#npc-control-optional" title="Permanent link">#</a></h3>
 <p>Currently the only supported way to add NPCs to the simulation is using prerecorded rosbags.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>The current NPC control feature will not be supported in the OSS version of AWSIM</p>
 <h4 id="preparation_1">Preparation<a class="headerlink" href="#preparation_1" title="Permanent link">#</a></h4>
 <ul>
 <li>Download and extract <a href="https://drive.google.com/file/d/1fMvjOnz7Z0cGXotwdOAhBfLPYO52ssp0/view?usp=sharing">npc_msgs</a></li>
@@ -3298,10 +3473,12 @@ ros2 topic pub /autoware/engage autoware_auto_vehicle_msgs/msg/Engage <span clas
 
 
 
-              
-            </article>
-            
-          </div>
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -3374,10 +3551,10 @@ ros2 topic pub /autoware/engage autoware_auto_vehicle_msgs/msg/Engage <span clas
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.2ab50757.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.37e9125f.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

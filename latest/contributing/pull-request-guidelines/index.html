@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/contributing/pull-request-guidelines/">
       
       <link rel="icon" href="../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
@@ -19,13 +19,14 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6b80c2a2.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
+
     
     
     
@@ -46,6 +47,7 @@
     
       
 
+    
     
     
   </head>
@@ -154,7 +156,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -283,6 +285,22 @@
     <li class="md-tabs__item">
       <a href="../" class="md-tabs__link md-tabs__link--active">
         Contributing
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../datasets/" class="md-tabs__link">
+        Datasets
       </a>
     </li>
   
@@ -2721,6 +2739,8 @@
         
           
         
+          
+        
       
       
         
@@ -2741,6 +2761,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ci-checks/" class="md-nav__link">
+        CI checks
+      </a>
+    </li>
+  
+
             
           
             
@@ -2863,6 +2897,50 @@
             
           
         
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../datasets/">Datasets</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Datasets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Datasets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+          
+            
+          
+        
           
         
           
@@ -2876,14 +2954,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../support/">Support</a>
           
-            <label for="__nav_7">
+            <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Support" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Support
         </label>
@@ -2973,58 +3051,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ci-checks" class="md-nav__link">
-    CI checks
+  <a href="#pull-request-rules" class="md-nav__link">
+    Pull request rules
   </a>
   
-    <nav class="md-nav" aria-label="CI checks">
+    <nav class="md-nav" aria-label="Pull request rules">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dco" class="md-nav__link">
-    DCO
+  <a href="#use-an-appropriate-pull-request-template-required-non-automated" class="md-nav__link">
+    Use an appropriate pull request template (required, non-automated)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#semantic-pull-request" class="md-nav__link">
-    semantic-pull-request
+  <a href="#set-appropriate-reviewers-after-creating-a-pull-request-required-partially-automated" class="md-nav__link">
+    Set appropriate reviewers after creating a pull request (required, partially automated)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pre-commit" class="md-nav__link">
-    pre-commit
+  <a href="#apply-conventional-commits-to-the-pull-request-title-required-automated" class="md-nav__link">
+    Apply Conventional Commits to the pull request title (required, automated)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#spell-check-differential" class="md-nav__link">
-    spell-check-differential
+  <a href="#add-the-related-component-names-to-the-scope-of-conventional-commits-advisory-non-automated" class="md-nav__link">
+    Add the related component names to the scope of Conventional Commits (advisory, non-automated)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-and-test-differential" class="md-nav__link">
-    build-and-test-differential
+  <a href="#keep-a-pull-request-small-advisory-non-automated" class="md-nav__link">
+    Keep a pull request small (advisory, non-automated)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#build-and-test-differential-self-hosted" class="md-nav__link">
-    build-and-test-differential-self-hosted
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deploy-docs" class="md-nav__link">
-    deploy-docs
+  <a href="#remind-reviewers-if-there-is-no-response-for-more-than-a-week-advisory-non-automated" class="md-nav__link">
+    Remind reviewers if there is no response for more than a week (advisory, non-automated)
   </a>
   
 </li>
@@ -3042,10 +3113,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
   <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/contributing/pull-request-guidelines/index.md" title="Edit this page" class="md-content__button md-icon">
     
@@ -3056,128 +3128,188 @@
 <h1 id="pull-request-guidelines">Pull request guidelines<a class="headerlink" href="#pull-request-guidelines" title="Permanent link">#</a></h1>
 <h2 id="general-pull-request-workflow">General pull request workflow<a class="headerlink" href="#general-pull-request-workflow" title="Permanent link">#</a></h2>
 <p>Autoware uses the fork-and-pull model.
-For the detailed explanation of the model, refer to <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests">GitHub Docs</a>.</p>
-<p>The following is a general example of the pull request workflow.</p>
+For more details about the model, refer to <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests">GitHub Docs</a>.</p>
+<p>The following is a general example of the pull request workflow based on the fork-and-pull model.
+Use this workflow as a reference when you contribute to Autoware.</p>
 <ol>
-<li>Create a fork. (for the first time only)</li>
 <li>Create an issue.<ul>
-<li>Discuss the approach to the issue with maintainers.</li>
+<li>Discuss the approaches to the issue with maintainers.</li>
+<li>Confirm the <a href="../../support/support-guidelines/">support guidelines</a> before creating an issue.</li>
+<li>Follow the <a href="../discussion-guidelines/">discussion guidelines</a> when you discuss with other contributors.</li>
 </ul>
 </li>
-<li>Write code in the agreed approach.<ul>
-<li>Write the tests and documentation if necessary.</li>
-<li>Follow the guidelines when you write code, tests, and documentation.<ul>
-<li><a href="../coding-guidelines/">Coding guidelines</a></li>
-<li><a href="../testing-guidelines/">Testing guidelines</a></li>
-<li><a href="../documentation-guidelines/">Documentation guidelines</a></li>
-</ul>
-</li>
-<li>Follow the <a href="commit-guidelines/">Commit guidelines</a> when commit your change.</li>
+<li>Create a fork repository. (for the first time only)</li>
+<li>Write code in your fork repository according to the approach agreed upon in the issue.<ul>
+<li>Write the tests and documentation as appropriate.</li>
+<li>Follow the <a href="../coding-guidelines/">coding guidelines</a> guidelines when you write code.</li>
+<li>Follow the <a href="../testing-guidelines/">Testing guidelines</a> guidelines when you write tests.</li>
+<li>Follow the <a href="../documentation-guidelines/">Documentation guidelines</a> guidelines when you write documentation.</li>
+<li>Follow the <a href="commit-guidelines/">commit guidelines</a> when you commit your changes.</li>
 </ul>
 </li>
 <li>Test the code.<ul>
-<li>In the later review process, you will need to write what tests you have done.</li>
+<li>It is recommended that you summarize the test results, because you will need to explain the test results in the later review process.</li>
+<li>If you are not sure what tests should be done, discuss them with maintainers.</li>
 </ul>
 </li>
 <li>Create a pull request.<ul>
-<li>Read the pull request template carefully and fill the required content.</li>
-<li>Assign reviewers after creating a pull request.<ul>
-<li>If you have no rights to assign reviewers, just mention them instead.</li>
-<li>If you are not sure who to set reviewers, contact to the people written as the <code>maintainer</code> tag in <code>package.xml</code>.</li>
-</ul>
-</li>
+<li>Follow the <a href="#pull-request-rules">pull request rules</a> when you create a pull request.</li>
 </ul>
 </li>
 <li>Wait for the pull request to be reviewed.<ul>
 <li>The reviewers will review your code following the <a href="review-guidelines/">review guidelines</a>.<ul>
-<li>Take a look at the guidelines as well because it is good to understand the thoughts of the reviewer's side.</li>
+<li>Not only the reviewers, but also the author is encouraged to understand the review guidelines.</li>
 </ul>
 </li>
-<li>If <a href="#ci-checks">CI checks</a> have failed, fix the errors.</li>
+<li>If <a href="ci-checks/">CI checks</a> have failed, fix the errors.</li>
 </ul>
 </li>
 <li>Address the review comments pointed out by the reviewers.<ul>
-<li>If you cannot understand or agree with a review comment, discuss it with the reviewers and find a rational reason.<ul>
-<li>The author should be responsible for the final content of their pull request.</li>
+<li>If you don't understand the meaning of a review comment, ask the reviewers until you understand it.<ul>
+<li>Fixing without understanding the reason is not recommended because the author should be responsible for the final content of their own pull request.</li>
+</ul>
+</li>
+<li>If you don't agree with a review comment, ask the reviewers for a rational reason.<ul>
 <li>The reviewers are obligated to make the author understand the meanings of each comment.</li>
 </ul>
 </li>
-<li>After you have done with them, re-request a review to the reviewers and back to 6.</li>
-<li>If there are no more new review comments, the reviewers will approve the pull request and go to 6.</li>
+<li>After you have done with the review comments, re-request a review to the reviewers and back to 6.</li>
+<li>If there are no more new review comments, the reviewers will approve the pull request and proceed to 8.</li>
 </ul>
 </li>
 <li>Merge the pull request.<ul>
-<li>Confirm all items of the checklist are checked off before merging.</li>
 <li>Anyone with write access can merge the pull request if there is no special request from maintainers.<ul>
-<li>Generally, the author is expected to merge it to feel responsible for their pull request.</li>
+<li>The author is encouraged to merge the pull request to feel responsible for their own pull request.</li>
 <li>If the author does not have write access, ask the reviewers or maintainers.</li>
-<li>It is the author's responsibility to care about their own pull request until it is merged.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
-<h2 id="ci-checks">CI checks<a class="headerlink" href="#ci-checks" title="Permanent link">#</a></h2>
-<p>Autoware has several checks for a pull request.
-The results are shown at the bottom of the pull request page as below.</p>
-<p><img alt="ci-checks" src="images/ci-checks.png" /></p>
-<p>If the ❌ mark is shown, click the <code>Details</code> button and investigate the failure reason.</p>
-<p>If the <code>Required</code> mark is shown, you cannot merge the pull request unless you resolve the error.
-If not, it is optional, but preferably it should be fixed.</p>
-<p>The following sections explain about common CI checks in Autoware.<br />
-Note that some repositories may have different settings.</p>
-<h3 id="dco">DCO<a class="headerlink" href="#dco" title="Permanent link">#</a></h3>
-<p>The Developer Certificate of Origin (DCO) is a lightweight way for contributors to certify that they wrote or otherwise have the right to submit the code they are contributing to the project.</p>
-<p>This workflow checks whether the pull request fulfills <code>DCO</code>.<br />
-You need to confirm the <a href="https://developercertificate.org/">required items</a> and commit with <code>git commit -s</code>.</p>
-<p>For more information, refer to the <a href="https://github.com/apps/dco">GitHub App page</a>.</p>
-<h3 id="semantic-pull-request">semantic-pull-request<a class="headerlink" href="#semantic-pull-request" title="Permanent link">#</a></h3>
-<p>Autoware uses <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> with the settings of <a href="https://github.com/commitizen/conventional-commit-types">commitizen/conventional-commit-types</a>.</p>
-<p>This workflow checks whether the pull request follows <code>Conventional Commits</code>.</p>
-<p>Note that if there is only one commit in the pull request, you need to make the commit title semantic as well.<br />
-This is due to GitHub's non-intuitive behavior when there is only one commit.
-GitHub uses the commit title for the squashed commit message, instead of the pull request title.</p>
-<p>For more detailed behaviors of this workflow, refer to <a href="https://github.com/amannn/action-semantic-pull-request">amannn/action-semantic-pull-request</a>.</p>
-<p>For the detailed rules, see the <a href="commit-guidelines/">commit guidelines</a>.</p>
-<h3 id="pre-commit">pre-commit<a class="headerlink" href="#pre-commit" title="Permanent link">#</a></h3>
-<p><a href="https://pre-commit.com/">pre-commit</a> is a tool to run formatters or linters when you commit.</p>
-<p>This workflow checks whether the pull request has no error with <code>pre-commit</code>.</p>
-<p>In the workflow <code>pre-commit.ci - pr</code> is enabled in the repository, it will automatically fix errors by <a href="https://pre-commit.ci/">pre-commit.ci</a> as many as possible.<br />
-If there are some errors remain, fix them manually.</p>
-<p>You can run <code>pre-commit</code> in your local environment by the following command:</p>
-<div class="highlight"><pre><span></span><code>pre-commit run -a
+<h2 id="pull-request-rules">Pull request rules<a class="headerlink" href="#pull-request-rules" title="Permanent link">#</a></h2>
+<h3 id="use-an-appropriate-pull-request-template-required-non-automated">Use an appropriate pull request template (required, non-automated)<a class="headerlink" href="#use-an-appropriate-pull-request-template-required-non-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale">Rationale<a class="headerlink" href="#rationale" title="Permanent link">#</a></h4>
+<ul>
+<li>The unified style of descriptions by templates can make reviews efficient.</li>
+</ul>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
+<ol>
+<li>Select the appropriate template, as shown in <a href="https://user-images.githubusercontent.com/31987104/184344710-2adee239-799f-4fdf-bfab-be76345bfac1.mp4">this video</a>.</li>
+<li>Read the selected template carefully and fill the required content.</li>
+<li>Check the checkboxes during a review.<ul>
+<li>There are <a href="https://github.com/autowarefoundation/autoware/blob/44c70d33825617b56d8de5e6fe921000238238bd/.github/PULL_REQUEST_TEMPLATE/standard-change.md#pre-review-checklist-for-the-pr-author">pre-review checklist</a> and <a href="https://github.com/autowarefoundation/autoware/blob/44c70d33825617b56d8de5e6fe921000238238bd/.github/PULL_REQUEST_TEMPLATE/standard-change.md#post-review-checklist-for-the-pr-author">post-review checklist</a> for the author.</li>
+</ul>
+</li>
+</ol>
+<h3 id="set-appropriate-reviewers-after-creating-a-pull-request-required-partially-automated">Set appropriate reviewers after creating a pull request (required, partially automated)<a class="headerlink" href="#set-appropriate-reviewers-after-creating-a-pull-request-required-partially-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale_1">Rationale<a class="headerlink" href="#rationale_1" title="Permanent link">#</a></h4>
+<ul>
+<li>Pull requests must be reviewed by appropriate reviewers to keep the quality of the codebase.</li>
+</ul>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">#</a></h4>
+<ul>
+<li>For most <abbr title="Robot Operating System">ROS</abbr> packages, reviewers will be automatically assigned based on the <code>maintainer</code> information in <code>package.xml</code>.</li>
+<li>If no reviewer is assigned automatically, assign reviewers manually following the instructions in <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review">GitHub Docs</a>.<ul>
+<li>You can find the reviewers by seeing the <code>.github/CODEOWNERS</code> file of the repository.</li>
+</ul>
+</li>
+<li>If you are not sure the appropriate reviewers, ask <code>@autoware-maintainers</code>.</li>
+<li>If you have no rights to assign reviewers, mention reviewers instead.</li>
+</ul>
+<h3 id="apply-conventional-commits-to-the-pull-request-title-required-automated">Apply Conventional Commits to the pull request title (required, automated)<a class="headerlink" href="#apply-conventional-commits-to-the-pull-request-title-required-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale_2">Rationale<a class="headerlink" href="#rationale_2" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> can generate categorized changelogs, for example using <a href="https://github.com/orhun/git-cliff">git-cliff</a>.</li>
+</ul>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code>feat(trajectory_follower): add an awesome feature
 </code></pre></div>
-<p>Or you can install <code>pre-commit</code> to the repository and automatically run it before committing:</p>
-<div class="highlight"><pre><span></span><code>pre-commit install
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You have to start the description part (here <code>add an awesome feature</code>) with a lowercase.</p>
+</div>
+<p>If your change breaks some interfaces, use the <code>!</code> (breaking changes) mark as follows:</p>
+<div class="highlight"><pre><span></span><code>feat(trajectory_follower)!: remove package
+feat(trajectory_follower)!: change parameter names
+feat(planning)!: change topic names
+feat(autoware_utils)!: change function names
 </code></pre></div>
-<p>Since it is difficult to detect errors with no false positives, some jobs are split into another config file and marked as optional.<br />
-To check them, use the <code>--config</code> option:</p>
-<div class="highlight"><pre><span></span><code>pre-commit run -a --config .pre-commit-config-optional.yaml
+<p>For the repositories that contain code (most repositories), use the <a href="https://github.com/commitizen/conventional-commit-types/blob/c3a9be4c73e47f2e8197de775f41d981701407fb/index.json">definition of conventional-commit-types</a> for the type.</p>
+<p>For documentation repositories such as <a href="https://github.com/autowarefoundation/autoware-documentation">autoware-documentation</a>, use the following definition:</p>
+<ul>
+<li><code>feat</code><ul>
+<li>Add new pages.</li>
+<li>Add contents to the existing pages.</li>
+</ul>
+</li>
+<li><code>fix</code><ul>
+<li>Fix the contents in the existing pages.</li>
+</ul>
+</li>
+<li><code>refactor</code><ul>
+<li>Move contents to different pages.</li>
+</ul>
+</li>
+<li><code>docs</code><ul>
+<li>Update documentation for the documentation repository itself.</li>
+</ul>
+</li>
+<li><code>build</code><ul>
+<li>Update the settings of the documentation site builder.</li>
+</ul>
+</li>
+<li><code>!</code> (breaking changes)<ul>
+<li>Remove pages.</li>
+<li>Change the URL of pages.</li>
+</ul>
+</li>
+</ul>
+<p><code>perf</code> and <code>test</code> are generally unused.
+Other types have the same meaning as the code repositories.</p>
+<h3 id="add-the-related-component-names-to-the-scope-of-conventional-commits-advisory-non-automated">Add the related component names to the scope of Conventional Commits (advisory, non-automated)<a class="headerlink" href="#add-the-related-component-names-to-the-scope-of-conventional-commits-advisory-non-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale_3">Rationale<a class="headerlink" href="#rationale_3" title="Permanent link">#</a></h4>
+<ul>
+<li>It helps contributors find pull requests that are relevant to them.</li>
+<li>It makes the changelog clearer.</li>
+</ul>
+<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">#</a></h4>
+<p>For <abbr title="Robot Operating System">ROS</abbr> packages, adding the package name or component name is good.</p>
+<div class="highlight"><pre><span></span><code>feat(trajectory_follower): add an awesome feature
+refactor(planning, control): use common utils
 </code></pre></div>
-<h3 id="spell-check-differential">spell-check-differential<a class="headerlink" href="#spell-check-differential" title="Permanent link">#</a></h3>
-<p>This workflow detects spelling mistakes using <a href="https://github.com/streetsidesoftware/cspell">CSpell</a> with <a href="https://github.com/tier4/autoware-spell-check-dict/blob/main/.cspell.json">our dictionary file</a>.<br />
-You can submit pull requests to <a href="https://github.com/tier4/autoware-spell-check-dict">tier4/autoware-spell-check-dict</a> to update the dictionary.</p>
-<p>Since it is difficult to detect errors with no false positives, it is an optional workflow, but it is preferable to remove spelling mistakes as many as possible.</p>
-<h3 id="build-and-test-differential">build-and-test-differential<a class="headerlink" href="#build-and-test-differential" title="Permanent link">#</a></h3>
-<p>This workflow checks <code>colcon build</code> and <code>colcon test</code> for the pull request.<br />
-To make the CI faster, it doesn't check all packages but only modified packages and the dependencies.</p>
-<h3 id="build-and-test-differential-self-hosted">build-and-test-differential-self-hosted<a class="headerlink" href="#build-and-test-differential-self-hosted" title="Permanent link">#</a></h3>
-<p>This workflow is the <code>ARM64</code> version of <code>build-and-test-differential</code>.<br />
-You need to add the <code>ARM64</code> label to run this workflow.</p>
-<p>For reference information, since ARM machines are not supported by GitHub-hosted runners, we use self-hosted runners prepared by the <abbr title="Autoware Foundation">AWF</abbr>.<br />
-For the details about self-hosted runners, refer to <a href="https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners">GitHub Docs</a>.</p>
-<h3 id="deploy-docs">deploy-docs<a class="headerlink" href="#deploy-docs" title="Permanent link">#</a></h3>
-<p>This workflow deploys the preview documentation site for the pull request.<br />
-You need to add the <code>documentation</code> label to run this workflow.</p>
+<h3 id="keep-a-pull-request-small-advisory-non-automated">Keep a pull request small (advisory, non-automated)<a class="headerlink" href="#keep-a-pull-request-small-advisory-non-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale_4">Rationale<a class="headerlink" href="#rationale_4" title="Permanent link">#</a></h4>
+<ul>
+<li>Small pull requests are easy to understand for reviewers.</li>
+<li>Small pull requests are easy to revert for maintainers.</li>
+</ul>
+<h4 id="exception">Exception<a class="headerlink" href="#exception" title="Permanent link">#</a></h4>
+<p>It is acceptable if it is agreed with maintainers that there is no other way but to submit a big pull request.</p>
+<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">#</a></h4>
+<ul>
+<li>Avoid developing two features in one pull request.</li>
+<li>Avoid mixing different types (<code>feat</code>, <code>fix</code>, <code>refactor</code>, etc.) of changes in the same commit.</li>
+</ul>
+<h3 id="remind-reviewers-if-there-is-no-response-for-more-than-a-week-advisory-non-automated">Remind reviewers if there is no response for more than a week (advisory, non-automated)<a class="headerlink" href="#remind-reviewers-if-there-is-no-response-for-more-than-a-week-advisory-non-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale_5">Rationale<a class="headerlink" href="#rationale_5" title="Permanent link">#</a></h4>
+<ul>
+<li>It is the author's responsibility to care about their own pull request until it is merged.</li>
+</ul>
+<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code>@{some-of-developers} Would it be possible for you to review this PR?
+@autoware-maintainers friendly ping.
+</code></pre></div>
 <!-- prettier-ignore -->
 
 
 
 
-              
-            </article>
-            
-          </div>
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -3209,13 +3341,13 @@ You need to add the <code>documentation</code> label to run this workflow.</p>
       
       
         
-        <a href="commit-guidelines/" class="md-footer__link md-footer__link--next" aria-label="Next: Commit guidelines" rel="next">
+        <a href="ci-checks/" class="md-footer__link md-footer__link--next" aria-label="Next: CI checks" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Commit guidelines
+              CI checks
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3250,10 +3382,10 @@ You need to add the <code>documentation</code> label to run this workflow.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2ab50757.min.js"></script>
+      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

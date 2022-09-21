@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/contributing/pull-request-guidelines/commit-guidelines/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
@@ -19,13 +19,14 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6b80c2a2.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
+
     
     
     
@@ -46,6 +47,7 @@
     
       
 
+    
     
     
   </head>
@@ -154,7 +156,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -283,6 +285,22 @@
     <li class="md-tabs__item">
       <a href="../../" class="md-tabs__link md-tabs__link--active">
         Contributing
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../datasets/" class="md-tabs__link">
+        Datasets
       </a>
     </li>
   
@@ -2721,6 +2739,8 @@
         
           
         
+          
+        
       
       
         
@@ -2741,6 +2761,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci-checks/" class="md-nav__link">
+        CI checks
+      </a>
+    </li>
+  
+
             
           
             
@@ -2827,27 +2861,6 @@
           <li class="md-nav__item">
   <a href="#sign-off-your-commits-required-automated" class="md-nav__link">
     Sign-off your commits (required, automated)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#follow-conventional-commits-required-automated" class="md-nav__link">
-    Follow Conventional Commits (required, automated)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-the-related-node-names-to-the-scope-of-conventional-commits-advisory-non-automated" class="md-nav__link">
-    Add the related node names to the scope of Conventional Commits (advisory, non-automated)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keep-a-pull-request-small-advisory-non-automated" class="md-nav__link">
-    Keep a pull request small (advisory, non-automated)
   </a>
   
 </li>
@@ -2972,6 +2985,50 @@
             
           
         
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../datasets/">Datasets</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Datasets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Datasets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+        
+          
+            
+          
+        
           
         
           
@@ -2985,14 +3042,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../support/">Support</a>
           
-            <label for="__nav_7">
+            <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Support" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Support
         </label>
@@ -3123,27 +3180,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#follow-conventional-commits-required-automated" class="md-nav__link">
-    Follow Conventional Commits (required, automated)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-the-related-node-names-to-the-scope-of-conventional-commits-advisory-non-automated" class="md-nav__link">
-    Add the related node names to the scope of Conventional Commits (advisory, non-automated)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keep-a-pull-request-small-advisory-non-automated" class="md-nav__link">
-    Keep a pull request small (advisory, non-automated)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3157,10 +3193,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
   <a href="https://github.com/tier4/autoware-documentation/edit/tier4/main/docs/contributing/pull-request-guidelines/commit-guidelines.md" title="Edit this page" class="md-content__button md-icon">
     
@@ -3227,53 +3264,17 @@ Signed-off-by: Autoware &lt;autoware@example.com&gt;
 <ul>
 <li><a href="https://github.com/apps/dco">GitHub Apps - DCO</a></li>
 </ul>
-<h3 id="follow-conventional-commits-required-automated">Follow <code>Conventional Commits</code> (required, automated)<a class="headerlink" href="#follow-conventional-commits-required-automated" title="Permanent link">#</a></h3>
-<h4 id="rationale_4">Rationale<a class="headerlink" href="#rationale_4" title="Permanent link">#</a></h4>
-<ul>
-<li>It can generate categorized changelog, for example using <a href="https://github.com/orhun/git-cliff">git-cliff</a>.</li>
-</ul>
-<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>feat(trajectory_follower): add an awesome feature
-</code></pre></div>
-<p>Note that you have to start the description part (<code>add an awesome feature</code>) with a lowercase.</p>
-<p>Since Autoware uses the <code>Squash and merge</code> method of GitHub, you need to make the PR title follow <code>Conventional Commits</code> as well.</p>
-<h4 id="reference_3">Reference<a class="headerlink" href="#reference_3" title="Permanent link">#</a></h4>
-<ul>
-<li><a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a></li>
-<li><a href="https://github.com/commitizen/conventional-commit-types">commitizen/conventional-commit-types</a></li>
-<li><a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github#squashing-your-merge-commits">GitHub Docs</a></li>
-</ul>
-<h3 id="add-the-related-node-names-to-the-scope-of-conventional-commits-advisory-non-automated">Add the related node names to the scope of <code>Conventional Commits</code> (advisory, non-automated)<a class="headerlink" href="#add-the-related-node-names-to-the-scope-of-conventional-commits-advisory-non-automated" title="Permanent link">#</a></h3>
-<h4 id="rationale_5">Rationale<a class="headerlink" href="#rationale_5" title="Permanent link">#</a></h4>
-<ul>
-<li>The package maintainer can become aware of the pull request by seeing the notification.</li>
-<li>It can make the changelog clearer.</li>
-</ul>
-<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code>feat(trajectory_follower): add an awesome feature
-</code></pre></div>
-<h3 id="keep-a-pull-request-small-advisory-non-automated">Keep a pull request small (advisory, non-automated)<a class="headerlink" href="#keep-a-pull-request-small-advisory-non-automated" title="Permanent link">#</a></h3>
-<h4 id="rationale_6">Rationale<a class="headerlink" href="#rationale_6" title="Permanent link">#</a></h4>
-<ul>
-<li>Small pull requests are easy to understand for reviewers.</li>
-<li>Small pull requests are easy to revert for maintainers.</li>
-</ul>
-<h4 id="exception_2">Exception<a class="headerlink" href="#exception_2" title="Permanent link">#</a></h4>
-<p>It is acceptable if it is agreed with maintainers that there is no other way but to submit a big pull request.</p>
-<h4 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">#</a></h4>
-<ul>
-<li>Avoid developing two features in one pull request.</li>
-<li>Avoid mixing <code>feat</code>, <code>fix</code>, and <code>refactor</code> in the same commit.</li>
-</ul>
 <!-- prettier-ignore -->
 
 
 
 
-              
-            </article>
-            
-          </div>
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -3289,7 +3290,7 @@ Signed-off-by: Autoware &lt;autoware@example.com&gt;
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Pull request guidelines" rel="prev">
+        <a href="../ci-checks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CI checks" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3298,7 +3299,7 @@ Signed-off-by: Autoware &lt;autoware@example.com&gt;
               <span class="md-footer__direction">
                 Previous
               </span>
-              Pull request guidelines
+              CI checks
             </div>
           </div>
         </a>
@@ -3346,10 +3347,10 @@ Signed-off-by: Autoware &lt;autoware@example.com&gt;
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.2ab50757.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.37e9125f.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

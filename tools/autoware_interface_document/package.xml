@@ -11,7 +11,8 @@
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
-  <exec_depend>autoware_ad_api_msgs</exec_depend>
+  <exec_depend>autoware_adapi_version_msgs</exec_depend>
+  <exec_depend>autoware_adapi_v1_msgs</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

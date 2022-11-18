@@ -19,6 +19,7 @@ uint16 EMERGENCY_OPERATION = 8
 # constants for direction
 uint16 LEFT = 1
 uint16 RIGHT = 2
+uint16 STRAIGHT = 3
 
 # constants for status
 uint16 APPROACHING = 1
@@ -26,8 +27,8 @@ uint16 TRYING = 2
 uint16 TURNING = 3
 
 # variables
-geometry_msgs/Pose pose
-float32 distance
+geometry_msgs/Pose[2] pose
+float32[2] distance
 uint16 type
 uint16 direction
 uint16 status

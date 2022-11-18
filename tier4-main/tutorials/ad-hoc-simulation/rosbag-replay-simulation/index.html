@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/tutorials/ad-hoc-simulation/rosbag-replay-simulation/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -122,6 +122,7 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -129,6 +130,7 @@
             </label>
           
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
@@ -824,7 +826,7 @@
   
     <li class="md-nav__item">
       <a href="../digital-twin-simulation/awsim-tutorial/" class="md-nav__link">
-        AWSIM simulator setup
+        AWSIM simulator
       </a>
     </li>
   
@@ -967,10 +969,47 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2">
+          Rosbag replay simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rosbag replay simulation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Rosbag replay simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../scenario-simulation/rosbag-replay-simulation/" class="md-nav__link">
-        Rosbag replay simulation
+      <a href="../../scenario-simulation/rosbag-replay-simulation/driving-log-replayer/" class="md-nav__link">
+        Driving Log Replayer
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1007,6 +1046,8 @@
         
           
             
+          
+        
           
         
           
@@ -1137,6 +1178,20 @@
     <li class="md-nav__item">
       <a href="../../../how-to-guides/calibrating-your-sensors/" class="md-nav__link">
         Calibrating your sensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/evaluating-controller-performance/" class="md-nav__link">
+        Evaluating the controller performance
       </a>
     </li>
   
@@ -3157,19 +3212,19 @@
 <li>
 <p>Download and unpack a sample map.</p>
 <ul>
-<li>Click <a href="https://drive.google.com/file/d/1A-8BvYRX3DhSzkAnOcGWFw5T30xTlwZI/view?usp=sharing">here</a> to download.</li>
-<li>Unpack it by running the following command.</li>
+<li>You can also download <a href="https://drive.google.com/file/d/1A-8BvYRX3DhSzkAnOcGWFw5T30xTlwZI/view?usp=sharing">the map</a> manually.</li>
 </ul>
-<div class="highlight"><pre><span></span><code>unzip -d ~/Downloads/ ~/Downloads/sample-map-rosbag.zip
+<div class="highlight"><pre><span></span><code>gdown -O ~/autoware_map/ <span class="s1">&#39;https://docs.google.com/uc?export=download&amp;id=1A-8BvYRX3DhSzkAnOcGWFw5T30xTlwZI&#39;</span>
+unzip -d ~/autoware_map/ ~/autoware_map/sample-map-rosbag.zip
 </code></pre></div>
 </li>
 <li>
 <p>Download the sample rosbag files.</p>
 <ul>
-<li>Click <a href="https://drive.google.com/file/d/1VnwJx9tI3kI_cTLzP61ktuAJ1ChgygpG/view?usp=sharing">here</a> to download.</li>
-<li>Unpack it by running the following command.</li>
+<li>You can also download <a href="https://drive.google.com/file/d/1VnwJx9tI3kI_cTLzP61ktuAJ1ChgygpG/view?usp=sharing">the rosbag files</a> manually.</li>
 </ul>
-<div class="highlight"><pre><span></span><code>unzip -d ~/Downloads/ ~/Downloads/sample-rosbag.zip
+<div class="highlight"><pre><span></span><code>gdown -O ~/autoware_map/ <span class="s1">&#39;https://docs.google.com/uc?export=download&amp;id=1VnwJx9tI3kI_cTLzP61ktuAJ1ChgygpG&#39;</span>
+unzip -d ~/autoware_map/ ~/autoware_map/sample-rosbag.zip
 </code></pre></div>
 </li>
 </ol>
@@ -3187,7 +3242,7 @@
 <li>
 <p>Launch Autoware.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> ~/autoware/install/setup.bash
-ros2 launch autoware_launch logging_simulator.launch.xml map_path:<span class="o">=</span><span class="nv">$HOME</span>/Downloads/sample-map-rosbag vehicle_model:<span class="o">=</span>sample_vehicle sensor_model:<span class="o">=</span>sample_sensor_kit
+ros2 launch autoware_launch logging_simulator.launch.xml map_path:<span class="o">=</span><span class="nv">$HOME</span>/autoware_map/sample-map-rosbag vehicle_model:<span class="o">=</span>sample_vehicle sensor_model:<span class="o">=</span>sample_sensor_kit
 </code></pre></div>
 <p>Note that you cannot use <code>~</code> instead of <code>$HOME</code> here.</p>
 <p><img alt="after-autoware-launch" src="../images/rosbag-replay/after-autoware-launch.png" /></p>
@@ -3195,7 +3250,7 @@ ros2 launch autoware_launch logging_simulator.launch.xml map_path:<span class="o
 <li>
 <p>Play the sample rosbag file.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> ~/autoware/install/setup.bash
-ros2 bag play ~/Downloads/sample-rosbag/sample.db3 -r <span class="m">0</span>.2
+ros2 bag play ~/autoware_map/sample-rosbag/sample.db3 -r <span class="m">0</span>.2 -s sqlite3
 </code></pre></div>
 <p><img alt="after-rosbag-play" src="../images/rosbag-replay/after-rosbag-play.png" /></p>
 </li>
@@ -3250,13 +3305,13 @@ ros2 bag play ~/Downloads/sample-rosbag/sample.db3 -r <span class="m">0</span>.2
       
       
         
-        <a href="../digital-twin-simulation/awsim-tutorial/" class="md-footer__link md-footer__link--next" aria-label="Next: AWSIM simulator setup" rel="next">
+        <a href="../digital-twin-simulation/awsim-tutorial/" class="md-footer__link md-footer__link--next" aria-label="Next: AWSIM simulator" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              AWSIM simulator setup
+              AWSIM simulator
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3291,10 +3346,10 @@ ros2 bag play ~/Downloads/sample-rosbag/sample.db3 -r <span class="m">0</span>.2
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

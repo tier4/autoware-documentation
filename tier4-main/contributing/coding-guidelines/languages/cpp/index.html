@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/tier4-main/contributing/coding-guidelines/languages/cpp/">
       
       <link rel="icon" href="../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -122,6 +122,7 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -129,6 +130,7 @@
             </label>
           
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
@@ -759,7 +761,7 @@
   
     <li class="md-nav__item">
       <a href="../../../../tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial/" class="md-nav__link">
-        AWSIM simulator setup
+        AWSIM simulator
       </a>
     </li>
   
@@ -902,10 +904,47 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2">
+          Rosbag replay simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rosbag replay simulation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Rosbag replay simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../../tutorials/scenario-simulation/rosbag-replay-simulation/" class="md-nav__link">
-        Rosbag replay simulation
+      <a href="../../../../tutorials/scenario-simulation/rosbag-replay-simulation/driving-log-replayer/" class="md-nav__link">
+        Driving Log Replayer
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -942,6 +981,8 @@
         
           
             
+          
+        
           
         
           
@@ -1072,6 +1113,20 @@
     <li class="md-nav__item">
       <a href="../../../../how-to-guides/calibrating-your-sensors/" class="md-nav__link">
         Calibrating your sensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../how-to-guides/evaluating-controller-performance/" class="md-nav__link">
+        Evaluating the controller performance
       </a>
     </li>
   
@@ -2283,9 +2338,88 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          C++
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         C++
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-rules" class="md-nav__link">
+    Style rules
+  </a>
+  
+    <nav class="md-nav" aria-label="Style rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include-header-files-in-the-defined-order-required-partially-automated" class="md-nav__link">
+    Include header files in the defined order (required, partially automated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-lower-snake-case-for-function-names-required-partially-automated" class="md-nav__link">
+    Use lower snake case for function names (required, partially automated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-upper-camel-case-for-enum-names-required-partially-automated" class="md-nav__link">
+    Use upper camel case for enum names (required, partially automated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-lower-snake-case-for-constant-names-required-partially-automated" class="md-nav__link">
+    Use lower snake case for constant names (required, partially automated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-acronyms-and-contractions-of-compound-words-as-one-word-required-partially-automated" class="md-nav__link">
+    Count acronyms and contractions of compound words as one word (required, partially automated)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3049,6 +3183,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-rules" class="md-nav__link">
+    Style rules
+  </a>
+  
+    <nav class="md-nav" aria-label="Style rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include-header-files-in-the-defined-order-required-partially-automated" class="md-nav__link">
+    Include header files in the defined order (required, partially automated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-lower-snake-case-for-function-names-required-partially-automated" class="md-nav__link">
+    Use lower snake case for function names (required, partially automated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-upper-camel-case-for-enum-names-required-partially-automated" class="md-nav__link">
+    Use upper camel case for enum names (required, partially automated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-lower-snake-case-for-constant-names-required-partially-automated" class="md-nav__link">
+    Use lower snake case for constant names (required, partially automated)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-acronyms-and-contractions-of-compound-words-as-one-word-required-partially-automated" class="md-nav__link">
+    Count acronyms and contractions of compound words as one word (required, partially automated)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3072,12 +3269,171 @@
 <p class="admonition-title">Warning</p>
 <p>Under Construction</p>
 </div>
-<p>Refer to the following links for now:</p>
-<ul>
-<li><a href="https://docs.ros.org/en/humble/Contributing/Code-Style-Language-Versions.html#id1">https://docs.ros.org/en/humble/Contributing/Code-Style-Language-Versions.html#id1</a></li>
-<li><a href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines">https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines</a></li>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
+<p>Follow the guidelines below if a rule is not defined on this page.</p>
+<ol>
+<li><a href="https://docs.ros.org/en/humble/Contributing/Code-Style-Language-Versions.html">https://docs.ros.org/en/humble/Contributing/Code-Style-Language-Versions.html</a></li>
 <li><a href="https://www.autosar.org/fileadmin/user_upload/standards/adaptive/21-11/AUTOSAR_RS_CPP14Guidelines.pdf">https://www.autosar.org/fileadmin/user_upload/standards/adaptive/21-11/AUTOSAR_RS_CPP14Guidelines.pdf</a></li>
+<li><a href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines">https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines</a></li>
+</ol>
+<p>Also, it is encouraged to apply Clang-Tidy to each file.
+For the usage, see <a href="../../../../how-to-guides/applying-clang-tidy-to-ros-packages/">Applying Clang-Tidy to <abbr title="Robot Operating System">ROS</abbr> packages</a>.</p>
+<p>Note that not all rules are covered by Clang-Tidy.</p>
+<h2 id="style-rules">Style rules<a class="headerlink" href="#style-rules" title="Permanent link">#</a></h2>
+<h3 id="include-header-files-in-the-defined-order-required-partially-automated">Include header files in the defined order (required, partially automated)<a class="headerlink" href="#include-header-files-in-the-defined-order-required-partially-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale">Rationale<a class="headerlink" href="#rationale" title="Permanent link">#</a></h4>
+<ul>
+<li>Due to indirect dependencies, the include system of C++ makes different behaviors if the header order is different.</li>
+<li>To reduce unintended bugs, local header files should come first.</li>
 </ul>
+<h4 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://llvm.org/docs/CodingStandards.html#include-style">https://llvm.org/docs/CodingStandards.html#include-style</a></li>
+</ul>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
+<p>Include the headers in the following order:</p>
+<ul>
+<li>Main module header</li>
+<li>Local package headers</li>
+<li>Other package headers</li>
+<li>Message headers</li>
+<li>Boost headers</li>
+<li>C system headers</li>
+<li>C++ system headers</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// Compliant</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_header.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_package/foo.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;package1/foo.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;package2/bar.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;std_msgs/msg/header.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+</code></pre></div>
+<p>If you use <code>""</code> and <code>&lt;&gt;</code> properly, <code>ClangFormat</code> in <code>pre-commit</code> sorts headers automatically.</p>
+<p>Do not define macros between <code>#include</code> lines because it prevents automatic sorting.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Non-compliant</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;package1/foo.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;package2/bar.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#define EIGEN_MPL2_ONLY</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_header.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_package/foo.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Eigen/Core&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;std_msgs/msg/header.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+</code></pre></div>
+<p>Instead, define macros before <code>#include</code> lines.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Compliant</span>
+<span class="cp">#define EIGEN_MPL2_ONLY</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_header.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_package/foo.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Eigen/Core&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;package1/foo.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;package2/bar.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;std_msgs/msg/header.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+</code></pre></div>
+<p>If there are any reasons for defining macros at a specific position, write a comment before the macro.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Compliant</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_header.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_package/foo.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;package1/foo.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;package2/bar.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;std_msgs/msg/header.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+
+<span class="c1">// For the foo bar reason, the FOO_MACRO must be defined here.</span>
+<span class="cp">#define FOO_MACRO</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;foo/bar.hpp&gt;</span><span class="cp"></span>
+</code></pre></div>
+<h3 id="use-lower-snake-case-for-function-names-required-partially-automated">Use lower snake case for function names (required, partially automated)<a class="headerlink" href="#use-lower-snake-case-for-function-names-required-partially-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale_1">Rationale<a class="headerlink" href="#rationale_1" title="Permanent link">#</a></h4>
+<ul>
+<li>It is consistent with the C++ standard library.</li>
+<li>It is consistent with other programming languages such as Python and Rust.</li>
+</ul>
+<h4 id="exception">Exception<a class="headerlink" href="#exception" title="Permanent link">#</a></h4>
+<ul>
+<li>For member functions of classes inherited from external project classes such as Qt, follow that naming convention.</li>
+</ul>
+<h4 id="reference_1">Reference<a class="headerlink" href="#reference_1" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://docs.ros.org/en/humble/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html#function-and-method-naming">https://docs.ros.org/en/humble/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html#function-and-method-naming</a></li>
+</ul>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">function_name</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="use-upper-camel-case-for-enum-names-required-partially-automated">Use upper camel case for enum names (required, partially automated)<a class="headerlink" href="#use-upper-camel-case-for-enum-names-required-partially-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale_2">Rationale<a class="headerlink" href="#rationale_2" title="Permanent link">#</a></h4>
+<ul>
+<li>It is consistent with <abbr title="Robot Operating System">ROS</abbr> 2 core packages.</li>
+</ul>
+<h4 id="exception_1">Exception<a class="headerlink" href="#exception_1" title="Permanent link">#</a></h4>
+<ul>
+<li>Enums defined in the <code>rosidl</code> file can use other naming conventions.</li>
+</ul>
+<h4 id="reference_2">Reference<a class="headerlink" href="#reference_2" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="http://wiki.ros.org/CppStyleGuide">http://wiki.ros.org/CppStyleGuide</a> (Refer to "15. Enumerations")</li>
+</ul>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">Red</span><span class="p">,</span><span class="w"> </span><span class="n">Green</span><span class="p">,</span><span class="w"> </span><span class="n">Blue</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="use-lower-snake-case-for-constant-names-required-partially-automated">Use lower snake case for constant names (required, partially automated)<a class="headerlink" href="#use-lower-snake-case-for-constant-names-required-partially-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale_3">Rationale<a class="headerlink" href="#rationale_3" title="Permanent link">#</a></h4>
+<ul>
+<li>It is consistent with <abbr title="Robot Operating System">ROS</abbr> 2 core packages.</li>
+<li>It is consistent with <code>std::numbers</code>.</li>
+</ul>
+<h4 id="exception_2">Exception<a class="headerlink" href="#exception_2" title="Permanent link">#</a></h4>
+<ul>
+<li>Constants defined in the <code>rosidl</code> file can use other naming conventions.</li>
+</ul>
+<h4 id="reference_3">Reference<a class="headerlink" href="#reference_3" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://en.cppreference.com/w/cpp/numeric/constants">https://en.cppreference.com/w/cpp/numeric/constants</a></li>
+</ul>
+<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">gravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.80665</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="count-acronyms-and-contractions-of-compound-words-as-one-word-required-partially-automated">Count acronyms and contractions of compound words as one word (required, partially automated)<a class="headerlink" href="#count-acronyms-and-contractions-of-compound-words-as-one-word-required-partially-automated" title="Permanent link">#</a></h3>
+<h4 id="rationale_4">Rationale<a class="headerlink" href="#rationale_4" title="Permanent link">#</a></h4>
+<ul>
+<li>To clarify the boundaries of words when acronyms are consecutive.</li>
+</ul>
+<h4 id="reference_4">Reference<a class="headerlink" href="#reference_4" title="Permanent link">#</a></h4>
+<ul>
+<li><a href="https://rust-lang.github.io/api-guidelines/naming.html#casing-conforms-to-rfc-430-c-case">https://rust-lang.github.io/api-guidelines/naming.html#casing-conforms-to-rfc-430-c-case</a></li>
+</ul>
+<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">RosApi</span><span class="p">;</span><span class="w"></span>
+<span class="n">RosApi</span><span class="w"> </span><span class="n">ros_api</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 <!-- prettier-ignore -->
 
 
@@ -3161,10 +3517,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

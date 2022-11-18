@@ -11,18 +11,18 @@
         <link rel="canonical" href="https://tier4.github.io/autoware-documentation/latest/tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial/">
       
       <link rel="icon" href="../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>AWSIM simulator setup - Autoware Documentation</title>
+        <title>AWSIM simulator - Autoware Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#awsim-simulator-setup" class="md-skip">
+        <a href="#awsim-simulator" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AWSIM simulator setup
+              AWSIM simulator
             
           </span>
         </div>
@@ -122,6 +122,7 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -129,6 +130,7 @@
             </label>
           
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
@@ -773,95 +775,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          AWSIM simulator setup
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        AWSIM simulator setup
+        AWSIM simulator
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-requirements" class="md-nav__link">
-    Hardware requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preparation" class="md-nav__link">
-    Preparation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-steps" class="md-nav__link">
-    Running steps
-  </a>
-  
-    <nav class="md-nav" aria-label="Running steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#awsim-simulator" class="md-nav__link">
-    AWSIM Simulator
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-autoware-to-control-awsim" class="md-nav__link">
-    Running Autoware to control AWSIM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#npc-control-optional" class="md-nav__link">
-    NPC Control (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    Troubleshooting
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1004,10 +920,47 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2">
+          Rosbag replay simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rosbag replay simulation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Rosbag replay simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../scenario-simulation/rosbag-replay-simulation/" class="md-nav__link">
-        Rosbag replay simulation
+      <a href="../../../scenario-simulation/rosbag-replay-simulation/driving-log-replayer/" class="md-nav__link">
+        Driving Log Replayer
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1044,6 +997,8 @@
         
           
             
+          
+        
           
         
           
@@ -1174,6 +1129,20 @@
     <li class="md-nav__item">
       <a href="../../../../how-to-guides/calibrating-your-sensors/" class="md-nav__link">
         Calibrating your sensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../how-to-guides/evaluating-controller-performance/" class="md-nav__link">
+        Evaluating the controller performance
       </a>
     </li>
   
@@ -3135,76 +3104,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-requirements" class="md-nav__link">
-    Hardware requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preparation" class="md-nav__link">
-    Preparation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-steps" class="md-nav__link">
-    Running steps
-  </a>
-  
-    <nav class="md-nav" aria-label="Running steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#awsim-simulator" class="md-nav__link">
-    AWSIM Simulator
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-autoware-to-control-awsim" class="md-nav__link">
-    Running Autoware to control AWSIM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#npc-control-optional" class="md-nav__link">
-    NPC Control (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    Troubleshooting
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3223,251 +3122,8 @@
   </a>
 
 
-<h1 id="awsim-simulator-setup">AWSIM simulator setup<a class="headerlink" href="#awsim-simulator-setup" title="Permanent link">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The binary is just a sample one for the initial testing, for <abbr title="Autoware Foundation">AWF</abbr> developers only. To get access, please contact Wojciech Jaworski on Autoware Discord. The official binary from TIER IV will be released in October.</p>
-</div>
-<h2 id="hardware-requirements">Hardware requirements<a class="headerlink" href="#hardware-requirements" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th align="left">Required PC Specs</th>
-<th align="left"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">OS</td>
-<td align="left">Ubuntu 20.04</td>
-</tr>
-<tr>
-<td align="left">CPU</td>
-<td align="left">6cores and 12thread or higher</td>
-</tr>
-<tr>
-<td align="left"><abbr title="Graphics Processing Unit">GPU</abbr></td>
-<td align="left">RTX2080Ti or higher</td>
-</tr>
-</tbody>
-</table>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
-<ol>
-<li>
-<p>Nvidia <abbr title="Graphics Processing Unit">GPU</abbr> driver (Skip if already installed)</p>
-<ol>
-<li>Add Nvidia driver to apt repository</li>
-</ol>
-<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:graphics-drivers/ppa
-</code></pre></div>
-<ol>
-<li>Check supported Nvidia driver versions</li>
-</ol>
-<div class="highlight"><pre><span></span><code>$ ubuntu-drivers <span class="nv">devices</span>
-<span class="o">==</span> /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0 <span class="o">==</span>
-modalias : pci:v000010DEd00001F91sv000017AAsd0000229Fbc03sc00i00
-vendor : NVIDIA Corporation
-driver : nvidia-driver-435 - distro non-free
-driver : nvidia-driver-440-server - distro non-free
-driver : nvidia-driver-418-server - distro non-free
-driver : nvidia-driver-450 - third-party free recommended
-driver : nvidia-driver-440 - distro non-free
-driver : xserver-xorg-video-nouveau - distro free <span class="nb">builtin</span>
-
-<span class="o">==</span> /sys/devices/pci0000:00/0000:00:1d.6/0000:52:00.0 <span class="o">==</span>
-modalias : pci:v00008086d00002723sv00008086sd00000080bc02sc80i00
-vendor : Intel Corporation
-manual_install: True
-driver : backport-iwlwifi-dkms - distro free
-</code></pre></div>
-<ol>
-<li>Install the recommended version</li>
-</ol>
-<div class="highlight"><pre><span></span><code>sudo apt install nvidia-driver-450
-</code></pre></div>
-<ol>
-<li>reboot and check nvidia-smi</li>
-</ol>
-<div class="highlight"><pre><span></span><code>$ nvidia-smi
-Fri Aug <span class="m">14</span> <span class="m">18</span>:18:17 <span class="m">2020</span>
-+-----------------------------------------------------------------------------+
-<span class="p">|</span> NVIDIA-SMI <span class="m">450</span>.57 Driver Version: <span class="m">450</span>.57 CUDA Version: <span class="m">11</span>.0 <span class="p">|</span>
-<span class="p">|</span>-------------------------------+----------------------+----------------------+
-<span class="p">|</span> GPU Name Persistence-M<span class="p">|</span> Bus-Id Disp.A <span class="p">|</span> Volatile Uncorr. ECC <span class="p">|</span>
-<span class="p">|</span> Fan Temp Perf Pwr:Usage/Cap<span class="p">|</span> Memory-Usage <span class="p">|</span> GPU-Util Compute M. <span class="p">|</span>
-<span class="p">|</span> <span class="p">|</span> <span class="p">|</span> MIG M. <span class="p">|</span>
-<span class="p">|</span><span class="o">===============================</span>+<span class="o">======================</span>+<span class="o">======================</span><span class="p">|</span>
-<span class="p">|</span> <span class="m">0</span> GeForce GTX <span class="m">165</span>... Off <span class="p">|</span> <span class="m">00000000</span>:01:00.0 On <span class="p">|</span> N/A <span class="p">|</span>
-<span class="p">|</span> N/A 40C P8 4W / N/A <span class="p">|</span> 540MiB / 3903MiB <span class="p">|</span> <span class="m">1</span>% Default <span class="p">|</span>
-<span class="p">|</span> <span class="p">|</span> <span class="p">|</span> N/A <span class="p">|</span>
-+-------------------------------+----------------------+----------------------+
-
-+-----------------------------------------------------------------------------+
-<span class="p">|</span> Processes: <span class="p">|</span>
-<span class="p">|</span> GPU GI CI PID Type Process name GPU Memory <span class="p">|</span>
-<span class="p">|</span> ID ID Usage <span class="p">|</span>
-<span class="p">|</span><span class="o">=============================================================================</span><span class="p">|</span>
-<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">1264</span> G /usr/lib/xorg/Xorg 26MiB <span class="p">|</span>
-<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">1406</span> G /usr/bin/gnome-shell 47MiB <span class="p">|</span>
-<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">1606</span> G /usr/lib/xorg/Xorg 202MiB <span class="p">|</span>
-<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">1739</span> G /usr/bin/gnome-shell 110MiB <span class="p">|</span>
-<span class="p">|</span> <span class="m">0</span> N/A N/A <span class="m">3697</span> G ...AAAAAAAAA<span class="o">=</span> --shared-files 149MiB <span class="p">|</span>
-+-----------------------------------------------------------------------------+
-</code></pre></div>
-</li>
-<li>
-<p>Vulkun Graphics Library (Skip if already installed)</p>
-<ol>
-<li>Update apt</li>
-</ol>
-<div class="highlight"><pre><span></span><code>sudo apt update
-</code></pre></div>
-<ol>
-<li>install libvulkan1</li>
-</ol>
-<div class="highlight"><pre><span></span><code>sudo apt install libvulkan1
-</code></pre></div>
-</li>
-</ol>
-<h2 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">#</a></h2>
-<ul>
-<li>Install Autoware following the <a href="https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/">official guide</a></li>
-<li>Download and extract the <a href="https://drive.google.com/file/d/1p_dEiSTODHjCVkxFy8F7tLkY1J9VItIb/view?usp=sharing">AWSIM binary</a></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In case of less powerful computers, performance problems might occur when running Autoware with high-resolution camera simulation on single PC. For such situations, AWSIM binaries with lower camera resolution are prepared: <a href="https://drive.google.com/file/d/14iiidsKiwzADyEqk9PeHQefkIIFpuA6B/view?usp=sharing">AWSIM-720p</a> , <a href="https://drive.google.com/file/d/1c8gADhhS6jtseE_TN2treSNkL-4_6UE6/view?usp=sharing">AWSIM-360p</a></p>
-</div>
-<ul>
-<li>Download and extract the <a href="https://drive.google.com/file/d/1vGFI0o0zQ-gRZYqKrPbnrtCN3c3-92Fy/view?usp=sharing">sample map folder</a></li>
-</ul>
-<h2 id="running-steps">Running steps<a class="headerlink" href="#running-steps" title="Permanent link">#</a></h2>
-<h3 id="awsim-simulator">AWSIM Simulator<a class="headerlink" href="#awsim-simulator" title="Permanent link">#</a></h3>
-<p>To run the AWSIM simulator, open a terminal window, navigate to the simulation directory and run the following commands:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">source</span> /opt/ros/galactic/setup.bash
-<span class="nb">cd</span> &lt;PATH_TO_EXTRACTED_FOLDER_WITH_AWSIM&gt;
-./AWSIM.x86_64
-</code></pre></div>
-<p>If the simulator is working properly, Lidar rays should be visible and the <a href="https://github.com/autowarefoundation/autoware-projects/wiki/Bus-ODD-Simulation-requirements#integration-interface-with-autoware-universe">expected data topics</a> should appear when <code>ros2 topic list</code> is run.</p>
-<p><img alt="correctly working simulator" src="../images/workingSim.png" /></p>
-<h4 id="simulator-shortcuts">Simulator shortcuts<a class="headerlink" href="#simulator-shortcuts" title="Permanent link">#</a></h4>
-<p>It is also possible to control the simulation using the keyboard shortcuts listed below:</p>
-<table>
-<thead>
-<tr>
-<th>Shortcut</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>v</td>
-<td>Toggle lidar points visualization</td>
-</tr>
-<tr>
-<td>m</td>
-<td>Toggle manual operation mode (Ego listens to keyboard)</td>
-</tr>
-</tbody>
-</table>
-<p><b> In manual mode: </b></p>
-<table>
-<thead>
-<tr>
-<th>Shortcut</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>d</td>
-<td>Shift gear to Drive</td>
-</tr>
-<tr>
-<td>p</td>
-<td>Shift gear to Park</td>
-</tr>
-<tr>
-<td>r</td>
-<td>Shift gear to Reverse</td>
-</tr>
-<tr>
-<td>← ↑ ↓ →</td>
-<td>Accelerate/brake and steering</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Left blinker</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Right blinker</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Emergency lights</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Turn off lights</td>
-</tr>
-</tbody>
-</table>
-<h3 id="running-autoware-to-control-awsim">Running Autoware to control AWSIM<a class="headerlink" href="#running-autoware-to-control-awsim" title="Permanent link">#</a></h3>
-<p>To run Autoware, open a terminal and run the following commands:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> &lt;YOUR_WORKSPACE&gt;/autoware
-<span class="nb">source</span> install/setup.bash
-ros2 launch autoware_launch autoware.launch.xml map_path:<span class="o">=</span>&lt;PATH_TO_EXTRACTED_FOLDER_WITH_MAP&gt; vehicle_model:<span class="o">=</span>sample_vehicle sensor_model:<span class="o">=</span>sample_sensor_kit use_sim_time:<span class="o">=</span><span class="nb">true</span> launch_sensing_driver:<span class="o">=</span><span class="nb">false</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note that <code>map_path</code> must be a full path. Relative paths will not work.</p>
-</div>
-<ul>
-<li>RViz should appear with the Lanelet2 map displayed. Although the ego vehicle can localize itself at the beginning, the localization can be inaccurate. It is recommended to explicitly set the vehicle's initial pose using the <code>2D Pose Estimate</code> button as shown in the image below.</li>
-</ul>
-<p><img alt="how to initialize autoware" src="../images/initializeAutoware.png" /></p>
-<ul>
-<li>To make Autoware plan the route, use the <code>2D Goal Pose</code> button to set a goal pose somewhere within the Lanelet2 road lanes.</li>
-</ul>
-<ul>
-<li>To make Autoware execute the planned route, open a new terminal and send the engage message:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> &lt;YOUR_WORKSPACE&gt;/autoware
-<span class="nb">source</span> install/setup.bash
-ros2 topic pub /autoware/engage autoware_auto_vehicle_msgs/msg/Engage <span class="s2">&quot;engage: true&quot;</span>
-</code></pre></div>
-<p>From now on, Autoware will execute the planned route and operate the AWSIM Simulator.</p>
-<p><img alt="AWSIM with autoware" src="../images/awf_awsim.png" /></p>
-<h3 id="npc-control-optional">NPC Control (optional)<a class="headerlink" href="#npc-control-optional" title="Permanent link">#</a></h3>
-<p>Currently the only supported way to add NPCs to the simulation is using prerecorded rosbags.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-</div>
-<p>The current NPC control feature will not be supported in the OSS version of AWSIM</p>
-<h4 id="preparation_1">Preparation<a class="headerlink" href="#preparation_1" title="Permanent link">#</a></h4>
-<ul>
-<li>Download and extract <a href="https://drive.google.com/file/d/1fMvjOnz7Z0cGXotwdOAhBfLPYO52ssp0/view?usp=sharing">npc_msgs</a></li>
-<li>Download and extract <a href="https://drive.google.com/file/d/1BSoIq82DW_RIyeSR6OinhKmA6lD6jmWe/view?usp=sharing">sample rosbags</a></li>
-</ul>
-<h4 id="run-npcs-from-rosbag">Run NPCs from rosbag<a class="headerlink" href="#run-npcs-from-rosbag" title="Permanent link">#</a></h4>
-<p>To run NPCs from rosbag, follow the steps:</p>
-<ul>
-<li>Navigate to the directory where the <code>npc_msgs</code> source code was extracted</li>
-<li>Build and source <code>npc_msgs</code>:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>colcon build
-<span class="nb">source</span> install/setup.bash
-</code></pre></div>
-<ul>
-<li>Play the downloaded sample rosbag while AWSIM is running:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>ros2 bag play &lt;ROSBAG_NAME&gt;
-</code></pre></div>
-<p><img alt="AWSIM with autoware and NPCs" src="../images/awsim_npc.png" /></p>
-<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h3>
-<p>If the expected <abbr title="Robot Operating System">ROS</abbr> topic data is not produced, or the point cloud is not visible on the simulation screen, report the problem as an <a href="https://github.com/autowarefoundation/autoware/discussions/">Autoware Q&amp;A discussion</a>.</p>
-<p>To make analysis of the problem easier, make sure to provide a description of your environment, a detailed set of reproduction steps, screenshots or a short video of any unexpected behaviour and attach the <code>Player.log</code> file, which can be found in the <code>~/.config/unity3d/Tier\ IV/E2ESimulator/Player.log</code> directory.</p>
+<h1 id="awsim-simulator">AWSIM simulator<a class="headerlink" href="#awsim-simulator" title="Permanent link">#</a></h1>
+<p>AWSIM is a simulator for Autoware development and testing. To get started, please follow the official <a href="https://tier4.github.io/AWSIM/GettingStarted/QuickStartDemo/">instruction</a> provided by TIER IV.</p>
 <!-- prettier-ignore -->
 
 
@@ -3551,10 +3207,10 @@ ros2 topic pub /autoware/engage autoware_auto_vehicle_msgs/msg/Engage <span clas
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

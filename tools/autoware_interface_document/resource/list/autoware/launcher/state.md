@@ -1,7 +1,7 @@
 ---
 autoware_interface:
   method: notification
-  type: autoware_ad_api_msgs/msg/AutowareLauncherState
+  type: autoware_adapi_v1_msgs/msg/AutowareLauncherState
 ---
 
 # /api/autoware/launcher/state

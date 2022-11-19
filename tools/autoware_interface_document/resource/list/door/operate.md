@@ -1,7 +1,7 @@
 ---
 autoware_interface:
   method: function call
-  type: autoware_ad_api_msgs/srv/DoorOperate
+  type: autoware_adapi_v1_msgs/srv/DoorOperate
 ---
 
 # /api/door/operate

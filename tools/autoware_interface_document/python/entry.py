@@ -51,7 +51,7 @@ def clean_target(target_path):
 
 
 def list_msgs():
-    packages = ["autoware_ad_api_msgs"]
+    packages = ["autoware_adapi_version_msgs", "autoware_adapi_v1_msgs"]
     msgs = dict()
     for package in packages:
         path = Path(get_package_share_directory(package))

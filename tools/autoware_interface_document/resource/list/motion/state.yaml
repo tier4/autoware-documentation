@@ -1,6 +1,6 @@
 interface:
   name: /api/motion/state
-  type: autoware_ad_api_msgs/msg/MotionState
+  type: autoware_adapi_v1_msgs/msg/MotionState
   method: notification
 
 description: |-

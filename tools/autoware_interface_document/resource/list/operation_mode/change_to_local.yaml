@@ -1,6 +1,6 @@
 interface:
   name: /api/operation_mode/change_to_local
-  type: autoware_ad_api_msgs/srv/ChangeOperationMode
+  type: autoware_adapi_v1_msgs/srv/ChangeOperationMode
   method: function call
 
 description: |-

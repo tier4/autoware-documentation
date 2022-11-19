@@ -1,6 +1,6 @@
 interface:
   name: /api/routing/state
-  type: autoware_ad_api_msgs/msg/RouteState
+  type: autoware_adapi_v1_msgs/msg/RouteState
   method: notification
 
 description: |-

@@ -1,7 +1,7 @@
 ---
 autoware_interface:
   method: function call
-  type: autoware_ad_api_msgs/msg/VehicleStatus
+  type: autoware_adapi_v1_msgs/msg/VehicleStatus
 ---
 
 # /api/vehicle/status

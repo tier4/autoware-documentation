@@ -1,6 +1,6 @@
 interface:
   name: /api/interface/version
-  type: autoware_ad_api_msgs/srv/InterfaceVersion
+  type: autoware_adapi_version_msgs/srv/InterfaceVersion
   method: function call
 
 description: |-

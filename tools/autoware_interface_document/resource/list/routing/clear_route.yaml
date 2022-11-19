@@ -1,6 +1,6 @@
 interface:
   name: /api/routing/clear_route
-  type: autoware_ad_api_msgs/srv/ClearRoute
+  type: autoware_adapi_v1_msgs/srv/ClearRoute
   method: function call
 
 description: |-

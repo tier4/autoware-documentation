@@ -1,6 +1,6 @@
 interface:
   name: /api/localization/initialize
-  type: autoware_ad_api_msgs/srv/InitializeLocalization
+  type: autoware_adapi_v1_msgs/srv/InitializeLocalization
   method: function call
 
 description: |-

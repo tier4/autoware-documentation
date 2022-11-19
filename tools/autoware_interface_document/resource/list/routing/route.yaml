@@ -1,6 +1,6 @@
 interface:
   name: /api/routing/route
-  type: autoware_ad_api_msgs/msg/Route
+  type: autoware_adapi_v1_msgs/msg/Route
   method: notification
 
 description: |-
@@ -9,5 +9,5 @@ description: |-
 message:
   - name: header
     text: header for pose transformation
-  - name: body
+  - name: data
     text: The route in lanelet format

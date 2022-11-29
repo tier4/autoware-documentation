@@ -1,4 +1,8 @@
 repositories:
+  autoware-document-generator:
+    type: git
+    url: https://github.com/isamu-takagi/autoware-document-generator.git
+    version: main
   autoware_common:
     type: git
     url: https://github.com/autowarefoundation/autoware_common.git

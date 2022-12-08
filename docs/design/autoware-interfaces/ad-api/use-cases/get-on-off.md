@@ -2,7 +2,7 @@
 
 ## Related API
 
-- [Door](../list/api/vehicle/door/index.md)
+- Door (T.B.D.)
 
 ## Sequence
 

@@ -3,7 +3,7 @@
 ## Related API
 
 - [Interface](../list/api/interface/index.md)
-- [Launcher](../list/api/launcher/index.md)
+- [Launch](../list/api/launch/index.md)
 
 ## Sequence
 

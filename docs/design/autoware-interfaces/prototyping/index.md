@@ -1,4 +1,4 @@
-# List of External TIER IV API
+# List of TIER IV API
 
 これらは TIER IV の独自実装であり、段階的に [AD API](../ad-api/list/index.md) に統合する予定です。
 

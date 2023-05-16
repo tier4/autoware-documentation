@@ -2,6 +2,8 @@ nav:
   - index.md
   - planning.md
   - control.md
+  - localization.md
+  - map.md
   - vehicle-interface.md
   - vehicle-dimensions.md
   - V2I: v2i

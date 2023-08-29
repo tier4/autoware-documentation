@@ -13,6 +13,8 @@
 | ------------------ | ------------ |
 | lanelet2_map.osm   | レーンレット |
 | pointcloud_map.pcd | 点群地図     |
+| pointcloud_map_metadata.yaml | 点群地図のメタデータ     |
+| map_projector_info.yaml | 地図の射影情報     |
 
 ## Parameter files
 

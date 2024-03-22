@@ -1,4 +1,4 @@
-# /api/external/get/rosbag_record
+# /api/autoware/get/rosbag_record
 
 ## Classification
 

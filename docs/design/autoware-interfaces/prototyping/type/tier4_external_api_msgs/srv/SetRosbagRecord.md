@@ -1,0 +1,7 @@
+# SetRosbagRecord
+
+```txt
+bool record
+---
+tier4_external_api_msgs/ResponseStatus status
+```

@@ -5147,6 +5147,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-api" class="md-nav__link">
+    Deprecated API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removed-api" class="md-nav__link">
+    Removed API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tier-iv-api" class="md-nav__link">
+    TIER IV API
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5164,7 +5193,204 @@
 
 
 <div><h1 id="list-of-tier-iv-api">List of TIER IV API<a class="headerlink" href="#list-of-tier-iv-api" title="Permanent link">#</a></h1>
-<p>これらは TIER IV の独自実装であり、段階的に <a href="../ad-api/list/">AD API</a> に統合する予定です。</p>
+<h2 id="deprecated-api">Deprecated API<a class="headerlink" href="#deprecated-api" title="Permanent link">#</a></h2>
+<p>これらの API は TIER IV の独自実装であり、段階的に <a href="../ad-api/list/">AD API</a> に統合する予定です。</p>
+<table>
+<thead>
+<tr>
+<th>種別</th>
+<th>名前</th>
+<th>移行先</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>service</td>
+<td><a href="api/external/get/version/">/api/external/get/version</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/interface/">Interface API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/initialize_pose/">/api/external/set/initialize_pose</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/localization/">Localization API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/initialize_pose_auto/">/api/external/set/initialize_pose_auto</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/localization/">Localization API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/route/">/api/external/set/route</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/routing/">Routing API</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/route/">/api/external/get/route</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/routing/">Routing API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/clear_route/">/api/external/set/clear_route</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/routing/">Routing API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/engage/">/api/external/set/engage</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/operation_mode/">Operation mode API</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/engage/">/api/external/get/engage</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/operation_mode/">Operation mode API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/operator/">/api/external/set/operator</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/operation_mode/">Operation mode API</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/operator/">/api/external/get/operator</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/operation_mode/">Operation mode API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/observer/">/api/external/set/observer</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/operation_mode/">Operation mode API</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/observer/">/api/external/get/observer</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/operation_mode/">Operation mode API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/pause_driving/">/api/external/set/pause_driving</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/operation_mode/">Operation mode API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/autoware/set/start_request/">/api/autoware/set/start_request</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/emergency/">/api/external/set/emergency</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/emergency/">/api/external/get/emergency</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/vehicle/status/">/api/external/get/vehicle/status</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/vehicle-status/">Vehicle status API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/door/">/api/external/set/door</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/vehicle-doors/">Vehicle doors API</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/door/">/api/external/get/door</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/vehicle-doors/">Vehicle doors API</a></td>
+</tr>
+<tr>
+<td>service</td>
+<td><a href="api/external/set/velocity_limit/">/api/external/set/velocity_limit</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/set/command/local/control/">/api/external/set/command/local/control</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/set/command/local/shift/">/api/external/set/command/local/shift</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/set/command/local/turn_signal/">/api/external/set/command/local/turn_signal</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/set/command/local/heartbeat/">/api/external/set/command/local/heartbeat</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/set/command/remote/control/">/api/external/set/command/remote/control</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/set/command/remote/shift/">/api/external/set/command/remote/shift</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/set/command/remote/turn_signal/">/api/external/set/command/remote/turn_signal</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/set/command/remote/heartbeat/">/api/external/set/command/remote/heartbeat</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/command/selected/control/">/api/external/get/command/selected/control</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/external/get/command/selected/vehicle/">/api/external/get/command/selected/vehicle</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/iv_msgs/planning/scenario_planning/trajectory/">/api/iv_msgs/planning/scenario_planning/trajectory</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/iv_msgs/perception/object_recognition/tracking/objects/">/api/iv_msgs/perception/object_recognition/tracking/objects</a></td>
+<td>T.B.D.</td>
+</tr>
+<tr>
+<td>topic</td>
+<td><a href="api/iv_msgs/autoware/state/">/api/iv_msgs/autoware/state</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware.universe/main/system/default_ad_api/document/autoware-state/">Autoware state compatibility</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="removed-api">Removed API<a class="headerlink" href="#removed-api" title="Permanent link">#</a></h2>
+<p>これらの API は削除されました。代わりに <a href="../ad-api/list/">AD API</a> を使用してください。</p>
+<table>
+<thead>
+<tr>
+<th>種別</th>
+<th>名前</th>
+<th>移行先</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>topic</td>
+<td><a href="api/iv_msgs/vehicle/status/control_mode/">/api/iv_msgs/vehicle/status/control_mode</a></td>
+<td><a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/features/operation_mode/">Operation mode API</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tier-iv-api">TIER IV API<a class="headerlink" href="#tier-iv-api" title="Permanent link">#</a></h2>
+<p>これらの API はユースケースが限定的であり、<a href="../ad-api/list/">AD API</a> に統合されるか不明です。</p>
 <table>
 <thead>
 <tr>
@@ -5174,11 +5400,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>service</td>
-<td><a href="api/external/get/version/">/api/external/get/version</a></td>
-<td><a href="type/autoware_external_api_msgs/srv/GetVersion/">autoware_external_api_msgs/srv/GetVersion</a></td>
-</tr>
 <tr>
 <td>service</td>
 <td><a href="api/external/get/metadata/packages/">/api/external/get/metadata/packages</a></td>
@@ -5200,89 +5421,9 @@
 <td><a href="type/tier4_external_api_msgs/msg/ClassifiedDiagnostics/">tier4_external_api_msgs/msg/ClassifiedDiagnostics</a></td>
 </tr>
 <tr>
-<td>service</td>
-<td><a href="api/external/set/engage/">/api/external/set/engage</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/Engage/">tier4_external_api_msgs/srv/Engage</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/get/engage/">/api/external/get/engage</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/EngageStatus/">tier4_external_api_msgs/msg/EngageStatus</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/emergency/">/api/external/set/emergency</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/SetEmergency/">tier4_external_api_msgs/srv/SetEmergency</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/get/emergency/">/api/external/get/emergency</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/Emergency/">tier4_external_api_msgs/msg/Emergency</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/door/">/api/external/set/door</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/SetDoor/">tier4_external_api_msgs/srv/SetDoor</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/get/door/">/api/external/get/door</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/DoorStatus/">tier4_external_api_msgs/msg/DoorStatus</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/get/vehicle/status/">/api/external/get/vehicle/status</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/VehicleStatusStamped/">tier4_external_api_msgs/msg/VehicleStatusStamped</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/initialize_pose/">/api/external/set/initialize_pose</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/InitializePose/">tier4_external_api_msgs/srv/InitializePose</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/initialize_pose_auto/">/api/external/set/initialize_pose_auto</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/InitializePoseAuto/">tier4_external_api_msgs/srv/InitializePoseAuto</a></td>
-</tr>
-<tr>
 <td>topic</td>
 <td><a href="api/external/get/localization_scores/">/api/external/get/localization_scores</a></td>
 <td><a href="type/tier4_external_api_msgs/msg/LocalizationScoreArray/">tier4_external_api_msgs/msg/LocalizationScoreArray</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/route/">/api/external/set/route</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/SetRoute/">tier4_external_api_msgs/srv/SetRoute</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/get/route/">/api/external/get/route</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/Route/">tier4_external_api_msgs/msg/Route</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/clear_route/">/api/external/set/clear_route</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/ClearRoute/">tier4_external_api_msgs/srv/ClearRoute</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/operator/">/api/external/set/operator</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/SetOperator/">tier4_external_api_msgs/srv/SetOperator</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/get/operator/">/api/external/get/operator</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/Operator/">tier4_external_api_msgs/msg/Operator</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/observer/">/api/external/set/observer</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/SetObserver/">tier4_external_api_msgs/srv/SetObserver</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/get/observer/">/api/external/get/observer</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/Observer/">tier4_external_api_msgs/msg/Observer</a></td>
 </tr>
 <tr>
 <td>topic</td>
@@ -5293,66 +5434,6 @@
 <td>service</td>
 <td><a href="api/external/get/map/lanelet/xml/">/api/external/get/map/lanelet/xml</a></td>
 <td><a href="type/tier4_external_api_msgs/srv/GetTextFile/">tier4_external_api_msgs/srv/GetTextFile</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/pause_driving/">/api/external/set/pause_driving</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/PauseDriving/">tier4_external_api_msgs/srv/PauseDriving</a></td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/external/set/velocity_limit/">/api/external/set/velocity_limit</a></td>
-<td><a href="type/tier4_external_api_msgs/srv/SetVelocityLimit/">tier4_external_api_msgs/srv/SetVelocityLimit</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/set/command/local/control/">/api/external/set/command/local/control</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/ControlCommandStamped/">tier4_external_api_msgs/msg/ControlCommandStamped</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/set/command/local/shift/">/api/external/set/command/local/shift</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/GearShiftStamped/">tier4_external_api_msgs/msg/GearShiftStamped</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/set/command/local/turn_signal/">/api/external/set/command/local/turn_signal</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/TurnSignalStamped/">tier4_external_api_msgs/msg/TurnSignalStamped</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/set/command/local/heartbeat/">/api/external/set/command/local/heartbeat</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/Heartbeat/">tier4_external_api_msgs/msg/Heartbeat</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/set/command/remote/control/">/api/external/set/command/remote/control</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/ControlCommandStamped/">tier4_external_api_msgs/msg/ControlCommandStamped</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/set/command/remote/shift/">/api/external/set/command/remote/shift</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/GearShiftStamped/">tier4_external_api_msgs/msg/GearShiftStamped</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/set/command/remote/turn_signal/">/api/external/set/command/remote/turn_signal</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/TurnSignalStamped/">tier4_external_api_msgs/msg/TurnSignalStamped</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/set/command/remote/heartbeat/">/api/external/set/command/remote/heartbeat</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/Heartbeat/">tier4_external_api_msgs/msg/Heartbeat</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/get/command/selected/control/">/api/external/get/command/selected/control</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/ControlCommandStamped/">tier4_external_api_msgs/msg/ControlCommandStamped</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/external/get/command/selected/vehicle/">/api/external/get/command/selected/vehicle</a></td>
-<td><a href="type/tier4_external_api_msgs/msg/ControlCommandStamped/">tier4_external_api_msgs/msg/ControlCommandStamped</a></td>
 </tr>
 <tr>
 <td>service</td>
@@ -5373,31 +5454,6 @@
 <td>service</td>
 <td><a href="api/external/get/accel_brake_map_calibrator/data/">/api/external/get/accel_brake_map_calibrator/data</a></td>
 <td><a href="type/tier4_external_api_msgs/srv/GetAccelBrakeMapCalibrationData/">tier4_external_api_msgs/srv/GetAccelBrakeMapCalibrationData</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/iv_msgs/autoware/state/">/api/iv_msgs/autoware/state</a></td>
-<td><a href="type/tier4_system_msgs/msg/AutowareState/">tier4_system_msgs/msg/AutowareState</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/iv_msgs/vehicle/status/control_mode/">/api/iv_msgs/vehicle/status/control_mode</a></td>
-<td><a href="type/tier4_vehicle_msgs/msg/ControlMode/">tier4_vehicle_msgs/msg/ControlMode</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/iv_msgs/planning/scenario_planning/trajectory/">/api/iv_msgs/planning/scenario_planning/trajectory</a></td>
-<td><a href="type/tier4_planning_msgs/msg/Trajectory/">tier4_planning_msgs/msg/Trajectory</a></td>
-</tr>
-<tr>
-<td>topic</td>
-<td><a href="api/iv_msgs/perception/object_recognition/tracking/objects/">/api/iv_msgs/perception/object_recognition/tracking/objects</a></td>
-<td>tier4_perception_msgs/msg/DynamicObjectArray</td>
-</tr>
-<tr>
-<td>service</td>
-<td><a href="api/autoware/set/start_request/">/api/autoware/set/start_request</a></td>
-<td><a href="type/std_srvs/srv/Trigger/">std_srvs/srv/Trigger</a></td>
 </tr>
 </tbody>
 </table>

@@ -5193,10 +5193,14 @@
 
 
 <div><h1 id="operation-mode-compatibility">Operation mode compatibility<a class="headerlink" href="#operation-mode-compatibility" title="Permanent link">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>TIER IV API は High-level API または TIER IV External API と呼ばれる場合があります。</p>
+</div>
 <h2 id="tier-iv-api">構成（TIER IV API）<a class="headerlink" href="#tier-iv-api" title="Permanent link">#</a></h2>
-<p>TIER IV API は、以下のような２つの入力セレクター（operator と observer）と、２つのフィルター（pause_driving と engage）からなる構成に基づいて設計されました。
-フィルターの engage は車両の直接操作時（DRIVER）以外では常に適用され false の場合にコマンドを停止で上書きする効果を持ちます。
-もう一方のフィルターの pause_driving は AUTONOMOUS のみが対象で true の場合に車両の最高速度を 0 km/h に設定することで車両を停止させていました。</p>
+<p>TIER IV API における Operation Mode は、以下のような２つの入力セレクター（operator と observer）と、２つのフィルター（pause_driving と engage）からなる構成に基づいて設計されました。
+Engage フィルターは車両の直接操作時（DRIVER）以外では常に適用され false の場合にコマンドを停止で上書きする効果を持ちます。
+もう一方の pause_driving フィルターは AUTONOMOUS のみが対象で true の場合に車両の最高速度を 0 km/h に設定することで車両を停止させていました。</p>
 <p><img alt="block-tier4" src="block-tier4.drawio.svg"></p>
 <h2 id="ad-api">構成（AD API）<a class="headerlink" href="#ad-api" title="Permanent link">#</a></h2>
 <p>AD API では、フィルターによる停止コマンドへの上書きは廃止され、代わりに STOP モードからの入力という形でセレクターに処理が統合されました。

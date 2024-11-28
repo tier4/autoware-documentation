@@ -8,7 +8,7 @@
 
 TIER IV API における Operation Mode は、以下のような２つの入力セレクター（operator と observer）と、２つのフィルター（pause_driving と engage）からなる構成に基づいて設計されました。
 Engage フィルターは車両の直接操作時（DRIVER）以外では常に適用され false の場合にコマンドを停止で上書きする効果を持ちます。
-もう一方のフィルターの pause_driving は AUTONOMOUS のみが対象で true の場合に車両の最高速度を 0 km/h に設定することで車両を停止させていました。
+もう一方の pause_driving フィルターは AUTONOMOUS のみが対象で true の場合に車両の最高速度を 0 km/h に設定することで車両を停止させていました。
 
 ![block-tier4](./operation-mode/block-tier4.drawio.svg)
 

@@ -1,5 +1,9 @@
 # List of TIER IV API
 
+!!! note
+
+    TIER IV API は High-level API または TIER IV External API と呼ばれる場合があります。
+
 ## Deprecated API
 
 これらの API は TIER IV の独自実装であり、段階的に [AD API](../ad-api/list/index.md) に統合する予定です。

@@ -91,12 +91,18 @@ def parse_rosidl_file(depends: set, visited: set, specs: dict, name: str):
             specs[name] = {"req": req, "res": res}
             specs[name] = {k: v for k, v in specs[name].items() if v}
 
-def main():
-    # Create a list of data types used in adapi.
-    adapi = Path("docs/design/autoware-interfaces/ad-api/list/api")
-    pages = (load_markdown_metadata(path) for path in adapi.glob("**/*.md"))
-    pages = [page for page in pages if page]
 
+def tabulate(data, header):
+    widths = map(len, header)
+    for line in data:
+        widths = map(max, zip(map(len, line), widths))
+    widths = list(widths)
+    format = "| " + " | ".join(f"{{:{width}}}" for width in widths) + " |"
+    border = ["-" * width for width in widths]
+    return "\n".join(format.format(*line) for line in [header, border, *data])
+
+
+def update_type_page(pages):
     # Create a field list for each data type.
     names = (page["type"]["name"] for page in pages)
     specs = {}
@@ -147,16 +153,32 @@ def main():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text)
 
-    ## Generate api list page.
-    text = "# List of Autoware AD API\n\n"
-    for title in sorted(page["title"] for page in pages):
-        text += f"- [{title}](.{title}.md)\n"
-    Path("docs/design/autoware-interfaces/ad-api/list/index.md").write_text(text)
-
     ## Generate api type page.
     text = "# Types of Autoware AD API\n\n"
     for spec in sorted(specs):
         text += f"- [{spec}](./{spec}.md)\n"
     Path("docs/design/autoware-interfaces/ad-api/types/index.md").write_text(text)
+
+
+def update_list_page(pages):
+    ## Generate api list page.
+    data = []
+    for page in sorted(pages, key=lambda page: page["title"]):
+        title = page["title"]
+        data.append([f"[{title}](.{title}.md)", page["status"], page["method"]])
+    text = "# List of Autoware AD API\n\n" + tabulate(data, ["API", "Release", "Method"]) + "\n"
+    Path("docs/design/autoware-interfaces/ad-api/list/index.md").write_text(text)
+
+
+def main():
+    # Create a list of data types used in adapi.
+    adapi = Path("docs/design/autoware-interfaces/ad-api/list/api")
+    pages = (load_markdown_metadata(path) for path in adapi.glob("**/*.md"))
+    pages = [page for page in pages if page]
+
+    update_list_page(pages)
+    update_type_page(pages)
+
+
 
 main()

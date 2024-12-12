@@ -6,6 +6,6 @@ nav:
   - localization.md
   - map.md
   - sensing.md
-  - perception-interface.md
+  - perception.md
   - vehicle-interface.md
   - vehicle-dimensions.md

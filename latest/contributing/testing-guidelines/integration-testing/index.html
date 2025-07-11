@@ -5412,21 +5412,21 @@ either read the <a href="https://github.com/ros2/launch/tree/master/launch_testi
 or follow the steps below.</p>
 <p>Taking <a href="https://github.com/autowarefoundation/autoware.universe/blob/main/map/map_loader/test/lanelet2_map_loader_launch.test.py"><code>test/lanelet2_map_loader_launch.test.py</code></a> as an example,
 first dependencies are imported:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">unittest</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
 
-<span class="kn">from</span> <span class="nn">ament_index_python</span> <span class="kn">import</span> <span class="n">get_package_share_directory</span>
-<span class="kn">import</span> <span class="nn">launch</span>
-<span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
-<span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">Node</span>
-<span class="kn">import</span> <span class="nn">launch_testing</span>
-<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ament_index_python</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_package_share_directory</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">launch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch</span><span class="w"> </span><span class="kn">import</span> <span class="n">LaunchDescription</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">launch_ros.actions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">launch_testing</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 </code></pre></div>
 <p>Then a launch description is created to launch the node under test.
 Note that the <a href="https://github.com/autowarefoundation/autoware.universe/blob/main/map/map_loader/test/data/test_map.osm"><code>test_map.osm</code></a> file path is found and passed to the node,
 something that cannot be done with the <a href="#smoke-tests">smoke testing API</a>:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">launch_test</span>
-<span class="k">def</span> <span class="nf">generate_test_description</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_test_description</span><span class="p">():</span>
 
     <span class="n">lanelet2_map_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
         <span class="n">get_package_share_directory</span><span class="p">(</span><span class="s2">"map_loader"</span><span class="p">),</span> <span class="s2">"test/data/test_map.osm"</span>
@@ -5464,8 +5464,8 @@ something that cannot be done with the <a href="#smoke-tests">smoke testing API<
 <p>Finally, a test is executed after the node executable has been shut down (<code>post_shutdown_test</code>).
 Here we ensure that the node was launched without error and exited cleanly.</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@launch_testing</span><span class="o">.</span><span class="n">post_shutdown_test</span><span class="p">()</span>
-<span class="k">class</span> <span class="nc">TestProcessOutput</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">test_exit_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proc_info</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestProcessOutput</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_exit_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proc_info</span><span class="p">):</span>
         <span class="c1"># Check that process exits with code 0: no error</span>
         <span class="n">launch_testing</span><span class="o">.</span><span class="n">asserts</span><span class="o">.</span><span class="n">assertExitCodes</span><span class="p">(</span><span class="n">proc_info</span><span class="p">)</span>
 </code></pre></div>
@@ -5491,21 +5491,21 @@ Here we ensure that the node was launched without error and exited cleanly.</p>
 <p>To test while the node is running,
 create an <a href="https://github.com/ros2/launch/tree/foxy/launch_testing#active-tests"><em>active test</em></a> by adding a subclass of Python's <code>unittest.TestCase</code> to <code>*launch.test.py</code>.
 Some boilerplate code is required to access output by creating a node and a subscription to a particular topic, e.g.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">unittest</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
 
-<span class="k">class</span> <span class="nc">TestRunningDataPublisher</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestRunningDataPublisher</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">setUpClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setUpClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">Context</span><span class="p">()</span>
         <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="bp">cls</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">node</span> <span class="o">=</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">create_node</span><span class="p">(</span><span class="s2">"test_node"</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="bp">cls</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">tearDownClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tearDownClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="bp">cls</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">msgs</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
             <span class="n">msg_type</span><span class="o">=</span><span class="n">my_msg_type</span><span class="p">,</span>
@@ -5514,11 +5514,11 @@ Some boilerplate code is required to access output by creating a node and a subs
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">addCleanup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">destroy_subscription</span><span class="p">,</span> <span class="n">sub</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_msg_received</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_msg_received</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
         <span class="c1"># Callback for ROS 2 subscriber used in the test</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">msgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">get_message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">startlen</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">msgs</span><span class="p">)</span>
 
         <span class="n">executor</span> <span class="o">=</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">executors</span><span class="o">.</span><span class="n">SingleThreadedExecutor</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
@@ -5537,7 +5537,7 @@ Some boilerplate code is required to access output by creating a node and a subs
         <span class="k">finally</span><span class="p">:</span>
             <span class="n">executor</span><span class="o">.</span><span class="n">remove_node</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">test_message_content</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_message_content</span><span class="p">():</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_message</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s2">"Hello, world"</span><span class="p">)</span>
 </code></pre></div>
